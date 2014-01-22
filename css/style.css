@@ -1,0 +1,417 @@
+nav {
+    font-family: 'UbuntuMedium', sans-serif;
+    font-weight: 500;
+    font-size: 1.25em;
+}
+    
+.navbar-brand {
+    display: block;
+    width: 150px;
+    height: 40px;
+    background: url(../images/logo.png) no-repeat center center;
+    background-size: 136px 36px;
+    text-indent: -99999px;
+    margin: 6px 5px 5px 5px;
+}
+
+#mbit .social-icon {
+    font-size: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#mbit header {
+    margin-bottom: 0;
+}
+
+.page-head {
+    width: 90%;
+    left: 5%;
+    background-color: #3498db;
+    text-align: center;
+    padding: 10px 0;
+    margin: -30px inherit auto auto;
+    color: white;
+    font-size: 150%;
+    font-family: 'UbuntuRegular', sans-serif;
+}
+
+@media (max-width: 991px) {
+    .page-head {
+        margin-top: -25px;
+        font-size: 120%;
+    }
+}
+
+.headline h2 {
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+}
+
+.section {
+    font-size: 120%;
+}
+
+.section ul {
+    padding-left: 0px;
+    list-style-position: inside;
+}
+
+.homepage-image {
+    background: url(../images/home/anim-group-1.jpg);
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    z-index: -1;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .homepage-image { height: 200px; min-width: 586px; }
+}
+@media (min-width:769px) and (max-width: 991px) {
+    .homepage-image { height: 300px; min-width: 391px; }
+}
+
+.homepage-image.img-anim-group-1 {
+    background-image: url(../images/home/anim-group-1.jpg);
+}
+
+.homepage-image.img-groups-1 {
+    background-image: url(../images/home/groups-1.jpg);
+}
+
+.homepage-image.img-class-whiteboard-1 {
+    background-image: url(../images/home/class-whiteboard-1.jpg);
+}
+.homepage-image.img-video-1 {
+    background-image: url(../images/home/video-1.jpg);
+}
+.homepage-image.img-focused-1 {
+    background-image: url(../images/home/focused-1.jpg);
+}
+
+#mbit .donate-icon {
+    font-size: 15px;
+    margin-top: -5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.donate-icon .fa-usd {
+    font-weight: bold;
+}
+.donate-icon .fa-square {
+    color: #f0ad4e;
+}
+.donate-icon:hover .fa-square,
+.donate-icon:focus .fa-square {
+    color: #ed9c28;
+}
+
+.campaign-alert {
+    text-align: center;
+}
+iframe.campaign-alert {
+    margin: 30px 15px 15px 15px;
+    float: right;
+}
+
+.donate-ctr {
+    text-align: center;
+    margin: 50px auto 30px auto;
+}
+
+.vimeo .donate-ctr {
+    margin: 0px auto inherit auto;
+}
+.vimeo .donate {
+    width: 500px;
+}
+
+#mbit .donate {
+    text-transform: uppercase;
+    font-family: 'UbuntuRegular', sans-serif;
+    color: #fff;
+    background: #f0ad4e;
+    text-shadow: none;
+    border: none;
+}
+#mbit .donate:hover, #mbit .donate:focus {
+    background: #ed9c28;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px 0 30px;
+}
+
+footer,
+.copyright {
+    color: #dadada;
+    background: black;
+}
+
+footer a {
+    color: #3498db;
+    font-weight: 500;
+}
+
+footer address td.icon {
+    text-align: center;
+    padding-right: 10px;
+}
+
+.copyright {
+    border-top: 1px solid #777;
+    padding: 11px 0 7px;
+    font-size: 12px;
+}
+
+.headline {
+    margin: 30px 0 15px 0;
+    border-bottom: 1px dotted #e4e9f0;
+}
+
+.headline h2 {
+    display: inline;
+    border-bottom: 2px solid #3498db;
+}
+
+.team h3 {
+    font-family: 'UbuntuRegular', sans-serif;
+}
+
+.team small {
+    display: block;
+    font-size: 12px;
+    margin-top: 2px;
+    font-family: 'UbuntuRegular', sans-serif;
+}
+
+.team .team-social li {
+    padding: 0;
+}
+
+.team .team-social li i {
+    font-size: 20px;
+    padding: 3px;
+    min-width: 30px;
+    text-align: center;
+    background: #f7f7f7;
+    color: #aaa;
+    display: inline-block;
+}
+.team .team-social li i:hover {
+    background: #3498db;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.team ul.team-social {
+    text-align: right;
+}
+
+.team .thumbnail-style {
+    padding: 12px;
+}
+
+.team .thumbnail-style:hover {
+    box-shadow: 0 0 8px #ddd;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.testimonials .testimonial-info img {
+    width: 60px;
+    height: 60px;
+    float: left;
+    padding: 2px;
+    margin-right: 15px;
+    border: solid 1px #ccc;
+    border-radius: 50%;
+}
+
+.testimonials p {
+    margin-top: 5px;
+}
+.testimonials .testimonial-info {
+    color: #3498db;
+}
+.testimonials .testimonial-info em {
+    color: #777;
+    display: block;
+}
+
+.promo-box {
+    padding: 20px;
+    margin: 25px 0 20px;
+    text-align: center;
+}
+
+.promo-box i {
+    display: block;
+    font-size: 50px;
+}
+
+#mbit .share-button {
+    text-transform: uppercase;
+    font-family: 'UbuntuRegular', sans-serif;
+    color: #fff;
+    background: #3498db;
+    text-shadow: none;
+    border: none;
+    width: 500px;
+}
+#mbit .share-button:hover, #mbit .share-button:focus {
+    background: #3aa9f2;
+}
+
+#mbit.share {
+    background-color: #f0f0f0;
+    margin: 0;
+}
+#mbit.share header {
+    padding: 2px 0px 10px 0px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+}
+.share header h1 {
+    text-align: center;
+}
+.share .copyright {
+    border-top: 1px solid #eee;
+    text-align: center;
+    background: inherit;
+    color: #999;
+}
+#mbit .share-cta {
+    background-color: white;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.share .actions {
+    text-align: center;
+}
+.share .actions h2 {
+    font-family: 'UbuntuMedium', sans-serif;
+    color: black;
+}
+
+.share .actions .byline {
+    color: #666;
+    margin: 10px 0;
+}
+
+.share .actions button {
+    font-weight: bold;
+    border: 1px solid #1a1a1a;
+    border-radius: 6px;
+    font-size: 24px;
+    line-height: 48px;
+    padding: 0 20px;
+    margin: 0;
+    cursor: pointer;
+}
+.share .actions button:hover {
+    opacity: 0.9;
+}
+.share .actions button.facebook {
+    background: #3b5998;
+    background-image: linear-gradient(#4b71c1, #3b5998);
+    color: #fff;
+    box-shadow: inset 0 1px 0 0 #5b8aeb;
+    text-shadow: #3b5998 0 1px 0;
+}
+.share .actions button.twitter {
+    background: #2578b4;
+    background-image: linear-gradient(#58a8e2, #2578b4);
+    color: #fff;
+    box-shadow: inset 0 1px 0 0 #88c1ec;
+    text-shadow: #2578b4 0 1px 0;
+}
+.share .actions button.play {
+    background: #87c442;
+    background-image: linear-gradient(#9fd04f, #87c442);
+    box-shadow: inset 0 1px 0 0 #b7dc63;
+    text-shadow: #ffff8e 0 1px 0;
+}
+
+@media (max-width:991px) {
+    .share .actions .col-md-4:nth-child(1n+2) {
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+    }
+}
+@media (min-width:992px) {
+    .share .actions .col-md-4:nth-child(1n+2) {
+        border-left: 1px solid #ddd;
+    }
+}
+    
+
+.share .progress-ctr {
+    padding-top: 5px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -15px;
+    border-top: 1px solid #ccc;
+}
+
+.share .progress .progress-bar {
+    text-align: right;
+    background: #87C442;
+    background-image: linear-gradient(#9fd04f, #87c442);
+    height: 30px;
+}
+.share .progress .number {
+    color: #000;
+    font-family: 'UbuntuMedium', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 4px;
+}
+
+.programs .section {
+    clear: both;
+}
+
+.program .logo {
+    float: right;
+    max-width: 200px;
+}
+
+@media (max-width:991px) {
+    .program .logo {
+        max-width: 100px;
+    }
+}
+
+.programs .program ul {
+    list-style-type: none;
+}
+
+.color-blue { color: #3498db; }
+.color-orange { color: #e67e22; }
+.color-red { color: #e74c3c; }
+.color-sea { color: #1abc9c; }
+
+/* Retina images */
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 1.5dppx) {
+    .navbar-brand {
+        background-image: url(../images/logo@2x.png);
+    }
+}
