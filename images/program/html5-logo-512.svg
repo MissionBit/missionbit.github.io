@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>Untitled</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="html5-logo" sketch:type="MSLayerGroup" transform="translate(74.500000, 0.000000)">
+            <path d="M32.644,470.877 L-0.367,100.62 L362.367,100.62 L329.321,470.819 L180.778,512 L32.644,470.877 Z" id="Shape" fill="#E44D26" sketch:type="MSShapeGroup"></path>
+            <path d="M181,480.523 L301.03,447.246 L329.27,130.894 L181,130.894 L181,480.523 Z" id="Shape" fill="#F16529" sketch:type="MSShapeGroup"></path>
+            <path d="M181,268.217 L120.91,268.217 L116.76,221.716 L181,221.716 L181,176.305 L180.843,176.305 L67.132,176.305 L68.219,188.488 L79.38,313.627 L181,313.627 L181,268.217 Z" id="Shape" fill="#EBEBEB" sketch:type="MSShapeGroup"></path>
+            <path d="M181,386.153 L180.801,386.206 L130.227,372.55 L126.994,336.333 L102.419,336.333 L81.409,336.333 L87.771,407.634 L180.791,433.457 L181,433.399 L181,386.153 Z" id="Shape" fill="#EBEBEB" sketch:type="MSShapeGroup"></path>
+            <path d="M33.382,0 L56.459,0 L56.459,22.8 L77.569,22.8 L77.569,0 L100.647,0 L100.647,69.044 L77.57,69.044 L77.57,45.924 L56.46,45.924 L56.46,69.044 L33.383,69.044 L33.383,0 L33.382,0 Z" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M130.994,22.896 L110.678,22.896 L110.678,0 L174.398,0 L174.398,22.896 L154.073,22.896 L154.073,69.044 L130.995,69.044 L130.995,22.896 L130.994,22.896 Z" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M184.511,0 L208.574,0 L223.376,24.26 L238.163,0 L262.235,0 L262.235,69.044 L239.253,69.044 L239.253,34.822 L223.376,59.371 L222.979,59.371 L207.091,34.822 L207.091,69.044 L184.511,69.044 L184.511,0 L184.511,0 Z" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M273.72,0 L296.804,0 L296.804,46.222 L329.257,46.222 L329.257,69.044 L273.72,69.044 L273.72,0 L273.72,0 Z" id="Shape" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <path d="M180.843,268.217 L180.843,313.627 L236.761,313.627 L231.49,372.521 L180.843,386.191 L180.843,433.435 L273.937,407.634 L274.62,399.962 L285.291,280.411 L286.399,268.217 L274.162,268.217 L180.843,268.217 Z" id="Shape" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M180.843,176.305 L180.843,204.509 L180.843,221.605 L180.843,221.716 L290.385,221.716 L290.531,221.716 L291.442,211.509 L293.511,188.488 L294.597,176.305 L180.843,176.305 Z" id="Shape" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
