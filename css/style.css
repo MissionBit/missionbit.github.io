@@ -118,6 +118,9 @@ nav {
 .campaign-alert {
     text-align: center;
 }
+.student-alert {
+    text-align: center;
+}
 iframe.campaign-alert {
     margin: 30px 15px 15px 15px;
     float: right;
