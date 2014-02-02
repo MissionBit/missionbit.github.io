@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<style>
+    table { font-size: 20px; }
+</style>
+<body>
+<table>
+    <thead>
+        <tr><td>Key</td><td>Value</td></tr>
+    </thead>
+    <tfoot>
+    </tfoot>
+    <tbody>
+    </tbody>
+</table>
+</table>
+<script>
+    var a = window.location.search.substr(1).split('&');
+    var tbody = document.querySelector('tbody');
+    var t = document.createTextNode.bind(document);
+    function td(s) {
+        var td = document.createElement('td');
+        td.appendChild(t(s));
+        return td;
+    }
+    for (var i = 0; i < a.length; ++i) {
+        var p = a[i].split('=').map(function (s) {
+            return decodeURIComponent(s).replace(/\+/g, " ")
+        });  
+        if (p.length === 2) {
+            var tr = document.createElement('tr');
+            tr.appendChild(td(p[0]));
+            tr.appendChild(td(p[1]));
+            tbody.appendChild(tr);
+        }
+    }
+</script>
+</body>
+</html>
