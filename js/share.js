@@ -1,7 +1,7 @@
 /*jslint browser: true*/
 window.jQuery(function ($) {
     'use strict';
-    var url = 'http://bit.ly/mbit-spring-2014',
+    var url = 'http://www.missionbit.com/donate/',
         encodedURL = encodeURIComponent(url),
         title = encodeURIComponent('Free coding classes for SF public school students by @missionbit – '),
         buttons = $.makeArray($('.actions button').data('clicked', 0)),
