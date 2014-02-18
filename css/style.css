@@ -403,6 +403,20 @@ footer address td.icon {
     list-style-type: none;
 }
 
+.partners div.row div {
+    text-align: center;
+    min-height: 100px;
+}
+.partners div.row .vpadding {
+    display: inline-block;
+    height: 100%;
+}
+.partners div.row img {
+    max-width: 100%;
+    max-height: 100px;
+    vertical-align: middle;
+}
+
 .color-blue { color: #3498db; }
 .color-orange { color: #e67e22; }
 .color-red { color: #e74c3c; }
