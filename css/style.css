@@ -24,6 +24,13 @@ nav {
     margin-bottom: 0;
 }
 
+.bitpay-logo {
+    background: url(../images/bitpay/donate-md.png);
+    border: none;
+    width: 126px;
+    height: 48px;
+}
+
 .page-head {
     width: 90%;
     left: 5%;
