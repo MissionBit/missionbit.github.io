@@ -31,6 +31,23 @@ nav {
     height: 48px;
 }
 
+.dogecoin-logo img {
+    vertical-align: middle;
+    margin-top: -0.25em;
+    width: 1.75em;
+    height: 1.75em;
+    border: none;
+}
+
+.doge-left {
+    float: left;
+    width: 150px;
+    height: 150px;
+    background: url(../images/doge.png) no-repeat center center;
+    background-size: 150px 150px;
+    text-indent: -99999px;
+}
+
 .page-head {
     width: 90%;
     left: 5%;
@@ -391,6 +408,10 @@ footer address td.icon {
     margin: 0 4px;
 }
 
+.clear {
+    clear: both;
+}
+
 .programs .section {
     clear: both;
 }
@@ -435,6 +456,9 @@ footer address td.icon {
     only screen and (min--moz-device-pixel-ratio: 1.5),
     only screen and (min-device-pixel-ratio: 1.5),
     only screen and (min-resolution: 1.5dppx) {
+    .doge-left {
+        background-image: url(../images/doge@2x.png);
+    }
     .navbar-brand {
         background-image: url(../images/logo@2x.png);
     }
