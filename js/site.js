@@ -6,4 +6,7 @@ window.jQuery(function ($) {
     if (Date.now() >= new Date(campaignEnd).getTime()) {
         $('.campaign-alert').hide();
     }
+    if ($.fn.qrcode !== undefined) {
+        $('.doge-qrcode').qrcode($('.doge-qrcode').data('qrcode'));
+    }
 });

@@ -48,6 +48,11 @@ nav {
     text-indent: -99999px;
 }
 
+.doge-qrcode {
+    margin: 1em auto 1em auto;
+    text-align: center;
+}
+
 .page-head {
     width: 90%;
     left: 5%;
