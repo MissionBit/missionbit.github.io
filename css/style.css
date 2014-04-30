@@ -155,7 +155,7 @@ iframe.campaign-alert {
     float: right;
 }
 
-.donate-ctr {
+.apply-ctr, .donate-ctr {
     text-align: center;
     margin: 50px auto 30px auto;
 }
@@ -178,6 +178,20 @@ iframe.campaign-alert {
 #mbit .donate:hover, #mbit .donate:focus {
     background: #ed9c28;
 }
+
+#mbit .apply {
+    text-transform: uppercase;
+    font-family: 'UbuntuRegular', sans-serif;
+    color: #fff;
+    background: #f0ad4e;
+    text-shadow: none;
+    border: none;
+}
+#mbit .apply:hover, #mbit .apply:focus {
+    background: #ed9c28;
+}
+
+
 
 footer {
     margin-top: 40px;
