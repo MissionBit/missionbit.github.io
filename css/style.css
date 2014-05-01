@@ -76,6 +76,10 @@ nav {
     font-family: 'SourceCodeProSemiBold', sans-serif;
 }
 
+.season h2 {
+    font-size: 2.15em;
+}
+
 .section {
     font-size: 120%;
 }
