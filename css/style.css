@@ -486,3 +486,12 @@ footer address td.icon {
         background-image: url(../images/logo@2x.png);
     }
 }
+
+.course-details ul {
+    list-style-type: none;
+}
+
+.course-detail-title {
+    font-style: italic;
+    font-weight: bold;  
+}
