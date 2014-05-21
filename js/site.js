@@ -176,6 +176,9 @@ $("#intern-online-yes").change(function() {
 	$(".remote-mentor-details").show();
 	$(".internship-submit").show();
 	$('.remote-mentor').hide();
+	if (sessionUser && sessionEmail) {
+		$('.intern-user-info').hide();
+	}
 })
 
 $("#intern-online-no-yes").change(function() {
