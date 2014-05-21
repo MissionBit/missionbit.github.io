@@ -156,13 +156,14 @@ $('.sfusd-project-submit').click(function(e) {
 
 })
 
-
-
 $("#firebase-yes").change(function() {
 	$(".remote-mentor").show();
 	$('.firebase-mentor-details').show();
 	$('#remote-mentor-no').remove();
 	$('.firebase-mentor').hide();
+	if (sessionUser && sessionEmail) {
+		$('.intern-user-info').hide();
+	}
 })
 
 $("#firebase-no").change(function() {
@@ -181,6 +182,9 @@ $("#intern-online-no-yes").change(function() {
 	$(".remote-mentor-details").show();
 	$(".internship-submit").show();
 	$('.remote-mentor').hide();
+	if (sessionUser && sessionEmail) {
+		$('.intern-user-info').hide();
+	}
 })
 
 $("#intern-online-no").change(function() {
@@ -239,7 +243,10 @@ $('.teacher-submit').click(function(e) {
 	e.preventDefault();
 
 	var teacherMentorName = $('#mentor-teacher-name-input').val();
+	sessionUser = teacherMentorName;
+
 	var teacherMentorEmail = $('#mentor-teacher-email-input').val();
+	sessionEmail = teacherMentorEmail;
 
 	var TeacherMentor = Parse.Object.extend("TeacherMentor");
 	var teacherMentor = new TeacherMentor();
@@ -274,12 +281,14 @@ $("#mobile-signup").click(function(e) {
 		var mobileMentorName = sessionUser;
 	} else {
 		var mobileMentorName = $('#mentor-mobile-name-input').val();
+		sessionUser = mobileMentorName;
 	}
 
 	if (sessionEmail) {
 		var mobileMentorEmail = sessionEmail;
 	} else {
 		var mobileMentorEmail = $('#mentor-mobile-email-input').val();
+		sessionEmail = mobileMentorEmail;
 	}
 
 	if ($('#mentor-mobile-week-first-input').is(':checked')) {
@@ -385,16 +394,18 @@ $("#summer-signup").click(function(e) {
 	var internWeek = [];
 	var internDays = [];
 	var internTimes = [];
-	
 
-	var mentorName = $('#mentor-name-input').val();
-	var mentorEmail = $('#mentor-email-input').val();
-
-	if (mentorName) {
+	if (sessionUser) {
+		var mentorName = sessionUser;
+	} else {
+		var mentorName = $('#mentor-name-input').val();
 		sessionUser = mentorName;
 	}
 
-	if (mentorEmail) {
+	if (sessionEmail) {
+		var mentorEmail = sessionEmail;
+	} else {
+		var mentorEmail = $('#mentor-email-input').val();
 		sessionEmail = mentorEmail;
 	}
 
