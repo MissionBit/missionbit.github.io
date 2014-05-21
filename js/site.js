@@ -11,17 +11,29 @@ window.jQuery(function ($) {
     }
 });
 
+$("#intern-online-yes").change(function() {
+	$(".remote-mentor-details").show();
+})
+
+$("#firebase-yes").change(function() {
+	$(".remote-mentor").show();
+	$('.firebase-mentor-details').show();
+})
+
 $("#summer-signup").click(function() {
 	var mentorName = $('#mentor-name-input').val();
+	var mentorTitle = $('#mentor-title-input').val();
 
 	var Mentor = Parse.Object.extend("Mentor");
 	var mentor = new Mentor();
 
 	mentor.set("name", mentorName);
+	mentor.set("title", mentorTitle);
+	$("#summer-mentor-form").hide();
 	 
 	mentor.save(null, {
 	  success: function(mentor) {
-	    alert('New object created with objectId: ' + mentor.id);
+	    alert('New object created with objectId: ' + mentor.attributes.title);
 	  },
 	  error: function(mentor, error) {
 	    alert('Failed to create new object, with error code: ' + error.description);

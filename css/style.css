@@ -495,3 +495,26 @@ footer address td.icon {
     font-style: italic;
     font-weight: bold;  
 }
+
+.mentor-form {
+    background-color: silver;
+}
+
+.radio, 
+.checkbox,
+.mentor-name {
+    margin-left: 1em;
+}
+
+/*.internship-description {
+    background-color: slategray;
+}
+
+#summer-mentor-form {
+    background-color: red;
+}
+*/
+
+
+
+

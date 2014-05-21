@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,17 +161,270 @@
 			      	</div>
 			      </div>
 
-			      <div class="col-sm-12 signup-jump">
-			        <p class="summer-description jump-call"> 
-			        	Mission Bit is looking for mentors to support the summer internship in the following ways.  
-			        </p>
-			        <p class="summer-description jump-call"> 
-			        	Serve as remote online tech help for the interns to discuss technical questions they have regarding their project work at Hack Reactor. Hack Reactor mentors will be the front line of help and guidance to the summer interns, but Mission Bit is looking to provide a back up remote tech help channel.  
-			        </p>
-			        <p class="summer-description jump-call"> 
-			        	Serve as remote online tech help for the interns to discuss technical questions they have regarding their project work at Hack Reactor. Hack Reactor mentors will be the front line of help and guidance to the summer interns, but Mission Bit is looking to provide a back up remote tech help channel.  
-			        </p>
-			      </div>
+			      <div id="summer-mentor-form" class="col-sm-12 mentor-form">
+		          <form class="form-horizontal" role="form">
+		          	<div class="row">
+
+						      <div class="col-sm-12 signup-jump">
+						        <p class="summer-description jump-call"> 
+						        	Mission Bit is looking for mentors to support the students' summer internship at Hack Reactor. 
+						        </p>
+						        <p class="summer-description jump-call"> 
+						        	Mentors can serve as remote online tech help for the interns to discuss technical questions they have regarding their project work at Hack Reactor. Hack Reactor mentors will be the front line of help and guidance to the summer interns, but Mission Bit is looking to provide a back up remote tech help channel.  
+						        </p>
+						        <p class="summer-description jump-call"> 
+						        	To help the Mission Bit students get familiar with the tech stack they'll be working with at Hack Reactor, Mentors can hack with the Mission Bit students on a Firebase project on Saturday May 24th from 10am - 4pm.    
+						        </p>
+						      </div>
+			      			<div class="internship-online-question col-sm-12">
+			      				<div class="row">
+
+			      					<div class="col-sm-12 firebase-mentor">
+		                		<p> Are you interested in hacking on a Firebase project with the Mission Bit students on Saturday May 24th to help prepare them for their internship at Hack Reactor? 
+		                		</p>
+		                	</div>
+
+		                	<div id="mentor-firebase-div" class="form-group mentor-input-div firebase-mentor">
+								      	<div class="col-sm-12">
+										      <div class="radio">
+													  <label>
+													    <input type="radio" name="optionsRadios" id="firebase-yes" value="Yes">
+													    Yes
+													  </label>
+													</div>
+
+													<div class="radio">
+													  <label>
+													    <input type="radio" name="optionsRadios" id="firebase-no" value="No">
+													    No
+													  </label>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-sm-12 firebase-mentor-details" hidden>
+		                		<p> Your Full Name  
+		                		</p>
+		                	</div>
+
+		                	<div id="mentor-name-div" class="form-group mentor-input-div firebase-mentor-details" hidden>
+					              <!-- <label for="mentor-name" class="col-sm-2 control-label"> Your Full Name </label> -->
+					              <div class="col-sm-4 mentor-name">
+					                <input 
+					                  id="mentor-name-input" 
+					                  type="text" 
+					                  maxlength="50"
+					                  class="form-control mentor-input" 
+					                  placeholder="First Name Last Name">
+					              </div>
+					            </div>
+
+											<div class="col-sm-12 firebase-mentor-details" hidden>
+		                		<p> What half of the day on Saturday May 24th are you available to hack on a Firebase project with the Mission Bit students?
+		                		</p>
+		                	</div>
+
+											<div id="mentor-firebase-time-div" class="form-group mentor-input-div firebase-mentor-details" hidden>
+					              <div class="col-sm-12">
+				                  <div class="checkbox col-sm-8">
+				                    <label>
+				                      <input 
+				                        id="mentor-firebase-time-AM-input" 
+				                        class="firebase-time" 
+				                        type="checkbox" 
+				                        value="AM">
+				                      10am - 12:30pm
+				                    </label>
+				                  </div>
+				                  <div class="checkbox col-sm-8">
+				                    <label>
+				                      <input 
+				                        id="mentor-firebase-time-PM-input" 
+				                        type="checkbox" 
+				                        class="firebase-time" 
+				                        value="PM">
+				                      1:30pm - 4:00pm
+				                    </label>
+				                  </div>
+					              </div>
+					            </div>
+
+			      					<div class="col-sm-12 remote-mentor" hidden>
+		                		<p> Are you interested in helping as a remote online mentor providing back up tech help support for the Mission Bit students during their internship at Hack Reactor? Its hard at this point to anticipate how much back up support the interns will need. If you sign up, its possible you won't receive any help requests during your shift. 
+		                		</p>
+		                	</div>
+		                	<div id="mentor-intership-div" class="form-group mentor-input-div remote-mentor" hidden>
+								      	<div class="col-sm-12">
+
+										      <div class="radio col-sm-11">
+													  <label>
+													    <input type="radio" name="optionsRadios" id="intern-online-yes" value="Yes">
+													    Yes
+													  </label>
+													</div>
+
+													<div class="radio col-sm-11 col-sm-offset-1">
+													  <label>
+													    <input type="radio" name="optionsRadios" id="intern-online-no" value="No">
+													    No
+													  </label>
+													</div>
+
+												</div>
+											</div>
+
+											<div class="col-sm-12 remote-mentor-details" hidden>
+		                		<p> Which week from June 2 - June 27 are you available to provide support as a remote online mentor? Please check all that apply.  
+		                		</p>
+		                	</div>
+
+							        <div id="mentor-remote-week-div" class="form-group mentor-input-div remote-mentor-details" hidden>
+					              <div class="col-sm-12">
+				                  <div class="checkbox col-sm-8 col-sm-offset-1">
+				                    <label>
+				                      <input 
+				                        id="mentor-remote-week-students-input" 
+				                        class="customer-check" 
+				                        type="checkbox" 
+				                        value="First Week">
+				                      The first week. June 2 - June 6
+				                    </label>
+				                  </div>
+				                  <div class="checkbox col-sm-8 col-sm-offset-1">
+				                    <label>
+				                      <input 
+				                        id="mentor-remote-week-families-input" 
+				                        type="checkbox" 
+				                        class="customer-check" 
+				                        value="Second Week">
+				                      The second week. June 9 - June 13
+				                    </label>
+				                  </div>
+				                  <div class="checkbox col-sm-8 col-sm-offset-1">
+				                    <label>
+				                      <input 
+				                        id="mentor-remote-week-teachers-input" 
+				                        class="customer-check"
+				                        type="checkbox" 
+				                        value="Third Week">
+				                      The third week. June 16 - June 20
+				                    </label>
+				                  </div>
+				                  <div class="checkbox col-sm-8 col-sm-offset-1">
+				                    <label>
+				                      <input 
+				                        id="mentor-remote-week-teachers-input" 
+				                        class="customer-check"
+				                        type="checkbox" 
+				                        value="Fourth Week">
+				                      The fourth week. June 23 - June 27
+				                    </label>
+				                  </div>
+					              </div>
+					            </div>
+
+											<div class="col-sm-12 remote-mentor-details" hidden>
+		                		<p> What weekdays from June 2 through June 27 are you available to provide support as an online remote mentor? Please check all that apply. 
+		                		</p>
+		                	</div>
+
+							        <div id="mentor-remote-day-div" class="form-group mentor-input-div remote-mentor-details" hidden>
+					              <div class="col-sm-12">
+				                  <div class="checkbox col-sm-8 col-sm-offset-1">
+				                    <label>
+				                      <input 
+				                        id="mentor-remote-day-students-input" 
+				                        class="customer-check" 
+				                        type="checkbox" 
+				                        value="Monday">
+				                      Monday
+				                    </label>
+				                  </div>
+				                  <div class="checkbox col-sm-8 col-sm-offset-1">
+				                    <label>
+				                      <input 
+				                        id="mentor-remote-day-families-input" 
+				                        type="checkbox" 
+				                        class="customer-check" 
+				                        value="Tuesday">
+				                      Tuesday
+				                    </label>
+				                  </div>
+				                  <div class="checkbox col-sm-8 col-sm-offset-1">
+				                    <label>
+				                      <input 
+				                        id="mentor-remote-day-teachers-input" 
+				                        class="customer-check"
+				                        type="checkbox" 
+				                        value="Wednesday">
+				                      Wednesday
+				                    </label>
+				                  </div>
+				                  <div class="checkbox col-sm-8 col-sm-offset-1">
+				                    <label>
+				                      <input 
+				                        id="mentor-remote-day-teachers-input" 
+				                        class="customer-check"
+				                        type="checkbox" 
+				                        value="Thursday">
+				                      Thursday
+				                    </label>
+				                  </div>
+				                  <div class="checkbox col-sm-8 col-sm-offset-1">
+				                    <label>
+				                      <input 
+				                        id="mentor-remote-day-teachers-input" 
+				                        class="customer-check"
+				                        type="checkbox" 
+				                        value="Friday">
+				                      Friday
+				                    </label>
+				                  </div>
+					              </div>
+					            </div>
+
+					            <div class="col-sm-12 remote-mentor-details" hidden>
+		                		<p> What half of the day are you available to provide support as an online remote mentor? Please check all that apply.
+		                		</p>
+		                	</div>
+
+							        <div id="mentor-remote-time-div" class="form-group mentor-input-div remote-mentor-details" hidden>
+					              <div class="col-sm-12">
+				                  <div class="checkbox col-sm-8 col-sm-offset-1">
+				                    <label>
+				                      <input 
+				                        id="mentor-remote-time-students-input" 
+				                        class="customer-check" 
+				                        type="checkbox" 
+				                        value="AM">
+				                      9am - 1pm
+				                    </label>
+				                  </div>
+				                  <div class="checkbox col-sm-8 col-sm-offset-1">
+				                    <label>
+				                      <input 
+				                        id="mentor-remote-time-families-input" 
+				                        type="checkbox" 
+				                        class="customer-check" 
+				                        value="PM">
+				                      2pm - 6pm
+				                    </label>
+				                  </div>
+					              </div>
+					            </div>
+
+					            <div class="form-group remote-mentor-details" hidden>
+							          <div id="add-org-button" class="col-sm-offset-1 col-sm-9">
+							            <button id="summer-signup" type="submit" class="btn btn-primary"> SAVE MENTOR DETAILS </button>
+							          </div>
+							        </div>
+
+	                	</div>
+                	</div>
+						      
+			          </div>
+		          </form>
+		        </div>
 
 			    </div>
 	      </div>
@@ -315,71 +567,6 @@
 		      </div>
 		    </div>
 
-		    <div class="headline col-sm-12">
-            <h2> Summer Programs Mentor Sign Up Form </h2>
-        </div>
-
-        <div class="col-sm-12">
-          <form class="form-horizontal" role="form">
-
-          	<div id="mentor-name-div" class="form-group new-partner-input-div">
-              <label for="mentor-name" class="col-sm-2 control-label"> Mentor Full Name </label>
-              <div class="col-sm-4">
-                <input 
-                  id="mentor-name-input" 
-                  type="text" 
-                  maxlength="35"
-                  class="form-control new-partner-input" 
-                  placeholder="First Name Last Name">
-              </div>
-            </div>
-
-<!--             <div id="partner-name-div" class="form-group new-partner-input-div">
-            	<div class="col-sm-8">
-                <div class="row">
-                  <div class="checkbox col-sm-8 col-sm-offset-1">
-                    <label>
-                      <input 
-                        id="partner-customer-students-input" 
-                        class="customer-check" 
-                        type="checkbox" 
-                        value="Students">
-                      Students
-                    </label>
-                  </div>
-                  <div class="checkbox col-sm-8 col-sm-offset-1">
-                    <label>
-                      <input 
-                        id="partner-customer-families-input" 
-                        type="checkbox" 
-                        class="customer-check" 
-                        value="Families"x>
-                      Families
-                    </label>
-                  </div>
-                  <div class="checkbox col-sm-8 col-sm-offset-1">
-                    <label>
-                      <input 
-                        id="partner-customer-teachers-input" 
-                        class="customer-check"
-                        type="checkbox" 
-                        value="Teachers">
-                      Teachers
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
-          </form>
-        </div>
-
-        <div class="form-group">
-          <div id="add-org-button" class="col-sm-offset-3 col-sm-9">
-            <button id="summer-signup" type="submit" class="btn btn-primary"> ADD YOUR ORGANIZATION </button>
-          </div>
-        </div>
-     
     </div>
 </div><!-- /container -->
 
