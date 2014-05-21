@@ -497,9 +497,14 @@ footer address td.icon {
 }
 
 .internship-online-question, 
-.mobile-boolean-question {
-    background-color: silver;
+.mobile-boolean-question,
+.teacher-boolean-question {
+    background-color: rgba(192, 192, 192, 0.25);
     padding: 2em;
+    border-radius: 0.25em;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 1);
+    border: 1px solid rgba(52, 152, 219, 1);
+    margin-top: 1em;
 }
 
 .radio, 
@@ -510,10 +515,40 @@ footer address td.icon {
 }
 
 #save-intern-button,
-#save-mobile-button {
+#save-mobile-button,
+#save-teacher-button {
     margin-left: 1em;
     margin-top: 1em;
 }
+
+.mentor-success {
+    border: 1px solid green;
+    color: green; 
+    text-align: center;
+    margin-top: 1em;
+    border-radius: .25em;
+    background-color: rgba(192, 192, 192, 0.25);
+    box-shadow: 0 0 2px green;
+}
+
+.success-msg {
+    padding-top: .5em;
+} 
+
+.mentor-form {
+    margin-top: 1em;
+}
+
+.the-ask {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.25em;
+}
+
+.question {
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+}
+
 
 
 

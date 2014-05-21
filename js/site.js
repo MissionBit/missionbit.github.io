@@ -54,8 +54,6 @@ $("#mobile-yes").change(function() {
 	$('.mobile-mentor').hide();
 	if (sessionUser && sessionEmail) {
 		$('.mobile-user-info').hide();
-		console.log(sessionUser);
-		console.log(sessionEmail);
 	}
 })
 
@@ -63,6 +61,62 @@ $("#mobile-no").change(function() {
 	$('.mobile-boolean-question').hide();
 	// $('.mobile-mentor').hide();
 })
+
+$("#teacher-yes").change(function() {
+	if (sessionUser && sessionEmail) {
+		$('.teacher-boolean-question').hide();
+
+		var TeacherMentor = Parse.Object.extend("TeacherMentor");
+		var teacherMentor = new TeacherMentor();
+
+		teacherMentor.set("name", sessionUser);
+		teacherMentor.set("email", sessionEmail);
+		teacherMentor.set("info", true);
+
+		$("#summer-mentor-teacher-form").hide();
+		 
+		teacherMentor.save(null, {
+		  success: function(mentor) {
+		  	$('.teacher-mentor-success').show();
+		    console.log('save successful');
+		  },
+		  error: function(mentor, error) {
+		    console.log('Failed to create new object, with error code: ' + error.description);
+		  }
+		});
+	} else {
+		$('.teacher-mentor-details').show();
+		$('.teacher-submit').show();
+		$('.teacher-mentor').hide();
+	}
+})
+
+$('.teacher-submit').click(function(e) {
+	e.preventDefault();
+
+	var teacherMentorName = $('#mentor-teacher-name-input').val();
+	var teacherMentorEmail = $('#mentor-teacher-email-input').val();
+
+	var TeacherMentor = Parse.Object.extend("TeacherMentor");
+	var teacherMentor = new TeacherMentor();
+
+	teacherMentor.set("name", teacherMentorName);
+	teacherMentor.set("email", teacherMentorEmail);
+	teacherMentor.set("info", true);
+
+	$("#summer-mentor-teacher-form").hide();
+		 
+	teacherMentor.save(null, {
+	  success: function(mentor) {
+	  	$('.teacher-mentor-success').show();
+	    console.log('save successful');
+	  },
+	  error: function(mentor, error) {
+	    console.log('Failed to create new object, with error code: ' + error.description);
+	  }
+	});
+})
+
 
 $("#mobile-signup").click(function(e) {
 	
@@ -72,11 +126,17 @@ $("#mobile-signup").click(function(e) {
 	var mobileDays = [];
 	var mobileTimes = [];
 
-	var mobileMentorName = $('#mentor-mobile-name-input').val();
-	console.log(mobileMentorName);
+	if (sessionUser) {
+		var mobileMentorName = sessionUser;
+	} else {
+		var mobileMentorName = $('#mentor-mobile-name-input').val();
+	}
 
-	var mobileMentorEmail = $('#mentor-mobile-email-input').val();
-	console.log(mobileMentorEmail);
+	if (sessionEmail) {
+		var mobileMentorEmail = sessionEmail;
+	} else {
+		var mobileMentorEmail = $('#mentor-mobile-email-input').val();
+	}
 
 	if ($('#mentor-mobile-week-first-input').is(':checked')) {
 		var mobileWeekOne = $('#mentor-mobile-week-first-input').val();
@@ -163,6 +223,7 @@ $("#mobile-signup").click(function(e) {
 	 
 	mobileMentor.save(null, {
 	  success: function(mentor) {
+	  	$('.mobile-mentor-success').show();
 	    console.log('save successful');
 	  },
 	  error: function(mentor, error) {
@@ -170,7 +231,7 @@ $("#mobile-signup").click(function(e) {
 	  }
 	});
 
-	})
+})
 
 $("#summer-signup").click(function(e) {
 	
@@ -276,6 +337,7 @@ $("#summer-signup").click(function(e) {
 	internMentor.save(null, {
 	  success: function(mentor) {
 	    console.log('save successful');
+	    $('.intern-mentor-success').show();
 	  },
 	  error: function(mentor, error) {
 	    console.log('Failed to create new object, with error code: ' + error.description);
