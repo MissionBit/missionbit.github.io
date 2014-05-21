@@ -11,8 +11,8 @@ window.jQuery(function ($) {
     }
 });
 
-var sessionUser = null;
-
+var sessionUser;
+var sessionEmail;
 
 $("#firebase-yes").change(function() {
 	$(".remote-mentor").show();
@@ -52,6 +52,11 @@ $("#mobile-yes").change(function() {
 	$('.mobile-mentor-details').show();
 	$('.mobile-submit').show();
 	$('.mobile-mentor').hide();
+	if (sessionUser && sessionEmail) {
+		$('.mobile-user-info').hide();
+		console.log(sessionUser);
+		console.log(sessionEmail);
+	}
 })
 
 $("#mobile-no").change(function() {
@@ -67,7 +72,103 @@ $("#mobile-signup").click(function(e) {
 	var mobileDays = [];
 	var mobileTimes = [];
 
-	console.log('mobile button working');
+	var mobileMentorName = $('#mentor-mobile-name-input').val();
+	console.log(mobileMentorName);
+
+	var mobileMentorEmail = $('#mentor-mobile-email-input').val();
+	console.log(mobileMentorEmail);
+
+	if ($('#mentor-mobile-week-first-input').is(':checked')) {
+		var mobileWeekOne = $('#mentor-mobile-week-first-input').val();
+		mobileWeeks.push(mobileWeekOne);
+	}
+
+	if ($('#mentor-mobile-week-second-input').is(':checked')) {
+		var mobileWeekTwo = $('#mentor-mobile-week-second-input').val();
+		mobileWeeks.push(mobileWeekTwo);
+	}
+
+	if ($('#mentor-mobile-week-third-input').is(':checked')) {
+		var mobileWeekThree = $('#mentor-mobile-week-third-input').val();
+		mobileWeeks.push(mobileWeekThree);
+	}
+
+	if ($('#mentor-mobile-week-fourth-input').is(':checked')) {
+		var mobileWeekFour = $('#mentor-mobile-week-fourth-input').val();
+		mobileWeeks.push(mobileWeekFour);
+	}
+
+	if ($('#mentor-mobile-week-fifth-input').is(':checked')) {
+		var mobileWeekFive = $('#mentor-mobile-week-fifth-input').val();
+		mobileWeeks.push(mobileWeekFive);
+	}
+
+	if ($('#mentor-mobile-week-sixth-input').is(':checked')) {
+		var mobileWeekSix = $('#mentor-mobile-week-sixth-input').val();
+		mobileWeeks.push(mobileWeekSix);
+	}
+	console.log(mobileWeeks);
+
+	if ($('#mentor-mobile-day-monday-input').is(':checked')) {
+		var monday = $('#mentor-mobile-day-monday-input').val();
+		mobileDays.push(monday);
+	}
+
+	if ($('#mentor-mobile-day-tuesday-input').is(':checked')) {
+		var tuesday = $('#mentor-mobile-day-tuesday-input').val();
+		mobileDays.push(tuesday);
+	}
+
+	if ($('#mentor-mobile-day-wednesday-input').is(':checked')) {
+		var wednesday = $('#mentor-mobile-day-wednesday-input').val();
+		mobileDays.push(wednesday);
+	}
+
+	if ($('#mentor-mobile-day-thursday-input').is(':checked')) {
+		var thursday = $('#mentor-mobile-day-thursday-input').val();
+		mobileDays.push(thursday);
+	}
+
+	if ($('#mentor-mobile-day-friday-input').is(':checked')) {
+		var friday = $('#mentor-mobile-day-friday-input').val();
+		mobileDays.push(friday);
+	}
+	console.log(mobileDays);
+
+	if ($('#mentor-mobile-time-1012-input').is(':checked')) {
+		var mobile1012 = $('#mentor-mobile-time-1012-input').val();
+		mobileTimes.push(mobile1012);
+	}
+
+	if ($('#mentor-mobile-time-13-input').is(':checked')) {
+		var mobile13 = $('#mentor-mobile-time-13-input').val();
+		mobileTimes.push(mobile13);
+	}
+
+	if ($('#mentor-mobile-time-24-input').is(':checked')) {
+		var mobile24 = $('#mentor-mobile-time-24-input').val();
+		mobileTimes.push(mobile24);
+	}
+	console.log(mobileTimes);	
+
+	var MobileMentor = Parse.Object.extend("MobileMentor");
+	var mobileMentor = new MobileMentor();
+
+	mobileMentor.set("name", mobileMentorName);
+	mobileMentor.set("email", mobileMentorEmail);
+	mobileMentor.set("mobileWeeks", mobileWeeks);
+	mobileMentor.set("mobileDays", mobileDays);
+	mobileMentor.set("mobileTimes", mobileTimes);
+	$("#summer-mentor-mobile-form").hide();
+	 
+	mobileMentor.save(null, {
+	  success: function(mentor) {
+	    console.log('save successful');
+	  },
+	  error: function(mentor, error) {
+	    console.log('Failed to create new object, with error code: ' + error.description);
+	  }
+	});
 
 	})
 
@@ -82,9 +183,14 @@ $("#summer-signup").click(function(e) {
 	
 
 	var mentorName = $('#mentor-name-input').val();
+	var mentorEmail = $('#mentor-email-input').val();
 
 	if (mentorName) {
 		sessionUser = mentorName;
+	}
+
+	if (mentorEmail) {
+		sessionEmail = mentorEmail;
 	}
 
 	if ($('#mentor-firebase-time-AM-input').is(':checked')) {
@@ -97,7 +203,6 @@ $("#summer-signup").click(function(e) {
 		fireTime.push(mentorFirePM);
 	}
 	console.log(fireTime);
-
 
 	if ($('#mentor-remote-week-first-input').is(':checked')) {
 		var internWeekOne = $('#mentor-remote-week-first-input').val();
@@ -157,17 +262,18 @@ $("#summer-signup").click(function(e) {
 	}
 	console.log(internTimes);
 
-	var Mentor = Parse.Object.extend("Mentor");
-	var mentor = new Mentor();
+	var InternMentor = Parse.Object.extend("InternMentor");
+	var internMentor = new InternMentor();
 
-	mentor.set("name", mentorName);
-	mentor.set("fireTimes", fireTime);
-	mentor.set("internWeeks", internWeek);
-	mentor.set("internDays", internDays);
-	mentor.set("internTimes", internTimes);
-	$("#summer-mentor-form").hide();
+	internMentor.set("name", mentorName);
+	internMentor.set("name", mentorEmail);
+	internMentor.set("fireTimes", fireTime);
+	internMentor.set("internWeeks", internWeek);
+	internMentor.set("internDays", internDays);
+	internMentor.set("internTimes", internTimes);
+	$("#summer-mentor-intern-form").hide();
 	 
-	mentor.save(null, {
+	internMentor.save(null, {
 	  success: function(mentor) {
 	    console.log('save successful');
 	  },

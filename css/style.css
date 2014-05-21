@@ -504,7 +504,8 @@ footer address td.icon {
 
 .radio, 
 .checkbox,
-.mentor-name {
+.mentor-name,
+.mentor-email {
     margin-left: 1em;
 }
 
