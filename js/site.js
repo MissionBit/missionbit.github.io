@@ -11,14 +11,42 @@ window.jQuery(function ($) {
     }
 });
 
-$("#intern-online-yes").change(function() {
-	$(".remote-mentor-details").show();
-})
+var firebaseYes;
 
 $("#firebase-yes").change(function() {
 	$(".remote-mentor").show();
 	$('.firebase-mentor-details').show();
+	$('.firebase-mentor').hide();
+	firebaseYes = true;
 })
+
+$("#firebase-no").change(function() {
+	$(".remote-mentor").show();
+	// $("#intern-online-yes").addClass("no-yes");
+	// $("#intern-online-yes").removeClass("remote-yes");
+	// $("#intern-online-no").addClass("no-no");
+	// $("#intern-online-no").removeClass("remote-no");
+	$('.firebase-mentor').hide();
+	firebaseYes = false;
+})
+
+$("#intern-online-yes").change(function() {
+	$(".remote-mentor-details").show();
+	$(".internship-submit").show();
+	$('.remote-mentor').hide();
+})
+
+if (firebaseYes) {
+	$("#intern-online-no").change(function() {
+		$(".internship-submit").show();
+		$('.remote-mentor').hide();
+	})
+} else {
+	$("#intern-online-no").change(function() {
+		$('.internship-online-question').hide();
+	})
+}
+
 
 $("#summer-signup").click(function() {
 	var mentorName = $('#mentor-name-input').val();
