@@ -319,9 +319,22 @@
             <h2> Summer Programs Mentor Sign Up Form </h2>
         </div>
 
-        <div class="col-sm-10 col-sm-offset-2">
+        <div class="col-sm-12">
           <form class="form-horizontal" role="form">
-            <div id="partner-name-div" class="form-group new-partner-input-div">
+
+          	<div id="mentor-name-div" class="form-group new-partner-input-div">
+              <label for="mentor-name" class="col-sm-2 control-label"> Mentor Full Name </label>
+              <div class="col-sm-4">
+                <input 
+                  id="mentor-name-input" 
+                  type="text" 
+                  maxlength="35"
+                  class="form-control new-partner-input" 
+                  placeholder="First Name Last Name">
+              </div>
+            </div>
+
+<!--             <div id="partner-name-div" class="form-group new-partner-input-div">
             	<div class="col-sm-8">
                 <div class="row">
                   <div class="checkbox col-sm-8 col-sm-offset-1">
@@ -356,10 +369,17 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
+
           </form>
         </div>
-      
+
+        <div class="form-group">
+          <div id="add-org-button" class="col-sm-offset-3 col-sm-9">
+            <button id="summer-signup" type="submit" class="btn btn-primary"> ADD YOUR ORGANIZATION </button>
+          </div>
+        </div>
+     
     </div>
 </div><!-- /container -->
 
@@ -425,6 +445,11 @@
   ga('create', 'UA-47473369-1', 'missionbit.com');
   ga('require', 'linkid', 'linkid.js');
   ga('send', 'pageview');
+</script>
+<!-- PARSE -->
+<script src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+<script> 
+	Parse.initialize("w39zwZoBCaH3HAmDecx7shBkR4Od4G6bpfd0rBuY", "EO4wwBBLCOl1MDnboPWCyWs7H1p2YQIwLlId0apw");
 </script>
 </body>
 </html>

@@ -10,3 +10,23 @@ window.jQuery(function ($) {
         $('.doge-qrcode').qrcode($('.doge-qrcode').data('qrcode'));
     }
 });
+
+$("#summer-signup").click(function() {
+	var mentorName = $('#mentor-name-input').val();
+
+	var Mentor = Parse.Object.extend("Mentor");
+	var mentor = new Mentor();
+
+	mentor.set("name", mentorName);
+	 
+	mentor.save(null, {
+	  success: function(mentor) {
+	    alert('New object created with objectId: ' + mentor.id);
+	  },
+	  error: function(mentor, error) {
+	    alert('Failed to create new object, with error code: ' + error.description);
+	  }
+	});
+
+})
+
