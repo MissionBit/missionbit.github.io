@@ -496,7 +496,8 @@ footer address td.icon {
     font-weight: bold;  
 }
 
-.internship-online-question {
+.internship-online-question, 
+.mobile-boolean-question {
     background-color: silver;
     padding: 2em;
 }
@@ -507,7 +508,8 @@ footer address td.icon {
     margin-left: 1em;
 }
 
-#save-intern-button {
+#save-intern-button,
+#save-mobile-button {
     margin-left: 1em;
     margin-top: 1em;
 }

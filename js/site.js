@@ -11,6 +11,8 @@ window.jQuery(function ($) {
     }
 });
 
+var sessionUser = null;
+
 
 $("#firebase-yes").change(function() {
 	$(".remote-mentor").show();
@@ -37,7 +39,6 @@ $("#intern-online-no-yes").change(function() {
 	$('.remote-mentor').hide();
 })
 
-
 $("#intern-online-no").change(function() {
 	$(".internship-submit").show();
 	$('.remote-mentor').hide();
@@ -47,7 +48,28 @@ $("#intern-online-no-no").change(function() {
 	$('.internship-online-question').hide();
 })
 
+$("#mobile-yes").change(function() {
+	$('.mobile-mentor-details').show();
+	$('.mobile-submit').show();
+	$('.mobile-mentor').hide();
+})
 
+$("#mobile-no").change(function() {
+	$('.mobile-boolean-question').hide();
+	// $('.mobile-mentor').hide();
+})
+
+$("#mobile-signup").click(function(e) {
+	
+	e.preventDefault();
+
+	var mobileWeeks = [];
+	var mobileDays = [];
+	var mobileTimes = [];
+
+	console.log('mobile button working');
+
+	})
 
 $("#summer-signup").click(function(e) {
 	
@@ -56,9 +78,14 @@ $("#summer-signup").click(function(e) {
 	var fireTime = [];
 	var internWeek = [];
 	var internDays = [];
+	var internTimes = [];
 	
 
 	var mentorName = $('#mentor-name-input').val();
+
+	if (mentorName) {
+		sessionUser = mentorName;
+	}
 
 	if ($('#mentor-firebase-time-AM-input').is(':checked')) {
 		var mentorFireAM = $('#mentor-firebase-time-AM-input').val();
@@ -119,21 +146,35 @@ $("#summer-signup").click(function(e) {
 	}
 	console.log(internDays);
 
-	// var Mentor = Parse.Object.extend("Mentor");
-	// var mentor = new Mentor();
+	if ($('#mentor-remote-time-AM-input').is(':checked')) {
+		var mentorRemoteAM = $('#mentor-remote-time-AM-input').val();
+		internTimes.push(mentorRemoteAM);
+	}
 
-	// mentor.set("name", mentorName);
-	// mentor.set("title", mentorTitle);
-	// $("#summer-mentor-form").hide();
+	if ($('#mentor-remote-time-PM-input').is(':checked')) {
+		var mentorRemotePM = $('#mentor-remote-time-PM-input').val();
+		internTimes.push(mentorRemotePM);
+	}
+	console.log(internTimes);
+
+	var Mentor = Parse.Object.extend("Mentor");
+	var mentor = new Mentor();
+
+	mentor.set("name", mentorName);
+	mentor.set("fireTimes", fireTime);
+	mentor.set("internWeeks", internWeek);
+	mentor.set("internDays", internDays);
+	mentor.set("internTimes", internTimes);
+	$("#summer-mentor-form").hide();
 	 
-	// mentor.save(null, {
-	//   success: function(mentor) {
-	//     alert('New object created with objectId: ' + mentor.attributes.title);
-	//   },
-	//   error: function(mentor, error) {
-	//     alert('Failed to create new object, with error code: ' + error.description);
-	//   }
-	// });
+	mentor.save(null, {
+	  success: function(mentor) {
+	    console.log('save successful');
+	  },
+	  error: function(mentor, error) {
+	    console.log('Failed to create new object, with error code: ' + error.description);
+	  }
+	});
 
 })
 
