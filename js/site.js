@@ -40,12 +40,14 @@ $('.mhs-project-submit').click(function(e) {
 		var mhsCoderName = sessionUser;
 	} else {
 		var mhsCoderName = $('#project-mhs-name-input').val();
+		sessionUser = mhsCoderName;
 	}
 
 	if (sessionEmail) {
 		var mhsCoderEmail = sessionEmail;
 	} else {
 		var mhsCoderEmail = $('#project-mhs-email-input').val();
+		sessionEmail = mhsCoderEmail;
 	}
 
 	if ($('#mhsLead').is(':checked')) {
@@ -74,6 +76,77 @@ $('.mhs-project-submit').click(function(e) {
 	missionProject.save(null, {
 	  success: function(project) {
 	  	$('.mhs-project-success').show();
+	    console.log('save successful');
+	  },
+	  error: function(project, error) {
+	    console.log('Failed to create new object, with error code: ' + error.description);
+	  }
+	});
+
+})
+
+$("#sfusdLead").change(function() {
+	$('.sfusd-project-details').show();
+	$('.sfusd-project-submit').show();
+	if (sessionUser && sessionEmail) {
+		$('.sfusd-session-info').hide();
+	}
+})
+
+$("#sfusdHack").change(function() {
+	$('.sfusd-project-details').show();
+	$('.sfusd-project-submit').show();
+	if (sessionUser && sessionEmail) {
+		$('.sfusd-session-info').hide();
+	}
+})
+
+$('.sfusd-project-submit').click(function(e) {
+	e.preventDefault();
+	console.log('sfusd in the house');
+
+	var coderRoles = [];
+
+	if (sessionUser) {
+		var sfusdCoderName = sessionUser;
+	} else {
+		var sfusdCoderName = $('#project-sfusd-name-input').val();
+		sessionUser = sfusdCoderName;
+	}
+
+	if (sessionEmail) {
+		var sfusdCoderEmail = sessionEmail;
+	} else {
+		var sfusdCoderEmail = $('#project-sfusd-email-input').val();
+		sessionEmail = sfusdCoderEmail;
+	}
+
+	if ($('#sfusdLead').is(':checked')) {
+		var sfusdLead = $('#sfusdLead').val();
+		coderRoles.push(sfusdLead);
+	}
+
+	if ($('#sfusdHack').is(':checked')) {
+		var sfusdHack = $('#sfusdHack').val();
+		coderRoles.push(sfusdHack);
+	}
+
+	console.log(coderRoles);
+	console.log(sfusdCoderEmail);
+	console.log(sfusdCoderName);
+
+	var UnifiedProject = Parse.Object.extend("UnifiedProject");
+	var unifiedProject = new UnifiedProject();
+
+	unifiedProject.set("name", sfusdCoderName);
+	unifiedProject.set("email", sfusdCoderEmail);
+	unifiedProject.set("roles", coderRoles);
+
+	$("#project-sfusd-vendor-form").hide();
+	 
+	unifiedProject.save(null, {
+	  success: function(project) {
+	  	$('.sfusd-project-success').show();
 	    console.log('save successful');
 	  },
 	  error: function(project, error) {

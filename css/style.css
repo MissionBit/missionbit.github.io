@@ -499,7 +499,8 @@ footer address td.icon {
 .internship-online-question, 
 .mobile-boolean-question,
 .teacher-boolean-question,
-.mhs-project-form-body {
+.mhs-project-form-body,
+.sfusd-project-form-body {
     background-color: rgba(192, 192, 192, 0.25);
     padding: 2em;
     border-radius: 0.25em;
@@ -520,7 +521,8 @@ footer address td.icon {
 #save-intern-button,
 #save-mobile-button,
 #save-teacher-button,
-#save-mhs-project-button {
+#save-mhs-project-button,
+#save-sfusd-project-button {
     margin-left: 1em;
     margin-top: 1em;
 }
