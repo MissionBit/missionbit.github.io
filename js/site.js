@@ -14,6 +14,77 @@ window.jQuery(function ($) {
 var sessionUser;
 var sessionEmail;
 
+$("#mhsLead").change(function() {
+	$('.mhs-project-details').show();
+	$('.mhs-project-submit').show();
+	if (sessionUser && sessionEmail) {
+		$('.mhs-session-info').hide();
+	}
+})
+
+$("#mhsHack").change(function() {
+	$('.mhs-project-details').show();
+	$('.mhs-project-submit').show();
+	if (sessionUser && sessionEmail) {
+		$('.mhs-session-info').hide();
+	}
+})
+
+$('.mhs-project-submit').click(function(e) {
+	e.preventDefault();
+	console.log('mhs in the house');
+
+	var coderRoles = [];
+
+	if (sessionUser) {
+		var mhsCoderName = sessionUser;
+	} else {
+		var mhsCoderName = $('#project-mhs-name-input').val();
+	}
+
+	if (sessionEmail) {
+		var mhsCoderEmail = sessionEmail;
+	} else {
+		var mhsCoderEmail = $('#project-mhs-email-input').val();
+	}
+
+	if ($('#mhsLead').is(':checked')) {
+		var mhsLead = $('#mhsLead').val();
+		coderRoles.push(mhsLead);
+	}
+
+	if ($('#mhsHack').is(':checked')) {
+		var mhsHack = $('#mhsHack').val();
+		coderRoles.push(mhsHack);
+	}
+
+	console.log(coderRoles);
+	console.log(mhsCoderEmail);
+	console.log(mhsCoderName);
+
+	var MissionProject = Parse.Object.extend("MissionProject");
+	var missionProject = new MissionProject();
+
+	missionProject.set("name", mhsCoderName);
+	missionProject.set("email", mhsCoderEmail);
+	missionProject.set("roles",coderRoles);
+
+	$("#project-mission-map-form").hide();
+	 
+	missionProject.save(null, {
+	  success: function(project) {
+	  	$('.mhs-project-success').show();
+	    console.log('save successful');
+	  },
+	  error: function(project, error) {
+	    console.log('Failed to create new object, with error code: ' + error.description);
+	  }
+	});
+
+})
+
+
+
 $("#firebase-yes").change(function() {
 	$(".remote-mentor").show();
 	$('.firebase-mentor-details').show();

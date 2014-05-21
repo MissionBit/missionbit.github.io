@@ -498,7 +498,8 @@ footer address td.icon {
 
 .internship-online-question, 
 .mobile-boolean-question,
-.teacher-boolean-question {
+.teacher-boolean-question,
+.mhs-project-form-body {
     background-color: rgba(192, 192, 192, 0.25);
     padding: 2em;
     border-radius: 0.25em;
@@ -510,18 +511,22 @@ footer address td.icon {
 .radio, 
 .checkbox,
 .mentor-name,
-.mentor-email {
+.mentor-email, 
+.project-name,
+.project-email {
     margin-left: 1em;
 }
 
 #save-intern-button,
 #save-mobile-button,
-#save-teacher-button {
+#save-teacher-button,
+#save-mhs-project-button {
     margin-left: 1em;
     margin-top: 1em;
 }
 
-.mentor-success {
+.mentor-success,
+.project-success {
     border: 1px solid green;
     color: green; 
     text-align: center;
@@ -547,6 +552,14 @@ footer address td.icon {
 
 .question {
     font-family: 'SourceCodeProSemiBold', sans-serif;
+}
+
+.owner-header {
+    font-weight: bold;
+}
+
+.owner-name {
+    font-style: italic;
 }
 
 
