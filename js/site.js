@@ -215,11 +215,13 @@ $("#intern-online-yes").change(function() {
 })
 
 $("#intern-online-no").change(function() {
-	$('.intern-user-info').show();
 	$(".remote-mentor-details").hide();
 	$("#intern-online-yes").attr('checked', false);
-	$(".internship-submit").show();
 	$('.intern-mentor-success').hide();
+	if ($("#firebase-yes").is(':checked')) {
+		$('.intern-user-info').show();
+		$(".internship-submit").show();
+	}
 	if (sessionUser) {
 		$('#mentor-name-input').val(sessionUser);
 	}
@@ -244,8 +246,8 @@ $("#mobile-yes").change(function() {
 
 $("#mobile-no").change(function() {
 	$('.mobile-mentor-details').hide();
-	$('.mobile-submit').show();
-	$('.mobile-user-info').show();
+	// $('.mobile-submit').show();
+	// $('.mobile-user-info').show();
 	$('.mobile-mentor-success').hide();
 	$("#mobile-yes").attr('checked', false);
 	// $('.mobile-boolean-question').hide();
@@ -272,8 +274,8 @@ $("#teacher-no").change(function() {
 	if (sessionEmail) {
 		$('#mentor-teacher-email-input').val(sessionEmail);
 	}
-	$('.teacher-mentor-details').show();
-	$('.teacher-submit').show();
+	// $('.teacher-mentor-details').show();
+	// $('.teacher-submit').show();
 	$('.teacher-mentor-success').hide();
 	$("#teacher-yes").attr('checked', false);
 })
