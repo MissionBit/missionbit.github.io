@@ -23,9 +23,6 @@ $("#mhsLead").change(function() {
 	if (sessionEmail) {
 		$('#project-mhs-email-input').val(sessionEmail);
 	}
-	// if (sessionUser && sessionEmail) {
-	// 	$('.mhs-session-info').hide();
-	// }
 })
 
 $("#mhsHack").change(function() {
@@ -37,14 +34,10 @@ $("#mhsHack").change(function() {
 	if (sessionEmail) {
 		$('#project-mhs-email-input').val(sessionEmail);
 	}
-	// if (sessionUser && sessionEmail) {
-	// 	$('.mhs-session-info').hide();
-	// }
 })
 
 $('.mhs-project-submit').click(function(e) {
 	e.preventDefault();
-	console.log('mhs in the house');
 
 	var coderRoles = [];
 
@@ -83,7 +76,7 @@ $('.mhs-project-submit').click(function(e) {
 	missionProject.set("email", mhsCoderEmail);
 	missionProject.set("roles",coderRoles);
 
-	$("#project-mission-map-form").hide();
+	// $("#project-mission-map-form").hide();
 	 
 	missionProject.save(null, {
 	  success: function(project) {
@@ -106,9 +99,6 @@ $("#sfusdLead").change(function() {
 	if (sessionEmail) {
 		$('#project-sfusd-email-input').val(sessionEmail);
 	}
-	// if (sessionUser && sessionEmail) {
-	// 	$('.sfusd-session-info').hide();
-	// }
 })
 
 $("#sfusdHack").change(function() {
@@ -120,14 +110,10 @@ $("#sfusdHack").change(function() {
 	if (sessionEmail) {
 		$('#project-sfusd-email-input').val(sessionEmail);
 	}
-	// if (sessionUser && sessionEmail) {
-	// 	$('.sfusd-session-info').hide();
-	// }
 })
 
 $('.sfusd-project-submit').click(function(e) {
 	e.preventDefault();
-	console.log('sfusd in the house');
 
 	var coderRoles = [];
 
@@ -166,7 +152,7 @@ $('.sfusd-project-submit').click(function(e) {
 	unifiedProject.set("email", sfusdCoderEmail);
 	unifiedProject.set("roles", coderRoles);
 
-	$("#project-sfusd-vendor-form").hide();
+	// $("#project-sfusd-vendor-form").hide();
 	 
 	unifiedProject.save(null, {
 	  success: function(project) {
