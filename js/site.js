@@ -17,17 +17,29 @@ var sessionEmail;
 $("#mhsLead").change(function() {
 	$('.mhs-project-details').show();
 	$('.mhs-project-submit').show();
-	if (sessionUser && sessionEmail) {
-		$('.mhs-session-info').hide();
+	if (sessionUser) {
+		$('#project-mhs-name-input').val(sessionUser);
 	}
+	if (sessionEmail) {
+		$('#project-mhs-email-input').val(sessionEmail);
+	}
+	// if (sessionUser && sessionEmail) {
+	// 	$('.mhs-session-info').hide();
+	// }
 })
 
 $("#mhsHack").change(function() {
 	$('.mhs-project-details').show();
 	$('.mhs-project-submit').show();
-	if (sessionUser && sessionEmail) {
-		$('.mhs-session-info').hide();
+	if (sessionUser) {
+		$('#project-mhs-name-input').val(sessionUser);
 	}
+	if (sessionEmail) {
+		$('#project-mhs-email-input').val(sessionEmail);
+	}
+	// if (sessionUser && sessionEmail) {
+	// 	$('.mhs-session-info').hide();
+	// }
 })
 
 $('.mhs-project-submit').click(function(e) {
@@ -88,17 +100,29 @@ $('.mhs-project-submit').click(function(e) {
 $("#sfusdLead").change(function() {
 	$('.sfusd-project-details').show();
 	$('.sfusd-project-submit').show();
-	if (sessionUser && sessionEmail) {
-		$('.sfusd-session-info').hide();
+	if (sessionUser) {
+		$('#project-sfusd-name-input').val(sessionUser);
 	}
+	if (sessionEmail) {
+		$('#project-sfusd-email-input').val(sessionEmail);
+	}
+	// if (sessionUser && sessionEmail) {
+	// 	$('.sfusd-session-info').hide();
+	// }
 })
 
 $("#sfusdHack").change(function() {
 	$('.sfusd-project-details').show();
 	$('.sfusd-project-submit').show();
-	if (sessionUser && sessionEmail) {
-		$('.sfusd-session-info').hide();
+	if (sessionUser) {
+		$('#project-sfusd-name-input').val(sessionUser);
 	}
+	if (sessionEmail) {
+		$('#project-sfusd-email-input').val(sessionEmail);
+	}
+	// if (sessionUser && sessionEmail) {
+	// 	$('.sfusd-session-info').hide();
+	// }
 })
 
 $('.sfusd-project-submit').click(function(e) {
@@ -159,57 +183,70 @@ $('.sfusd-project-submit').click(function(e) {
 $("#firebase-yes").change(function() {
 	$(".remote-mentor").show();
 	$('.firebase-mentor-details').show();
-	$('#remote-mentor-no').remove();
-	$('.firebase-mentor').hide();
-	if (sessionUser && sessionEmail) {
-		$('.intern-user-info').hide();
+	$("#firebase-no").attr('checked', false);
+	// $('#remote-mentor-no').remove();
+	// $('.firebase-mentor').hide();
+	if (sessionUser) {
+		$('#mentor-name-input').val(sessionUser);
 	}
+	if (sessionEmail) {
+		$('#mentor-email-input').val(sessionEmail);
+	}
+	// if (sessionUser && sessionEmail) {
+	// 	$('.intern-user-info').hide();
+	// }
 })
 
 $("#firebase-no").change(function() {
 	$(".remote-mentor").show();
-	$('.firebase-mentor').hide();
-	$('#remote-mentor-yes').remove();
+	// $('.firebase-mentor-details').hide();
+	// $('.firebase-mentor').hide();
+	$("#firebase-yes").attr('checked', false);
+	// $(".internship-submit").show();
+	// $('#remote-mentor-yes').remove();
 })
 
 $("#intern-online-yes").change(function() {
 	$(".remote-mentor-details").show();
 	$(".internship-submit").show();
-	$('.remote-mentor').hide();
-	if (sessionUser && sessionEmail) {
-		$('.intern-user-info').hide();
+	$("#intern-online-no").attr('checked', false);
+	if (sessionUser) {
+		$('#mentor-name-input').val(sessionUser);
 	}
-})
-
-$("#intern-online-no-yes").change(function() {
-	$(".remote-mentor-details").show();
-	$(".internship-submit").show();
-	$('.remote-mentor').hide();
-	if (sessionUser && sessionEmail) {
-		$('.intern-user-info').hide();
+	if (sessionEmail) {
+		$('#mentor-email-input').val(sessionEmail);
 	}
 })
 
 $("#intern-online-no").change(function() {
+	$('.intern-user-info').show();
+	$("#intern-online-yes").attr('checked', false);
 	$(".internship-submit").show();
-	$('.remote-mentor').hide();
 })
 
-$("#intern-online-no-no").change(function() {
-	$('.internship-online-question').hide();
-})
 
 $("#mobile-yes").change(function() {
 	$('.mobile-mentor-details').show();
 	$('.mobile-submit').show();
-	$('.mobile-mentor').hide();
-	if (sessionUser && sessionEmail) {
-		$('.mobile-user-info').hide();
+	$("#mobile-no").attr('checked', false);
+	// $('.mobile-mentor').hide();
+	if (sessionUser) {
+		$('#mentor-mobile-name-input').val(sessionUser);
 	}
+	if (sessionEmail) {
+		$('#mentor-mobile-email-input').val(sessionEmail);
+	}
+	// if (sessionUser && sessionEmail) {
+	// 	$('.mobile-user-info').hide();
+	// }
 })
 
 $("#mobile-no").change(function() {
-	$('.mobile-boolean-question').hide();
+	$('.mobile-mentor-details').hide();
+	$('.mobile-submit').hide();
+	$('.mobile-mentor').show();
+	$("#mobile-yes").attr('checked', false);
+	// $('.mobile-boolean-question').hide();
 	// $('.mobile-mentor').hide();
 })
 
