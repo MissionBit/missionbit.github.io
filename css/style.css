@@ -536,6 +536,7 @@ footer address td.icon {
     border-radius: .25em;
     background-color: rgba(192, 192, 192, 0.25);
     box-shadow: 0 0 2px green;
+    margin-bottom: 1em;
 }
 
 .success-msg {

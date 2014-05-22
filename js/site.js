@@ -183,32 +183,28 @@ $('.sfusd-project-submit').click(function(e) {
 $("#firebase-yes").change(function() {
 	$(".remote-mentor").show();
 	$('.firebase-mentor-details').show();
+	// $('.intern-user-info').show();
+	// $(".internship-submit").show();
 	$("#firebase-no").attr('checked', false);
-	// $('#remote-mentor-no').remove();
-	// $('.firebase-mentor').hide();
 	if (sessionUser) {
 		$('#mentor-name-input').val(sessionUser);
 	}
 	if (sessionEmail) {
 		$('#mentor-email-input').val(sessionEmail);
 	}
-	// if (sessionUser && sessionEmail) {
-	// 	$('.intern-user-info').hide();
-	// }
 })
 
 $("#firebase-no").change(function() {
 	$(".remote-mentor").show();
-	// $('.firebase-mentor-details').hide();
-	// $('.firebase-mentor').hide();
+	$('.firebase-mentor-details').hide();
 	$("#firebase-yes").attr('checked', false);
-	// $(".internship-submit").show();
-	// $('#remote-mentor-yes').remove();
 })
 
 $("#intern-online-yes").change(function() {
 	$(".remote-mentor-details").show();
 	$(".internship-submit").show();
+	$('.intern-user-info').show();
+	$('.mobile-mentor-success').hide();
 	$("#intern-online-no").attr('checked', false);
 	if (sessionUser) {
 		$('#mentor-name-input').val(sessionUser);
@@ -220,63 +216,66 @@ $("#intern-online-yes").change(function() {
 
 $("#intern-online-no").change(function() {
 	$('.intern-user-info').show();
+	$(".remote-mentor-details").hide();
 	$("#intern-online-yes").attr('checked', false);
 	$(".internship-submit").show();
+	$('.intern-mentor-success').hide();
+	if (sessionUser) {
+		$('#mentor-name-input').val(sessionUser);
+	}
+	if (sessionEmail) {
+		$('#mentor-email-input').val(sessionEmail);
+	}
 })
 
 
 $("#mobile-yes").change(function() {
 	$('.mobile-mentor-details').show();
 	$('.mobile-submit').show();
+	$('.mobile-mentor-success').hide();
 	$("#mobile-no").attr('checked', false);
-	// $('.mobile-mentor').hide();
 	if (sessionUser) {
 		$('#mentor-mobile-name-input').val(sessionUser);
 	}
 	if (sessionEmail) {
 		$('#mentor-mobile-email-input').val(sessionEmail);
 	}
-	// if (sessionUser && sessionEmail) {
-	// 	$('.mobile-user-info').hide();
-	// }
 })
 
 $("#mobile-no").change(function() {
 	$('.mobile-mentor-details').hide();
-	$('.mobile-submit').hide();
-	$('.mobile-mentor').show();
+	$('.mobile-submit').show();
+	$('.mobile-user-info').show();
+	$('.mobile-mentor-success').hide();
 	$("#mobile-yes").attr('checked', false);
 	// $('.mobile-boolean-question').hide();
 	// $('.mobile-mentor').hide();
 })
 
 $("#teacher-yes").change(function() {
-	if (sessionUser && sessionEmail) {
-		$('.teacher-boolean-question').hide();
-
-		var TeacherMentor = Parse.Object.extend("TeacherMentor");
-		var teacherMentor = new TeacherMentor();
-
-		teacherMentor.set("name", sessionUser);
-		teacherMentor.set("email", sessionEmail);
-		teacherMentor.set("info", true);
-
-		$("#summer-mentor-teacher-form").hide();
-		 
-		teacherMentor.save(null, {
-		  success: function(mentor) {
-		  	$('.teacher-mentor-success').show();
-		    console.log('save successful');
-		  },
-		  error: function(mentor, error) {
-		    console.log('Failed to create new object, with error code: ' + error.description);
-		  }
-		});
-	} else {
-		$('.teacher-mentor-details').show();
-		$('.teacher-submit').show();
-		$('.teacher-mentor').hide();
+	if (sessionUser) {
+		$('#mentor-teacher-name-input').val(sessionUser);
 	}
+	if (sessionEmail) {
+		$('#mentor-teacher-email-input').val(sessionEmail);
+	}
+	$('.teacher-mentor-details').show();
+	$('.teacher-submit').show();
+	$('.teacher-mentor-success').hide();
+	$("#teacher-no").attr('checked', false);
+})
+
+$("#teacher-no").change(function() {
+	if (sessionUser) {
+		$('#mentor-teacher-name-input').val(sessionUser);
+	}
+	if (sessionEmail) {
+		$('#mentor-teacher-email-input').val(sessionEmail);
+	}
+	$('.teacher-mentor-details').show();
+	$('.teacher-submit').show();
+	$('.teacher-mentor-success').hide();
+	$("#teacher-yes").attr('checked', false);
 })
 
 $('.teacher-submit').click(function(e) {
@@ -295,7 +294,7 @@ $('.teacher-submit').click(function(e) {
 	teacherMentor.set("email", teacherMentorEmail);
 	teacherMentor.set("info", true);
 
-	$("#summer-mentor-teacher-form").hide();
+	// $("#summer-mentor-teacher-form").hide();
 		 
 	teacherMentor.save(null, {
 	  success: function(mentor) {
@@ -412,7 +411,7 @@ $("#mobile-signup").click(function(e) {
 	mobileMentor.set("mobileWeeks", mobileWeeks);
 	mobileMentor.set("mobileDays", mobileDays);
 	mobileMentor.set("mobileTimes", mobileTimes);
-	$("#summer-mentor-mobile-form").hide();
+	// $("#summer-mentor-mobile-form").hide();
 	 
 	mobileMentor.save(null, {
 	  success: function(mentor) {
@@ -527,7 +526,7 @@ $("#summer-signup").click(function(e) {
 	internMentor.set("internWeeks", internWeek);
 	internMentor.set("internDays", internDays);
 	internMentor.set("internTimes", internTimes);
-	$("#summer-mentor-intern-form").hide();
+	// $("#summer-mentor-intern-form").hide();
 	 
 	internMentor.save(null, {
 	  success: function(mentor) {
