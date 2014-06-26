@@ -1,12 +1,42 @@
 
 .mob-game-title {
-    font-size: 73px;
+    font-size: 30px;
     font-family: 'SourceCodeProSemiBold', sans-serif;
     display: inline;
     border-bottom: 2px solid #3498db;
 }
+.mob-game-d {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-size: 120%;
+    line-height: 1.428571429;
+    color: #333333;
+    margin: 0 0 10px;
+}
+.Projects {
+    font-size: 30x;
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+    display: inline;
+    border-bottom: 2px solid #3498db
+}
+.smaller-title {
+    font-size: 50px;
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+    display: inline;
+    border-bottom: 1px dotted #e4e9f0;
+}
+#left {
+    float: left;
+    width:50%;
+    height:50%;
+}
+#right {
+    float: right;
+    width: 49%;
+    height: 50%;
 
-
+}
+}
 nav {
     font-family: 'UbuntuMedium', sans-serif;
     font-weight: 500;
@@ -126,7 +156,7 @@ nav {
 }
 
 .homepage-image.img-groups-1 {
-    background-image: url(../images/home/groups-1.jpg);
+    background-image: url(../images/home/mobile-class.jpg);
 }
 
 .homepage-image.img-class-whiteboard-1 {
