@@ -1,3 +1,12 @@
+
+.mob-game-title {
+    font-size: 73px;
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+    display: inline;
+    border-bottom: 2px solid #3498db;
+}
+
+
 nav {
     font-family: 'UbuntuMedium', sans-serif;
     font-weight: 500;
