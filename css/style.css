@@ -42,9 +42,12 @@
     font-size: 120%;
     line-height: 1.428571429;
     color: #333333;
-
-
 }
+.leadinstructor {
+    display: inline;
+    border-bottom: 2px solid #3498db;
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-weight: 500;
 }
 nav {
     font-family: 'UbuntuMedium', sans-serif;
