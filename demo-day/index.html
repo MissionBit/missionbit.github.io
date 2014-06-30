@@ -97,39 +97,67 @@
     <div class="page-head">
         <span> Free Coding Classes for Public School Students</span>
     </div>
-    <div class="section" id="demo-day">
-        <div id="apply"></div>
-            <div class="headline season">
+    <div class="section" id="fall-2014">
+        <div class="headline season">
                 <h2> Demo Day </h2>
-            </div>
         </div>
-    </div>
-    <div class="headline">
-    <h2> Description </h2>
+    <div class="headline season">
+        <h2> Description </h2>
     </div>
     <p> Demo Day will be a day where our game developers will get to display their projects. Join us! </p>
+         <div class="headline season">
     <h2> When</h2>
      <p> Thursday, July 10, 2014 <br>
         4:00 pm- 7:00 pm</p>
+      <div class="headline season">   
     <h2> Where </h2>
-    <p> TBA (Plus enter a map maybe?)</p>
+    <p> 220 Montgomery Street <br> Suite 750 <br> San Francisco, CA 94104 <br>
+       <head>
+    <style>
+      #map_canvas {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var map_canvas = document.getElementById('map_canvas');
+        var map_options = {
+          center: new google.maps.LatLng(37.791240, -122.402272),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <div id="map_canvas"></div>
+  </body>
+    </p>
+     <div class="headline season">
     <h2> Projects </h2>
     <p> <!--STARTING THE LIST OF GAMES-->
         <ul>  
-            <ul> <li> <h3> Monty RPG </h3> </li>
+            <div class="season"><ul> <li> <h2>  Monty RPG  </h2> </li>
                 <li> <h4> Monty Choy, Kelly Huang, Herman Lin, Chris Lim </h4> </li>
                 <li> ______ is one of the wolves in his wolf pack, and he was bullied by other members of the pack. He must go through the trial of wolves in order to strengthen his ability and prove himself to his comrades. He must take the trial to go from pup to a mature, powerful wolf. There are monstrous creatures on his road of trial. <br>
                 In the end, he proves himself worthy and becomes the very best like no one ever was. </li> 
-                <li> <a href="https://github.com/MissionBit/montyRPG"> https://github.com/MissionBit/montyRPG </a> </li> </ul>
-            <ul> <li> <h3> Snail Assalt </h3> </li>
+                <li> <a href="https://github.com/MissionBit/montyRPG"> https://github.com/MissionBit/montyRPG </a> </li> </ul> </div> 
+            <div class="season"><ul> <li> <h2> Snail Assalt </h2> </li>
                 <li> <h4> Douglas Mejia, Milo Kahney, Vivian Lam, Ryan Shee, Lin Chen </h3> </li>
                 <li> Jimmy is this mean kid who picks on snails and ants and whatnot. While his parents are out on vacation. King Snaily (mutated satan offspring snail, with human intelligence and a bad temper) wants to conquer world. So Snailey begins his evil plan at Jimmy’s house first. Jimmy must stop snaily and his hordes and protect his house. Tried to warn people of Snailey’s plan, no one believed him. Called him crazy. </li>
-                <li> <a href="https://github.com/MissionBit/SnailAssalt"> https://github.com/MissionBit/SnailAssalt </a> </li> </ul>
-            <ul> <li> <h3> Swipe RPG </h3> </li>
+                <li> <a href="https://github.com/MissionBit/SnailAssalt"> https://github.com/MissionBit/SnailAssalt </a> </li></ul></div> 
+            <div class="season"><ul> <li> <h2> Swipe RPG </h2> </li>
                 <li> <h4> Ryan Hu, Tommy Wong, Susan Tham <h4> </li>
                 <li> In a fantasy world where magic and monsters exist, humans are known as the weakest lifeforms on the planet because they cannot use magic. The main character is an orphan and one of the only few humans who can use magic because his/her father infused his own blood with dragon blood, giving his child (you/main character) magical abilities. However humans with magical abilities are considered evil, as many use their magic for their own personal gain (greed, power, etc.) and are called Endonin or Endors for short. There are eight races living on this planet. Humans, Winoas, Dragons, -to be continued later- <br> <br> (Note: ‘you’ will reference the player from now on). One day your village is attacked by dragons while you are out fishing, you come back to the sight of your village engulfed in flames. 1st Quest saving people at your orphanage. After saving them a dragon comes back to attack you but without knowing you cast magic, which makes the dragon kidnap you to its mountain lair nearby. 2nd Quest learn from the dragon(Tutorial). </li>
-                <li> <a href="https://github.com/MissionBit/SwipeRPG"> https://github.com/MissionBit/SwipeRPG </a> </li> </ul>
-    <h5> Appetizers/ Non-Alcoholic Beverages will be provided ^-^</h5>
+                <li> <a href="https://github.com/MissionBit/SwipeRPG"> https://github.com/MissionBit/SwipeRPG </a> </li> </ul></div>
+     <h3> Appetizers/ Non-Alcoholic Beverages will be provided ^-^ </h3>
+     </div>
+ </div>
+</div>
 </div><!-- /container -->
 
 <footer role="contentinfo">
