@@ -1,3 +1,9 @@
+.mob-project-details {
+    margin-left: 10px;
+}
+.mob-proj-team {
+    margin-left: 30px;
+}
 
 .mob-game-title {
     font-size: 30px;
@@ -618,9 +624,13 @@ footer address td.icon {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8a89a9c7c7682fec1c6b018464348641baf43811
+=======
+=======
+>>>>>>> 7a4f57dfd3d5e06a2a4a1b772c4e42d60de629e8
 .TeamMembers{
     font-size: 20px;
 }
@@ -643,9 +653,15 @@ footer address td.icon {
     font-size: 30px;
 }
 
+.amap {
+ position: fixed;
+}
+
+<<<<<<< HEAD
 
 
 
 
-
+=======
+>>>>>>> 7a4f57dfd3d5e06a2a4a1b772c4e42d60de629e8
 >>>>>>> b38994f6e40b0fbc274a89e43c9cb2ecb0a1564f
