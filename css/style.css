@@ -616,8 +616,36 @@ footer address td.icon {
     font-style: italic;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8a89a9c7c7682fec1c6b018464348641baf43811
+.TeamMembers{
+    font-size: 20px;
+}
+
+<<<<<<< HEAD
+.SnailAssalt{
+=======
+.projects{
+>>>>>>> 8a89a9c7c7682fec1c6b018464348641baf43811
+    font-family:'SourceCodeProSemiBold', sans-serif;
+    display: inline;
+    border-bottom: 2px solid #3498db;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 30px 0 15px 0;
+}
+
+.Members{
+    font-size: 30px;
+}
 
 
 
 
 
+
+>>>>>>> b38994f6e40b0fbc274a89e43c9cb2ecb0a1564f
