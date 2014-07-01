@@ -1,3 +1,9 @@
+.mob-project-details {
+    margin-left: 10px;
+}
+.mob-proj-team {
+    margin-left: 30px;
+}
 
 .mob-game-title {
     font-size: 30px;
@@ -636,8 +642,8 @@ footer address td.icon {
     font-size: 30px;
 }
 
-
-
-
+.amap {
+ position: fixed;
+}
 
 >>>>>>> b38994f6e40b0fbc274a89e43c9cb2ecb0a1564f
