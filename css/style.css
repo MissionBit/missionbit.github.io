@@ -166,6 +166,12 @@ nav {
 .homepage-image.img-anim-group-1 {
     background-image: url(../images/home/anim-group-1.jpg);
 }
+.homepage-image.snailassalt {
+    background-image: url(../images/teamimages/snailassalt.jpg);
+}
+.homepage-image.wolfpack {
+    background-image: url(../images/teamimages/wolfpack.jpg)
+}
 
 .homepage-image.img-groups-1 {
     background-image: url(../images/home/mobile-class.jpg);
@@ -616,20 +622,11 @@ footer address td.icon {
     font-style: italic;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8a89a9c7c7682fec1c6b018464348641baf43811
 .TeamMembers{
     font-size: 20px;
 }
 
-<<<<<<< HEAD
-.SnailAssalt{
-=======
 .projects{
->>>>>>> 8a89a9c7c7682fec1c6b018464348641baf43811
     font-family:'SourceCodeProSemiBold', sans-serif;
     display: inline;
     border-bottom: 2px solid #3498db;
@@ -643,9 +640,25 @@ footer address td.icon {
     font-size: 30px;
 }
 
+.col-sm-3{
+    text-align: center;
+    font-size: 24px; 
+    font-family: 'UbuntuRegular', sans-serif;
+}
 
+.col-sm-2{
+    text-align: center; 
+    font-size: 24px; 
+    font-family: 'UbuntuRegular', sans-serif;
+}
 
+.col-sm-4{
+    text-align: center; 
+    font-size: 24px; 
+    font-family: 'UbuntuRegular', sans-serif;
+}
 
-
-
->>>>>>> b38994f6e40b0fbc274a89e43c9cb2ecb0a1564f
+.icon{
+    height: auto;
+    width: 100%;
+}
