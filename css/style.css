@@ -640,25 +640,16 @@ footer address td.icon {
     font-size: 30px;
 }
 
-.col-sm-3{
+.teamlineup div.row div {
     text-align: center;
-    font-size: 24px; 
-    font-family: 'UbuntuRegular', sans-serif;
+    min-height: 100px;
 }
-
-.col-sm-2{
-    text-align: center; 
-    font-size: 24px; 
-    font-family: 'UbuntuRegular', sans-serif;
+.teamlineup div.row .vpadding {
+    display: inline-block;
+    height: 100%;
 }
-
-.col-sm-4{
-    text-align: center; 
-    font-size: 24px; 
-    font-family: 'UbuntuRegular', sans-serif;
-}
-
-.icon{
-    height: auto;
-    width: 100%;
+.teamlineup div.row img {
+    max-width: 210%;
+    max-height: 210px;
+    vertical-align: middle;
 }
