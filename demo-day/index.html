@@ -88,8 +88,8 @@
         </nav><!-- /navbar-collapse -->
     </div><!-- /container -->
 </header>
-
-<div class="homepage-image img-groups-1">
+ 
+<div class="homepage-image mbgamedevs">
 </div>
 
 <!-- container -->
@@ -108,33 +108,28 @@
         <h2> Description </h2>
     </div>
 
-    <p> Demo Day will be a day where our game developers will get to display their projects. Join us! </p>
+    <p> Demo Day will be a day where our 12 high school game developers will get to display their projects. Join us! </p>
 
     <div class="headline">
         <h2> When</h2>
     </div>
-    <p> Thursday, July 10, 2014
-        <br>
-        5:00 PM to 7:30 PM 
-    </p>
-    <div class="headline">   
-    <h2> Where </h2>
-    </div>
-    <p> 220 Montgomery Street
-        <br> Suite 750
-        <br> San Francisco, CA 94104
-    </p>
 
-<!--Mapping code starts here-->
+<!--Mapping code starts here,
+interupting the "When" section
+had to do this to position the map
+in the correct position, because in 
+an <iframe> I couldnt find the attribute
+to position it by pixels on the 
+page. 
+So I inserted the map here-->
     <head>
-        <style>
-        #map_canvas {
-            width: 500px;
-            height: 400px;
-        }
-        </style> 
-
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <div class="map_canvas">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m29!1m12!1m3!1d3153.0022966744527!2d-122.40473695!3d37.78998594528506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m14!1i0!3e2!4m5!1s0x8085808ed3fd40bb%3A0xfe41d9b5994cb6ba!2sUnion+Square%2C+San+Francisco%2C+CA!3m2!1d37.787993799999995!2d-122.40743739999999!4m5!1s0x80858089fa577d23%3A0xb5044171ac645739!2s220+Montgomery+St%2C+San+Francisco%2C+CA+94104!3m2!1d37.7912998!2d-122.40219719999999!5e0!3m2!1sen!2sus!4v1404259574366"
+        width="500" 
+        height="250" 
+        align="right"
+        frameborder="1"> </iframe>
+    </div>
 
         <script>
         function initialize() {
@@ -152,7 +147,23 @@
     </head>
 
     <div id="map_canvas"></div>
-<!--Mapping code ends here-->
+<!--Mapping code ends here 
+and continues on with the 
+"When" details-->
+
+    <p> Thursday, July 10, 2014
+        <br>
+        5:00 PM to 7:30 PM 
+    </p>
+    <div class="headline">   
+    <h2> Where </h2>
+    </div>
+    <p> 
+        Pocket Gems
+        <br> 220 Montgomery Street
+        <br> Suite 750
+        <br> San Francisco, CA 94104
+    </p>
 
      <div class="headline">
         <h2> Projects </h2>
@@ -169,7 +180,7 @@
                         <br>
                     <a href="https://github.com/MissionBit/montyRPG"> https://github.com/MissionBit/montyRPG </a>
                 </div>
-                
+        <!-- Second game-->               
                 <div class="headline season">
                     <h2> Snail Assalt </h2>
                 </div>
@@ -179,7 +190,7 @@
                             <br>
                         <a href="https://github.com/MissionBit/SnailAssalt"> https://github.com/MissionBit/SnailAssalt </a>
                     </div> 
-                
+        <!--Last game-->               
             <div class="headline season">
                 <h2> Swipe RPG </h2>
             </div>
