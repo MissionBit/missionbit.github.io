@@ -640,11 +640,11 @@ footer address td.icon {
     font-style: italic;
 }
 
-.TeamMembers{
+.TeamMembers {
     font-size: 20px;
 }
 
-.projects{
+.projects {
     font-family:'SourceCodeProSemiBold', sans-serif;
     display: inline;
     border-bottom: 2px solid #3498db;
@@ -654,33 +654,23 @@ footer address td.icon {
     margin: 30px 0 15px 0;
 }
 
-.Members{
+.Members {
     font-size: 30px;
 }
 
 .amap {
- position: fixed;
+    position: fixed;
 }
 
-.col-sm-3{
+.game-page .col-sm-2,
+.game-page .col-sm-3,
+.game-page .col-sm-4 {
     text-align: center;
     font-size: 24px; 
     font-family: 'UbuntuRegular', sans-serif;
 }
 
-.col-sm-2{
-    text-align: center; 
-    font-size: 24px; 
-    font-family: 'UbuntuRegular', sans-serif;
-}
-
-.col-sm-4{
-    text-align: center; 
-    font-size: 24px; 
-    font-family: 'UbuntuRegular', sans-serif;
-}
-
-.icon{
+.team-icon {
     height: auto;
     width: 100%;
 }
