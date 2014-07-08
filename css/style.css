@@ -653,3 +653,8 @@ footer address td.icon {
     max-height: 210px;
     vertical-align: middle;
 }
+
+.studentquotes {
+    color: gray;
+    font-style: italic;
+}
