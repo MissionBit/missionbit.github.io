@@ -1,4 +1,4 @@
-<!--<!DOCTYPE html>-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <base href="..">
@@ -88,8 +88,8 @@
         </nav><!-- /navbar-collapse -->
     </div><!-- /container -->
 </header>
-
-<div class="homepage-image img-groups-1">
+ 
+<div class="homepage-image mbgamedevs">
 </div>
 
 <!-- container -->
@@ -97,40 +97,137 @@
     <div class="page-head">
         <span> Free Coding Classes for Public School Students</span>
     </div>
-    <div class="section" id="demo-day">
-        <div id="apply"></div>
-            <div class="headline season">
-                <h2> Demo Day </h2>
-            </div>
+    <div class="section" id="demoday">
+        <div class="headline season">
+            <h2> Demo Day </h2>
         </div>
     </div>
+
     <div class="headline">
-    <h2> Description </h2>
+        <h2> Description </h2>
     </div>
-    <p> Demo Day will be a day where our game developers will get to display their projects. Join us! </p>
-    <h2> When</h2>
-     <p> Thursday, July 10, 2014 <br>
-        4:00 pm- 7:00 pm</p>
+
+    <p> <b> Event Details </b> 
+            <p>Twelve SFUSD (San Francisco Unified School District) public high school students from Mission Bit's free summer 2014 immersive mobile game development class will be presenting the 'shippable' games they've built working together in teams 5 days/week for 7 hours/day since June 2, 2014. A panel of game industry and mobile app professionals will provide feedback to the class game teams and all Demo Day attendees will have the opportunity to play the games and meet the students. </p>
+
+            <p>Demo Day is an excellent chance for attendees to meet the rising crop of San Francisco native rock star game developers and get an update on Mission Bit's plans for the 2014/2015 school year.</p>
+            
+            <b>Demo Day Agenda:</b>
+            <br>
+            <ul>
+            <p>
+            <li>5:00pm: Networking and student game demos<br></li>
+            <li>5:30pm: Mission Bit welcome and update<br></li>
+            <li>5:45pm: Student game presentations and panel feedback<br></li>
+            <li>6:45pm: Networking and student game demos</li>
+            </ul>
+            <p>
+
+            The game industry panelists will be announced soon.<br>
+            Hors d'oeuvres and refreshments will be provided.<br>
+            </p>
+            
+            The summer 2014 mobile game development class is sponsored by WeChat and supported by co.lab, The Salesforce Foundation, AdRoll, BrightRoll, Rackspace//Geekdom, Hack Reactor, Tagged, Chartboost, Zynga.org, DeNA and Glu Mobile.
+
+Contact demoday@missionbit.com to request invites for peers and colleagues. 
+<br>
+<a href="www.missionbit.com"> www.missionbit.com </a> 
+<br>
+Have questions about Mission Bit Demo Day - Mobile Game Dev Class Summer 2014? Contact Us! <a href="mailto:info@missionbit.com">Mission Bit</a>
+    <div class="headline">
+        <h2> When</h2>
+    </div>
+
+<!--Mapping code starts here,
+interupting the "When" section
+had to do this to position the map
+in the correct position, because in 
+an <iframe> I couldnt find the attribute
+to position it by pixels on the 
+page. 
+So I inserted the map here-->
+    <head>
+    <div class="map_canvas">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m29!1m12!1m3!1d3153.0022966744527!2d-122.40473695!3d37.78998594528506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m14!1i0!3e2!4m5!1s0x8085808ed3fd40bb%3A0xfe41d9b5994cb6ba!2sUnion+Square%2C+San+Francisco%2C+CA!3m2!1d37.787993799999995!2d-122.40743739999999!4m5!1s0x80858089fa577d23%3A0xb5044171ac645739!2s220+Montgomery+St%2C+San+Francisco%2C+CA+94104!3m2!1d37.7912998!2d-122.40219719999999!5e0!3m2!1sen!2sus!4v1404259574366"
+        width="500" 
+        height="250" 
+        align="right"
+        frameborder="1"> </iframe>
+    </div>
+
+        <script>
+        function initialize() {
+            var map_canvas = document.getElementById('map_canvas');
+            var map_options = {
+            center: new google.maps.LatLng(37.791240, -122.402272),
+            zoom: 8,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(map_canvas, map_options)
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+
+    </head>
+
+    <div id="map_canvas"></div>
+<!--Mapping code ends here 
+and continues on with the 
+"When" details-->
+
+    <p> Thursday, July 10, 2014
+        <br>
+        5:00 PM to 7:30 PM 
+    </p>
+    <div class="headline">   
     <h2> Where </h2>
-    <p> TBA (Plus enter a map maybe?)</p>
-    <h2> Projects </h2>
-    <p> <!--STARTING THE LIST OF GAMES-->
+    </div>
+    <p> 
+        Pocket Gems is generously hosting Mission Bit Demo Day. <br> Pocket Gems offices are located at:
+        <br> 220 Montgomery Street
+        <br> Suite 750
+        <br> San Francisco, CA 94104
+    </p>
+
+     <div class="headline">
+        <h2> Projects </h2>
+    </div>
+    <!--STARTING THE LIST OF GAMES-->
         <ul>  
-            <ul> <li> <h3> Monty RPG </h3> </li>
-                <li> <h4> Monty Choy, Kelly Huang, Herman Lin, Chris Lim </h4> </li>
-                <li> ______ is one of the wolves in his wolf pack, and he was bullied by other members of the pack. He must go through the trial of wolves in order to strengthen his ability and prove himself to his comrades. He must take the trial to go from pup to a mature, powerful wolf. There are monstrous creatures on his road of trial. <br>
-                In the end, he proves himself worthy and becomes the very best like no one ever was. </li> 
-                <li> <a href="https://github.com/MissionBit/montyRPG"> https://github.com/MissionBit/montyRPG </a> </li> </ul>
-            <ul> <li> <h3> Snail Assalt </h3> </li>
-                <li> <h4> Douglas Mejia, Milo Kahney, Vivian Lam, Ryan Shee, Lin Chen </h3> </li>
-                <li> Jimmy is this mean kid who picks on snails and ants and whatnot. While his parents are out on vacation. King Snaily (mutated satan offspring snail, with human intelligence and a bad temper) wants to conquer world. So Snailey begins his evil plan at Jimmy’s house first. Jimmy must stop snaily and his hordes and protect his house. Tried to warn people of Snailey’s plan, no one believed him. Called him crazy. </li>
-                <li> <a href="https://github.com/MissionBit/SnailAssalt"> https://github.com/MissionBit/SnailAssalt </a> </li> </ul>
-            <ul> <li> <h3> Swipe RPG </h3> </li>
-                <li> <h4> Ryan Hu, Tommy Wong, Susan Tham <h4> </li>
-                <li> In a fantasy world where magic and monsters exist, humans are known as the weakest lifeforms on the planet because they cannot use magic. The main character is an orphan and one of the only few humans who can use magic because his/her father infused his own blood with dragon blood, giving his child (you/main character) magical abilities. However humans with magical abilities are considered evil, as many use their magic for their own personal gain (greed, power, etc.) and are called Endonin or Endors for short. There are eight races living on this planet. Humans, Winoas, Dragons, -to be continued later- <br> <br> (Note: ‘you’ will reference the player from now on). One day your village is attacked by dragons while you are out fishing, you come back to the sight of your village engulfed in flames. 1st Quest saving people at your orphanage. After saving them a dragon comes back to attack you but without knowing you cast magic, which makes the dragon kidnap you to its mountain lair nearby. 2nd Quest learn from the dragon(Tutorial). </li>
-                <li> <a href="https://github.com/MissionBit/SwipeRPG"> https://github.com/MissionBit/SwipeRPG </a> </li> </ul>
-    <h5> Appetizers/ Non-Alcoholic Beverages will be provided ^-^</h5>
-</div><!-- /container -->
+            <div class="headline season"> 
+                <h2>  Kibo  </h2> 
+            </div>
+                <div class="mob-project-details">
+                    <h4 class="mob-proj-team"> Monty Choy, Kelly Huang, Herman Lin, Chris Lim </h4> 
+                        <b>Story:</b> Fang is one of the wolves in his wolf pack, and he was bullied by other members of the pack. He must go through the trial of wolves in order to strengthen his ability and prove himself to his comrades. He must take the trial to go from pup to a mature, powerful wolf. There are monstrous creatures on his road of trial. In the end, he proves himself worthy and becomes the very best like no one ever was.<br>
+                        <b>Mechanics:</b> Hold the left side of the screen to move back. Hold the right side of the screen to move forward. Tap the enemy to automatically move to a reasonable range, and attack the enemy once. Swipe left to go back swiftly (in order to dodge enemy attack). Swipe right to dash forward (needs upgrade. Tap the player itself to activate defense (reduce damage). Open upgrade menu by pressing menu located on the upper right corner, which enables player to upgrade the character’s skills
+                        <br>
+                    <a href="https://missionbit.com/projects/kibo"> https://missionbit.com/projects/kibo </a>
+                </div>
+        <!-- Second game-->               
+                <div class="headline season">
+                    <h2> Snail Assalt </h2>
+                </div>
+                    <div class="mob-project-details">
+                        <h4 class="mob-proj-team"> Douglas Mejia, Milo Kahney, Vivian Lam, Ryan Shee, Lin Chen </h4>
+                            <b>Story:</b> Jimmy is this asshole kid who picks on snails and ants and whatnot. While his parents are out on vacation. King Snaily (mutated satan offspring snail, with human intelligence and a bad temper) wants to conquer world. So Snailey begins his evil plan at Jimmy’s house first. Jimmy must stop snaily and his hordes and protect his house. Tried to warn people of Snailey’s plan, no one believed him. Called him crazy.<br>
+                            <b>Mechanics:</b> Tap/hold to shoot. (Water has recharge bar thing, pump watergun to refill) Double tap for extra power (use up more water) if house destroyed level lost, snaily wins fortify house and upgrade weapons acquire gold/snail shell to buy upgrades vine to protect house… temp barrier 4 lanes where snails attack from.
+                            <br>
+                        <a href="https://missionbit.com/projects/snailassalt"> https://missionbit.com/projects/snailassalt </a>
+                    </div> 
+        <!--Last game-->               
+            <div class="headline season">
+                <h2> Protators </h2>
+            </div>
+                <div class="mob-project-details">
+                <h4 class="mob-proj-team"> Ryan Hu, Tommy Wong, Susan Tham</h4>
+                    <b>Story:</b> You’re a magician whose sole duty is to protect your village from hordes and hordes of monsters who are trying to steal your village’s taters(potatoes) in other to make tater tots. As the magician you can never “die” however monsters can attack you and if they bring your HP down to 0 you “die”, but are later revived at your village, well and healthy. However if the village is destroyed, then the game is lost. There are about 16 levels you can play, or you can play the endless Sandbox mode to challenge yourself to an infinite horde. As you beat levels you have the chance to upgrade your magician and/or village to help you and your village to last against the horde, using your spoils of war (gold) and points which can be converted to your magician’s EXP or your magician’s skills. <br>
+                    <b>Mechanics:</b> Waves of monsters will spawn during a level, depending on how far you have progressed monsters will either get tougher, increase in number, or both. You must defend your village from the monsters using the magician you control. As the magician you will have a basic attack, skills, and items. Attacks and skills can be upgraded, while items can be bought or picked up as monster drops. You can move left or right to either fall down to the village or engage any enemies. Your village has HP, if that HP reaches zero, you lose. Monsters will gradually bring down your village’s HP when they reach your village. If your village is still standing at the end of the level you win that level and gain points and gold from the level, which is spent on items and/or upgrades
+                    <br>
+                <a href="https://missionbit.com/projects/protators"> https://missionbit.com/projects/protators </a>            
+                </div>
+</div>
+<!-- /container -->
 
 <footer role="contentinfo">
     <div class="container">
