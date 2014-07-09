@@ -3,9 +3,6 @@
     duplicate-background-images:false, text-indent:false,
     box-model: false, fallback-colors:false, overqualified-elements:false,
     display-property-grouping:false */
-.mbgamedevs {
-    background: url(../images/home/mbgamedevs.png);
-}
 
 .mob-project-details {
     margin-left: 10px;
