@@ -39,9 +39,30 @@
 </li>
 <li>Click on the orange "Macintosh HD" icon, go to the Restore tab. Drag the "Untitled" harddrive partition to the Destination field. Click Restore and confirm that it says "Are you sure you want to erase "Untitled" and replace its contents with the contents of "Macintosh HD"?" and then click Erase. Wait until this is done (15-20 minutes)</li>
 <li>When the image is done copying, press Command-Q to quick Disk Utility and then Command-Q again to quit the restore tool. Choose "Restart" and when the computer restarts take the USB stick out.</li>
-<li>Let the computer restart and let it sit at the login screen for 10 minutes or until it shows up in the Meraki dashboard at https://meraki.cisco.com/</li>
+<li>After the computer restarts, login as missionbit/missionbit and
+skip any iCloud signup.</li>
+<li>Click on the time and make sure the date is correct.
+    <ul>
+        <li>If the date is not correct, Open Date &amp; Time preferences. Click in the
+            "Apple Americas/U.S." box and press return to force an update
+        </li>
+    </ul>
+</li>
+<li>Check that the battery is charging.
+    <ul><li>If the battery is not charging, reset the SMC and the PRAM
+      and then login and check that the battery is charging again. If that
+      doesn't work, the battery is dead. Make a note of this on
+      the computer and put it in the stack of broken
+      computers.</li></ul>
+</li>
+<li>Restart the computer and check that there's a message at the
+bottom that says something like
+"[ blue-html contact laptops@missionbit.com if found ]". If not, wait
+10 minutes, restart the computer, and check again.</li>
 <li>Login as missionbit/missionbit to check that it all worked. Check the battery levels. If it says "Battery not charging" then perform a SMC and PRAM reset.</li>
-<li>Shut the computer down and make sure to mark it as wiped (I've been using blue tags for this)</li>
+<li>Shut the computer down and make sure to mark it as wiped (I've
+been using blue tags or a sticky note near the keyboard that sticks
+out of the laptop for this)</li>
 </ol>
 <h2 id="troubleshooting"><a href="#troubleshooting">Troubleshooting</a></h2>
 <dl>
