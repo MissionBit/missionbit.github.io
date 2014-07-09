@@ -1,6 +1,8 @@
-.mbgamedevs {
-    background: url(..desktop/mbgamedevs.png);
-}
+/*csslint ids:false, text-indent:false, qualified-headings:false,
+    unique-headings:false, adjoining-classes:false,
+    duplicate-background-images:false, text-indent:false,
+    box-model: false, fallback-colors:false, overqualified-elements:false,
+    display-property-grouping:false */
 
 .mob-project-details {
     margin-left: 10px;
@@ -24,7 +26,7 @@
     margin: 0 0 10px;
 }
 .Projects {
-    font-size: 30x;
+    font-size: 30px;
     font-family: 'SourceCodeProSemiBold', sans-serif;
     display: inline;
     border-bottom: 2px solid #3498db
@@ -146,7 +148,7 @@ nav {
 }
 
 .section ul {
-    padding-left: 0px;
+    padding-left: 0;
     list-style-position: inside;
 }
 
@@ -159,7 +161,6 @@ nav {
     height: 400px;
     position: relative;
     z-index: -1;
-    background-position: top;
     background-repeat: no-repeat;
     background-position: 50%;
     margin: 0;
@@ -176,9 +177,15 @@ nav {
 .homepage-image.img-anim-group-1 {
     background-image: url(../images/home/anim-group-1.jpg);
 }
+.homepage-image.snailassalt {
+    background-image: url(../images/teamimages/snailassalt.jpg);
+}
+.homepage-image.wolfpack {
+    background-image: url(../images/teamimages/wolfpack.jpg)
+}
 
 .homepage-image.img-groups-1 {
-    background-image: url(../images/home/mobile-class.jpg);
+    background-image: url(../images/home/mobiledevclass.jpg);
 }
 
 .homepage-image.img-class-whiteboard-1 {
@@ -230,7 +237,7 @@ iframe.campaign-alert {
 }
 
 .vimeo .donate-ctr {
-    margin: 0px auto inherit auto;
+    margin: 0 auto inherit auto;
 }
 .vimeo .donate {
     width: 500px;
@@ -392,7 +399,7 @@ footer address td.icon {
     margin: 0;
 }
 #mbit.share header {
-    padding: 2px 0px 10px 0px;
+    padding: 2px 0 10px 0;
     margin-bottom: 20px;
     background-color: black;
     color: white;
@@ -408,7 +415,7 @@ footer address td.icon {
 }
 #mbit .share-cta {
     background-color: white;
-    box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
     border-bottom: 2px solid rgba(0,0,0,0.1);
     margin-bottom: 20px;
 }
@@ -630,13 +637,11 @@ footer address td.icon {
     font-style: italic;
 }
 
-<<<<<<< HEAD
-=======
-.TeamMembers{
+.TeamMembers {
     font-size: 20px;
 }
 
-.SnailAssalt{
+.projects {
     font-family:'SourceCodeProSemiBold', sans-serif;
     display: inline;
     border-bottom: 2px solid #3498db;
@@ -646,12 +651,23 @@ footer address td.icon {
     margin: 30px 0 15px 0;
 }
 
-.Members{
+.Members {
     font-size: 30px;
 }
 
 .amap {
- position: fixed;
+    position: fixed;
 }
 
->>>>>>> b38994f6e40b0fbc274a89e43c9cb2ecb0a1564f
+.game-page .col-sm-2,
+.game-page .col-sm-3,
+.game-page .col-sm-4 {
+    text-align: center;
+    font-size: 24px; 
+    font-family: 'UbuntuRegular', sans-serif;
+}
+
+.team-icon {
+    height: auto;
+    width: 100%;
+}
