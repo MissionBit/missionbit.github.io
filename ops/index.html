@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="..">
+    <title>Mission Bit – Ops</title>
+</head>
+
+<body>
+<h1>Laptop Re-imaging HOWTO</h1>
+<h2 id="prerequisites"><a href="#prerequisites">Prerequisites</a></h2>
+<ol>
+    <li>"MissionBit Ops" wireless network should be up.
+        Make sure a laptop is plugged into the router,
+        logged on to the redbrick network,
+        and Internet Sharing from Wi-Fi to Ethernet is on.
+    </li>
+    <li>Have the USB sticks with our image on them ready.</li>
+</ol>
+<h2 id="procedure"><a href="#procedure">Procedure</a></h2>
+<ol>
+<li>Plug computer into power, ensure that the MagSafe light turns on. If it stays green and the computer isn't fully charged, you will have to reset the SMC</li>
+<li>Insert USB stick into any USB port</li>
+<li>Start up computer by pressing power button, then immediately hold the Option key and wait for the boot menu to show up before releasing the key.
+    <ul>
+        <li>If the computer is awaking from hibernation (grayed out desktop) just force it to power off (hold power button for a few seconds) and start this step over.</li>
+        <li>If it gets to a lock screen, then mark it with a sticky note that says "Firmware Password" and put it in the pile of other laptops with that problem.</li>
+        <li>If it turns on and then goes right to sleep, reset the PRAM.</li>
+        <li>If it doesn't turn on at all, reset the SMC and leave it plugged in for 5-10 minutes to charge up and try again (it might've been totally drained after a very long nap!).</li>
+    </ul>
+<li>Click on the "Recovery-10.9.4" disk that shows up, will have an orange and white external USB hard drive icon and then click on the up arrow to boot from it.</li>
+<li>If it asks you to choose a language, choose English :)</li>
+<li>Choose Disk Utility</li>
+<li>Click on the internal harddrive (always the first disk in the list, *not* orange) and then go to the Erase tab. Make sure the Format is "Mac OS Extended (Journaled)" and then click the Erase button.
+    <ul>
+        <li>If there is no internal harddrive listed, then put a sticky note on it that says the hard drive is broken and put it in the pile of damaged laptops</li>
+        <li>If there is no Erase tab, click on the first partition under that internal harddrive and erase it with "Mac OS Extended (Journaled)"</li>
+        <li>If there's some other issue here, try destroying the GPT and then start this step over.</li>
+    </ul>
+</li>
+<li>Click on the orange "Macintosh HD" icon, go to the Restore tab. Drag the "Untitled" harddrive partition to the Destination field. Click Restore and confirm that it says "Are you sure you want to erase "Untitled" and replace its contents with the contents of "Macintosh HD"?" and then click Erase. Wait until this is done (15-20 minutes)</li>
+<li>When the image is done copying, press Command-Q to quick Disk Utility and then Command-Q again to quit the restore tool. Choose "Restart" and when the computer restarts take the USB stick out.</li>
+<li>Let the computer restart and let it sit at the login screen for 10 minutes or until it shows up in the Meraki dashboard at https://meraki.cisco.com/</li>
+<li>Login as missionbit/missionbit to check that it all worked. Check the battery levels. If it says "Battery not charging" then perform a SMC and PRAM reset.</li>
+<li>Shut the computer down and make sure to mark it as wiped (I've been using blue tags for this)</li>
+</ol>
+<h2 id="troubleshooting"><a href="#troubleshooting">Troubleshooting</a></h2>
+<dl>
+    <dt id="pram-reset">PRAM reset</dt><dd><a href="http://support.apple.com/kb/ht1379">http://support.apple.com/kb/ht1379</a> Power then Command-Option-P-R, hold until second startup sound</dd>
+    <dt id="smc-reset">SMC reset</dt><dd><a href="http://support.apple.com/kb/ht3964">http://support.apple.com/kb/ht3964</a> For most laptops hold Shift-Control-Option-Power while the computer is off for about 5 seconds and let go. You should expect to see the light on the power adapter change. If battery is removable then remove battery and power cord and hold power for 5 secs.</dd>
+    <dt id="destroy-gpt">Destroy GPT</dt><dd>Cmd-Q to quit Disk Utility, Open Terminal and type <code>gpt destroy /dev/disk0</code> and then press return. Cmd-Q to quit Terminal and go back to Disk Utility to continue.</dd>
+</dl>
+</body>
+</html>
