@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Mission Bit</title>
+    <!-- set base for compatibility with non-jekyll pages -->
+    <base href="{% assign path_components = page.path | split: '/' %}{% for item in path_components offset:1 %}..{% unless forloop.last %}/{% endunless %}{% endfor %}">
+    <title>{{ site.title }}{% if page.title %} – {{ page.title }}{% endif %}</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
