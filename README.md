@@ -27,7 +27,7 @@ Open a Terminal and change to the directory where you've checked out
 preview server:
 
 ```bash
-jekyll serve --watch
+jekyll serve --watch --safe
 ```
 
 This will run a webserver on your computer at http://127.0.0.1:4000/
