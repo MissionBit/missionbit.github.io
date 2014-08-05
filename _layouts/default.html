@@ -37,10 +37,12 @@
 
 <body id="mbit">
 
+{% unless page.disable_alert %}
 <div class="alert alert-warning alert-dismissable student-alert">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
     <strong> <a href="https://docs.google.com/a/missionbit.com/forms/d/1lUS1vLNspkkeGLP4xq1jjYmEi0I7Uluvxo4pRkaOjj0/viewform">CLICK HERE </a> to volunteer for the Fall semester! Mission Bit will contact all Fall 2014 voluteers by mid August. </strong>
 </div>
+{% endunless %}
 
 <!--=== Header ===-->
 <header class="navbar navbar-default" role="banner">
@@ -151,6 +153,7 @@
 <!-- Local JS -->
 <script src="js/site.js"></script>
 <!-- Analytics -->
+{{ page.scripts }}
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
