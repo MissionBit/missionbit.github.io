@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- set base for compatibility with non-jekyll pages -->
-    <base href="{% assign path_components = page.path | split: '/' %}{% for item in path_components offset:1 %}..{% unless forloop.last %}/{% endunless %}{% endfor %}">
+    {% assign path_components = page.path | split: '/' %}<base href="{% if path_components.size == 1 %}./{% endif %}{% for item in path_components offset:1 %}..{% unless forloop.last %}/{% endunless %}{% endfor %}">
     <title>{{ site.title }}{% if page.title %} – {{ page.title }}{% endif %}</title>
 
     <!-- Meta -->
