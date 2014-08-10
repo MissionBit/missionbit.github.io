@@ -1,1065 +1,908 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <base href="..">
-    <title>Mission Bit – Get Involved - Summer 2014 Programs</title>
-
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Shortcut icons -->
-    <link rel="shortcut icon" href="images/icon64.png" sizes="64x64" type="image/png">
-    <link rel="shortcut icon" href="images/icon128.png" sizes="128x128" type="image/png">
-    <link rel="shortcut icon" href="images/icon256.png" sizes="256x256" type="image/png">
-    <!-- Vendor CSS -->
-    <!--
-    <link rel="stylesheet" href="vendor/bootstrap-3.0.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/bootstrap-3.0.3/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="vendor/font-awesome-4.0.3/css/font-awesome.min.css">
-    -->
-    <link rel="stylesheet" href="vendor/bootstrap-3.0.3/css/bootstrap.css">
-    <link rel="stylesheet" href="vendor/bootstrap-3.0.3/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="vendor/font-awesome-4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href="vendor/ubuntu/stylesheet.css">
-    <link rel="stylesheet" href="vendor/source-code-pro/stylesheet.css">
-    <!-- Local CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body id="mbit">
-
-<!-- <div class="alert alert-warning alert-dismissable student-alert">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    <strong>Spring 2014 students:</strong>
-    <a href="students/spring2014/">click here</a> for important info about this semester!
-</div> -->
-
-<!--=== Header ===-->
-<header class="navbar navbar-default" role="banner">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <!-- TODO can we use fa-bars for these bars? -->
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="./">Mission Bit</a>
-        </div>
-        <nav class="collapse navbar-collapse navbar-responsive-collapse" role="navigation">
-            <ul class="nav navbar-nav">
-                <li class="menu-item menu-about-us">
-                    <a href="about-us/">About Us</a>
-                </li>
-                <li class="menu-item menu-programs">
-                    <a href="programs/">Programs</a>
-                </li>
-                <li class="menu-item menu-get-involved">
-                    <a href="get-involved/">Get Involved</a>
-                </li>
-                <li class="menu-item menu-apply">
-                    <a href="programs/#apply">Apply</a>
-                </li>
-                <li class="menu-item menu-donate visible-xs">
-                    <a href="donate/">Donate</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right hidden-xs">
-                <li class="menu-item">
-                    <a aria-label="Facebook" title="Facebook" class="social-icon fa fa-facebook-square" href="https://www.facebook.com/missionbit" target="_blank"></a>
-                </li>
-                <li class="menu-item">
-                    <a aria-label="Twitter" title="Twitter" class="social-icon fa fa-twitter-square" href="https://twitter.com/MissionBit" target="_blank"></a>
-                </li>
-                <li class="menu-item">
-                    <a aria-label="GitHub" title="GitHub" class="social-icon fa fa-github-square" href="https://github.com/MissionBit" target="_blank"></a>
-                </li>
-                <li class="menu-item">
-                    <a aria-label="Donate" title="Donate Today" class="donate-icon" href="donate/">
-                        <span class="fa-stack">
-                            <span class="fa fa-square fa-stack-2x"></span>
-                            <span class="fa fa-inverse fa-usd fa-stack-1x"></span>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </nav><!-- /navbar-collapse -->
-    </div><!-- /container -->
-</header>
-
+---
+title: "Get Involved – Summer 2014 Programs"
+scripts: |
+    <!-- PARSE -->
+    <script src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
+    <script src="js/get-involved.js"></script>
+---
 <!-- container -->
 <div class="container" role="main">
     <div class="section row">
         <div class="headline season col-sm-12">
-            <h2>Summer 2014 Programs & Mentor Opportunities</h2>
+            <h2>Summer 2014 Programs &amp; Mentor Opportunities</h2>
         </div>
-      	</br>
 
-      	<div class="col-sm-12">
-        	<div class="row">
+        <div class="col-sm-12">
+            <div class="row">
 
-		        <div class="headline col-sm-12">
-		            <h2> Immersive Mobile Game Development </h2>
-		        </div>
-		        <div class="col-sm-12">
-			        <p class="summer-description"> 
-			            Mission Bit is running a free 6 week full time mobile game development class from June 2 to July 11. Twelve high school students will learn the fundamentals of android game development and, in the second half of the course, work in teams of 2 -3 students to produce an 'app store ready' mobile game by the end of the class. 
-			        </p>
+                <div class="headline col-sm-12">
+                    <h2> Immersive Mobile Game Development </h2>
+                </div>
+                <div class="col-sm-12">
+                    <p class="summer-description"> 
+                        Mission Bit is running a free 6 week full time mobile game development class from June 2 to July 11. Twelve high school students will learn the fundamentals of android game development and, in the second half of the course, work in teams of 2 -3 students to produce an 'app store ready' mobile game by the end of the class. 
+                    </p>
 
-			        <p class="summer-description">
-			        	In addition to mentors working with the lead instructor to guide the students through the mobile game development process, Mission Bit will invite guest professionals from top SF mobile gaming companies to work with the class on disciplines such as production, design, monetization, gameplay during the development cycle. 
-			        </p>
+                    <p class="summer-description">
+                        In addition to mentors working with the lead instructor to guide the students through the mobile game development process, Mission Bit will invite guest professionals from top SF mobile gaming companies to work with the class on disciplines such as production, design, monetization, gameplay during the development cycle. 
+                    </p>
 
-			        <p class="summer-description">
-			        	At the end of class, the teams will present their games for feedback to a panel of game industry professionals that include game publishers, game developers and game industry press.
-			        </p>
+                    <p class="summer-description">
+                        At the end of class, the teams will present their games for feedback to a panel of game industry professionals that include game publishers, game developers and game industry press.
+                    </p>
 
-			        <p class="summer-description">
-			        	The summer mobile game development class is supported by Tencent America, DeNA, Glu Mobile and Chartboost.
-			        </p>	
-			      </div>
+                    <p class="summer-description">
+                        The summer mobile game development class is supported by Tencent America, DeNA, Glu Mobile and Chartboost.
+                    </p>    
+                  </div>
 
-			      <div class="col-sm-12 course-details">
-			      	<div class="row">
+                  <div class="col-sm-12 course-details">
+                    <div class="row">
 
-			      		<div class="col-sm-2 course-detail-title">
-			      			<span> Course Dates </span>
-			      		</div>
-			      		<div class="col-sm-10">
-			      			<span> June 2 - July 11, 2014. No classes on Thursday July 3 and Friday July 4 </span>
-			      		</div>
+                        <div class="col-sm-2 course-detail-title">
+                            <span> Course Dates </span>
+                        </div>
+                        <div class="col-sm-10">
+                            <span> June 2 - July 11, 2014. No classes on Thursday July 3 and Friday July 4 </span>
+                        </div>
 
-			      	</div>
-			      </div>
+                    </div>
+                  </div>
 
-			      <div class="col-sm-12">
-			      	<div class="row">
-			      		<div class="col-sm-2 course-detail-title">
-			      			<span> Days of Week </span>
-			      		</div>
-			      		<div class="col-sm-10">
-			      			<span> Monday - Friday </span>
-			      		</div>
-			      	</div>
-			      </div>
+                  <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2 course-detail-title">
+                            <span> Days of Week </span>
+                        </div>
+                        <div class="col-sm-10">
+                            <span> Monday - Friday </span>
+                        </div>
+                    </div>
+                  </div>
 
-			      <div class="col-sm-12">
-			      	<div class="row">
-			      		<div class="col-sm-2 course-detail-title">
-			      			<span> Daily Hours </span>
-			      		</div>
-			      		<div class="col-sm-10">
-			      			<span> 9am - 4pm. 12pm - 1pm is reserved for lunch </span>
-			      		</div>
-			      	</div>
-			      </div>
+                  <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2 course-detail-title">
+                            <span> Daily Hours </span>
+                        </div>
+                        <div class="col-sm-10">
+                            <span> 9am - 4pm. 12pm - 1pm is reserved for lunch </span>
+                        </div>
+                    </div>
+                  </div>
 
-			      <div class="col-sm-12">
-			      	<div class="row">
-			      		<div class="col-sm-2 course-detail-title">
-			      			<span> Class Location </span>
-			      		</div>
-			      		<div class="col-sm-10">
-			      			<span> Somewhere in mid-market or SoMA </span>
-			      		</div>
-			      	</div>
-			      </div>
+                  <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2 course-detail-title">
+                            <span> Class Location </span>
+                        </div>
+                        <div class="col-sm-10">
+                            <span> Somewhere in mid-market or SoMA </span>
+                        </div>
+                    </div>
+                  </div>
 
-			    </div>
-			  </div>
+                </div>
+              </div>
 
-			  <div id="summer-mentor-mobile-form" class="col-sm-12 mentor-form">
+              <div id="summer-mentor-mobile-form" class="col-sm-12 mentor-form">
           <form class="form-horizontal" role="form">
-          	<div class="row">
+            <div class="row">
 
-				      <div class="col-sm-10 col-sm-offset-1 signup-jump">
-				        <p class="summer-description jump-call the-ask"> 
-				        	Mission Bit is looking for mentors to support inclass instruction and the student teams' paths to an 'app store ready' product. 
-				        </p>
-				      </div>
-	      			<div class="mobile-boolean-question col-sm-10 col-sm-offset-1">
-	      				<div class="row">
+                      <div class="col-sm-10 col-sm-offset-1 signup-jump">
+                        <p class="summer-description jump-call the-ask"> 
+                            Mission Bit is looking for mentors to support inclass instruction and the student teams' paths to an 'app store ready' product. 
+                        </p>
+                      </div>
+                    <div class="mobile-boolean-question col-sm-10 col-sm-offset-1">
+                        <div class="row">
 
-	      					<div class="col-sm-12 mobile-mentor question">
-                		<p> Are you interested in being a mentor for the mobile game dev class? 
-                		</p>
-                	</div>
+                            <div class="col-sm-12 mobile-mentor question">
+                        <p> Are you interested in being a mentor for the mobile game dev class? 
+                        </p>
+                    </div>
 
-                	<div id="mentor-mobile-div" class="form-group mentor-input-div mobile-mentor">
-						      	<div class="col-sm-12">
-								      <div class="radio">
-											  <label>
-											    <input 
-											    type="radio" 
-											    name="mobileYes" 
-											    id="mobile-yes" 
-											    value="Yes">
-											    Yes
-											  </label>
-											</div>
+                    <div id="mentor-mobile-div" class="form-group mentor-input-div mobile-mentor">
+                                <div class="col-sm-12">
+                                      <div class="radio">
+                                              <label>
+                                                <input 
+                                                type="radio" 
+                                                name="mobileYes" 
+                                                id="mobile-yes" 
+                                                value="Yes">
+                                                Yes
+                                              </label>
+                                            </div>
 
-											<div class="radio">
-											  <label>
-											    <input 
-											    	type="radio" 
-											    	name="mobileNo" 
-											    	id="mobile-no" 
-											    	value="No">
-											    No
-											  </label>
-											</div>
-										</div>
-									</div>
+                                            <div class="radio">
+                                              <label>
+                                                <input 
+                                                    type="radio" 
+                                                    name="mobileNo" 
+                                                    id="mobile-no" 
+                                                    value="No">
+                                                No
+                                              </label>
+                                            </div>
+                                        </div>
+                                    </div>
 
-									<div class="col-sm-12 mobile-mentor-details question" hidden>
-                		<p> Which week from June 2 - June 11 are you available to mentor the mobile game dev class? Please check all that apply.  
-                		</p>
-                	</div>
+                                    <div class="col-sm-12 mobile-mentor-details question" hidden>
+                        <p> Which week from June 2 - June 11 are you available to mentor the mobile game dev class? Please check all that apply.  
+                        </p>
+                    </div>
 
-					        <div id="mentor-mobile-week-div" class="form-group mentor-input-div mobile-mentor-details" hidden>
-			              <div class="col-sm-12">
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-week-first-input" 
-		                        class="mobile-week" 
-		                        name="mobileWeekOne"
-		                        type="checkbox" 
-		                        value="First Week">
-		                      The first week. June 2 - June 6
-		                    </label>
-		                  </div>
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-week-second-input" 
-		                        type="checkbox" 
-		                        name="mobileWeekTwo"
-		                        class="mobile-week" 
-		                        value="Second Week">
-		                      The second week. June 9 - June 13
-		                    </label>
-		                  </div>
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-week-third-input" 
-		                        class="mobile-week"
-		                        name="mobileWeekThree"
-		                        type="checkbox" 
-		                        value="Third Week">
-		                      The third week. June 16 - June 20
-		                    </label>
-		                  </div>
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-week-fourth-input" 
-		                        class="mobile-week"
-		                        name="mobileWeekFour"
-		                        type="checkbox" 
-		                        value="Fourth Week">
-		                      The fourth week. June 23 - June 27
-		                    </label>
-		                  </div>
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-week-fifth-input" 
-		                        class="mobile-week"
-		                        name="mobileWeekFive"
-		                        type="checkbox" 
-		                        value="Fifth Week">
-		                      The fifth week. June 30 - July 4th. There is no class on July 3rd and July 4th.
-		                    </label>
-		                  </div>
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-week-sixth-input" 
-		                        class="mobile-week"
-		                        name="mobileWeekSix"
-		                        type="checkbox" 
-		                        value="Sixth Week">
-		                      The sixth week. July 7th - July 11th. 
-		                    </label>
-		                  </div>
-			              </div>
-			            </div>
+                            <div id="mentor-mobile-week-div" class="form-group mentor-input-div mobile-mentor-details" hidden>
+                          <div class="col-sm-12">
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-week-first-input" 
+                                class="mobile-week" 
+                                name="mobileWeekOne"
+                                type="checkbox" 
+                                value="First Week">
+                              The first week. June 2 - June 6
+                            </label>
+                          </div>
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-week-second-input" 
+                                type="checkbox" 
+                                name="mobileWeekTwo"
+                                class="mobile-week" 
+                                value="Second Week">
+                              The second week. June 9 - June 13
+                            </label>
+                          </div>
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-week-third-input" 
+                                class="mobile-week"
+                                name="mobileWeekThree"
+                                type="checkbox" 
+                                value="Third Week">
+                              The third week. June 16 - June 20
+                            </label>
+                          </div>
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-week-fourth-input" 
+                                class="mobile-week"
+                                name="mobileWeekFour"
+                                type="checkbox" 
+                                value="Fourth Week">
+                              The fourth week. June 23 - June 27
+                            </label>
+                          </div>
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-week-fifth-input" 
+                                class="mobile-week"
+                                name="mobileWeekFive"
+                                type="checkbox" 
+                                value="Fifth Week">
+                              The fifth week. June 30 - July 4th. There is no class on July 3rd and July 4th.
+                            </label>
+                          </div>
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-week-sixth-input" 
+                                class="mobile-week"
+                                name="mobileWeekSix"
+                                type="checkbox" 
+                                value="Sixth Week">
+                              The sixth week. July 7th - July 11th. 
+                            </label>
+                          </div>
+                          </div>
+                        </div>
 
-									<div class="col-sm-12 mobile-mentor-details question" hidden>
-                		<p> What weekdays from June 2 through July 11 are you available to mentor the mobile game dev class? Please check all that apply. 
-                		</p>
-                	</div>
+                                    <div class="col-sm-12 mobile-mentor-details question" hidden>
+                        <p> What weekdays from June 2 through July 11 are you available to mentor the mobile game dev class? Please check all that apply. 
+                        </p>
+                    </div>
 
-					        <div id="mentor-mobile-day-div" class="form-group mentor-input-div mobile-mentor-details" hidden>
-			              <div class="col-sm-12">
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-day-monday-input" 
-		                        class="mentor-mobile-day" 
-		                        name="mobileMonday"
-		                        type="checkbox" 
-		                        value="Monday">
-		                      Monday
-		                    </label>
-		                  </div>
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-day-tuesday-input" 
-		                        type="checkbox" 
-		                        name="mobileTuesday"
-		                        class="mentor-mobile-day" 
-		                        value="Tuesday">
-		                      Tuesday
-		                    </label>
-		                  </div>
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-day-wednesday-input" 
-		                        class="mentor-mobile-day"
-		                        name="mobileWednesday"
-		                        type="checkbox" 
-		                        value="Wednesday">
-		                      Wednesday
-		                    </label>
-		                  </div>
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-day-thursday-input" 
-		                        class="mentor-mobile-day"
-		                        name="mobileThursday"
-		                        type="checkbox" 
-		                        value="Thursday">
-		                      Thursday
-		                    </label>
-		                  </div>
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-day-friday-input" 
-		                        class="mentor-mobile-day"
-		                        name="mobileFriday"
-		                        type="checkbox" 
-		                        value="Friday">
-		                      Friday
-		                    </label>
-		                  </div>
-			              </div>
-			            </div>
+                            <div id="mentor-mobile-day-div" class="form-group mentor-input-div mobile-mentor-details" hidden>
+                          <div class="col-sm-12">
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-day-monday-input" 
+                                class="mentor-mobile-day" 
+                                name="mobileMonday"
+                                type="checkbox" 
+                                value="Monday">
+                              Monday
+                            </label>
+                          </div>
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-day-tuesday-input" 
+                                type="checkbox" 
+                                name="mobileTuesday"
+                                class="mentor-mobile-day" 
+                                value="Tuesday">
+                              Tuesday
+                            </label>
+                          </div>
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-day-wednesday-input" 
+                                class="mentor-mobile-day"
+                                name="mobileWednesday"
+                                type="checkbox" 
+                                value="Wednesday">
+                              Wednesday
+                            </label>
+                          </div>
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-day-thursday-input" 
+                                class="mentor-mobile-day"
+                                name="mobileThursday"
+                                type="checkbox" 
+                                value="Thursday">
+                              Thursday
+                            </label>
+                          </div>
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-day-friday-input" 
+                                class="mentor-mobile-day"
+                                name="mobileFriday"
+                                type="checkbox" 
+                                value="Friday">
+                              Friday
+                            </label>
+                          </div>
+                          </div>
+                        </div>
 
-			            <div class="col-sm-12 mobile-mentor-details question" hidden>
-                		<p> What daily 2 hour time block are you available to mentor the mobile game dev class? Please check all that apply.
-                		</p>
-                	</div>
+                        <div class="col-sm-12 mobile-mentor-details question" hidden>
+                        <p> What daily 2 hour time block are you available to mentor the mobile game dev class? Please check all that apply.
+                        </p>
+                    </div>
 
-					        <div id="mentor-mobile-time-div" class="form-group mentor-input-div mobile-mentor-details" hidden>
-			              <div class="col-sm-12">
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-time-1012-input" 
-		                        class="mobile-mentor-time" 
-		                        name="time10"
-		                        type="checkbox" 
-		                        value="10am-12pm">
-		                      10am - 12pm
-		                    </label>
-		                  </div>
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-time-13-input" 
-		                        type="checkbox" 
-		                        name="time1"
-		                        class="mobile-mentor-time" 
-		                        value="1pm-3pm">
-		                      1pm - 3pm
-		                    </label>
-		                  </div>
-		                  <div class="checkbox col-sm-8 col-sm-offset-1">
-		                    <label>
-		                      <input 
-		                        id="mentor-mobile-time-24-input" 
-		                        type="checkbox" 
-		                        name="time2"
-		                        class="mobile-mentor-time" 
-		                        value="2pm-4pm">
-		                      2pm - 4pm
-		                    </label>
-		                  </div>
-			              </div>
-			            </div>
+                            <div id="mentor-mobile-time-div" class="form-group mentor-input-div mobile-mentor-details" hidden>
+                          <div class="col-sm-12">
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-time-1012-input" 
+                                class="mobile-mentor-time" 
+                                name="time10"
+                                type="checkbox" 
+                                value="10am-12pm">
+                              10am - 12pm
+                            </label>
+                          </div>
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-time-13-input" 
+                                type="checkbox" 
+                                name="time1"
+                                class="mobile-mentor-time" 
+                                value="1pm-3pm">
+                              1pm - 3pm
+                            </label>
+                          </div>
+                          <div class="checkbox col-sm-8 col-sm-offset-1">
+                            <label>
+                              <input 
+                                id="mentor-mobile-time-24-input" 
+                                type="checkbox" 
+                                name="time2"
+                                class="mobile-mentor-time" 
+                                value="2pm-4pm">
+                              2pm - 4pm
+                            </label>
+                          </div>
+                          </div>
+                        </div>
 
-			            <div class="col-sm-12 mobile-mentor-details mobile-user-info question" hidden>
-                		<p> Your Full Name  
-                		</p>
-                	</div>
+                        <div class="col-sm-12 mobile-mentor-details mobile-user-info question" hidden>
+                        <p> Your Full Name  
+                        </p>
+                    </div>
 
-			            <div id="mentor-mobile-name-div" class="form-group mentor-input-div mobile-mentor-details mobile-user-info" hidden>
-			              <div class="col-sm-4 mentor-name">
-			                <input 
-			                  id="mentor-mobile-name-input" 
-			                  type="text" 
-			                  maxlength="50"
-			                  class="form-control mentor-input" 
-			                  placeholder="First Name Last Name">
-			              </div>
-			            </div>
+                        <div id="mentor-mobile-name-div" class="form-group mentor-input-div mobile-mentor-details mobile-user-info" hidden>
+                          <div class="col-sm-4 mentor-name">
+                            <input 
+                              id="mentor-mobile-name-input" 
+                              type="text" 
+                              maxlength="50"
+                              class="form-control mentor-input" 
+                              placeholder="First Name Last Name">
+                          </div>
+                        </div>
 
-			            <div class="col-sm-12 mobile-mentor-details mobile-user-info question" hidden>
-                		<p> Your Email Address
-                		</p>
-                	</div>
+                        <div class="col-sm-12 mobile-mentor-details mobile-user-info question" hidden>
+                        <p> Your Email Address
+                        </p>
+                    </div>
 
-                	<div id="mentor-mobile-email-div" class="form-group mentor-input-div mobile-mentor-details mobile-user-info" hidden>
-			              <div class="col-sm-4 mentor-email">
-			                <input 
-			                  id="mentor-mobile-email-input" 
-			                  type="email" 
-			                  maxlength="50"
-			                  class="form-control mentor-input" 
-			                  placeholder="e.g. mentor@mentor.com">
-			              </div>
-			            </div>
+                    <div id="mentor-mobile-email-div" class="form-group mentor-input-div mobile-mentor-details mobile-user-info" hidden>
+                          <div class="col-sm-4 mentor-email">
+                            <input 
+                              id="mentor-mobile-email-input" 
+                              type="email" 
+                              maxlength="50"
+                              class="form-control mentor-input" 
+                              placeholder="e.g. mentor@mentor.com">
+                          </div>
+                        </div>
 
-			            <div class="col-sm-10 col-sm-offset-1 mobile-mentor-success mentor-success" hidden>
-						      	<p class="success-msg"> Thank you for your interest in supporting the mobile game dev class. We'll be in touch soon. </p>
-						      </div>
+                        <div class="col-sm-10 col-sm-offset-1 mobile-mentor-success mentor-success" hidden>
+                                <p class="success-msg"> Thank you for your interest in supporting the mobile game dev class. We'll be in touch soon. </p>
+                              </div>
 
-			            <div class="form-group mobile-submit" hidden>
-					          <div id="save-mobile-button" class="col-sm-9">
-					            <button id="mobile-signup" type="submit" class="btn btn-primary"> SUBMIT DETAILS </button>
-					          </div>
-					        </div>
+                        <div class="form-group mobile-submit" hidden>
+                              <div id="save-mobile-button" class="col-sm-9">
+                                <button id="mobile-signup" type="submit" class="btn btn-primary"> SUBMIT DETAILS </button>
+                              </div>
+                            </div>
 
-              	</div>
-            	</div>
-				      
-	          </div>
+                </div>
+                </div>
+                      
+              </div>
           </form>
         </div>
        
         <div class="col-sm-12">
-        	<div class="row">
-		        <div class="headline col-sm-12">
-		            <h2> Mission Bit interns at Hack Reactor </h2>
-		        </div>
+            <div class="row">
+                <div class="headline col-sm-12">
+                    <h2> Mission Bit interns at Hack Reactor </h2>
+                </div>
 
-		        <div class="col-sm-12 description-div">
-			        <p class="summer-description"> 
-			        	Three Mission Bit spring semester students have been selected to participate in a four week paid internship at 
-			        	<a href="http://www.hackreactor.com" target="_blank">Hack Reactor</a>. The interns will spend the first two weeks working on a personal project and the second two weeks working on a project assigned by Hack Reactor. Project work will be assisted by Hack Reactor mentors.  
-			        </p>
-			      </div>
+                <div class="col-sm-12 description-div">
+                    <p class="summer-description"> 
+                        Three Mission Bit spring semester students have been selected to participate in a four week paid internship at 
+                        <a href="http://www.hackreactor.com" target="_blank">Hack Reactor</a>. The interns will spend the first two weeks working on a personal project and the second two weeks working on a project assigned by Hack Reactor. Project work will be assisted by Hack Reactor mentors.  
+                    </p>
+                  </div>
 
-			      <div class="col-sm-12 course-details">
-			      	<div class="row">
+                  <div class="col-sm-12 course-details">
+                    <div class="row">
 
-			      		<div class="col-sm-2 course-detail-title">
-			      			<span> Internship Dates </span>
-			      		</div>
-			      		<div class="col-sm-10">
-			      			<span> June 2 - June 27, 2014 </span>
-			      		</div>
+                        <div class="col-sm-2 course-detail-title">
+                            <span> Internship Dates </span>
+                        </div>
+                        <div class="col-sm-10">
+                            <span> June 2 - June 27, 2014 </span>
+                        </div>
 
-			      	</div>
-			      </div>
+                    </div>
+                  </div>
 
-			      <div class="col-sm-12 course-details">
-			      	<div class="row">
-			      		<div class="col-sm-2 course-detail-title">
-			      			<span> Days of Week </span>
-			      		</div>
-			      		<div class="col-sm-10">
-			      			<span> Monday - Friday </span>
-			      		</div>
-			      	</div>
-			      </div>
+                  <div class="col-sm-12 course-details">
+                    <div class="row">
+                        <div class="col-sm-2 course-detail-title">
+                            <span> Days of Week </span>
+                        </div>
+                        <div class="col-sm-10">
+                            <span> Monday - Friday </span>
+                        </div>
+                    </div>
+                  </div>
 
-			      <div class="col-sm-12 course-details">
-			      	<div class="row">
-			      		<div class="col-sm-2 course-detail-title">
-			      			<span> Daily Hours </span>
-			      		</div>
-			      		<div class="col-sm-10">
-			      			<span> 9am - 6pm. 1pm - 2pm is reserved for lunch </span>
-			      		</div>
-			      	</div>
-			      </div>
+                  <div class="col-sm-12 course-details">
+                    <div class="row">
+                        <div class="col-sm-2 course-detail-title">
+                            <span> Daily Hours </span>
+                        </div>
+                        <div class="col-sm-10">
+                            <span> 9am - 6pm. 1pm - 2pm is reserved for lunch </span>
+                        </div>
+                    </div>
+                  </div>
 
-			      <div class="col-sm-12 course-details">
-			      	<div class="row">
-			      		<div class="col-sm-2 course-detail-title">
-			      			<span> Internship Location </span>
-			      		</div>
-			      		<div class="col-sm-10">
-			      			<ul>
-				            <li>
-				                <a href="http://bit.ly/HRHQaddy" title="Map of 944 Market, SF, CA 94102" target="_blank"><i class="fa fa-lg fa-map-marker">&nbsp;</i>Hack Reactor, 944 Market, SF, CA </a>
-				            </li>
-				          </ul>
-			      		</div>
-			      	</div>
-			      </div>
+                  <div class="col-sm-12 course-details">
+                    <div class="row">
+                        <div class="col-sm-2 course-detail-title">
+                            <span> Internship Location </span>
+                        </div>
+                        <div class="col-sm-10">
+                            <ul>
+                            <li>
+                                <a href="http://bit.ly/HRHQaddy" title="Map of 944 Market, SF, CA 94102" target="_blank"><i class="fa fa-lg fa-map-marker">&nbsp;</i>Hack Reactor, 944 Market, SF, CA </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </div>
+                  </div>
 
-			      <div id="summer-mentor-intern-form" class="col-sm-12 mentor-form">
-		          <form class="form-horizontal" role="form">
-		          	<div class="row">
+                  <div id="summer-mentor-intern-form" class="col-sm-12 mentor-form">
+                  <form class="form-horizontal" role="form">
+                    <div class="row">
 
-						      <div class="col-sm-10 col-sm-offset-1 signup-jump">
-						        <p class="summer-description jump-call the-ask"> 
-						        	Mission Bit is looking for mentors to support the students' summer internship at Hack Reactor. 
-						        </p>
-						        <p class="summer-description jump-call"> 
-						        	Mentors can serve as remote online tech help for the interns to discuss technical questions they have regarding their project work at Hack Reactor. Hack Reactor mentors will be the front line of help and guidance to the summer interns, but Mission Bit is looking to provide a back up remote tech help channel.  
-						        </p>
-						        <p class="summer-description jump-call"> 
-						        	To help the Mission Bit students get familiar with the tech stack they'll be working with at Hack Reactor, Mentors can hack with the Mission Bit students on a Firebase project on Saturday May 24th from 10am - 4pm.    
-						        </p>
-						      </div>
-			      			<div class="internship-online-question col-sm-10 col-sm-offset-1">
-			      				<div class="row">
+                              <div class="col-sm-10 col-sm-offset-1 signup-jump">
+                                <p class="summer-description jump-call the-ask"> 
+                                    Mission Bit is looking for mentors to support the students' summer internship at Hack Reactor. 
+                                </p>
+                                <p class="summer-description jump-call"> 
+                                    Mentors can serve as remote online tech help for the interns to discuss technical questions they have regarding their project work at Hack Reactor. Hack Reactor mentors will be the front line of help and guidance to the summer interns, but Mission Bit is looking to provide a back up remote tech help channel.  
+                                </p>
+                                <p class="summer-description jump-call"> 
+                                    To help the Mission Bit students get familiar with the tech stack they'll be working with at Hack Reactor, Mentors can hack with the Mission Bit students on a Firebase project on Saturday May 24th from 10am - 4pm.    
+                                </p>
+                              </div>
+                            <div class="internship-online-question col-sm-10 col-sm-offset-1">
+                                <div class="row">
 
-			      					<div class="col-sm-12 firebase-mentor question">
-		                		<p> Are you interested in hacking on a Firebase project with the Mission Bit students on Saturday May 24th to help prepare them for their internship at Hack Reactor? 
-		                		</p>
-		                	</div>
+                                    <div class="col-sm-12 firebase-mentor question">
+                                <p> Are you interested in hacking on a Firebase project with the Mission Bit students on Saturday May 24th to help prepare them for their internship at Hack Reactor? 
+                                </p>
+                            </div>
 
-		                	<div id="mentor-firebase-div" class="form-group mentor-input-div firebase-mentor">
-								      	<div class="col-sm-12">
-										      <div class="radio">
-													  <label>
-													    <input 
-													    type="radio" 
-													    name="firebaseYes" 
-													    id="firebase-yes" 
-													    value="Yes">
-													    Yes
-													  </label>
-													</div>
+                            <div id="mentor-firebase-div" class="form-group mentor-input-div firebase-mentor">
+                                        <div class="col-sm-12">
+                                              <div class="radio">
+                                                      <label>
+                                                        <input 
+                                                        type="radio" 
+                                                        name="firebaseYes" 
+                                                        id="firebase-yes" 
+                                                        value="Yes">
+                                                        Yes
+                                                      </label>
+                                                    </div>
 
-													<div class="radio">
-													  <label>
-													    <input 
-													    	type="radio" 
-													    	name="firebaseNo" 
-													    	id="firebase-no" 
-													    	value="No">
-													    No
-													  </label>
-													</div>
-												</div>
-											</div>
+                                                    <div class="radio">
+                                                      <label>
+                                                        <input 
+                                                            type="radio" 
+                                                            name="firebaseNo" 
+                                                            id="firebase-no" 
+                                                            value="No">
+                                                        No
+                                                      </label>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-											<div class="col-sm-12 firebase-mentor-details question" hidden>
-		                		<p> What half of the day on Saturday May 24th are you available to hack on a Firebase project with the Mission Bit students?
-		                		</p>
-		                	</div>
+                                            <div class="col-sm-12 firebase-mentor-details question" hidden>
+                                <p> What half of the day on Saturday May 24th are you available to hack on a Firebase project with the Mission Bit students?
+                                </p>
+                            </div>
 
-											<div id="mentor-firebase-time-div" class="form-group mentor-input-div firebase-mentor-details" hidden>
-					              <div class="col-sm-12">
-				                  <div class="checkbox col-sm-8">
-				                    <label>
-				                      <input 
-				                        id="mentor-firebase-time-AM-input" 
-				                        class="firebase-time"
-				                        name="firebaseAM" 
-				                        type="checkbox" 
-				                        value="AM">
-				                      10am - 12:30pm
-				                    </label>
-				                  </div>
-				                  <div class="checkbox col-sm-8">
-				                    <label>
-				                      <input 
-				                        id="mentor-firebase-time-PM-input" 
-				                        type="checkbox" 
-				                        name="firebasePM"
-				                        class="firebase-time" 
-				                        value="PM">
-				                      1:30pm - 4:00pm
-				                    </label>
-				                  </div>
-					              </div>
-					            </div>
+                                            <div id="mentor-firebase-time-div" class="form-group mentor-input-div firebase-mentor-details" hidden>
+                                  <div class="col-sm-12">
+                                  <div class="checkbox col-sm-8">
+                                    <label>
+                                      <input 
+                                        id="mentor-firebase-time-AM-input" 
+                                        class="firebase-time"
+                                        name="firebaseAM" 
+                                        type="checkbox" 
+                                        value="AM">
+                                      10am - 12:30pm
+                                    </label>
+                                  </div>
+                                  <div class="checkbox col-sm-8">
+                                    <label>
+                                      <input 
+                                        id="mentor-firebase-time-PM-input" 
+                                        type="checkbox" 
+                                        name="firebasePM"
+                                        class="firebase-time" 
+                                        value="PM">
+                                      1:30pm - 4:00pm
+                                    </label>
+                                  </div>
+                                  </div>
+                                </div>
 
-			      					<div class="col-sm-12 remote-mentor question" hidden>
-		                		<p> Are you interested in helping as a remote online mentor providing back up tech help support for the Mission Bit students during their internship at Hack Reactor? Its hard at this point to anticipate how much back up support the interns will need. If you sign up, its possible you won't receive any help requests during your shift. 
-		                		</p>
-		                	</div>
+                                    <div class="col-sm-12 remote-mentor question" hidden>
+                                <p> Are you interested in helping as a remote online mentor providing back up tech help support for the Mission Bit students during their internship at Hack Reactor? Its hard at this point to anticipate how much back up support the interns will need. If you sign up, its possible you won't receive any help requests during your shift. 
+                                </p>
+                            </div>
 
-		                	<div id="remote-mentor-yes" class="form-group mentor-input-div remote-mentor" hidden>
-								      	<div class="col-sm-12">
+                            <div id="remote-mentor-yes" class="form-group mentor-input-div remote-mentor" hidden>
+                                        <div class="col-sm-12">
 
-										      <div class="radio col-sm-11">
-													  <label>
-													    <input 
-													    	type="radio" 
-													    	name="remoteYes" 
-													    	id="intern-online-yes" 
-													    	class="remote-yes" 
-													    	value="Yes">
-													    Yes
-													  </label>
-													</div>
+                                              <div class="radio col-sm-11">
+                                                      <label>
+                                                        <input 
+                                                            type="radio" 
+                                                            name="remoteYes" 
+                                                            id="intern-online-yes" 
+                                                            class="remote-yes" 
+                                                            value="Yes">
+                                                        Yes
+                                                      </label>
+                                                    </div>
 
-													<div class="radio col-sm-11 col-sm-offset-1">
-													  <label>
-													    <input 
-													    	type="radio" 
-													    	name="remoteNo" 
-													    	id="intern-online-no" 
-													    	class="remote-no" 
-													    	value="No">
-													    No
-													  </label>
-													</div>
+                                                    <div class="radio col-sm-11 col-sm-offset-1">
+                                                      <label>
+                                                        <input 
+                                                            type="radio" 
+                                                            name="remoteNo" 
+                                                            id="intern-online-no" 
+                                                            class="remote-no" 
+                                                            value="No">
+                                                        No
+                                                      </label>
+                                                    </div>
 
-												</div>
-											</div>
+                                                </div>
+                                            </div>
 
-											<div class="col-sm-12 remote-mentor-details question" hidden>
-		                		<p> Which week from June 2 - June 27 are you available to provide support as a remote online mentor? Please check all that apply.  
-		                		</p>
-		                	</div>
+                                            <div class="col-sm-12 remote-mentor-details question" hidden>
+                                <p> Which week from June 2 - June 27 are you available to provide support as a remote online mentor? Please check all that apply.  
+                                </p>
+                            </div>
 
-							        <div id="mentor-remote-week-div" class="form-group mentor-input-div remote-mentor-details" hidden>
-					              <div class="col-sm-12">
-				                  <div class="checkbox col-sm-8 col-sm-offset-1">
-				                    <label>
-				                      <input 
-				                        id="mentor-remote-week-first-input" 
-				                        class="remote-week" 
-				                        name="remoteWeekOne"
-				                        type="checkbox" 
-				                        value="First Week">
-				                      The first week. June 2 - June 6
-				                    </label>
-				                  </div>
-				                  <div class="checkbox col-sm-8 col-sm-offset-1">
-				                    <label>
-				                      <input 
-				                        id="mentor-remote-week-second-input" 
-				                        type="checkbox" 
-				                        name="remoteWeekTwo"
-				                        class="remote-week" 
-				                        value="Second Week">
-				                      The second week. June 9 - June 13
-				                    </label>
-				                  </div>
-				                  <div class="checkbox col-sm-8 col-sm-offset-1">
-				                    <label>
-				                      <input 
-				                        id="mentor-remote-week-third-input" 
-				                        class="remote-week"
-				                        name="remoteWeekThree"
-				                        type="checkbox" 
-				                        value="Third Week">
-				                      The third week. June 16 - June 20
-				                    </label>
-				                  </div>
-				                  <div class="checkbox col-sm-8 col-sm-offset-1">
-				                    <label>
-				                      <input 
-				                        id="mentor-remote-week-fourth-input" 
-				                        class="remote-week"
-				                        name="remoteWeekFour"
-				                        type="checkbox" 
-				                        value="Fourth Week">
-				                      The fourth week. June 23 - June 27
-				                    </label>
-				                  </div>
-					              </div>
-					            </div>
+                                    <div id="mentor-remote-week-div" class="form-group mentor-input-div remote-mentor-details" hidden>
+                                  <div class="col-sm-12">
+                                  <div class="checkbox col-sm-8 col-sm-offset-1">
+                                    <label>
+                                      <input 
+                                        id="mentor-remote-week-first-input" 
+                                        class="remote-week" 
+                                        name="remoteWeekOne"
+                                        type="checkbox" 
+                                        value="First Week">
+                                      The first week. June 2 - June 6
+                                    </label>
+                                  </div>
+                                  <div class="checkbox col-sm-8 col-sm-offset-1">
+                                    <label>
+                                      <input 
+                                        id="mentor-remote-week-second-input" 
+                                        type="checkbox" 
+                                        name="remoteWeekTwo"
+                                        class="remote-week" 
+                                        value="Second Week">
+                                      The second week. June 9 - June 13
+                                    </label>
+                                  </div>
+                                  <div class="checkbox col-sm-8 col-sm-offset-1">
+                                    <label>
+                                      <input 
+                                        id="mentor-remote-week-third-input" 
+                                        class="remote-week"
+                                        name="remoteWeekThree"
+                                        type="checkbox" 
+                                        value="Third Week">
+                                      The third week. June 16 - June 20
+                                    </label>
+                                  </div>
+                                  <div class="checkbox col-sm-8 col-sm-offset-1">
+                                    <label>
+                                      <input 
+                                        id="mentor-remote-week-fourth-input" 
+                                        class="remote-week"
+                                        name="remoteWeekFour"
+                                        type="checkbox" 
+                                        value="Fourth Week">
+                                      The fourth week. June 23 - June 27
+                                    </label>
+                                  </div>
+                                  </div>
+                                </div>
 
-											<div class="col-sm-12 remote-mentor-details question" hidden>
-		                		<p> What weekdays from June 2 through June 27 are you available to provide support as an online remote mentor? Please check all that apply. 
-		                		</p>
-		                	</div>
+                                            <div class="col-sm-12 remote-mentor-details question" hidden>
+                                <p> What weekdays from June 2 through June 27 are you available to provide support as an online remote mentor? Please check all that apply. 
+                                </p>
+                            </div>
 
-							        <div id="mentor-remote-day-div" class="form-group mentor-input-div remote-mentor-details" hidden>
-					              <div class="col-sm-12">
-				                  <div class="checkbox col-sm-8 col-sm-offset-1">
-				                    <label>
-				                      <input 
-				                        id="mentor-remote-day-monday-input" 
-				                        class="customer-check" 
-				                        name="dayMonday"
-				                        type="checkbox" 
-				                        value="Monday">
-				                      Monday
-				                    </label>
-				                  </div>
-				                  <div class="checkbox col-sm-8 col-sm-offset-1">
-				                    <label>
-				                      <input 
-				                        id="mentor-remote-day-tuesday-input" 
-				                        type="checkbox" 
-				                        name="dayTuesday"
-				                        class="customer-check" 
-				                        value="Tuesday">
-				                      Tuesday
-				                    </label>
-				                  </div>
-				                  <div class="checkbox col-sm-8 col-sm-offset-1">
-				                    <label>
-				                      <input 
-				                        id="mentor-remote-day-wednesday-input" 
-				                        class="customer-check"
-				                        name="dayWednesday"
-				                        type="checkbox" 
-				                        value="Wednesday">
-				                      Wednesday
-				                    </label>
-				                  </div>
-				                  <div class="checkbox col-sm-8 col-sm-offset-1">
-				                    <label>
-				                      <input 
-				                        id="mentor-remote-day-thursday-input" 
-				                        class="customer-check"
-				                        name="dayThursday"
-				                        type="checkbox" 
-				                        value="Thursday">
-				                      Thursday
-				                    </label>
-				                  </div>
-				                  <div class="checkbox col-sm-8 col-sm-offset-1">
-				                    <label>
-				                      <input 
-				                        id="mentor-remote-day-friday-input" 
-				                        class="customer-check"
-				                        name="dayFriday"
-				                        type="checkbox" 
-				                        value="Friday">
-				                      Friday
-				                    </label>
-				                  </div>
-					              </div>
-					            </div>
+                                    <div id="mentor-remote-day-div" class="form-group mentor-input-div remote-mentor-details" hidden>
+                                  <div class="col-sm-12">
+                                  <div class="checkbox col-sm-8 col-sm-offset-1">
+                                    <label>
+                                      <input 
+                                        id="mentor-remote-day-monday-input" 
+                                        class="customer-check" 
+                                        name="dayMonday"
+                                        type="checkbox" 
+                                        value="Monday">
+                                      Monday
+                                    </label>
+                                  </div>
+                                  <div class="checkbox col-sm-8 col-sm-offset-1">
+                                    <label>
+                                      <input 
+                                        id="mentor-remote-day-tuesday-input" 
+                                        type="checkbox" 
+                                        name="dayTuesday"
+                                        class="customer-check" 
+                                        value="Tuesday">
+                                      Tuesday
+                                    </label>
+                                  </div>
+                                  <div class="checkbox col-sm-8 col-sm-offset-1">
+                                    <label>
+                                      <input 
+                                        id="mentor-remote-day-wednesday-input" 
+                                        class="customer-check"
+                                        name="dayWednesday"
+                                        type="checkbox" 
+                                        value="Wednesday">
+                                      Wednesday
+                                    </label>
+                                  </div>
+                                  <div class="checkbox col-sm-8 col-sm-offset-1">
+                                    <label>
+                                      <input 
+                                        id="mentor-remote-day-thursday-input" 
+                                        class="customer-check"
+                                        name="dayThursday"
+                                        type="checkbox" 
+                                        value="Thursday">
+                                      Thursday
+                                    </label>
+                                  </div>
+                                  <div class="checkbox col-sm-8 col-sm-offset-1">
+                                    <label>
+                                      <input 
+                                        id="mentor-remote-day-friday-input" 
+                                        class="customer-check"
+                                        name="dayFriday"
+                                        type="checkbox" 
+                                        value="Friday">
+                                      Friday
+                                    </label>
+                                  </div>
+                                  </div>
+                                </div>
 
-					            <div class="col-sm-12 remote-mentor-details question" hidden>
-		                		<p> What half of the day are you available to provide support as an online remote mentor? Please check all that apply.
-		                		</p>
-		                	</div>
+                                <div class="col-sm-12 remote-mentor-details question" hidden>
+                                <p> What half of the day are you available to provide support as an online remote mentor? Please check all that apply.
+                                </p>
+                            </div>
 
-							        <div id="mentor-remote-time-div" class="form-group mentor-input-div remote-mentor-details" hidden>
-					              <div class="col-sm-12">
-				                  <div class="checkbox col-sm-8 col-sm-offset-1">
-				                    <label>
-				                      <input 
-				                        id="mentor-remote-time-AM-input" 
-				                        class="customer-check" 
-				                        name="timeAM"
-				                        type="checkbox" 
-				                        value="AM">
-				                      9am - 1pm
-				                    </label>
-				                  </div>
-				                  <div class="checkbox col-sm-8 col-sm-offset-1">
-				                    <label>
-				                      <input 
-				                        id="mentor-remote-time-PM-input" 
-				                        type="checkbox" 
-				                        name="timePM"
-				                        class="customer-check" 
-				                        value="PM">
-				                      2pm - 6pm
-				                    </label>
-				                  </div>
-					              </div>
-					            </div>
+                                    <div id="mentor-remote-time-div" class="form-group mentor-input-div remote-mentor-details" hidden>
+                                  <div class="col-sm-12">
+                                  <div class="checkbox col-sm-8 col-sm-offset-1">
+                                    <label>
+                                      <input 
+                                        id="mentor-remote-time-AM-input" 
+                                        class="customer-check" 
+                                        name="timeAM"
+                                        type="checkbox" 
+                                        value="AM">
+                                      9am - 1pm
+                                    </label>
+                                  </div>
+                                  <div class="checkbox col-sm-8 col-sm-offset-1">
+                                    <label>
+                                      <input 
+                                        id="mentor-remote-time-PM-input" 
+                                        type="checkbox" 
+                                        name="timePM"
+                                        class="customer-check" 
+                                        value="PM">
+                                      2pm - 6pm
+                                    </label>
+                                  </div>
+                                  </div>
+                                </div>
 
-					            <div class="col-sm-12 question intern-user-info" hidden>
-		                		<p> Your Full Name  
-		                		</p>
-		                	</div>
+                                <div class="col-sm-12 question intern-user-info" hidden>
+                                <p> Your Full Name  
+                                </p>
+                            </div>
 
-		                	<div id="mentor-name-div" class="form-group mentor-input-div intern-user-info" hidden>
-					              <!-- <label for="mentor-name" class="col-sm-2 control-label"> Your Full Name </label> -->
-					              <div class="col-sm-4 mentor-name">
-					                <input 
-					                  id="mentor-name-input" 
-					                  type="text" 
-					                  maxlength="50"
-					                  class="form-control mentor-input" 
-					                  placeholder="First Name Last Name">
-					              </div>
-					            </div>
+                            <div id="mentor-name-div" class="form-group mentor-input-div intern-user-info" hidden>
+                                  <!-- <label for="mentor-name" class="col-sm-2 control-label"> Your Full Name </label> -->
+                                  <div class="col-sm-4 mentor-name">
+                                    <input 
+                                      id="mentor-name-input" 
+                                      type="text" 
+                                      maxlength="50"
+                                      class="form-control mentor-input" 
+                                      placeholder="First Name Last Name">
+                                  </div>
+                                </div>
 
-							        <div class="col-sm-12 question intern-user-info" hidden>
-		                		<p> Your Email Address
-		                		</p>
-		                	</div>
+                                    <div class="col-sm-12 question intern-user-info" hidden>
+                                <p> Your Email Address
+                                </p>
+                            </div>
 
-		                	<div id="mentor-email-div" class="form-group mentor-input-div intern-user-info" hidden>
-					              <div class="col-sm-4 mentor-email">
-					                <input 
-					                  id="mentor-email-input" 
-					                  type="email" 
-					                  maxlength="50"
-					                  class="form-control mentor-input" 
-					                  placeholder="e.g. mentor@mentor.com">
-					              </div>
-					            </div>
+                            <div id="mentor-email-div" class="form-group mentor-input-div intern-user-info" hidden>
+                                  <div class="col-sm-4 mentor-email">
+                                    <input 
+                                      id="mentor-email-input" 
+                                      type="email" 
+                                      maxlength="50"
+                                      class="form-control mentor-input" 
+                                      placeholder="e.g. mentor@mentor.com">
+                                  </div>
+                                </div>
 
-					            <div class="col-sm-10 col-sm-offset-1 intern-mentor-success mentor-success" hidden>
-								      	<p class="success-msg"> Thank you for your interest in supporting the Mission Bit students prepare for and/or succeed in their internship at Hack Reactor. We'll be in touch soon. </p>
-								      </div>
+                                <div class="col-sm-10 col-sm-offset-1 intern-mentor-success mentor-success" hidden>
+                                        <p class="success-msg"> Thank you for your interest in supporting the Mission Bit students prepare for and/or succeed in their internship at Hack Reactor. We'll be in touch soon. </p>
+                                      </div>
 
-					            <div class="form-group internship-submit" hidden>
-							          <div id="save-intern-button" class="col-sm-9">
-							            <button id="summer-signup" type="submit" class="btn btn-primary"> SUBMIT DETAILS </button>
-							          </div>
-							        </div>
+                                <div class="form-group internship-submit" hidden>
+                                      <div id="save-intern-button" class="col-sm-9">
+                                        <button id="summer-signup" type="submit" class="btn btn-primary"> SUBMIT DETAILS </button>
+                                      </div>
+                                    </div>
 
-	                	</div>
-                	</div>
-						      
-			          </div>
-		          </form>
-		        </div>
+                        </div>
+                    </div>
+                              
+                      </div>
+                  </form>
+                </div>
 
-			    </div>
-	      </div>
+                </div>
+          </div>
 
-			  <div class="col-sm-12">
-        	<div class="row">
-					  <div class="headline col-sm-12">
-		            <h2> SFUSD Teacher Intro Web Programming </h2>
-		        </div>
-		        <div class="col-sm-12 description-div">
+              <div class="col-sm-12">
+            <div class="row">
+                      <div class="headline col-sm-12">
+                    <h2> SFUSD Teacher Intro Web Programming </h2>
+                </div>
+                <div class="col-sm-12 description-div">
 
-			        <p class="summer-description"> 
-			        	Mission Bit is running a three week SFUSD Teacher Externship Program supported by <a href="http://www.mpict.org/" target="_blank"> Mid Pacific Information and Communication Technologies Center (MPICT)</a>. The program includes a week of full day classes and two weeks in a job shadow at an SF based tech company. Upon completion of the classes and job shadow, the teachers will submit a plan to MPICT about how they intend to incorporate what they learned into their high school classes. Five SFUSD teachers from Burton, Thurgood Marshall, Lincoln and Lowell are participating in the 2014 Summer program.
-			        </p>
+                    <p class="summer-description"> 
+                        Mission Bit is running a three week SFUSD Teacher Externship Program supported by <a href="http://www.mpict.org/" target="_blank"> Mid Pacific Information and Communication Technologies Center (MPICT)</a>. The program includes a week of full day classes and two weeks in a job shadow at an SF based tech company. Upon completion of the classes and job shadow, the teachers will submit a plan to MPICT about how they intend to incorporate what they learned into their high school classes. Five SFUSD teachers from Burton, Thurgood Marshall, Lincoln and Lowell are participating in the 2014 Summer program.
+                    </p>
 
-			        <p class="summer-description"> 
-				        The class portion of the teacher externship will teach SFUSD teachers modern HTML, CSS and a little JavaScript by building portfolio pages via GitHub Pages.  The class will also focus on how they can bring these tools into their own classrooms to collaborate with their students to teach them the same skills.
-				      </p>
+                    <p class="summer-description"> 
+                        The class portion of the teacher externship will teach SFUSD teachers modern HTML, CSS and a little JavaScript by building portfolio pages via GitHub Pages.  The class will also focus on how they can bring these tools into their own classrooms to collaborate with their students to teach them the same skills.
+                      </p>
 
-			      </div>
+                  </div>
 
-			      <div class="col-sm-12 course-details">
-			      	<div class="row">
+                  <div class="col-sm-12 course-details">
+                    <div class="row">
 
-			      		<div class="col-sm-2 course-detail-title">
-			      			<span> Course Dates </span>
-			      		</div>
-			      		<div class="col-sm-10">
-			      			<span> June 2 - June 6 </span>
-			      		</div>
+                        <div class="col-sm-2 course-detail-title">
+                            <span> Course Dates </span>
+                        </div>
+                        <div class="col-sm-10">
+                            <span> June 2 - June 6 </span>
+                        </div>
 
-			      	</div>
-			      </div>
+                    </div>
+                  </div>
 
-			      <div class="col-sm-12">
-			      	<div class="row">
-			      		<div class="col-sm-2 course-detail-title">
-			      			<span> Days of Week </span>
-			      		</div>
-			      		<div class="col-sm-10">
-			      			<span> Monday - Friday </span>
-			      		</div>
-			      	</div>
-			      </div>
+                  <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2 course-detail-title">
+                            <span> Days of Week </span>
+                        </div>
+                        <div class="col-sm-10">
+                            <span> Monday - Friday </span>
+                        </div>
+                    </div>
+                  </div>
 
-			      <div class="col-sm-12">
-			      	<div class="row">
-			      		<div class="col-sm-2 course-detail-title">
-			      			<span> Daily Hours </span>
-			      		</div>
-			      		<div class="col-sm-10">
-			      			<span> 9am - 4pm. 12pm - 1pm is reserved for lunch </span>
-			      		</div>
-			      	</div>
-			      </div>
+                  <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2 course-detail-title">
+                            <span> Daily Hours </span>
+                        </div>
+                        <div class="col-sm-10">
+                            <span> 9am - 4pm. 12pm - 1pm is reserved for lunch </span>
+                        </div>
+                    </div>
+                  </div>
 
-			      <div class="col-sm-12">
-			      	<div class="row">
-			      		<div class="col-sm-2 course-detail-title">
-			      			<span> Class Location </span>
-			      		</div>
-			      		<div class="col-sm-10">
-			      			<span> Somewhere in mid-market or SoMA </span>
-			      		</div>
-			      	</div>
-			      </div>
-		      </div>
-		    </div>
+                  <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-2 course-detail-title">
+                            <span> Class Location </span>
+                        </div>
+                        <div class="col-sm-10">
+                            <span> Somewhere in mid-market or SoMA </span>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
 
-		    <div id="summer-mentor-teacher-form" class="col-sm-12 mentor-form">
+            <div id="summer-mentor-teacher-form" class="col-sm-12 mentor-form">
           <form class="form-horizontal" role="form">
-          	<div class="row">
+            <div class="row">
 
-				      <div class="col-sm-10 col-sm-offset-1 signup-jump">
-				        <p class="summer-description jump-call the-ask"> 
-				        	Mission Bit is looking for front end engineering teams to host the SFUSD high school teachers in a 2 week job shadow from June 9 - June 20. 
-				        </p>
-				      </div>
+                      <div class="col-sm-10 col-sm-offset-1 signup-jump">
+                        <p class="summer-description jump-call the-ask"> 
+                            Mission Bit is looking for front end engineering teams to host the SFUSD high school teachers in a 2 week job shadow from June 9 - June 20. 
+                        </p>
+                      </div>
 
-	      			<div class="teacher-boolean-question col-sm-10 col-sm-offset-1">
-	      				<div class="row">
+                    <div class="teacher-boolean-question col-sm-10 col-sm-offset-1">
+                        <div class="row">
 
-	      					<div class="col-sm-12 teacher-mentor question">
-                		<p> Would you like more information about hosting an SFUSD teacher in a two week job shadow?
-                		</p>
-                	</div>
+                            <div class="col-sm-12 teacher-mentor question">
+                        <p> Would you like more information about hosting an SFUSD teacher in a two week job shadow?
+                        </p>
+                    </div>
 
-                	<div id="mentor-teacher-div" class="form-group mentor-input-div teacher-mentor">
-						      	<div class="col-sm-12">
-								      <div class="radio">
-											  <label>
-											    <input 
-											    type="radio" 
-											    name="teacherYes" 
-											    id="teacher-yes" 
-											    value="Yes">
-											    Yes
-											  </label>
-											</div>
+                    <div id="mentor-teacher-div" class="form-group mentor-input-div teacher-mentor">
+                                <div class="col-sm-12">
+                                      <div class="radio">
+                                              <label>
+                                                <input 
+                                                type="radio" 
+                                                name="teacherYes" 
+                                                id="teacher-yes" 
+                                                value="Yes">
+                                                Yes
+                                              </label>
+                                            </div>
 
-											<div class="radio">
-											  <label>
-											    <input 
-											    	type="radio" 
-											    	name="teacherNo" 
-											    	id="teacher-no" 
-											    	value="No">
-											    No
-											  </label>
-											</div>
-										</div>
-									</div>
+                                            <div class="radio">
+                                              <label>
+                                                <input 
+                                                    type="radio" 
+                                                    name="teacherNo" 
+                                                    id="teacher-no" 
+                                                    value="No">
+                                                No
+                                              </label>
+                                            </div>
+                                        </div>
+                                    </div>
 
-									<div class="col-sm-12 teacher-mentor-details teacher-user-info question" hidden>
-                		<p> Your Full Name  
-                		</p>
-                	</div>
+                                    <div class="col-sm-12 teacher-mentor-details teacher-user-info question" hidden>
+                        <p> Your Full Name  
+                        </p>
+                    </div>
 
-                	<div id="mentor-teacher-name-div" class="form-group mentor-input-div teacher-mentor-details teacher-user-info" hidden>
-			              <!-- <label for="mentor-name" class="col-sm-2 control-label"> Your Full Name </label> -->
-			              <div class="col-sm-4 mentor-name">
-			                <input 
-			                  id="mentor-teacher-name-input" 
-			                  type="text" 
-			                  maxlength="50"
-			                  class="form-control mentor-input" 
-			                  placeholder="First Name Last Name">
-			              </div>
-			            </div>
+                    <div id="mentor-teacher-name-div" class="form-group mentor-input-div teacher-mentor-details teacher-user-info" hidden>
+                          <!-- <label for="mentor-name" class="col-sm-2 control-label"> Your Full Name </label> -->
+                          <div class="col-sm-4 mentor-name">
+                            <input 
+                              id="mentor-teacher-name-input" 
+                              type="text" 
+                              maxlength="50"
+                              class="form-control mentor-input" 
+                              placeholder="First Name Last Name">
+                          </div>
+                        </div>
 
-			            <div class="col-sm-12 teacher-mentor-details teacher-user-info question" hidden>
-                		<p> Your Email Address
-                		</p>
-                	</div>
+                        <div class="col-sm-12 teacher-mentor-details teacher-user-info question" hidden>
+                        <p> Your Email Address
+                        </p>
+                    </div>
 
-                	<div id="mentor-teacher-email-div" class="form-group mentor-input-div teacher-mentor-details teacher-user-info" hidden>
-			              <div class="col-sm-4 mentor-email">
-			                <input 
-			                  id="mentor-teacher-email-input" 
-			                  type="email" 
-			                  maxlength="50"
-			                  class="form-control mentor-input" 
-			                  placeholder="e.g. mentor@mentor.com">
-			              </div>
-			            </div>
+                    <div id="mentor-teacher-email-div" class="form-group mentor-input-div teacher-mentor-details teacher-user-info" hidden>
+                          <div class="col-sm-4 mentor-email">
+                            <input 
+                              id="mentor-teacher-email-input" 
+                              type="email" 
+                              maxlength="50"
+                              class="form-control mentor-input" 
+                              placeholder="e.g. mentor@mentor.com">
+                          </div>
+                        </div>
 
-			            <div class="col-sm-10 col-sm-offset-1 teacher-mentor-success mentor-success" hidden>
-						      	<p class="success-msg"> Thanks for your interest in hosting an SFUSD teacher shadow. We'll be in touch soon. </p>
-						      </div>
+                        <div class="col-sm-10 col-sm-offset-1 teacher-mentor-success mentor-success" hidden>
+                                <p class="success-msg"> Thanks for your interest in hosting an SFUSD teacher shadow. We'll be in touch soon. </p>
+                              </div>
 
-			            <div class="form-group teacher-submit" hidden>
-					          <div id="save-teacher-button" class="col-sm-9">
-					            <button id="teacher-signup" type="submit" class="btn btn-primary"> SUBMIT DETAILS </button>
-					          </div>
-					        </div>
+                        <div class="form-group teacher-submit" hidden>
+                              <div id="save-teacher-button" class="col-sm-9">
+                                <button id="teacher-signup" type="submit" class="btn btn-primary"> SUBMIT DETAILS </button>
+                              </div>
+                            </div>
 
-              	</div>
-            	</div>
-				      
-	          </div>
+                </div>
+                </div>
+                      
+              </div>
           </form>
         </div>
 
     </div>
 </div><!-- /container -->
-
-<footer role="contentinfo">
-    <div class="container">
-        <div class="row contact-info">
-            <div class="col-md-6 md-margin-bottom-40">
-                <!-- Monthly Newsletter -->
-                <div class="headline"><h2>Mission Bit Newsletter</h2></div>
-                <p> Email us to subscribe to our newsletter!</p>
-                <h4> <a href="mailto:info@missionbit.com">info@missionbit.com</a> </h4>
-            </div><!--/col-md-6-->
-        
-            <div class="col-md-6">
-                <!-- Monthly Newsletter -->
-                <div class="headline"><h2>Contact Us</h2></div>
-                <address class="md-margin-bottom-40">
-                    SF, CA <br />
-                    <a href="mailto:info@missionbit.com">info@missionbit.com</a> <br />
-                    <table>
-                        <tr>
-                            <td class="icon"><i class="fa fa-lg fa-twitter"></i></td>
-                            <td><a href="https://twitter.com/missionbit" target="_blank">@missionbit</a></td>
-                        </tr>
-                        <tr>
-                            <td class="icon"><i class="fa fa-lg fa-facebook"></i></td>
-                            <td><a href="https://facebook.com/MissionBit" target="_blank">facebook.com/missionbit</a></td>
-                        </tr>
-                        <tr>
-                            <td class="icon"><i class="fa fa-lg fa-github"></i></td>
-                            <td><a href="https://github.com/MissionBit" target="_blank">github.com/MissionBit</a></td>
-                        </tr>
-                    </table>
-                </address>
-            </div><!--/col-md-6-->
-        </div><!--/row-->
-    </div>
-</footer>
-<div class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p class="copyright-space">
-                    2014 &copy; Mission Bit. A 501(c)3 Non-Profit. ALL Rights Reserved.
-                </p>
-            </div>
-        </div><!--/row-->
-    </div>
-</div>
-
-<!-- Vendor JS -->
-<script src="vendor/jquery-2.0.3/jquery-2.0.3.min.js"></script>
-<script src="vendor/bootstrap-3.0.3/js/bootstrap.min.js"></script>
-<!-- Local JS -->
-<script src="js/site.js"></script>
-<!-- Analytics -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-47473369-1', 'missionbit.com');
-  ga('require', 'linkid', 'linkid.js');
-  ga('send', 'pageview');
-</script>
-<!-- PARSE -->
-<script src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
-<script> 
-	Parse.initialize("w39zwZoBCaH3HAmDecx7shBkR4Od4G6bpfd0rBuY", "EO4wwBBLCOl1MDnboPWCyWs7H1p2YQIwLlId0apw");
-</script>
-</body>
-</html>

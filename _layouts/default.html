@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body id="mbit"{% if page.body-class %} class="{{ page.body-class }}"{% endif %}>
+
+{% include alert.html %}
+{% include header.html %}
+
+{{ content }}
+
+{% include footer.html %}
+{% include copyright.html %}
+
+{% include scripts.html %}
+</body>
+</html>

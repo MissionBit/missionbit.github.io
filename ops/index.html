@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <base href="..">
-    <title>Mission Bit – Ops</title>
-</head>
-
-<body>
+---
+title: "Ops"
+---
+<div class="container" role="main">
 <h1>Laptop Re-imaging HOWTO</h1>
 <h2 id="prerequisites"><a href="#prerequisites">Prerequisites</a></h2>
 <ol>
@@ -27,6 +23,7 @@
         <li>If it turns on and then goes right to sleep, reset the PRAM.</li>
         <li>If it doesn't turn on at all, reset the SMC and leave it plugged in for 5-10 minutes to charge up and try again (it might've been totally drained after a very long nap!).</li>
     </ul>
+</li>
 <li>Click on the "Recovery-10.9.4" disk that shows up, will have an orange and white external USB hard drive icon and then click on the up arrow to boot from it.</li>
 <li>If it asks you to choose a language, choose English :)</li>
 <li>Choose Disk Utility</li>
@@ -70,5 +67,4 @@ out of the laptop for this)</li>
     <dt id="smc-reset">SMC reset</dt><dd><a href="http://support.apple.com/kb/ht3964">http://support.apple.com/kb/ht3964</a> For most laptops hold Shift-Control-Option-Power while the computer is off for about 5 seconds and let go. You should expect to see the light on the power adapter change. If battery is removable then remove battery and power cord and hold power for 5 secs.</dd>
     <dt id="destroy-gpt">Destroy GPT</dt><dd>Cmd-Q to quit Disk Utility, Open Terminal and type <code>gpt destroy /dev/disk0</code> and then press return. Cmd-Q to quit Terminal and go back to Disk Utility to continue.</dd>
 </dl>
-</body>
-</html>
+</div>
