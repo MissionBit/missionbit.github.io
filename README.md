@@ -43,8 +43,9 @@ look like this:
 *minimal-page-example.html*
 ```html
 ---
+title: "Minimal Page Example"
 ---
-<!-- The above two lines of three hypens are the YAML front matter! -->
+<!-- The above block between two lines of three hypens is the YAML front matter! -->
 <div class="homepage-image img-anim-group-1">
     <!-- This is the big image -->
 </div>
