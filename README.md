@@ -14,10 +14,11 @@ site work well and look good:
 
 # Setup
 
-Install [Jekyll] by opening Terminal and typing the following command:
+Make sure you have an administrator account on the computer and
+install [Jekyll] by opening Terminal and typing the following command:
 
 ```bash
-gem install jekyll
+sudo gem install jekyll
 ```
 
 # HACKING
