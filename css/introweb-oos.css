@@ -1,3 +1,6 @@
-#coursepage-students{
-	font-size: 10px;
+.coursepage-students img{
+max-width: 200px;
+}
+.coursepage-students h3{
+	font-size: 20px;
 }
