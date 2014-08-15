@@ -1,0 +1,7 @@
+title: "Mission Bit"
+defaults:
+  - scope:
+      path: ""
+      type: "page"
+    values:
+      layout: "default"
