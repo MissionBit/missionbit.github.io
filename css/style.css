@@ -4,6 +4,23 @@
     box-model: false, fallback-colors:false, overqualified-elements:false,
     display-property-grouping:false */
 
+.open-signups h1 {
+    text-align: center;
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+}
+
+.enroll-ctr {
+    margin-bottom: 2em;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.enroll-ctr a {
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+}
+
+
+
 .mob-project-details {
     margin-left: 10px;
 }
@@ -66,7 +83,7 @@ nav {
     font-weight: 500;
     font-size: 1.25em;
 }
-    
+
 .navbar-brand {
     display: block;
     width: 150px;
@@ -200,7 +217,7 @@ nav {
 
 .homepage-image.mbgamedevs {
     background-image: url(../images/home/mbgamedevs.jpg);
-} 
+}
 
 #mbit .donate-icon {
     font-size: 15px;
@@ -477,7 +494,7 @@ footer address td.icon {
         border-left: 1px solid #ddd;
     }
 }
-    
+
 
 .share .progress-ctr {
     padding-top: 5px;
@@ -565,10 +582,10 @@ footer address td.icon {
 
 .course-detail-title {
     font-style: italic;
-    font-weight: bold;  
+    font-weight: bold;
 }
 
-.internship-online-question, 
+.internship-online-question,
 .mobile-boolean-question,
 .teacher-boolean-question,
 .mhs-project-form-body,
@@ -581,10 +598,10 @@ footer address td.icon {
     margin-top: 1em;
 }
 
-.radio, 
+.radio,
 .checkbox,
 .mentor-name,
-.mentor-email, 
+.mentor-email,
 .project-name,
 .project-email {
     margin-left: 1em;
@@ -602,7 +619,7 @@ footer address td.icon {
 .mentor-success,
 .project-success {
     border: 1px solid green;
-    color: green; 
+    color: green;
     text-align: center;
     margin-top: 1em;
     border-radius: .25em;
@@ -613,7 +630,7 @@ footer address td.icon {
 
 .success-msg {
     padding-top: .5em;
-} 
+}
 
 .mentor-form {
     margin-top: 1em;
@@ -682,7 +699,7 @@ footer address td.icon {
 .game-page .col-sm-3,
 .game-page .col-sm-4 {
     text-align: center;
-    font-size: 24px; 
+    font-size: 24px;
     font-family: 'UbuntuRegular', sans-serif;
 }
 

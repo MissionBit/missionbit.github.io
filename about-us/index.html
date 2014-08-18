@@ -1,6 +1,8 @@
 ---
+enable-mentor-alert: true
 title: "About Us"
 ---
+
 <!-- {% comment %}
   Edit _data/people.yml to make changes to the lists here!
 }
@@ -135,12 +137,12 @@ title: "About Us"
     {% assign people = (site.data.people | where: "mentor", "y" | sort: "name", "last" | sort: "mentor-order", "first") %}
     {% assign people_long_format = false %}
     {% include about-us/people.html %}
-    
+
     <div class="headline" id="advisors-to-the-board"><h2>Advisors to the Board</h2></div>
     {% assign people = (site.data.people | where: "advisor", "y" | sort: "name", "last" | sort: "advisor-order", "first") %}
     {% assign people_long_format = false %}
     {% include about-us/people.html %}
-    
+
     <div class="section">
         <div class="donate-ctr">
             <a class="btn btn-lg btn-default donate" href="donate/">Donate Today</a>
