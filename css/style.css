@@ -4,6 +4,15 @@
     box-model: false, fallback-colors:false, overqualified-elements:false,
     display-property-grouping:false */
 
+.recruit-title h1 {
+    text-align: center;
+    font-family: 'UbuntuRegular', sans-serif;
+}
+
+.reasons {
+    text-align: center;
+}
+
 .open-signups h1 {
     text-align: center;
     font-family: 'SourceCodeProSemiBold', sans-serif;
@@ -20,7 +29,14 @@
     font-family: 'SourceCodeProSemiBold', sans-serif;
 }
 
+.showcase-link {
+    font-family: 'Aldrich', sans-serif;
+    text-align: center;
+}
 
+.vid-embed {
+    text-align: center;
+}
 
 .mob-project-details {
     margin-left: 10px;
