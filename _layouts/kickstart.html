@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	{% include head.html %}
+	{% assign kickstart = true %}
+
+	<body id="hacklab"{% if page.body-class %} class="{{ page.body-class }}"{% endif %}>
+
+		{% include min-header.html %}
+
+		{{ content }}
+
+		{% include copyright.html %}
+
+		{% include scripts.html %}
+
+	</body>
+</html>
