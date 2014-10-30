@@ -4,6 +4,20 @@
     box-model: false, fallback-colors:false, overqualified-elements:false,
     display-property-grouping:false */
 
+html {
+  font-size: 16px;
+}
+
+body {
+    font-size: 62.5%;
+    height: 700px;
+
+}
+
+img {
+    max-width: 100%;
+}
+
 .recruit-title h1 {
     text-align: center;
     font-family: 'UbuntuRegular', sans-serif;
@@ -162,12 +176,7 @@ nav {
     font-family: 'UbuntuRegular', sans-serif;
 }
 
-@media (max-width: 991px) {
-    .page-head {
-        margin-top: -25px;
-        font-size: 120%;
-    }
-}
+
 
 .headline h2 {
     font-family: 'SourceCodeProSemiBold', sans-serif;
@@ -199,13 +208,6 @@ nav {
     background-position: 50%;
     margin: 0;
     padding: 0;
-}
-
-@media (max-width: 768px) {
-    .homepage-image { height: 200px; min-width: 586px; }
-}
-@media (min-width:769px) and (max-width: 991px) {
-    .homepage-image { height: 300px; min-width: 391px; }
 }
 
 .homepage-image.img-anim-group-1 {
@@ -300,8 +302,6 @@ iframe.campaign-alert {
 #mbit .apply:hover, #mbit .apply:focus {
     background: #ed9c28;
 }
-
-
 
 footer {
     margin-top: 40px;
@@ -438,6 +438,12 @@ footer address td.icon {
     background-color: black;
     color: white;
 }
+
+#hacklab.kickstart header {
+    padding: 2px 0 10px 0;
+    margin-bottom: 20px;  
+}
+
 .share header h1 {
     text-align: center;
 }
@@ -453,8 +459,12 @@ footer address td.icon {
     border-bottom: 2px solid rgba(0,0,0,0.1);
     margin-bottom: 20px;
 }
+
 .share .actions {
     text-align: center;
+    border-top: 1px solid silver;
+/*    margin-top: 2em;*/
+    margin-bottom: 1em;
 }
 .share .actions h2 {
     font-family: 'UbuntuMedium', sans-serif;
@@ -475,17 +485,21 @@ footer address td.icon {
     padding: 0 20px;
     margin: 0;
     cursor: pointer;
+    z-index: 10;
 }
+
 .share .actions button:hover {
     opacity: 0.9;
 }
 .share .actions button.facebook {
-    background: #3b5998;
+/*    background: #3b5998;*/
     background-image: linear-gradient(#4b71c1, #3b5998);
     color: #fff;
     box-shadow: inset 0 1px 0 0 #5b8aeb;
     text-shadow: #3b5998 0 1px 0;
+    cursor: pointer;
 }
+
 .share .actions button.twitter {
     background: #2578b4;
     background-image: linear-gradient(#58a8e2, #2578b4);
@@ -500,27 +514,13 @@ footer address td.icon {
     text-shadow: #ffff8e 0 1px 0;
 }
 
-@media (max-width:991px) {
-    .share .actions .col-md-4:nth-child(1n+2) {
-        margin-top: 20px;
-        border-top: 1px solid #ddd;
-    }
-}
-@media (min-width:992px) {
-    .share .actions .col-md-4:nth-child(1n+2) {
-        border-left: 1px solid #ddd;
-    }
-}
-
-
 .share .progress-ctr {
-    padding-top: 5px;
-    margin-left: -15px;
-    margin-right: -15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: -15px;
-    border-top: 1px solid #ccc;
+    padding-top: 0.05%;
+    margin-left: -1.5%;
+    margin-right: -1.5%;
+    margin-bottom: -1.5%;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 .share .progress .progress-bar {
@@ -550,12 +550,6 @@ footer address td.icon {
     max-width: 200px;
 }
 
-@media (max-width:991px) {
-    .program .logo {
-        max-width: 100px;
-    }
-}
-
 .programs .program ul {
     list-style-type: none;
 }
@@ -578,20 +572,6 @@ footer address td.icon {
 .color-orange { color: #e67e22; }
 .color-red { color: #e74c3c; }
 .color-sea { color: #1abc9c; }
-
-/* Retina images */
-@media
-    only screen and (-webkit-min-device-pixel-ratio: 1.5),
-    only screen and (min--moz-device-pixel-ratio: 1.5),
-    only screen and (min-device-pixel-ratio: 1.5),
-    only screen and (min-resolution: 1.5dppx) {
-    .doge-left {
-        background-image: url(../images/doge@2x.png);
-    }
-    .navbar-brand {
-        background-image: url(../images/logo@2x.png);
-    }
-}
 
 .course-details ul {
     list-style-type: none;
@@ -723,6 +703,350 @@ footer address td.icon {
 .team-icon {
     height: auto;
     width: 100%;
+}
+
+@media (min-width:769px) and (max-width: 991px) {
+    .homepage-image { 
+        height: 300px; 
+        min-width: 391px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .homepage-image { 
+        height: 200px; 
+        min-width: 586px;
+    }
+}
+
+/************** kickstarter template *****************/
+
+.share #kick-welcome .kickhead {
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Aldrich', sans-serif;
+}
+
+.share .kickhead h3, 
+.share .kickhead h1 {
+    text-align: center;
+    font-family: 'Aldrich', sans-serif;
+    color: white; 
+}
+
+.share #kick-welcome {
+    background-color: rgba(0,0,0,0.45);
+    color: white;
+    margin-top: 1em;
+    border-radius: 0.5em;
+}
+
+.share #kick-welcome h5 {
+    font-size: 2em;
+    padding-left: .8em;
+}
+
+.share #kick-welcome .words {
+    background-color: rgba(255,255,255,0.75);
+    color: black; 
+/*    background-color: rgba(0,0,0,0.75);
+    color: white;*/
+    padding: 1em;
+    border-radius: 0.5em;
+    font-size: 1.5em;
+}
+
+.kick-welcome-intro {
+}
+
+.kick-thx {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.kick-hey {
+    font-size: 2em;
+}
+
+.share .kick-box {
+    padding: 2em;
+    margin-bottom: 5em;
+    border: 1px solid #eaeaea;
+    border-radius: .25em;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+/*    height: 30%;*/
+}
+
+.share .kick-home-box {
+    width: 100%;
+    height: 42.857143%; 
+    margin-bottom: 1em; 
+}
+
+.kickstart-image {
+    background: url(../images/home/summer-mobile-tunnel-sm.jpg);
+    /*min-width: 1172px;*/
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.share .kick-box h2 {
+}
+
+#kick-nav.navbar {
+    margin-bottom: 0;
+}
+
+#kick-welcome.share-cta,
+#kick-box.kick-box {
+    width: 82%;
+}
+
+.byline {
+    font-size: 1.5em;
+}
+
+.share .trigger-title {
+    font-family: 'UbuntuMedium', sans-serif;
+    color: black;
+    font-size: 3em;
+    padding-top: 2%;
+    line-height: 1.1em;
+}
+
+.trigger-box {
+    width: 31%;
+    display: inline-block;
+    margin: 0.75% .71428571% 0 .71428571% ;
+}
+
+.share .actions .kick {
+    font-weight: bold;
+    border: 1px solid #1a1a1a;
+    border-radius: 0.5em;
+    font-size: 2.4em;
+    line-height: 2em;
+    /*padding: 0 15%;*/
+    width: 75%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.share .actions button:hover {
+    opacity: 0.9;
+}
+.share .actions button.facebook {
+/*    background: #3b5998;*/
+    background-image: linear-gradient(#4b71c1, #3b5998);
+    color: #fff;
+    box-shadow: inset 0 1px 0 0 #5b8aeb;
+    text-shadow: #3b5998 0 1px 0;
+    cursor: pointer;
+}
+
+.share .actions button.twitter {
+    background: #2578b4;
+    background-image: linear-gradient(#58a8e2, #2578b4);
+    color: #fff;
+    box-shadow: inset 0 1px 0 0 #88c1ec;
+    text-shadow: #2578b4 0 1px 0;
+}
+.share .actions button.play {
+    background: #87c442;
+    background-image: linear-gradient(#9fd04f, #87c442);
+    box-shadow: inset 0 1px 0 0 #b7dc63;
+    text-shadow: #ffff8e 0 1px 0;
+}
+
+.share .progress-ctr {
+    padding-top: 0.05%;
+    margin-left: -1.5%;
+    margin-right: -1.5%;
+    margin-bottom: -1%;
+    padding-left: 2.25%;
+    padding-right: 2.25%;
+    padding-bottom: .75%;
+/*    background-color: linen;*/
+}
+
+.share .progress .progress-bar {
+    text-align: right;
+    background: #87C442;
+    background-image: linear-gradient(#9fd04f, #87c442);
+    height: 30px;
+}
+.share .progress .number {
+    color: #000;
+    font-family: 'UbuntuMedium', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 4px;
+}
+
+@media (min-width:992px) and (max-width: 1236px) {
+    .share .actions .byline {
+        height: 2.5em;
+    }
+}
+
+@media (max-width: 1057px) {
+    .kickstart-image {
+        height: 100%;
+/*        min-width: 391px;*/
+    }
+    .share .kick-home-box {
+        height: 37%;
+    }
+    .share #kick-welcome .kickhead {
+        font-size: 2.5em;
+    }
+    .share #kick-welcome #kick-hey {
+        font-size: 1.5em;
+    }
+    .share #kick-welcome .words {
+        font-size: 1.25em;
+    }
+    .share #kick-welcome #kick-thx {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width:992px) {
+    .share .actions .col-md-4:nth-child(1n+2) {
+/*        border-left: 1px solid #ddd;*/
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1203px) {
+    .trigger-title {
+        height: 2.5em;
+    }
+}
+
+@media (max-width: 991px) {
+    .page-head {
+        margin-top: -25px;
+        font-size: 120%;
+    }
+    .share .actions .col-md-4 {
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+    }
+    .program .logo {
+        max-width: 100px;
+    }
+    .share .trigger-title {
+        font-size: 2.5em;
+    }     
+}
+
+
+@media (min-width:889px) and (max-width: 991px) {
+    .kickstart-image {
+        height: 100%;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 889px) {
+    .kickstart-image {
+        height: 100%;
+        min-width: 100%;
+    }
+    .share .kick-home-box {
+        height: 11%;
+    }
+    .share #kick-welcome #support {
+        padding-top: .5em;  
+    }
+    .trigger-box {
+        width: 96%;
+        display: inline-block;
+        margin: 0.75% .71428571% 0 .71428571% ;
+    }
+    .share .kick-box {
+        height: 63%;
+    }
+    .share .trigger-title {
+        font-size: 2em;
+        margin-bottom: -2%;
+    }
+    .byline {
+        font-size: 1.5em;
+    }
+    .share .actions .kick {
+        font-size: 2em;
+        margin: 0 0 .75em 0;
+    }
+    #play-box,
+    #fb-box {
+        border-bottom: 1px solid silver;
+    }
+}
+
+@media (max-width: 615px) {
+    .share #kick-welcome .kickhead {
+        font-size: 2em;
+    }
+    .share .kick-home-box {
+        height: 9.5%;
+    }
+    .share #kick-welcome #support {
+        padding-top: .5em;  
+    }  
+}
+
+@media (max-width: 491px) {
+    .share #kick-welcome .kickhead {
+        font-size: 1.5em;
+    } 
+    .share .kick-home-box {
+        height: 8%;
+    }
+    .share .trigger-title {
+        font-size: 1.75em;
+    }
+    .byline {
+        font-size: 1.25em;
+    }
+    .share .actions .kick {
+        font-size: 1.75em;
+        margin: 0 0 .75em 0;
+    }
+    .share .kick-box {
+        height: 57%;
+    }
+}
+
+@media (max-width: 580px) {
+    #kick-welcome.share-cta,
+    #kick-box.kick-box {
+        width: 82%;
+    }  
+}
+
+
+/* Retina images */
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 1.5dppx) {
+    .doge-left {
+        background-image: url(../images/doge@2x.png);
+    }
+    .navbar-brand {
+        background-image: url(../images/logo@2x.png);
+    }
 }
 
 
