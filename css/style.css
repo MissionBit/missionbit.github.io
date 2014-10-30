@@ -4,6 +4,15 @@
     box-model: false, fallback-colors:false, overqualified-elements:false,
     display-property-grouping:false */
 
+html {
+  font-size: 16px;
+}
+
+body {
+    font-size: 62.5%;
+    height: 700px;
+}
+
 .recruit-title h1 {
     text-align: center;
     font-family: 'UbuntuRegular', sans-serif;
@@ -162,12 +171,7 @@ nav {
     font-family: 'UbuntuRegular', sans-serif;
 }
 
-@media (max-width: 991px) {
-    .page-head {
-        margin-top: -25px;
-        font-size: 120%;
-    }
-}
+
 
 .headline h2 {
     font-family: 'SourceCodeProSemiBold', sans-serif;
@@ -199,28 +203,6 @@ nav {
     background-position: 50%;
     margin: 0;
     padding: 0;
-}
-
-.kickstart-image {
-    background: url(../images/home/summer-mobile-tunnel-sm.jpg);
-    min-width: 1172px;
-    overflow: hidden;
-    background-size: 100%;
-    width: 100%;
-    height: 290px;
-    position: relative;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    margin: 0;
-    padding: 0;
-}
-
-@media (max-width: 768px) {
-    .homepage-image { height: 200px; min-width: 586px; }
-}
-@media (min-width:769px) and (max-width: 991px) {
-    .homepage-image { height: 300px; min-width: 391px; }
 }
 
 .homepage-image.img-anim-group-1 {
@@ -472,6 +454,7 @@ footer address td.icon {
     border-bottom: 2px solid rgba(0,0,0,0.1);
     margin-bottom: 20px;
 }
+
 .share .actions {
     text-align: center;
     margin-top: 2em;
@@ -524,83 +507,6 @@ footer address td.icon {
     text-shadow: #ffff8e 0 1px 0;
 }
 
-.kick-box {
-}
-
-.share .kickhead h3, 
-.share .kickhead h1 {
-    text-align: center;
-    font-family: 'Aldrich', sans-serif;
-    color: white; 
-}
-
-.share .kick-home-box {
-    width: 100%;
-    height: 290px; 
-    margin-bottom: 1em; 
-}
-
-.share #kick-welcome {
-    background-color: rgba(0,0,0,0.65);
-    color: white;
-    margin-top: 1em;
-}
-
-.share #kick-welcome h5 {
-    font-size: 1.25em;
-    padding-left: .8em;
-}
-
-.share #kick-welcome p {
-    background-color: rgba(255,255,255,0.65);
-    color: black; 
-    padding: 1em;
-    border-radius: 0.5em;
-}
-
-.kick-welcome-intro {
-}
-
-.kick-thx {
-    font-size: 1.5em;
-    line-height: 1.5em;
-}
-
-.kick-hey {
-    font-size: 2em;
-}
-
-.share .kick-box {
-    padding: 2em;
-    margin-bottom: 5em;
-    border: 1px solid #eaeaea;
-    border-radius: .25em;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
-}
-
-.trigger-box {
-}
-
-.share .kick-box h2 {
-}
-
-#kick-nav.navbar {
-    margin-bottom: 0;
-}
-
-@media (max-width:991px) {
-    .share .actions .col-md-4:nth-child(1n+2) {
-        margin-top: 20px;
-        border-top: 1px solid #ddd;
-    }
-}
-@media (min-width:992px) {
-    .share .actions .col-md-4:nth-child(1n+2) {
-        border-left: 1px solid #ddd;
-    }
-}
-
-
 .share .progress-ctr {
     padding-top: 5px;
     margin-left: -15px;
@@ -638,12 +544,6 @@ footer address td.icon {
     max-width: 200px;
 }
 
-@media (max-width:991px) {
-    .program .logo {
-        max-width: 100px;
-    }
-}
-
 .programs .program ul {
     list-style-type: none;
 }
@@ -666,20 +566,6 @@ footer address td.icon {
 .color-orange { color: #e67e22; }
 .color-red { color: #e74c3c; }
 .color-sea { color: #1abc9c; }
-
-/* Retina images */
-@media
-    only screen and (-webkit-min-device-pixel-ratio: 1.5),
-    only screen and (min--moz-device-pixel-ratio: 1.5),
-    only screen and (min-device-pixel-ratio: 1.5),
-    only screen and (min-resolution: 1.5dppx) {
-    .doge-left {
-        background-image: url(../images/doge@2x.png);
-    }
-    .navbar-brand {
-        background-image: url(../images/logo@2x.png);
-    }
-}
 
 .course-details ul {
     list-style-type: none;
@@ -811,6 +697,210 @@ footer address td.icon {
 .team-icon {
     height: auto;
     width: 100%;
+}
+
+/************** kickstarter template *****************/
+
+.kick-box {
+}
+
+.share .kickhead h3, 
+.share .kickhead h1 {
+    text-align: center;
+    font-family: 'Aldrich', sans-serif;
+    color: white; 
+}
+
+.share #kick-welcome {
+    background-color: rgba(0,0,0,0.65);
+    color: white;
+    margin-top: 1em;
+    border-radius: 0.5em;
+}
+
+.share #kick-welcome h5 {
+    font-size: 2em;
+    padding-left: .8em;
+}
+
+.share #kick-welcome p {
+    background-color: rgba(255,255,255,0.65);
+    color: black; 
+    padding: 1em;
+    border-radius: 0.5em;
+    font-size: 1.5em;
+}
+
+.kick-welcome-intro {
+}
+
+.kick-thx {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.kick-hey {
+    font-size: 2em;
+}
+
+.share .kick-box {
+    padding: 2em;
+    margin-bottom: 5em;
+    border: 1px solid #eaeaea;
+    border-radius: .25em;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    height: 100%;
+}
+
+.share .kick-home-box {
+    width: 100%;
+    height: 42.857143%; 
+    margin-bottom: 1em; 
+}
+
+.kickstart-image {
+    background: url(../images/home/summer-mobile-tunnel-sm.jpg);
+    /*min-width: 1172px;*/
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.trigger-box {
+}
+
+.share .kick-box h2 {
+}
+
+#kick-nav.navbar {
+    margin-bottom: 0;
+}
+
+#kick-welcome.share-cta,
+#kick-box.kick-box {
+    width: 82%;
+}
+
+.byline {
+    font-size: 1.5em;
+}
+
+@media (max-width: 580px) {
+    #kick-welcome.share-cta,
+    #kick-box.kick-box {
+        width: 82%;
+    }  
+}
+
+@media (max-width: 1057px) {
+    .kickstart-image {
+        height: 100%;
+/*        min-width: 391px;*/
+    }
+    .share .kick-home-box {
+        height: 45%;
+    }
+}
+
+@media (max-width: 991px) {
+    .page-head {
+        margin-top: -25px;
+        font-size: 120%;
+    }
+    .share #kick-welcome p  {
+        font-size: 1.25em;
+    }
+    .share .actions .col-md-4 {
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+    }
+}
+
+@media (min-width:992px) and (max-width: 1236px) {
+    .share .actions .byline {
+        height: 2.5em;
+    }
+}
+
+@media (min-width:992px) {
+    .share .actions .col-md-4:nth-child(1n+2) {
+/*        border-left: 1px solid #ddd;*/
+    }
+}
+
+@media (max-width: 768px) {
+    .homepage-image { 
+        height: 200px; 
+        min-width: 586px;
+    }
+    .kickstart-image {
+/*        height: 145px;*/
+/*        min-width: 586px;*/
+    }
+}
+
+@media (min-width:888px) and (max-width: 991px) {
+    .kickstart-image {
+        height: 100%;
+/*        min-width: 391px;*/
+    }
+    .share .kick-home-box {
+        height: 40%;
+    }
+}
+
+@media (min-width:769px) and (max-width: 991px) {
+    .homepage-image { 
+        height: 300px; 
+        min-width: 391px; 
+    }
+/*    .kickstart-image {
+        height: 100%;
+        min-width: 391px;
+    }
+    .share .kick-home-box {
+        height: 40%;
+    }*/
+}
+
+@media (max-width:991px) {
+    .program .logo {
+        max-width: 100px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1203px) {
+    .trigger-title {
+        height: 2.5em;
+    }
+}
+
+@media (max-width: 889px) {
+    #kick-hey,
+    .kick-welcome-intro {
+        visibility: hidden;
+    }
+}
+
+/* Retina images */
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 1.5dppx) {
+    .doge-left {
+        background-image: url(../images/doge@2x.png);
+    }
+    .navbar-brand {
+        background-image: url(../images/logo@2x.png);
+    }
 }
 
 

@@ -2,6 +2,13 @@
 
 window.jQuery(function ($) {
     'use strict';
+    var widthCheck = $(window).width();
+    $(window).on('resize', function () {
+        // event.preventDefault();
+        var widthCheck = $(window).width();
+        console.log(widthCheck);
+    })
+    console.log(widthCheck);
     var url = 'http://www.kickstarter.com/projects/tysonium/666429819?token=dfd637b2',
         encodedURL = encodeURIComponent(url),
         title = encodeURIComponent('The Hacker Lab, a space for kids to explore, learn and hack with volunteer engineers by @missionbit & MHS'),
