@@ -18,14 +18,20 @@ img {
     max-width: 100%;
 }
 
-p {
-    font-size: 1.6em;
+p,
+li,
+strong,
+.testimonial-info {
+    font-size: 1.6em;  
 }
 
-li {
-    font-size: 1.6em;
+#mbit .page-head {
+/*    font-size: 2.5em;*/
 }
 
+.md-margin-bottom-40 {
+    font-size: 1.6em;
+}
 
 /************** header template *****************/
 
@@ -190,7 +196,7 @@ nav {
     padding: 10px 0;
     margin: -30px inherit auto auto;
     color: white;
-    font-size: 150%;
+    font-size: 250%;
     font-family: 'UbuntuRegular', sans-serif;
 }
 
@@ -201,7 +207,7 @@ nav {
 }
 
 .season h2 {
-    font-size: 2.15em;
+    font-size: 2.5em;
 }
 
 .section {
@@ -962,7 +968,7 @@ footer address td.icon {
 @media (max-width: 991px) {
     .page-head {
         margin-top: -25px;
-        font-size: 120%;
+        font-size: 220%;
     }
     .share .actions .col-md-4 {
         margin-top: 20px;
