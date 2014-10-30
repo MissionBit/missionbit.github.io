@@ -11,6 +11,11 @@ html {
 body {
     font-size: 62.5%;
     height: 700px;
+
+}
+
+img {
+    max-width: 100%;
 }
 
 .recruit-title h1 {
@@ -699,9 +704,26 @@ footer address td.icon {
     width: 100%;
 }
 
+@media (min-width:769px) and (max-width: 991px) {
+    .homepage-image { 
+        height: 300px; 
+        min-width: 391px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .homepage-image { 
+        height: 200px; 
+        min-width: 586px;
+    }
+}
+
 /************** kickstarter template *****************/
 
-.kick-box {
+.share #kick-welcome .kickhead {
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Aldrich', sans-serif;
 }
 
 .share .kickhead h3, 
@@ -723,7 +745,7 @@ footer address td.icon {
     padding-left: .8em;
 }
 
-.share #kick-welcome p {
+.share #kick-welcome .words {
     background-color: rgba(255,255,255,0.65);
     color: black; 
     padding: 1em;
@@ -792,11 +814,10 @@ footer address td.icon {
     font-size: 1.5em;
 }
 
-@media (max-width: 580px) {
-    #kick-welcome.share-cta,
-    #kick-box.kick-box {
-        width: 82%;
-    }  
+@media (min-width:992px) and (max-width: 1236px) {
+    .share .actions .byline {
+        height: 2.5em;
+    }
 }
 
 @media (max-width: 1057px) {
@@ -805,27 +826,19 @@ footer address td.icon {
 /*        min-width: 391px;*/
     }
     .share .kick-home-box {
-        height: 45%;
+        height: 37%;
     }
-}
-
-@media (max-width: 991px) {
-    .page-head {
-        margin-top: -25px;
-        font-size: 120%;
+    .share #kick-welcome .kickhead {
+        font-size: 2.5em;
     }
-    .share #kick-welcome p  {
+    .share #kick-welcome #kick-hey {
+        font-size: 1.5em;
+    }
+    .share #kick-welcome .words {
         font-size: 1.25em;
     }
-    .share .actions .col-md-4 {
-        margin-top: 20px;
-        border-top: 1px solid #ddd;
-    }
-}
-
-@media (min-width:992px) and (max-width: 1236px) {
-    .share .actions .byline {
-        height: 2.5em;
+    .share #kick-welcome #kick-thx {
+        font-size: 1.5em;
     }
 }
 
@@ -835,59 +848,72 @@ footer address td.icon {
     }
 }
 
-@media (max-width: 768px) {
-    .homepage-image { 
-        height: 200px; 
-        min-width: 586px;
-    }
-    .kickstart-image {
-/*        height: 145px;*/
-/*        min-width: 586px;*/
-    }
-}
-
-@media (min-width:888px) and (max-width: 991px) {
-    .kickstart-image {
-        height: 100%;
-/*        min-width: 391px;*/
-    }
-    .share .kick-home-box {
-        height: 40%;
-    }
-}
-
-@media (min-width:769px) and (max-width: 991px) {
-    .homepage-image { 
-        height: 300px; 
-        min-width: 391px; 
-    }
-/*    .kickstart-image {
-        height: 100%;
-        min-width: 391px;
-    }
-    .share .kick-home-box {
-        height: 40%;
-    }*/
-}
-
-@media (max-width:991px) {
-    .program .logo {
-        max-width: 100px;
-    }
-}
-
 @media (min-width: 992px) and (max-width: 1203px) {
     .trigger-title {
         height: 2.5em;
     }
 }
 
-@media (max-width: 889px) {
-    #kick-hey,
-    .kick-welcome-intro {
-        visibility: hidden;
+@media (max-width: 991px) {
+    .page-head {
+        margin-top: -25px;
+        font-size: 120%;
+    }
+    .share .actions .col-md-4 {
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+    }
+    .program .logo {
+        max-width: 100px;
     }
 }
+
+
+@media (min-width:889px) and (max-width: 991px) {
+    .kickstart-image {
+        height: 100%;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 889px) {
+    .kickstart-image {
+        height: 100%;
+        min-width: 100%;
+    }
+    .share .kick-home-box {
+        height: 11%;
+    }
+    .share #kick-welcome #support {
+        padding-top: .5em;  
+    }
+}
+
+@media (max-width: 615px) {
+    .share #kick-welcome .kickhead {
+        font-size: 2em;
+    }
+    .share .kick-home-box {
+        height: 9.5%;
+    }
+    .share #kick-welcome #support {
+        padding-top: .5em;  
+    }  
+}
+
+@media (max-width: 491px) {
+    .share #kick-welcome .kickhead {
+        font-size: 1.5em;
+    } 
+}
+
+@media (max-width: 580px) {
+    #kick-welcome.share-cta,
+    #kick-box.kick-box {
+        width: 82%;
+    }  
+}
+
 
 /* Retina images */
 @media

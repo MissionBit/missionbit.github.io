@@ -2,11 +2,50 @@
 
 window.jQuery(function ($) {
     'use strict';
+
     var widthCheck = $(window).width();
+    var elem1 = $('#kick-hey');
+    var elem2 = $('.kick-welcome-intro');
+    var elem3 = $('#kick-thx');
+    var elem4 = $('#thx-words');
+    if (widthCheck <= 889) {
+        if (elem1[0]) {
+            $('#kick-hey').remove();
+            var elem1 = $('#kick-hey');
+        }
+        if (elem2[0]) {
+            $('.kick-welcome-intro').remove();
+        }
+        if (elem3[0]) {
+            $('#kick-thx').remove();
+        }
+        if (elem4[0]) {
+            $('#thx-words').remove();
+        }
+    }  
     $(window).on('resize', function () {
         // event.preventDefault();
         var widthCheck = $(window).width();
         console.log(widthCheck);
+        if (widthCheck <= 889) {
+            var elem1 = $('#kick-hey');
+            var elem2 = $('.kick-welcome-intro');
+            var elem3 = $('#kick-thx');
+            var elem4 = $('#thx-words');
+            if (elem1[0]) {
+                $('#kick-hey').remove();
+            }
+            if (elem2[0]) {
+                $('.kick-welcome-intro').remove();
+            }
+            if (elem3[0]) {
+                $('#kick-thx').remove();
+            }
+            if (elem4[0]) {
+                $('#thx-words').remove();
+            }
+
+        }
     })
     console.log(widthCheck);
     var url = 'http://www.kickstarter.com/projects/tysonium/666429819?token=dfd637b2',
