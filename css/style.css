@@ -18,9 +18,27 @@ img {
     max-width: 100%;
 }
 
+p {
+    font-size: 1.6em;
+}
+
+li {
+    font-size: 1.6em;
+}
+
+
+/************** header template *****************/
+
 .recruit-title h1 {
     text-align: center;
     font-family: 'UbuntuRegular', sans-serif;
+}
+
+/************** footer template *****************/
+
+.copyright-space {
+    font-size: 1em;
+    float: left;
 }
 
 .reasons {
@@ -723,7 +741,7 @@ footer address td.icon {
 
 .share #kick-welcome .kickhead {
     text-align: center;
-    font-size: 4em;
+    font-size: 2.5em;
     font-family: 'Aldrich', sans-serif;
 }
 
@@ -741,8 +759,8 @@ footer address td.icon {
     border-radius: 0.5em;
 }
 
-.share #kick-welcome h5 {
-    font-size: 2em;
+.share #kick-welcome p {
+/*    font-size: 2em;*/
     padding-left: .8em;
 }
 
@@ -759,13 +777,13 @@ footer address td.icon {
 .kick-welcome-intro {
 }
 
-.kick-thx {
-    font-size: 1.5em;
+#kick-thx {
+    font-size: 1.75em;
     line-height: 1.5em;
 }
 
-.kick-hey {
-    font-size: 2em;
+#kick-hey {
+    font-size: 1.75em;
 }
 
 .share .kick-box {
@@ -796,9 +814,6 @@ footer address td.icon {
     background-position: 50%;
     margin: 0;
     padding: 0;
-}
-
-.share .kick-box h2 {
 }
 
 #kick-nav.navbar {
@@ -932,6 +947,18 @@ footer address td.icon {
     }
 }
 
+@media (max-width: 998px) {
+    #kick-thx {
+        font-size: 1.5em;
+    }
+    #kick-hey {
+        font-size: 1.5em;
+    }
+    .share #kick-welcome .kickhead {
+        font-size: 2em;
+    }
+}
+
 @media (max-width: 991px) {
     .page-head {
         margin-top: -25px;
@@ -991,11 +1018,14 @@ footer address td.icon {
     #fb-box {
         border-bottom: 1px solid silver;
     }
+    .share #kick-welcome .kickhead {
+        font-size: 1.65em;
+    }
 }
 
-@media (max-width: 615px) {
+@media (max-width: 670px) {
     .share #kick-welcome .kickhead {
-        font-size: 2em;
+        font-size: 1.40em;
     }
     .share .kick-home-box {
         height: 9.5%;
@@ -1005,9 +1035,21 @@ footer address td.icon {
     }  
 }
 
+@media (max-width: 575px) {
+    .share #kick-welcome .kickhead {
+        font-size: 1.15em;
+    }
+    .share .kick-home-box {
+        height: 8.75%;
+    }
+    .share #kick-welcome #support {
+        padding-top: .5em;  
+    }  
+}
+
 @media (max-width: 491px) {
     .share #kick-welcome .kickhead {
-        font-size: 1.5em;
+        font-size: .9em;
     } 
     .share .kick-home-box {
         height: 8%;
