@@ -4,18 +4,12 @@
     box-model: false, fallback-colors:false, overqualified-elements:false,
     display-property-grouping:false */
 
-html {
-  font-size: 16px;
-}
-
-body {
-    font-size: 62.5%;
-    height: 700px;
-
-}
-
-img {
+body .share img {
     max-width: 100%;
+}
+
+.share {
+    font-size: 10px;
 }
 
 .recruit-title h1 {
