@@ -12,21 +12,6 @@ body .share img {
     font-size: 10px;
 }
 
-p,
-li,
-strong,
-.testimonial-info {
-    font-size: 1.6em;  
-}
-
-#mbit .page-head {
-/*    font-size: 2.5em;*/
-}
-
-.md-margin-bottom-40 {
-    font-size: 1.6em;
-}
-
 /************** header template *****************/
 
 .recruit-title h1 {
@@ -37,7 +22,6 @@ strong,
 /************** footer template *****************/
 
 .copyright-space {
-    font-size: 1em;
     float: left;
 }
 
@@ -190,7 +174,7 @@ nav {
     padding: 10px 0;
     margin: -30px inherit auto auto;
     color: white;
-    font-size: 250%;
+    font-size: 150%;
     font-family: 'UbuntuRegular', sans-serif;
 }
 
@@ -962,7 +946,7 @@ footer address td.icon {
 @media (max-width: 991px) {
     .page-head {
         margin-top: -25px;
-        font-size: 220%;
+        font-size: 120%;
     }
     .share .actions .col-md-4 {
         margin-top: 20px;
