@@ -16,8 +16,9 @@ body .share img {
 .hackerlab {
 }
 
-.hack-title {
+.headline .hack-title h3 {
     width: 100%;
+    font-family: 'SourceCodeProSemiBold', sans-serif;
 }
 
 .hack-headline {
@@ -1101,6 +1102,13 @@ footer address td.icon {
     }  
 }
 
+@media (max-width: 580px) {
+    #kick-welcome.share-cta,
+    #kick-box.kick-box {
+        width: 82%;
+    }  
+}
+
 @media (max-width: 575px) {
     .share #kick-welcome .kickhead {
         font-size: 1.15em;
@@ -1110,7 +1118,39 @@ footer address td.icon {
     }
     .share #kick-welcome #support {
         padding-top: .5em;  
-    }  
+    } 
+    .hack-support-box {
+        margin: 0;
+    }
+
+    .lab-video {
+        width: 90%;
+        /*box-shadow: 0 1px 1px rgba(0,0,0,0.3);*/
+        margin: 2% 5% 3% 4%;
+        height: 20em;
+        padding: 1em;
+    }
+
+    #goals-primary .goals-headline {
+        font-size: 1.5em;
+        text-align: center;
+        margin: 0 2em .5em 2em;
+    }
+    .hackerlab #goal1,
+    .hackerlab #goal2,
+    .hackerlab #goal3 {
+        margin-top: .5em;
+        margin-bottom: 0;
+        padding-top: .5em;
+        padding-bottom: .25em;
+        font-size: .9em;
+    }
+    .hackerlab #hack-headline {
+        font-size: .9em;
+    }
+    .hackerlab #hack-title h3 {
+        font-size: 1.8em;
+    } 
 }
 
 @media (max-width: 491px) {
@@ -1134,14 +1174,6 @@ footer address td.icon {
         height: 57%;
     }
 }
-
-@media (max-width: 580px) {
-    #kick-welcome.share-cta,
-    #kick-box.kick-box {
-        width: 82%;
-    }  
-}
-
 
 /* Retina images */
 @media
