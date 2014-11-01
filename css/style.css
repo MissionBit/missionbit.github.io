@@ -8,8 +8,86 @@ body .share img {
     max-width: 100%;
 }
 
-.share {
+.share,
+.hackerlab {
     font-size: 10px;
+}
+
+.hackerlab {
+}
+
+.hack-title {
+    width: 100%;
+}
+
+.hack-headline {
+    width: 100%;
+}
+
+.video-box {
+/*    border: 1px solid black;*/
+}
+
+.hack-support-box {
+    text-align: center;
+    margin: 1.5em 0 0 0;
+
+}
+
+.lab-video {
+    width: 50%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    margin: 2% 25% 3% 24%;
+    height: 35em;
+    padding: 2em;
+    border-radius: .5em;
+}
+
+#goals-primary {
+/*    width: 90%;*/
+/*    margin: 0 5%;*/
+}
+
+#goals-primary .goals-headline {
+    font-size: 2em;
+    text-align: center;
+}
+
+#goals-secondary {
+}
+
+.hackerlab .mhs-lab-vid {
+    width: 100%; 
+    height: 100%; 
+    border-radius: .5em;
+}
+
+.hackerlab #hack-page-head {
+    width: 95%;
+    left: 5%;
+    background-color: #3498db;
+    text-align: center;
+    padding: 10px 0;
+    margin: -30px inherit auto auto;
+    color: white;
+    font-size: 180%;
+    font-family: 'UbuntuRegular', sans-serif;  
+}
+
+.hackerlab p {
+    font-size: 1.4em;
+}
+
+.page-head {
+    width: 90%;
+    left: 5%;
+    background-color: #3498db;
+    text-align: center;
+    padding: 10px 0;
+    margin: -30px inherit auto auto;
+    color: white;
+    font-size: 150%;
+    font-family: 'UbuntuRegular', sans-serif;
 }
 
 /************** header template *****************/
@@ -210,6 +288,10 @@ nav {
     background-position: 50%;
     margin: 0;
     padding: 0;
+}
+
+.homepage-image.img-hackerlab-1 {
+    background-image: url(../images/home/hackerlab3.jpg);
 }
 
 .homepage-image.img-anim-group-1 {
