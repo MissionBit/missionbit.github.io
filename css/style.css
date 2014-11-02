@@ -1125,9 +1125,7 @@ footer address td.icon {
 
     .lab-video {
         width: 90%;
-        /*box-shadow: 0 1px 1px rgba(0,0,0,0.3);*/
         margin: 2% 5% 3% 4%;
-        height: 20em;
         padding: 1em;
     }
 
@@ -1172,6 +1170,54 @@ footer address td.icon {
     }
     .share .kick-box {
         height: 57%;
+    }
+}
+
+@media (max-width: 550px) {
+    .lab-video { 
+        height: 27em;
+    } 
+}
+
+@media (max-width: 530px) {
+    .lab-video { 
+        height: 26em;
+    } 
+}
+
+@media (max-width: 510px) {
+    .lab-video { 
+        height: 25em;
+    } 
+}
+
+@media (max-width: 490px) {
+    .lab-video { 
+        height: 24em;
+    } 
+}
+
+@media (max-width: 470px) {
+    .lab-video { 
+        height: 23em;
+    } 
+}
+
+@media (max-width: 450px) {
+    .lab-video { 
+        height: 22em;
+    } 
+}
+
+@media (max-width: 430px) {
+    .lab-video { 
+        height: 21em;
+    }
+}
+
+@media (max-width: 410px) {
+    .lab-video { 
+        height: 20em;
     }
 }
 
