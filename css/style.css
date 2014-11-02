@@ -1088,6 +1088,60 @@ footer address td.icon {
     .share #kick-welcome .kickhead {
         font-size: 1.65em;
     }
+
+    .lab-video {
+        width: 75%;
+        margin: 2% 12.5% 3% 12.4%;
+        padding: 1em;
+    }
+}
+
+@media (max-width: 800px) {
+    .lab-video { 
+        width: 78%;
+        height: 32em;
+        margin: 2% 11% 3% 11%;
+    } 
+}
+
+@media (max-width: 780px) {
+    .lab-video { 
+        width: 80%;
+        height: 34em;
+        margin: 2% 10% 3% 10%;
+    } 
+}
+
+@media (max-width: 760px) {
+    .lab-video { 
+        width: 82%;
+        height: 34em;
+        margin: 2% 9% 3% 9%;
+    } 
+}
+
+@media (max-width: 740px) {
+    .lab-video { 
+        width: 83%;
+        height: 34em;
+        margin: 2% 8.5% 3% 8.5%;
+    } 
+}
+
+@media (max-width: 720px) {
+    .lab-video { 
+        width: 84%;
+        height: 33em;
+        margin: 2% 8% 3% 8%;
+    } 
+}
+
+@media (max-width: 700px) {
+    .lab-video { 
+        width: 84%;
+        height: 32em;
+        margin: 2% 8% 3% 8%;
+    } 
 }
 
 @media (max-width: 670px) {
@@ -1099,7 +1153,40 @@ footer address td.icon {
     }
     .share #kick-welcome #support {
         padding-top: .5em;  
-    }  
+    }
+    .hackerlab #goal1,
+    .hackerlab #goal2,
+    .hackerlab #goal3 {
+        margin-top: .1em;
+        margin-bottom: 0;
+        padding-top: 1em;
+        padding-bottom: .75em;
+        font-size: 1em;
+    }
+    .lab-video {
+        width: 85%;
+        margin: 2% 7.5% 3% 7.4%;
+        padding: 1em;
+        height: 31em;
+    }
+}
+
+@media (max-width: 650px) {
+    .lab-video { 
+        height: 30em;
+    } 
+}
+
+@media (max-width: 630px) {
+    .lab-video { 
+        height: 29em;
+    } 
+}
+
+@media (max-width: 605px) {
+    .lab-video { 
+        height: 28em;
+    } 
 }
 
 @media (max-width: 580px) {
@@ -1122,32 +1209,49 @@ footer address td.icon {
     .hack-support-box {
         margin: 0;
     }
-
     .lab-video {
         width: 90%;
         margin: 2% 5% 3% 4%;
         padding: 1em;
+        height: 28em;
     }
-
     #goals-primary .goals-headline {
-        font-size: 1.5em;
+        font-size: 1.75em;
         text-align: center;
         margin: 0 2em .5em 2em;
     }
     .hackerlab #goal1,
     .hackerlab #goal2,
     .hackerlab #goal3 {
-        margin-top: .5em;
+        margin-top: .75em;
         margin-bottom: 0;
-        padding-top: .5em;
-        padding-bottom: .25em;
-        font-size: .9em;
+        padding-top: .75em;
+        padding-bottom: .5em;
+        font-size: 1em;
     }
     .hackerlab #hack-headline {
-        font-size: .9em;
+        font-size: 1em;
     }
     .hackerlab #hack-title h3 {
-        font-size: 1.8em;
+        font-size: 2em;
+    } 
+}
+
+@media (max-width: 550px) {
+    .lab-video { 
+        height: 27em;
+    } 
+}
+
+@media (max-width: 530px) {
+    .lab-video { 
+        height: 26em;
+    } 
+}
+
+@media (max-width: 510px) {
+    .lab-video { 
+        height: 25em;
     } 
 }
 
@@ -1171,25 +1275,37 @@ footer address td.icon {
     .share .kick-box {
         height: 57%;
     }
-}
+    .hack-support-box {
+        margin: 0;
+    }
 
-@media (max-width: 550px) {
-    .lab-video { 
-        height: 27em;
+    .lab-video {
+        width: 90%;
+        margin: 2% 5% 3% 4%;
+        padding: 1em;
+    }
+    #goals-primary .goals-headline {
+        font-size: 1.5em;
+        text-align: center;
+        margin: 0 2em .5em 2em;
+    }
+    .hackerlab #goal1,
+    .hackerlab #goal2,
+    .hackerlab #goal3 {
+        margin-top: .5em;
+        margin-bottom: 0;
+        padding-top: .5em;
+        padding-bottom: .25em;
+        font-size: .9em;
+    }
+    .hackerlab #hack-headline {
+        font-size: .9em;
+    }
+    .hackerlab #hack-title h3 {
+        font-size: 1.8em;
     } 
 }
 
-@media (max-width: 530px) {
-    .lab-video { 
-        height: 26em;
-    } 
-}
-
-@media (max-width: 510px) {
-    .lab-video { 
-        height: 25em;
-    } 
-}
 
 @media (max-width: 490px) {
     .lab-video { 
