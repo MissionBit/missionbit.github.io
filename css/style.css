@@ -1274,7 +1274,8 @@ footer address td.icon {
     }
     #goals-primary .goals-headline,
     #hack-workshops .workshops-headline,
-    #hack-mentors .mentors-headline {
+    #hack-mentors .mentors-headline,
+    #hack-support .support-headline {
         font-size: 1.75em;
         text-align: center;
         margin: 0 2em .5em 2em;
@@ -1346,10 +1347,14 @@ footer address td.icon {
     }
     #goals-primary .goals-headline,
     #hack-workshops .workshops-headline,
-    #hack-mentors .mentors-headline  {
+    #hack-mentors .mentors-headline,
+    #hack-support .support-headline  {
         font-size: 1.5em;
         text-align: center;
         margin: 0 2em .5em 2em;
+    }
+    .lab-support {
+        margin-top: .5em;
     }
     .hackerlab #goal1,
     .hackerlab #goal2,
