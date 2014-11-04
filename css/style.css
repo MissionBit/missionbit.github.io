@@ -44,6 +44,19 @@ body .share img {
     border-radius: .5em;
 }
 
+.home-video {
+    width: 90%;
+    margin: 2% 4.5% 2% 4.5%;
+    height: 22em;
+    padding: 2em;
+    border-radius: .5em;
+}
+
+.home-video-box {
+    width: 48%;
+    display: inline-block;
+}
+
 #goals-primary {
 /*    width: 90%;*/
 /*    margin: 0 5%;*/
@@ -58,6 +71,17 @@ body .share img {
     text-align: center;
 }
 
+#home-top .home-mission-headline {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.home-mission-box {
+    margin: 2em 5% 0 5%;
+    width: 90%;
+}
+
+
 #hack-workshops .workshops-headline {
 
 }
@@ -71,6 +95,12 @@ body .share img {
 }
 
 .hackerlab .mhs-lab-vid {
+    width: 100%; 
+    height: 100%; 
+    border-radius: .5em;
+}
+
+.home #home-passion {
     width: 100%; 
     height: 100%; 
     border-radius: .5em;
@@ -1046,6 +1076,13 @@ footer address td.icon {
     margin: 0 4px;
 }
 
+@media (max-width: 1200px) {
+    .home-video {
+        height: 18em;
+        padding: 1em;
+    }
+}
+
 @media (min-width:992px) and (max-width: 1236px) {
     .share .actions .byline {
         height: 2.5em;
@@ -1112,7 +1149,14 @@ footer address td.icon {
     }
     .share .trigger-title {
         font-size: 2.5em;
-    }     
+    } 
+    .home-video-box {
+        width: 80%;
+        margin: 0 10% 0 10%;
+    }
+    .home-video {
+        height: 23em;
+    }    
 }
 
 
@@ -1198,6 +1242,9 @@ footer address td.icon {
         height: 34em;
         margin: 2% 8.5% 3% 8.5%;
     } 
+    .home-video {
+        height: 22em;
+    } 
 }
 
 @media (max-width: 720px) {
@@ -1206,6 +1253,9 @@ footer address td.icon {
         height: 33em;
         margin: 2% 8% 3% 8%;
     } 
+    .home-video {
+        height: 21.5em;
+    } 
 }
 
 @media (max-width: 700px) {
@@ -1213,7 +1263,16 @@ footer address td.icon {
         width: 84%;
         height: 32em;
         margin: 2% 8% 3% 8%;
+    }
+    .home-video {
+        height: 21em;
     } 
+}
+
+@media (max-width: 680px) {
+    .home-video {
+        height: 20.5em;
+    }
 }
 
 @media (max-width: 670px) {
@@ -1241,17 +1300,26 @@ footer address td.icon {
         padding: 1em;
         height: 31em;
     }
+    .home-video {
+        height: 20em;
+    }
 }
 
 @media (max-width: 650px) {
     .lab-video { 
         height: 30em;
     } 
+    .home-video {
+        height: 19.5em;
+    }
 }
 
 @media (max-width: 630px) {
     .lab-video { 
         height: 29em;
+    }
+    .home-video {
+        height: 19em;
     } 
 }
 
@@ -1259,6 +1327,15 @@ footer address td.icon {
     .lab-video { 
         height: 28em;
     } 
+    .home-video {
+        height: 18em;
+    } 
+}
+
+@media (max-width: 585px) {
+    .home-video {
+        height: 17.5em;
+    }    
 }
 
 @media (max-width: 580px) {
@@ -1297,6 +1374,9 @@ footer address td.icon {
         margin: 0 2em .5em 2em;
         
     }
+    #home-top .home-mission-headline {
+        font-size: 1.25em;
+    }
     .hackerlab #goal1,
     .hackerlab #goal2,
     .hackerlab #goal3 {
@@ -1314,9 +1394,18 @@ footer address td.icon {
     } 
 }
 
+@media (max-width: 570px) {
+    .home-video {
+        height: 17em;
+    }    
+}
+
 @media (max-width: 550px) {
     .lab-video { 
         height: 27em;
+    } 
+    .home-video {
+        height: 16.5em;
     } 
 }
 
@@ -1324,12 +1413,18 @@ footer address td.icon {
     .lab-video { 
         height: 26em;
     } 
+    .home-video {
+        height: 16em;
+    } 
 }
 
 @media (max-width: 510px) {
     .lab-video { 
         height: 25em;
-    } 
+    }
+    .home-video {
+        height: 15.5em;
+    }  
 }
 
 @media (max-width: 491px) {
@@ -1388,12 +1483,18 @@ footer address td.icon {
     .hackerlab #hack-title h3 {
         font-size: 1.8em;
     } 
+    #home-top .home-mission-headline {
+        font-size: 1.15em;
+    }
 }
 
 
 @media (max-width: 490px) {
     .lab-video { 
         height: 24em;
+    }
+    .home-video {
+        height: 15em;
     } 
 }
 
@@ -1401,23 +1502,35 @@ footer address td.icon {
     .lab-video { 
         height: 23em;
     } 
+    .home-video {
+        height: 14.5em;
+    }
 }
 
 @media (max-width: 450px) {
     .lab-video { 
         height: 22em;
     } 
+    .home-video {
+        height: 14em;
+    }
 }
 
 @media (max-width: 430px) {
     .lab-video { 
         height: 21em;
     }
+    .home-video {
+        height: 13.5em;
+    }
 }
 
 @media (max-width: 410px) {
     .lab-video { 
         height: 20em;
+    }
+    .home-video {
+        height: 13em;
     }
 }
 
