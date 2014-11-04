@@ -37,7 +37,7 @@ body .share img {
 
 .lab-video {
     width: 50%;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
     margin: 2% 25% 3% 24%;
     height: 35em;
     padding: 2em;
@@ -49,9 +49,21 @@ body .share img {
 /*    margin: 0 5%;*/
 }
 
-#goals-primary .goals-headline {
+#goals-primary .goals-headline,
+#hack-workshops .workshops-headline,
+#hack-mentors .mentors-headline,
+#hack-support .support-headline {
     font-size: 2em;
     text-align: center;
+}
+
+#hack-workshops .workshops-headline {
+
+}
+
+.workshops-box {
+/*    width: 90%;
+    margin: 0 5% 0 5%;*/
 }
 
 #goals-secondary {
@@ -386,6 +398,51 @@ iframe.campaign-alert {
 }
 #mbit .apply:hover, #mbit .apply:focus {
     background: #ed9c28;
+}
+
+#mbit .lab {
+    text-transform: uppercase;
+    font-family: 'UbuntuRegular', sans-serif;
+    color: #fff;
+    background: #f0ad4e;
+    text-shadow: none;
+    border: none;
+}
+#mbit .lab:hover, #mbit .lab:focus {
+    background: white;
+    color: #ed9c28;
+}
+
+#mbit .workshop {
+    text-transform: uppercase;
+    font-family: 'UbuntuRegular', sans-serif;
+    color: #fff;
+    background: #3498db;
+    text-shadow: none;
+    border: none;
+}
+
+#mbit .workshop:hover, #mbit .workshop:focus {
+    background: white;
+    color: #3498db;
+}
+
+#mbit .mentor {
+    text-transform: uppercase;
+    font-family: 'UbuntuRegular', sans-serif;
+    color: #fff;
+    background: #e74c3c;
+    text-shadow: none;
+    border: none;
+}
+
+#mbit .mentor:hover, #mbit .mentor:focus {
+    background: white;
+    color: #e74c3c;
+}
+
+.shadow {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .4);
 }
 
 footer {
@@ -1215,10 +1272,13 @@ footer address td.icon {
         padding: 1em;
         height: 28em;
     }
-    #goals-primary .goals-headline {
+    #goals-primary .goals-headline,
+    #hack-workshops .workshops-headline,
+    #hack-mentors .mentors-headline {
         font-size: 1.75em;
         text-align: center;
         margin: 0 2em .5em 2em;
+        
     }
     .hackerlab #goal1,
     .hackerlab #goal2,
@@ -1284,7 +1344,9 @@ footer address td.icon {
         margin: 2% 5% 3% 4%;
         padding: 1em;
     }
-    #goals-primary .goals-headline {
+    #goals-primary .goals-headline,
+    #hack-workshops .workshops-headline,
+    #hack-mentors .mentors-headline  {
         font-size: 1.5em;
         text-align: center;
         margin: 0 2em .5em 2em;
