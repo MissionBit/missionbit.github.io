@@ -8,6 +8,56 @@ body .share img {
     max-width: 100%;
 }
 
+/*
+#home-press .home-press-box {
+    width: 90%;
+    margin: 0 5% 0 5%;
+    width: 100%;
+}*/
+
+#home-press .press-module {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    overflow: hidden;
+    margin-top: .5em;
+    margin-bottom: 1em;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#home-press .press-logo {
+    text-align: center;
+    min-height: 100%;
+    height: 100%;
+    width: 20%;
+    float: left;
+    display: inline-block;
+}
+
+#home-press .press-text {
+    width: 75%;
+    margin: 1.5em 0 0 2em ;
+    display: inline-block;
+}
+
+#home-press .press-text .press-title {
+    font-size: 1.75em;
+    vertical-align: middle; 
+    font-style: italic;
+    font-weight: bold; 
+    font-family: 'Slabo 27px', serif;
+}
+
+#home-press .press-logo img {
+    width: 70%;
+    max-width: 100%;
+    vertical-align: middle;
+    padding: 0.7em;
+}
+
 .share,
 .hackerlab {
     font-size: 10px;
