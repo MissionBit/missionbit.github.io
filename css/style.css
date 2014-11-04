@@ -52,7 +52,8 @@ body .share img {
 #goals-primary .goals-headline,
 #hack-workshops .workshops-headline,
 #hack-mentors .mentors-headline,
-#hack-support .support-headline {
+#hack-support .support-headline,
+#hack-hardware .hardware-headline {
     font-size: 2em;
     text-align: center;
 }
@@ -439,6 +440,20 @@ iframe.campaign-alert {
 #mbit .mentor:hover, #mbit .mentor:focus {
     background: white;
     color: #e74c3c;
+}
+
+#mbit .hardware {
+    text-transform: uppercase;
+    font-family: 'UbuntuRegular', sans-serif;
+    color: #fff;
+    background: #1abc9c;
+    text-shadow: none;
+    border: none;
+}
+
+#mbit .hardware:hover, #mbit .hardware:focus {
+    background: white;
+    color: #1abc9c;
 }
 
 .shadow {
@@ -1275,7 +1290,8 @@ footer address td.icon {
     #goals-primary .goals-headline,
     #hack-workshops .workshops-headline,
     #hack-mentors .mentors-headline,
-    #hack-support .support-headline {
+    #hack-support .support-headline,
+    #hack-hardware .hardware-headline {
         font-size: 1.75em;
         text-align: center;
         margin: 0 2em .5em 2em;
@@ -1348,7 +1364,8 @@ footer address td.icon {
     #goals-primary .goals-headline,
     #hack-workshops .workshops-headline,
     #hack-mentors .mentors-headline,
-    #hack-support .support-headline  {
+    #hack-support .support-headline,
+    #hack-hardware .hardware-headline  {
         font-size: 1.5em;
         text-align: center;
         margin: 0 2em .5em 2em;
