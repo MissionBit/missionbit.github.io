@@ -15,6 +15,20 @@ body .share img {
     width: 100%;
 }*/
 
+#home-press .press-text .press-title,
+#home-press .press-text .press-quote,
+#home-press .press-text .press-author {
+    padding-right: 1em;
+}
+
+#home-press .press-text .press-quote {
+    padding-bottom: 1em;
+}
+
+#hot-press .hack-headline {
+    margin-bottom: 1em;
+}
+
 #home-press .press-module {
     box-shadow: 0 0 15px rgba(0, 0, 0, .25);
     overflow: hidden;
@@ -37,6 +51,13 @@ body .share img {
     display: inline-block;
 }
 
+#home-press .press-logo img {
+    width: 70%;
+    max-width: 100%;
+    vertical-align: middle;
+    padding: .8em 0 0 0.5em;
+}
+
 #home-press .press-text {
     width: 75%;
     margin: 1.5em 0 0 2em ;
@@ -44,18 +65,16 @@ body .share img {
 }
 
 #home-press .press-text .press-title {
-    font-size: 1.75em;
+    font-size: 1.5em;
     vertical-align: middle; 
     font-style: italic;
     font-weight: bold; 
     font-family: 'Slabo 27px', serif;
 }
 
-#home-press .press-logo img {
-    width: 70%;
-    max-width: 100%;
-    vertical-align: middle;
-    padding: 0.7em;
+#home-press .press-text .press-author {
+    font-size: .9em;
+    margin-top: -1em;
 }
 
 .share,
@@ -1133,6 +1152,9 @@ footer address td.icon {
         height: 18em;
         padding: 1em;
     }
+    #home-press .press-logo img {
+        padding: .8em 0 0 0.5em;
+    }
 }
 
 @media (min-width:992px) and (max-width: 1236px) {
@@ -1160,6 +1182,13 @@ footer address td.icon {
     }
     .share #kick-welcome #kick-thx {
         font-size: 1.5em;
+    }
+    #home-press .press-module {
+        width: 94%;
+        margin: .5em 3% 1em 3%;
+    }
+    #home-press .press-logo img {
+        padding: .9em 0 0 0.5em;
     }
 }
 
@@ -1208,7 +1237,18 @@ footer address td.icon {
     }
     .home-video {
         height: 23em;
-    }    
+    } 
+    #home-press .press-logo {
+        width: 20%;
+    }
+    #home-press .press-logo img {
+        width: 70%;
+        padding: 1.3em 0 0 0.5em;
+    }
+    #home-press .press-text {
+        width: 75%;
+        margin: 1.5em 0 0 2em ;
+    }   
 }
 
 
@@ -1256,11 +1296,14 @@ footer address td.icon {
     .share #kick-welcome .kickhead {
         font-size: 1.65em;
     }
-
     .lab-video {
         width: 75%;
         margin: 2% 12.5% 3% 12.4%;
         padding: 1em;
+    }
+    #home-press .press-module {
+        width: 92%;
+        margin: .5em 4% 1em 4%;
     }
 }
 
@@ -1285,7 +1328,7 @@ footer address td.icon {
         width: 82%;
         height: 34em;
         margin: 2% 9% 3% 9%;
-    } 
+    }
 }
 
 @media (max-width: 740px) {
@@ -1308,6 +1351,17 @@ footer address td.icon {
     .home-video {
         height: 21.5em;
     } 
+}
+
+@media (max-width: 710px) {
+    #home-press .press-logo img {
+        width: 70%;
+        padding: 2.5em 0 0 1em;
+    }
+    #home-press .press-text {
+        width: 65%;
+        margin: 1.5em 0 0 2em ;
+    }
 }
 
 @media (max-width: 700px) {
@@ -1354,6 +1408,63 @@ footer address td.icon {
     }
     .home-video {
         height: 20em;
+    }
+    #home-top .home-mission-headline {
+        font-size: 1.15em;
+    }
+    #home-press .press-text .press-title {
+        font-size: 1.25em;
+        width: 95%;
+    }
+    #home-press .press-text .press-quote {
+        font-size: .9em;
+        width: 95%;
+    }
+    #home-press .press-text .press-author {
+        font-size: .8em;
+        width: 95%;
+    }
+/*    #home-press .press-text {
+        width: 97%;
+        margin: 0 0 0 2em;
+        display: inline-block;
+        padding: 0 .5em;
+    }*/
+/*    #home-press .press-logo {
+        width: 30%;
+        margin: 0 34% 0 34%;
+        display: inline-block;
+    }*/
+/*    #home-press .press-logo img {
+        width: 90%;
+        max-width: 100%;
+        vertical-align: middle;
+        padding: 0.7em;
+    }*/
+    #home-press .press-module {
+        width: 90%;
+        margin: .5em 5% 1em 5%;
+    }
+    .donate {
+        width: 90%;
+    }
+    #why-matters li,
+    #who-we p {
+        font-size: .8em;
+    }
+    #hot-press h2 {
+        font-size: 2em;
+    } 
+    #home-press .press-logo {
+        width: 25%;
+    }
+    #home-press .press-logo img {
+        width: 70%;
+        padding: 1.3em 0 0 0;
+    }
+    #home-press .press-text {
+        width: 70%;
+        margin: 1.5em 0 0 2em ;
     }
 }
 
@@ -1443,7 +1554,25 @@ footer address td.icon {
     }
     .hackerlab #hack-title h3 {
         font-size: 2em;
+    }
+    #home-press .press-module {
+        width: 88%;
+        margin: .5em 6% 1em 6%;
     } 
+    #home-press .press-logo {
+        width: 25%;
+        margin: 0 37.5% 0 37.5%;
+        display: inline-block;
+    }
+    #home-press .press-text {
+        width: 97%;
+        margin: 0 0 0 2em;
+        display: inline-block;
+        padding: 0 .5em;
+    }
+    #home-press #tc-text {
+        margin-top: .5em;
+    }
 }
 
 @media (max-width: 570px) {
@@ -1535,56 +1664,15 @@ footer address td.icon {
     .hackerlab #hack-title h3 {
         font-size: 1.8em;
     } 
-    #home-top .home-mission-headline {
-        font-size: 1.15em;
+    #home-press .press-module {
+        width: 85%;
+        margin: .5em 7.5% 1em 7.5%;
     }
     #home-press .press-logo {
         width: 30%;
         margin: 0 34% 0 34%;
         display: inline-block;
     }
-
-    #home-press .press-text {
-        width: 97%;
-        margin: 0 0 0 2em;
-        display: inline-block;
-        padding: 0 .5em;
-    }
-
-    #home-press .press-text .press-title {
-        font-size: 1.25em;
-        width: 95%
-    }
-    #home-press .press-text .press-quote {
-        font-size: .9em;
-        width: 95%;
-        padding-right: 1em;
-    }
-    #home-press .press-text .press-author {
-        font-size: .8em;
-        width: 95%;
-        padding-right: 1em;
-    }
-    #home-press .press-logo img {
-        width: 90%;
-        max-width: 100%;
-        vertical-align: middle;
-        padding: 0.7em;
-    }
-    #home-press .press-module {
-        width: 85%;
-        margin: .5em 7.5% 1em 7.5%;
-    }
-    .donate {
-        width: 90%;
-    }
-    #why-matters li,
-    #who-we p {
-        font-size: .8em;
-    }
-    #hot-press h2 {
-        font-size: 2em;
-    }   
 }
 
 
