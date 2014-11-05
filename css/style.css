@@ -466,7 +466,9 @@ iframe.campaign-alert {
     border: none;
 }
 #mbit .donate:hover, #mbit .donate:focus {
-    background: #ed9c28;
+    /*background: #ed9c28;*/
+    background-color: white;
+    color: #f0ad4e;
 }
 
 #mbit .apply {
@@ -1547,7 +1549,6 @@ footer address td.icon {
         margin: 0 0 0 2em;
         display: inline-block;
         padding: 0 .5em;
-/*        float: right;*/
     }
 
     #home-press .press-text .press-title {
@@ -1571,9 +1572,19 @@ footer address td.icon {
         padding: 0.7em;
     }
     #home-press .press-module {
-        width: 90%;
-        margin: .5em 3% 1em 3%;
+        width: 85%;
+        margin: .5em 7.5% 1em 7.5%;
     }
+    .donate {
+        width: 90%;
+    }
+    #why-matters li,
+    #who-we p {
+        font-size: .8em;
+    }
+    #hot-press h2 {
+        font-size: 2em;
+    }   
 }
 
 
