@@ -18,8 +18,8 @@ body .share img {
 #home-press .press-module {
     box-shadow: 0 0 15px rgba(0, 0, 0, .25);
     overflow: hidden;
-    margin-top: .5em;
-    margin-bottom: 1em;
+    width: 97%;
+    margin: .5em 1.4% 1em 1.5%;
 }
 
 .helper {
@@ -1535,6 +1535,44 @@ footer address td.icon {
     } 
     #home-top .home-mission-headline {
         font-size: 1.15em;
+    }
+    #home-press .press-logo {
+        width: 30%;
+        margin: 0 34% 0 34%;
+        display: inline-block;
+    }
+
+    #home-press .press-text {
+        width: 97%;
+        margin: 0 0 0 2em;
+        display: inline-block;
+        padding: 0 .5em;
+/*        float: right;*/
+    }
+
+    #home-press .press-text .press-title {
+        font-size: 1.25em;
+        width: 95%
+    }
+    #home-press .press-text .press-quote {
+        font-size: .9em;
+        width: 95%;
+        padding-right: 1em;
+    }
+    #home-press .press-text .press-author {
+        font-size: .8em;
+        width: 95%;
+        padding-right: 1em;
+    }
+    #home-press .press-logo img {
+        width: 90%;
+        max-width: 100%;
+        vertical-align: middle;
+        padding: 0.7em;
+    }
+    #home-press .press-module {
+        width: 90%;
+        margin: .5em 3% 1em 3%;
     }
 }
 
