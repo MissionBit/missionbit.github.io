@@ -32,8 +32,8 @@ body .share img {
 #home-press .press-module {
     box-shadow: 0 0 15px rgba(0, 0, 0, .25);
     overflow: hidden;
-    width: 97%;
-    margin: .5em 1.4% 1em 1.5%;
+    width: 95%;
+    margin: .5em 2.5% 1em 2.5%;
 }
 
 .helper {
@@ -55,7 +55,7 @@ body .share img {
     width: 70%;
     max-width: 100%;
     vertical-align: middle;
-    padding: .8em 0 0 0.5em;
+    padding: 1em 0;
 }
 
 #home-press .press-text {
@@ -65,7 +65,7 @@ body .share img {
 }
 
 #home-press .press-text .press-title {
-    font-size: 1.5em;
+    font-size: 1.75em;
     vertical-align: middle; 
     font-style: italic;
     font-weight: bold; 
@@ -74,7 +74,7 @@ body .share img {
 
 #home-press .press-text .press-author {
     font-size: .9em;
-    margin-top: -1em;
+    margin-top: -.9em;
 }
 
 .share,
@@ -1154,6 +1154,9 @@ footer address td.icon {
     }
     #home-press .press-logo img {
         padding: .8em 0 0 0.5em;
+    }
+    #home-press .press-text .press-title {
+        font-size: 1.5em;
     }
 }
 
