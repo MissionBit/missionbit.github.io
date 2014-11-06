@@ -72,6 +72,12 @@ body .share img {
     font-family: 'Slabo 27px', serif;
 }
 
+#home-press .press-text .press-title:hover, 
+#home-press .press-text .press-title:focus {
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
 #home-press .press-text .press-author {
     font-size: .9em;
     margin-top: -.9em;
@@ -1427,23 +1433,6 @@ footer address td.icon {
         font-size: .8em;
         width: 95%;
     }
-/*    #home-press .press-text {
-        width: 97%;
-        margin: 0 0 0 2em;
-        display: inline-block;
-        padding: 0 .5em;
-    }*/
-/*    #home-press .press-logo {
-        width: 30%;
-        margin: 0 34% 0 34%;
-        display: inline-block;
-    }*/
-/*    #home-press .press-logo img {
-        width: 90%;
-        max-width: 100%;
-        vertical-align: middle;
-        padding: 0.7em;
-    }*/
     #home-press .press-module {
         width: 90%;
         margin: .5em 5% 1em 5%;
@@ -1455,19 +1444,20 @@ footer address td.icon {
     #who-we p {
         font-size: .8em;
     }
-    #hot-press h2 {
+/*    #hot-press h2 {
         font-size: 2em;
-    } 
+    } */
     #home-press .press-logo {
-        width: 25%;
+        width: 24%;
     }
     #home-press .press-logo img {
         width: 70%;
-        padding: 1.3em 0 0 0;
+        padding: 1.75em 0 0 .2em;
     }
     #home-press .press-text {
         width: 70%;
-        margin: 1.5em 0 0 2em ;
+        margin: 1.5em 0 0 2em;
+        float: right;
     }
 }
 
@@ -1575,6 +1565,15 @@ footer address td.icon {
     }
     #home-press #tc-text {
         margin-top: .5em;
+    }
+    #home-press .press-text .press-title {
+        padding-left: 1em;  
+    }
+    #home-press .press-text .press-quote {
+        padding-left: 1.2em; 
+    }
+    #home-press .press-text .press-author {
+      padding-left: 1.5em;  
     }
 }
 
