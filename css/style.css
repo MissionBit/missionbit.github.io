@@ -8,6 +8,81 @@ body .share img {
     max-width: 100%;
 }
 
+/*
+#home-press .home-press-box {
+    width: 90%;
+    margin: 0 5% 0 5%;
+    width: 100%;
+}*/
+
+#home-press .press-text .press-title,
+#home-press .press-text .press-quote,
+#home-press .press-text .press-author {
+    padding-right: 1em;
+}
+
+#home-press .press-text .press-quote {
+    padding-bottom: 1em;
+}
+
+#hot-press .hack-headline {
+    margin-bottom: 1em;
+}
+
+#home-press .press-module {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    overflow: hidden;
+    width: 95%;
+    margin: .5em 2.5% 1em 2.5%;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#home-press .press-logo {
+    text-align: center;
+    min-height: 100%;
+    height: 100%;
+    width: 20%;
+    float: left;
+    display: inline-block;
+}
+
+#home-press .press-logo img {
+    width: 70%;
+    max-width: 100%;
+    vertical-align: middle;
+    padding: 1em 0;
+}
+
+#home-press .press-text {
+    width: 75%;
+    margin: 1.5em 0 0 2em ;
+    display: inline-block;
+}
+
+#home-press .press-text .press-title {
+    font-size: 1.75em;
+    vertical-align: middle; 
+    font-style: italic;
+    font-weight: bold; 
+    font-family: 'Slabo 27px', serif;
+}
+
+#home-press .press-text .press-title:hover, 
+#home-press .press-text .press-title:focus {
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+#home-press .press-text .press-author {
+    font-size: .9em;
+    margin-top: -.9em;
+}
+
 .share,
 .hackerlab {
     font-size: 10px;
@@ -44,6 +119,19 @@ body .share img {
     border-radius: .5em;
 }
 
+.home-video {
+    width: 90%;
+    margin: 2% 4.5% 2% 4.5%;
+    height: 22em;
+    padding: 2em;
+    border-radius: .5em;
+}
+
+.home-video-box {
+    width: 48%;
+    display: inline-block;
+}
+
 #goals-primary {
 /*    width: 90%;*/
 /*    margin: 0 5%;*/
@@ -52,10 +140,22 @@ body .share img {
 #goals-primary .goals-headline,
 #hack-workshops .workshops-headline,
 #hack-mentors .mentors-headline,
-#hack-support .support-headline {
+#hack-support .support-headline,
+#hack-hardware .hardware-headline {
     font-size: 2em;
     text-align: center;
 }
+
+#home-top .home-mission-headline {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.home-mission-box {
+    margin: 2em 5% 0 5%;
+    width: 90%;
+}
+
 
 #hack-workshops .workshops-headline {
 
@@ -70,6 +170,12 @@ body .share img {
 }
 
 .hackerlab .mhs-lab-vid {
+    width: 100%; 
+    height: 100%; 
+    border-radius: .5em;
+}
+
+.home #home-passion {
     width: 100%; 
     height: 100%; 
     border-radius: .5em;
@@ -385,7 +491,9 @@ iframe.campaign-alert {
     border: none;
 }
 #mbit .donate:hover, #mbit .donate:focus {
-    background: #ed9c28;
+    /*background: #ed9c28;*/
+    background-color: white;
+    color: #f0ad4e;
 }
 
 #mbit .apply {
@@ -439,6 +547,20 @@ iframe.campaign-alert {
 #mbit .mentor:hover, #mbit .mentor:focus {
     background: white;
     color: #e74c3c;
+}
+
+#mbit .hardware {
+    text-transform: uppercase;
+    font-family: 'UbuntuRegular', sans-serif;
+    color: #fff;
+    background: #1abc9c;
+    text-shadow: none;
+    border: none;
+}
+
+#mbit .hardware:hover, #mbit .hardware:focus {
+    background: white;
+    color: #1abc9c;
 }
 
 .shadow {
@@ -1031,6 +1153,19 @@ footer address td.icon {
     margin: 0 4px;
 }
 
+@media (max-width: 1200px) {
+    .home-video {
+        height: 18em;
+        padding: 1em;
+    }
+    #home-press .press-logo img {
+        padding: .8em 0 0 0.5em;
+    }
+    #home-press .press-text .press-title {
+        font-size: 1.5em;
+    }
+}
+
 @media (min-width:992px) and (max-width: 1236px) {
     .share .actions .byline {
         height: 2.5em;
@@ -1056,6 +1191,13 @@ footer address td.icon {
     }
     .share #kick-welcome #kick-thx {
         font-size: 1.5em;
+    }
+    #home-press .press-module {
+        width: 94%;
+        margin: .5em 3% 1em 3%;
+    }
+    #home-press .press-logo img {
+        padding: .9em 0 0 0.5em;
     }
 }
 
@@ -1097,7 +1239,25 @@ footer address td.icon {
     }
     .share .trigger-title {
         font-size: 2.5em;
-    }     
+    } 
+    .home-video-box {
+        width: 80%;
+        margin: 0 10% 0 10%;
+    }
+    .home-video {
+        height: 23em;
+    } 
+    #home-press .press-logo {
+        width: 20%;
+    }
+    #home-press .press-logo img {
+        width: 70%;
+        padding: 1.3em 0 0 0.5em;
+    }
+    #home-press .press-text {
+        width: 75%;
+        margin: 1.5em 0 0 2em ;
+    }   
 }
 
 
@@ -1145,11 +1305,14 @@ footer address td.icon {
     .share #kick-welcome .kickhead {
         font-size: 1.65em;
     }
-
     .lab-video {
         width: 75%;
         margin: 2% 12.5% 3% 12.4%;
         padding: 1em;
+    }
+    #home-press .press-module {
+        width: 92%;
+        margin: .5em 4% 1em 4%;
     }
 }
 
@@ -1174,7 +1337,7 @@ footer address td.icon {
         width: 82%;
         height: 34em;
         margin: 2% 9% 3% 9%;
-    } 
+    }
 }
 
 @media (max-width: 740px) {
@@ -1182,6 +1345,9 @@ footer address td.icon {
         width: 83%;
         height: 34em;
         margin: 2% 8.5% 3% 8.5%;
+    } 
+    .home-video {
+        height: 22em;
     } 
 }
 
@@ -1191,6 +1357,20 @@ footer address td.icon {
         height: 33em;
         margin: 2% 8% 3% 8%;
     } 
+    .home-video {
+        height: 21.5em;
+    } 
+}
+
+@media (max-width: 710px) {
+    #home-press .press-logo img {
+        width: 70%;
+        padding: 2.5em 0 0 1em;
+    }
+    #home-press .press-text {
+        width: 65%;
+        margin: 1.5em 0 0 2em ;
+    }
 }
 
 @media (max-width: 700px) {
@@ -1198,7 +1378,16 @@ footer address td.icon {
         width: 84%;
         height: 32em;
         margin: 2% 8% 3% 8%;
+    }
+    .home-video {
+        height: 21em;
     } 
+}
+
+@media (max-width: 680px) {
+    .home-video {
+        height: 20.5em;
+    }
 }
 
 @media (max-width: 670px) {
@@ -1226,17 +1415,67 @@ footer address td.icon {
         padding: 1em;
         height: 31em;
     }
+    .home-video {
+        height: 20em;
+    }
+    #home-top .home-mission-headline {
+        font-size: 1.15em;
+    }
+    #home-press .press-text .press-title {
+        font-size: 1.25em;
+        width: 95%;
+    }
+    #home-press .press-text .press-quote {
+        font-size: .9em;
+        width: 95%;
+    }
+    #home-press .press-text .press-author {
+        font-size: .8em;
+        width: 95%;
+    }
+    #home-press .press-module {
+        width: 90%;
+        margin: .5em 5% 1em 5%;
+    }
+    .donate {
+        width: 90%;
+    }
+    #why-matters li,
+    #who-we p {
+        font-size: .8em;
+    }
+/*    #hot-press h2 {
+        font-size: 2em;
+    } */
+    #home-press .press-logo {
+        width: 24%;
+    }
+    #home-press .press-logo img {
+        width: 70%;
+        padding: 1.75em 0 0 .2em;
+    }
+    #home-press .press-text {
+        width: 70%;
+        margin: 1.5em 0 0 2em;
+        float: right;
+    }
 }
 
 @media (max-width: 650px) {
     .lab-video { 
         height: 30em;
     } 
+    .home-video {
+        height: 19.5em;
+    }
 }
 
 @media (max-width: 630px) {
     .lab-video { 
         height: 29em;
+    }
+    .home-video {
+        height: 19em;
     } 
 }
 
@@ -1244,6 +1483,15 @@ footer address td.icon {
     .lab-video { 
         height: 28em;
     } 
+    .home-video {
+        height: 18em;
+    } 
+}
+
+@media (max-width: 585px) {
+    .home-video {
+        height: 17.5em;
+    }    
 }
 
 @media (max-width: 580px) {
@@ -1274,11 +1522,16 @@ footer address td.icon {
     }
     #goals-primary .goals-headline,
     #hack-workshops .workshops-headline,
-    #hack-mentors .mentors-headline {
+    #hack-mentors .mentors-headline,
+    #hack-support .support-headline,
+    #hack-hardware .hardware-headline {
         font-size: 1.75em;
         text-align: center;
         margin: 0 2em .5em 2em;
         
+    }
+    #home-top .home-mission-headline {
+        font-size: 1.25em;
     }
     .hackerlab #goal1,
     .hackerlab #goal2,
@@ -1294,12 +1547,48 @@ footer address td.icon {
     }
     .hackerlab #hack-title h3 {
         font-size: 2em;
+    }
+    #home-press .press-module {
+        width: 88%;
+        margin: .5em 6% 1em 6%;
     } 
+    #home-press .press-logo {
+        width: 25%;
+        margin: 0 37.5% 0 37.5%;
+        display: inline-block;
+    }
+    #home-press .press-text {
+        width: 97%;
+        margin: 0 0 0 2em;
+        display: inline-block;
+        padding: 0 .5em;
+    }
+    #home-press #tc-text {
+        margin-top: .5em;
+    }
+    #home-press .press-text .press-title {
+        padding-left: 1em;  
+    }
+    #home-press .press-text .press-quote {
+        padding-left: 1.2em; 
+    }
+    #home-press .press-text .press-author {
+      padding-left: 1.5em;  
+    }
+}
+
+@media (max-width: 570px) {
+    .home-video {
+        height: 17em;
+    }    
 }
 
 @media (max-width: 550px) {
     .lab-video { 
         height: 27em;
+    } 
+    .home-video {
+        height: 16.5em;
     } 
 }
 
@@ -1307,12 +1596,18 @@ footer address td.icon {
     .lab-video { 
         height: 26em;
     } 
+    .home-video {
+        height: 16em;
+    } 
 }
 
 @media (max-width: 510px) {
     .lab-video { 
         height: 25em;
-    } 
+    }
+    .home-video {
+        height: 15.5em;
+    }  
 }
 
 @media (max-width: 491px) {
@@ -1346,10 +1641,15 @@ footer address td.icon {
     }
     #goals-primary .goals-headline,
     #hack-workshops .workshops-headline,
-    #hack-mentors .mentors-headline  {
+    #hack-mentors .mentors-headline,
+    #hack-support .support-headline,
+    #hack-hardware .hardware-headline  {
         font-size: 1.5em;
         text-align: center;
         margin: 0 2em .5em 2em;
+    }
+    .lab-support {
+        margin-top: .5em;
     }
     .hackerlab #goal1,
     .hackerlab #goal2,
@@ -1366,12 +1666,24 @@ footer address td.icon {
     .hackerlab #hack-title h3 {
         font-size: 1.8em;
     } 
+    #home-press .press-module {
+        width: 85%;
+        margin: .5em 7.5% 1em 7.5%;
+    }
+    #home-press .press-logo {
+        width: 30%;
+        margin: 0 34% 0 34%;
+        display: inline-block;
+    }
 }
 
 
 @media (max-width: 490px) {
     .lab-video { 
         height: 24em;
+    }
+    .home-video {
+        height: 15em;
     } 
 }
 
@@ -1379,23 +1691,35 @@ footer address td.icon {
     .lab-video { 
         height: 23em;
     } 
+    .home-video {
+        height: 14.5em;
+    }
 }
 
 @media (max-width: 450px) {
     .lab-video { 
         height: 22em;
     } 
+    .home-video {
+        height: 14em;
+    }
 }
 
 @media (max-width: 430px) {
     .lab-video { 
         height: 21em;
     }
+    .home-video {
+        height: 13.5em;
+    }
 }
 
 @media (max-width: 410px) {
     .lab-video { 
         height: 20em;
+    }
+    .home-video {
+        height: 13em;
     }
 }
 
