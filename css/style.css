@@ -703,10 +703,10 @@ footer address td.icon {
     color: white;
 }
 
-#hacklab.kickstart header {
-    padding: 2px 0 10px 0;
-    margin-bottom: 20px;  
-}
+/*#hacklab.kickstart header {
+    padding: 2px 0 0px 0;
+    margin-bottom: 0px;  
+}*/
 
 .share header h1 {
     text-align: center;
@@ -987,7 +987,7 @@ footer address td.icon {
 
 .share #kick-welcome .kickhead {
     text-align: center;
-    font-size: 2.5em;
+/*    font-size: 2.5em;*/
     font-family: 'Aldrich', sans-serif;
 }
 
@@ -999,28 +999,31 @@ footer address td.icon {
 }
 
 .share #kick-welcome {
-    background-color: rgba(0,0,0,0.45);
-    color: white;
-    margin-top: 1em;
+    background-color: rgba(255,255,255,0.9);
+    color: #000;
+    margin-top: 5em;
+    margin-bottom: 5em;
     border-radius: 0.5em;
+    padding-top: 2em;
+}
+
+.share #kick-welcome .kickhead p {
+    font-size: 2.5em;
 }
 
 .share #kick-welcome p {
 /*    font-size: 2em;*/
-    padding-left: .8em;
+/*    padding-left: .8em;*/
 }
 
 .share #kick-welcome .words {
-    background-color: rgba(255,255,255,0.75);
-    color: black; 
-/*    background-color: rgba(0,0,0,0.75);
-    color: white;*/
-    padding: 1em;
     border-radius: 0.5em;
     font-size: 1.5em;
+    margin-top: -.8em;
 }
 
-.kick-welcome-intro {
+#kick-words {
+    margin: 0 5em 3em 5em;
 }
 
 #kick-thx {
@@ -1030,6 +1033,7 @@ footer address td.icon {
 
 #kick-hey {
     font-size: 1.75em;
+    line-height: 1.5em;
 }
 
 .share .kick-box {
@@ -1038,18 +1042,16 @@ footer address td.icon {
     border: 1px solid #eaeaea;
     border-radius: .25em;
     box-shadow: 0 0 15px rgba(0, 0, 0, .25);
-/*    height: 30%;*/
 }
 
 .share .kick-home-box {
     width: 100%;
     height: 42.857143%; 
-    margin-bottom: 1em; 
+    margin-bottom: 2em; 
 }
 
 .kickstart-image {
-    background: url(../images/home/summer-mobile-tunnel-sm.jpg);
-    /*min-width: 1172px;*/
+    background: url(../images/home/anim-group-1.jpg);
     overflow: hidden;
     background-size: 100%;
     width: 100%;
@@ -1173,6 +1175,10 @@ footer address td.icon {
 }
 
 @media (max-width: 1057px) {
+    .kick-home-box #kick-welcome {
+        margin-top: 3.5em;
+        margin-bottom: 3.5em;
+    }
     .kickstart-image {
         height: 100%;
 /*        min-width: 391px;*/
@@ -1180,9 +1186,9 @@ footer address td.icon {
     .share .kick-home-box {
         height: 37%;
     }
-    .share #kick-welcome .kickhead {
+/*    .share #kick-welcome .kickhead {
         font-size: 2.5em;
-    }
+    }*/
     .share #kick-welcome #kick-hey {
         font-size: 1.5em;
     }
@@ -1220,9 +1226,9 @@ footer address td.icon {
     #kick-hey {
         font-size: 1.5em;
     }
-    .share #kick-welcome .kickhead {
+/*    .share #kick-welcome .kickhead {
         font-size: 2em;
-    }
+    }*/
 }
 
 @media (max-width: 991px) {
@@ -1276,9 +1282,6 @@ footer address td.icon {
     .share .kick-home-box {
         height: 11%;
     }
-    .share #kick-welcome #support {
-        padding-top: .5em;  
-    }
     .trigger-box {
         width: 96%;
         display: inline-block;
@@ -1302,9 +1305,9 @@ footer address td.icon {
     #fb-box {
         border-bottom: 1px solid silver;
     }
-    .share #kick-welcome .kickhead {
+/*    .share #kick-welcome .kickhead {
         font-size: 1.65em;
-    }
+    }*/
     .lab-video {
         width: 75%;
         margin: 2% 12.5% 3% 12.4%;
@@ -1313,6 +1316,10 @@ footer address td.icon {
     #home-press .press-module {
         width: 92%;
         margin: .5em 4% 1em 4%;
+    }
+    #kick-words {
+        margin-bottom: 0;
+        margin-top: 0;
     }
 }
 
@@ -1391,15 +1398,19 @@ footer address td.icon {
 }
 
 @media (max-width: 670px) {
-    .share #kick-welcome .kickhead {
-        font-size: 1.40em;
+    .kick-home-box #kick-welcome {
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+    .share #kick-welcome .kickhead p {
+        font-size: 2em;
     }
     .share .kick-home-box {
         height: 9.5%;
     }
-    .share #kick-welcome #support {
+/*    .share #kick-welcome #support {
         padding-top: .5em;  
-    }
+    }*/
     .hackerlab #goal1,
     .hackerlab #goal2,
     .hackerlab #goal3 {
@@ -1444,9 +1455,6 @@ footer address td.icon {
     #who-we p {
         font-size: .8em;
     }
-/*    #hot-press h2 {
-        font-size: 2em;
-    } */
     #home-press .press-logo {
         width: 24%;
     }
@@ -1502,15 +1510,16 @@ footer address td.icon {
 }
 
 @media (max-width: 575px) {
-    .share #kick-welcome .kickhead {
-        font-size: 1.15em;
+    .kick-home-box #kick-welcome {
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
+    }
+    .share #kick-welcome .kickhead p {
+        font-size: 1.5em;
     }
     .share .kick-home-box {
         height: 8.75%;
     }
-    .share #kick-welcome #support {
-        padding-top: .5em;  
-    } 
     .hack-support-box {
         margin: 0;
     }
@@ -1611,9 +1620,13 @@ footer address td.icon {
 }
 
 @media (max-width: 491px) {
-    .share #kick-welcome .kickhead {
-        font-size: .9em;
-    } 
+    .kick-home-box #kick-welcome {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+/*    .share #kick-welcome .kickhead p {
+        font-size: 1.5em;
+    }*/
     .share .kick-home-box {
         height: 8%;
     }
