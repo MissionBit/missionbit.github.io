@@ -1,0 +1,79 @@
+---
+enable-mentor-alert: false
+title: "Hacker Lab Workshop Form"
+scripts: |
+    <script src="js/labworkshopform.js"></script>
+---
+
+<div id="hack-workshop" class="container">
+	<div id="hack-workshop-form-box" class="row">
+		<div class="hack-workshop-head-box col-sm-10 col-sm-offset-1">
+      <p class="hack-workshop-headline">
+          Thank you for your interest in running a workshop at the Hacker Lab.   
+      </p>
+      <br>
+      <p class="hack-workshop-headline">
+          Please tell us a little bit about the workshop you'd like to run. We'll get back to you soon with any follow up questions and to schedule your workshop.  
+      </p>
+    </div>
+    <div class="hack-workshop-success-box col-sm-10 col-sm-offset-1" hidden>
+      <p class="hack-workshop-success-msg">
+          Thank you for your interest in running a workshop at the Hacker Lab.  
+      </p>
+      <br>
+      <p class="hack-workshop-success-msg">
+          We'll get in touch with you soon to discuss next steps. 
+      </p>
+    </div>
+		<div id="lab-workshop-form" class="col-sm-8 col-sm-offset-2">
+			<form role="form">	
+				<div class="form-group hack-workshop-input-box">
+			    <div class="col-sm-12">
+			      <input 
+			      	id="hack-workshop-first-name" 
+			      	type="text" 
+			      	class="form-control name text workshop-form hack-lab" 
+			      	maxlength="35" 
+			      	placeholder="First Name"
+			      	autofocus>
+			    </div>	
+			  </div>
+			  <div class="form-group hack-workshop-input-box">
+			    <div class="col-sm-12">
+			      <input 
+			      	id="hack-workshop-last-name" 
+			      	type="text" 
+			      	class="form-control name text workshop-form hack-lab" 
+			      	maxlength="70" 
+			      	placeholder="Last Name">
+			    </div>	
+			  </div>
+			  <div class="form-group hack-workshop-input-box">
+				  <div class="col-sm-12">
+			       <input 
+			       		id="hack-workshop-email" 
+			       		type="email" 
+			       		maxlength="50" 
+			       		class="form-control email workshop-form hack-lab" 
+			       		placeholder="Email">
+			    </div>
+			  </div>
+			  <div class="form-group hack-workshop-input-box">
+				  <div class="col-sm-12">
+			       <textarea 
+			       		id="hack-workshop-description" 
+			       		name="textarea"
+			       		rows="6"
+			       		cols="100%"
+			       		maxlength="1000" 
+			       		class="form-control description workshop-form hack-lab"> Tell Us About Your Proposed Workshop
+			       	</textarea>
+			    </div>
+			  </div>
+				<div class="col-sm-12 hack-workshop-sub-btn">
+			  	<button id="hack-workshop-submit" type="submit" class="btn btn-primary">Submit</button>
+			  </div>
+			</form>
+		</div>
+	</div>
+</div>

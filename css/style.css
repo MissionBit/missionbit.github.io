@@ -68,23 +68,36 @@ body .share img {
 
 /********* HACKER LAB FORMS ***********/
 
-#hack-mentor {
+#hack-mentor,
+#hack-workshop,
+#hack-hardware {
     font-size: 10px;
 }
 
-#hack-mentor-form-box {
+#hack-mentor-form-box,
+#hack-workshop-form-box,
+#hack-hardware-form-box {
     margin-top: 3em;
-    width: 
 }
 
-.hack-mentor-head-box {
-/*    margin-bottom: 1em;*/
-}
-
-.hack-mentor-headline {
+.hack-mentor-headline,
+.hack-workshop-headline,
+.hack-hardware-headline {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.15em;
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+    /*font-family: 'Aldrich', sans-serif;*/
+}
+
+.hack-mentor-success-box,
+.hack-workshop-success-box,
+.hack-hardware-success-box {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    text-align: center;
+    font-size: 3em;
     font-family: 'Aldrich', sans-serif;
+    color: green;  
 }
 
 #hack-mentor-first-name, 
@@ -93,6 +106,28 @@ body .share img {
     height: 3em;
     font-size: 2.25em;
     text-align: center;
+}
+
+#hack-workshop-first-name, 
+#hack-workshop-last-name,
+#hack-workshop-email {
+    height: 3em;
+    font-size: 2.25em;
+    text-align: center;
+}
+
+#hack-hardware-first-name, 
+#hack-hardware-last-name,
+#hack-hardware-email {
+    height: 3em;
+    font-size: 2.25em;
+    text-align: center;
+}
+
+#hack-workshop-description,
+#hack-hardware-info {
+    font-size: 2.25em;
+    text-align: center; 
 }
 
 .hack-question {
@@ -105,13 +140,17 @@ body .share img {
     font-size: 2em;
 }
 
-#hack-mentor-submit {
+#hack-mentor-submit,
+#hack-workshop-submit,
+#hack-hardware-submit {
     font-size: 2em;
     margin-top: 2em;
     width: 30%;
 }
 
-.hack-mentor-sub-btn {
+.hack-mentor-sub-btn,
+.hack-workshop-sub-btn,
+.hack-hardware-sub-btn {
     text-align: center;
 }
 
@@ -120,6 +159,10 @@ input.hack-mentor-check {
     margin-right: 1em;
 }
 
+.workshop-form,
+.hardware-form {
+    margin-top: 1em;
+}
 
 
 /********* NEW HOME ***********/
