@@ -1,77 +1,77 @@
 ---
 enable-mentor-alert: false
-title: "Hacker Lab Workshop Form"
+title: "Hacker Lab Hardware Form"
 scripts: |
-    <script src="js/labworkshopform.js"></script>
+    <script src="js/labhardwareform.js"></script>
 ---
 
-<div id="hack-workshop" class="container">
-	<div id="hack-workshop-form-box" class="row">
-		<div class="hack-workshop-head-box col-sm-10 col-sm-offset-1">
-      <p class="hack-workshop-headline">
-          Thank you for your interest in running a workshop at the Hacker Lab.   
+<div id="hack-hardware" class="container">
+	<div id="hack-hardware-form-box" class="row">
+		<div class="hack-hardware-head-box col-sm-10 col-sm-offset-1">
+      <p class="hack-hardware-headline">
+          Thank you for your willingness to donate hardware to the Hacker Lab.  
       </p>
       <br>
-      <p class="hack-workshop-headline">
-          Please tell us a little bit about the workshop you'd like to run. We'll get back to you soon with any follow up questions and to schedule your workshop.  
+      <p class="hack-hardware-headline">
+          Please tell us what hardware you generously intend to donate and what condition its in. 
       </p>
     </div>
-    <div class="hack-workshop-success-box col-sm-10 col-sm-offset-1" hidden>
-      <p class="hack-workshop-success-msg">
-          Thank you for your interest in running a workshop at the Hacker Lab.  
+    <div class="hack-hardware-success-box col-sm-10 col-sm-offset-1" hidden>
+      <p class="hack-hardware-success-msg">
+          Thank you for generosity.   
       </p>
       <br>
-      <p class="hack-workshop-success-msg">
-          We'll get in touch with you soon to discuss next steps. 
+      <p class="hack-hardware-success-msg">
+          We'll get in touch with you soon to coordinate pick up of the hardware.
       </p>
     </div>
-		<div id="lab-workshop-form" class="col-sm-8 col-sm-offset-2">
+		<div id="lab-hardware-form" class="col-sm-8 col-sm-offset-2">
 			<form role="form">	
-				<div class="form-group hack-workshop-input-box">
+				<div class="form-group hack-hardware-input-box">
 			    <div class="col-sm-12">
 			      <input 
-			      	id="hack-workshop-first-name" 
+			      	id="hack-hardware-first-name" 
 			      	type="text" 
-			      	class="form-control name text workshop-form hack-lab" 
+			      	class="form-control name text hardware-form hack-lab" 
 			      	maxlength="35" 
 			      	placeholder="First Name"
 			      	autofocus>
 			    </div>	
 			  </div>
-			  <div class="form-group hack-workshop-input-box">
+			  <div class="form-group hack-hardware-input-box">
 			    <div class="col-sm-12">
 			      <input 
-			      	id="hack-workshop-last-name" 
+			      	id="hack-hardware-last-name" 
 			      	type="text" 
-			      	class="form-control name text workshop-form hack-lab" 
+			      	class="form-control name text hardware-form hack-lab" 
 			      	maxlength="70" 
 			      	placeholder="Last Name">
 			    </div>	
 			  </div>
-			  <div class="form-group hack-workshop-input-box">
+			  <div class="form-group hack-hardware-input-box">
 				  <div class="col-sm-12">
 			       <input 
-			       		id="hack-workshop-email" 
+			       		id="hack-hardware-email" 
 			       		type="email" 
 			       		maxlength="50" 
-			       		class="form-control email workshop-form hack-lab" 
+			       		class="form-control email hardware-form hack-lab" 
 			       		placeholder="Email">
 			    </div>
 			  </div>
-			  <div class="form-group hack-workshop-input-box">
+			  <div class="form-group hack-hardware-input-box">
 				  <div class="col-sm-12">
 			       <textarea 
-			       		id="hack-workshop-description" 
+			       		id="hack-hardware-info" 
 			       		name="textarea"
-			       		rows="6"
+			       		rows="3"
 			       		cols="100%"
-			       		maxlength="1000" 
-			       		class="form-control description workshop-form hack-lab"> Tell Us About Your Proposed Workshop
+			       		maxlength="400" 
+			       		class="form-control description hardware-form hack-lab"> Hardware details e.g. Google glass in good condition
 			       	</textarea>
 			    </div>
 			  </div>
-				<div class="col-sm-12 hack-workshop-sub-btn">
-			  	<button id="hack-workshop-submit" type="submit" class="btn btn-primary">Submit</button>
+				<div class="col-sm-12 hack-hardware-sub-btn">
+			  	<button id="hack-hardware-submit" type="submit" class="btn btn-primary">Submit</button>
 			  </div>
 			</form>
 		</div>

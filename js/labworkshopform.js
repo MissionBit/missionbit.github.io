@@ -4,7 +4,7 @@ window.jQuery(function ($) {
     'use strict';
     $("#hack-workshop-submit").on('click', function (e) {
 			e.preventDefault();
-			console.log('mentor button working');
+			console.log('hardware button working');
 
 			var firstName = $('#hack-workshop-first-name').val();
 			var lastName = $('#hack-workshop-last-name').val();
