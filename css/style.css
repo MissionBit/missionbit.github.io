@@ -81,8 +81,9 @@ body .share img {
 .hack-mentor-headline,
 .hack-workshop-headline {
     text-align: center;
-    font-size: 2.5em;
-    font-family: 'Aldrich', sans-serif;
+    font-size: 2.15em;
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+    /*font-family: 'Aldrich', sans-serif;*/
 }
 
 .hack-mentor-success-box,
