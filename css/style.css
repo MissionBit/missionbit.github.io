@@ -8,12 +8,121 @@ body .share img {
     max-width: 100%;
 }
 
-/*
-#home-press .home-press-box {
-    width: 90%;
-    margin: 0 5% 0 5%;
+/********* HACKER LAB INDEX ***********/
+
+.headline .hack-title h3 {
     width: 100%;
-}*/
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+}
+
+.hack-headline {
+    width: 100%;
+}
+
+.video-box {
+/*    border: 1px solid black;*/
+}
+
+.hack-support-box {
+    text-align: center;
+    margin: 1.5em 0 0 0;
+
+}
+
+.lab-video {
+    width: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    margin: 2% 25% 3% 24%;
+    height: 35em;
+    padding: 2em;
+    border-radius: .5em;
+}
+
+.share,
+.hackerlab {
+    font-size: 10px;
+}
+
+.hackerlab #hack-page-head {
+    width: 95%;
+    left: 5%;
+    background-color: #3498db;
+    text-align: center;
+    padding: 10px 0;
+    margin: -30px inherit auto auto;
+    color: white;
+    font-size: 180%;
+    font-family: 'UbuntuRegular', sans-serif;  
+}
+
+.hackerlab p {
+    font-size: 1.4em;
+}
+
+.hackerlab .mhs-lab-vid {
+    width: 100%; 
+    height: 100%; 
+    border-radius: .5em;
+}
+
+
+/********* HACKER LAB FORMS ***********/
+
+#hack-mentor {
+    font-size: 10px;
+}
+
+#hack-mentor-form-box {
+    margin-top: 3em;
+    width: 
+}
+
+.hack-mentor-head-box {
+/*    margin-bottom: 1em;*/
+}
+
+.hack-mentor-headline {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Aldrich', sans-serif;
+}
+
+#hack-mentor-first-name, 
+#hack-mentor-last-name,
+#hack-mentor-email {
+    height: 3em;
+    font-size: 2.25em;
+    text-align: center;
+}
+
+.hack-question {
+    font-size: 2.5em;
+    margin-top: 1em;
+}
+
+.hack-mentor-time,
+.hack-mentor-day    {
+    font-size: 2em;
+}
+
+#hack-mentor-submit {
+    font-size: 2em;
+    margin-top: 2em;
+    width: 30%;
+}
+
+.hack-mentor-sub-btn {
+    text-align: center;
+}
+
+input.hack-mentor-check {
+    margin-top: .35em;
+    margin-right: 1em;
+}
+
+
+
+/********* NEW HOME ***********/
 
 #home-press .press-text .press-title,
 #home-press .press-text .press-quote,
@@ -83,42 +192,6 @@ body .share img {
     margin-top: -.9em;
 }
 
-.share,
-.hackerlab {
-    font-size: 10px;
-}
-
-.hackerlab {
-}
-
-.headline .hack-title h3 {
-    width: 100%;
-    font-family: 'SourceCodeProSemiBold', sans-serif;
-}
-
-.hack-headline {
-    width: 100%;
-}
-
-.video-box {
-/*    border: 1px solid black;*/
-}
-
-.hack-support-box {
-    text-align: center;
-    margin: 1.5em 0 0 0;
-
-}
-
-.lab-video {
-    width: 50%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
-    margin: 2% 25% 3% 24%;
-    height: 35em;
-    padding: 2em;
-    border-radius: .5em;
-}
-
 .home-video {
     width: 90%;
     margin: 2% 4.5% 2% 4.5%;
@@ -132,10 +205,6 @@ body .share img {
     display: inline-block;
 }
 
-#goals-primary {
-/*    width: 90%;*/
-/*    margin: 0 5%;*/
-}
 
 #goals-primary .goals-headline,
 #hack-workshops .workshops-headline,
@@ -156,45 +225,10 @@ body .share img {
     width: 90%;
 }
 
-
-#hack-workshops .workshops-headline {
-
-}
-
-.workshops-box {
-/*    width: 90%;
-    margin: 0 5% 0 5%;*/
-}
-
-#goals-secondary {
-}
-
-.hackerlab .mhs-lab-vid {
-    width: 100%; 
-    height: 100%; 
-    border-radius: .5em;
-}
-
 .home #home-passion {
     width: 100%; 
     height: 100%; 
     border-radius: .5em;
-}
-
-.hackerlab #hack-page-head {
-    width: 95%;
-    left: 5%;
-    background-color: #3498db;
-    text-align: center;
-    padding: 10px 0;
-    margin: -30px inherit auto auto;
-    color: white;
-    font-size: 180%;
-    font-family: 'UbuntuRegular', sans-serif;  
-}
-
-.hackerlab p {
-    font-size: 1.4em;
 }
 
 .page-head {
