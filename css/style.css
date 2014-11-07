@@ -1736,6 +1736,24 @@ footer address td.icon {
     }
 }
 
+@media (max-width: 390px) {
+    .lab-video { 
+        height: 19em;
+    }
+    .home-video {
+        height: 12em;
+    }
+}
+
+@media (max-width: 370px) {
+    .lab-video { 
+        height: 18em;
+    }
+    .home-video {
+        height: 11em;
+    }
+}
+
 /* Retina images */
 @media
     only screen and (-webkit-min-device-pixel-ratio: 1.5),
