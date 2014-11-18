@@ -1115,6 +1115,12 @@ footer address td.icon {
 
 /************** kickstarter template *****************/
 
+#tagline {
+    font-size: 1.75em;
+    line-height: 1.5em;
+    text-align: center;
+}
+
 .share #kick-welcome .kickhead {
     text-align: center;
 /*    font-size: 2.5em;*/
