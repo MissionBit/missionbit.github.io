@@ -8,6 +8,14 @@ body .share img {
     max-width: 100%;
 }
 
+/********* DONATE INDEX ***********/
+
+.support li {
+    font-size: 1.4em;
+}
+
+
+
 /********* HACKER LAB INDEX ***********/
 
 .headline .hack-title h3 {
