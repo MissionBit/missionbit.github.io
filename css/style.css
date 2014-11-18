@@ -14,8 +14,6 @@ body .share img {
     font-size: 1.4em;
 }
 
-
-
 /********* HACKER LAB INDEX ***********/
 
 .headline .hack-title h3 {
@@ -316,7 +314,12 @@ input.hack-mentor-check {
     font-size: 1.25em;
     font-style: italic;
     text-align: center;
+}
 
+.hackerlab .students-first {
+    font-size: 1.75em;
+    font-style: italic;
+    text-align: center;
 }
 
 /************** header template *****************/
