@@ -175,6 +175,10 @@ input.hack-mentor-check {
 
 /********* NEW HOME ***********/
 
+.home .headline h3 {
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+}
+
 #home-press .press-text .press-title,
 #home-press .press-text .press-quote,
 #home-press .press-text .press-author {
@@ -306,6 +310,13 @@ input.hack-mentor-check {
     color: white;
     font-size: 150%;
     font-family: 'UbuntuRegular', sans-serif;
+}
+
+.home .students-first {
+    font-size: 1.25em;
+    font-style: italic;
+    text-align: center;
+
 }
 
 /************** header template *****************/
