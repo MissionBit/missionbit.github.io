@@ -75,18 +75,24 @@ body .share img {
 /********* HACKER LAB FORMS ***********/
 
 #hack-mentor,
+#spring-mentor,
+#spring-student,
 #hack-workshop,
 #hack-hardware {
     font-size: 10px;
 }
 
 #hack-mentor-form-box,
+#spring-mentor-form-box,
+#spring-student-form-box,
 #hack-workshop-form-box,
 #hack-hardware-form-box {
     margin-top: 3em;
 }
 
 .hack-mentor-headline,
+.spring-mentor-headline,
+.spring-student-headline,
 .hack-workshop-headline,
 .hack-hardware-headline {
     text-align: center;
@@ -96,6 +102,8 @@ body .share img {
 }
 
 .hack-mentor-success-box,
+.spring-mentor-success-box,
+.spring-student-success-box,
 .hack-workshop-success-box,
 .hack-hardware-success-box {
     margin-top: 3em;
@@ -108,7 +116,13 @@ body .share img {
 
 #hack-mentor-first-name, 
 #hack-mentor-last-name,
-#hack-mentor-email {
+#hack-mentor-email,
+#spring-mentor-first-name, 
+#spring-mentor-last-name,
+#spring-mentor-email,
+#spring-student-first-name, 
+#spring-student-last-name,
+#spring-student-email  {
     height: 3em;
     font-size: 2.25em;
     text-align: center;
@@ -148,13 +162,17 @@ body .share img {
 
 #hack-mentor-submit,
 #hack-workshop-submit,
-#hack-hardware-submit {
+#hack-hardware-submit,
+#spring-mentor-submit,
+#spring-student-submit {
     font-size: 2em;
     margin-top: 2em;
     width: 30%;
 }
 
 .hack-mentor-sub-btn,
+.spring-mentor-sub-btn,
+.spring-student-sub-btn,
 .hack-workshop-sub-btn,
 .hack-hardware-sub-btn {
     text-align: center;
@@ -487,8 +505,6 @@ nav {
     font-size: 150%;
     font-family: 'UbuntuRegular', sans-serif;
 }
-
-
 
 .headline h2 {
     font-family: 'SourceCodeProSemiBold', sans-serif;
@@ -1006,7 +1022,8 @@ footer address td.icon {
     padding-top: .5em;
 }
 
-.mentor-form {
+.mentor-form,
+.student-form {
     margin-top: 1em;
 }
 
