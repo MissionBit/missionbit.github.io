@@ -48,9 +48,9 @@ window.jQuery(function ($) {
         }
     })
     console.log(widthCheck);
-    var url = 'http://www.kickstarter.com/projects/tysonium/666429819?token=dfd637b2',
+    var url = 'https://www.kickstarter.com/projects/tysonium/mission-bit-hacker-lab-mission-high-school-in-sf-c',
         encodedURL = encodeURIComponent(url),
-        title = encodeURIComponent('The Hacker Lab, a space for kids to explore, learn and hack with volunteer engineers by @missionbit & MHS'),
+        title = encodeURIComponent('Support the Hacker Lab! A space for kids to explore, learn and hack with volunteer engineers. By @missionbit & MHS'),
         buttons = $.makeArray($('.actions button').data('clicked', 0)),
         $percent = $('.progress .progress-bar'),
         $number = $('.progress .number');
