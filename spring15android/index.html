@@ -1,15 +1,19 @@
 ---
-enable-mentor-alert: true
-title: "Student Spring 2015 Signup"
+enable-mentor-alert: false
+title: "Spring 2015 Intro Android Mobile App Development Student Signup"
 scripts: |
     <script src="js/student2015.js"></script>
 ---
 
 <div id="spring-student" class="container">
 	<div id="spring-student-form-box" class="row">
-		<div class="spring-student-head-box col-sm-10 col-sm-offset-1">
+		<div class="spring-student-head-box col-sm-12">
       <p class="spring-student-headline">
-          Thank you for your interest in taking a Mission Bit class in the Spring 2015 semester. Please complete and submit the form below. We'll contact you with further details in early December 2014.
+          Thank you for your interest in taking the Mission Bit Intro Android Mobile App Development class in the Spring 2015 semester. 
+          Please complete and submit the form below. 
+          <br>
+          <br>
+          The first class meeting is Tuesday February 3rd from 4pm-6pm. We look forward to working with you this semester and are excited to see what you build.
       </p>
     </div>
     <div class="spring-student-success-box col-sm-10 col-sm-offset-1" hidden>
@@ -97,13 +101,12 @@ scripts: |
         <div id="student-detail-gender-div" class="form-group spring-student-input-box">
           <div class="col-sm-12">
             <select id="spring-student-gender" class="form-control student-form spring-lab">
-            	<option value="gender"> What is Your Gender </option>
-              <option value="Female" selected="selected">Female</option>
+            	<option value="gender"> What is Your Gender? </option>
+              <option value="Female">Female</option>
               <option value="Male"> Male </option>
             </select>
           </div>
         </div>
-
         <div id="student-detail-ethnicity-div" class="form-group spring-student-input-box">
           <div class="col-sm-12">
             <select id="spring-student-ethnicity" class="form-control student-form spring-lab">
@@ -117,6 +120,30 @@ scripts: |
               <option value="Multi-Racial"> Multi-Racial </option>
               <option value="Undisclosed"> I choose not to share </option>
             </select>
+          </div>
+        </div>
+        <div id="student-detail-ethnicity-div" class="form-group spring-student-input-box">
+          <div class="col-sm-12">
+            <select id="spring-student-ethnicity" class="form-control student-form spring-lab">
+              <option value="ethnicity"> What is Your Ethnicity? </option>
+              <option value="Latino"> Latino/Latina </option>
+              <option value="African American"> African American </option>
+              <option value="Chinese"> Chinese </option>
+              <option value="Asian"> Asian, Non-Chinese </option>
+              <option value="Native American"> Native American </option>
+              <option value="White"> White </option>
+              <option value="Multi-Racial"> Multi-Racial </option>
+              <option value="Undisclosed"> I choose not to share </option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group spring-student-input-box">
+          <div class="col-sm-12">
+             <textarea 
+                id="spring-student-comments" 
+                class="form-control comments student-form spring-lab" 
+                rows="6"> Please tell us a little bit about your coding experience. What classes have you taken in high school and/or with out-of-school organizations? What languages have you worked with? Describe and, if possible, provide links to any websites, apps or software you have built individually or as a member of a team. 
+             </textarea>
           </div>
         </div>
 				<div class="col-sm-12 spring-student-sub-btn">

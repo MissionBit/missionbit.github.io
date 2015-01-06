@@ -227,10 +227,22 @@ body .share img {
 #spring-mentor-email,
 #spring-student-first-name, 
 #spring-student-last-name,
-#spring-student-email  {
+#spring-student-email,
+#spring-student-cell,
+#spring-student-school,
+#spring-student-grade,
+#spring-student-gender,
+#spring-student-ethnicity  {
     height: 3em;
     font-size: 2.25em;
-    text-align: center;
+    color: rgba(0,0,0,.4);
+/*    text-align: center;*/
+}
+
+#spring-student-comments {
+    font-size: 2.25em;
+    color: rgba(0,0,0,.4);
+    text-align: center; 
 }
 
 #hack-workshop-first-name, 
