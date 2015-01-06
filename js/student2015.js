@@ -4,8 +4,6 @@ window.jQuery(function ($) {
     $("#spring-student-submit").on('click', function (e) {
 			e.preventDefault();
 			console.log('student button working');
-			// var days = [];
-			// var time = [];
 			var firstName = $('#spring-student-first-name').val();
 			var lastName = $('#spring-student-last-name').val();
 			var email = $('#spring-student-email').val();

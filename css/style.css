@@ -8,6 +8,14 @@ body .share img {
     max-width: 100%;
 }
 
+.spring15-student-form-error {
+    margin-top: .5em;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'UbuntuRegular', sans-serif;
+    color: red;   
+}
+
 /********* DONATE INDEX ***********/
 
 .support li {
@@ -281,7 +289,8 @@ body .share img {
 #hack-workshop-submit,
 #hack-hardware-submit,
 #spring-mentor-submit,
-#spring-student-submit {
+#spring-student-submit,
+.spring-student-submit {
     font-size: 2em;
     margin-top: 2em;
     width: 30%;
