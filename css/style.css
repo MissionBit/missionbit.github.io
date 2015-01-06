@@ -14,11 +14,103 @@ body .share img {
     font-size: 1.4em;
 }
 
+/********* PROGRAMS INDEX ***********/
+
+.spring15-signups h3 {
+    width: 100%;
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+}
+
+.programs #high-school h3 {
+    font-size: 2.5em;
+}
+
+.programs p {
+    font-size: 1.4em;
+}
+
+#programs .class-module {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+/*    overflow: hidden;*/
+    width: 98%;
+    margin: .5em .75% 1em .75%;
+}
+
+#programs .class-logo {
+    text-align: center;
+    min-height: 100%;
+    height: 100%;
+    width: 21.75%;
+    display: inline-block;
+    margin: 1em 1% 1em 1%;
+}
+
+#programs .class-logo img {
+    width: 90%;
+    max-width: 100%;
+/*    margin-top: -4em;*/
+    vertical-align: bottom;
+    margin: 0 4.5% 0 4.5%;
+}
+
+#programs .class-text {
+    width: 73%;
+    margin: 1em 0 .75em 1%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#programs .action-buttons .spring15-ctr {
+    width: 46%;
+    display: inline-block;
+    text-align: center;
+}
+
+.action-buttons {
+    margin-top: 2em;
+}
+
+#student-btn-ctr {
+    margin-right: 2%;
+}
+
+#mentor-btn-ctr {
+    margin-left: 2%;
+}
+
+#programs .class-text .class-title {
+    font-size: 2.5em;
+    vertical-align: middle; 
+    font-style: italic;
+    font-weight: bold; 
+    font-family: 'Slabo 27px', serif;
+}
+
+#programs .class-text .class-lead-title {
+    font-size: 1.75em;
+    vertical-align: middle; 
+/*    font-style: italic;
+    font-weight: bold; */
+    font-family: 'Lato', 'sans-serif';
+}
+
+#programs .logistics {
+    font-size: 1.2em;
+}
+
+.logistics-span {
+    font-weight: bold;
+}
+
 /********* HACKER LAB INDEX ***********/
 
 .headline .hack-title h3 {
     width: 100%;
     font-family: 'SourceCodeProSemiBold', sans-serif;
+}
+
+.hackerlab #hack-title h3 {
+    font-size: 2.5em;
 }
 
 .hack-headline {
@@ -45,7 +137,8 @@ body .share img {
 }
 
 .share,
-.hackerlab {
+.hackerlab,
+.programs {
     font-size: 10px;
 }
 
@@ -359,6 +452,11 @@ input.hack-mentor-check {
 
 .open-signups h1 {
     text-align: center;
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-size: 1.45em;
+}
+.spring15-signups h1 {
+/*    text-align: center;*/
     font-family: 'SourceCodeProSemiBold', sans-serif;
     font-size: 1.45em;
 }
@@ -1694,9 +1792,10 @@ footer address td.icon {
     .hackerlab #hack-headline {
         font-size: 1em;
     }
-    .hackerlab #hack-title h3 {
+/*    .hackerlab #hack-title h3,
+    .programs #high-school h3 {
         font-size: 2em;
-    }
+    }*/
     #home-press .press-module {
         width: 88%;
         margin: .5em 6% 1em 6%;
