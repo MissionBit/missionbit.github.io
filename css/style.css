@@ -16,6 +16,18 @@ body .share img {
 
 /********* PROGRAMS INDEX ***********/
 
+.programs-page-head {
+    width: 90%;
+    left: 5%;
+    background-color: #3498db;
+    text-align: center;
+    padding: 10px 0;
+    margin: -30px inherit auto auto;
+    color: white;
+    font-size: 180%;
+    font-family: 'UbuntuRegular', sans-serif;
+}
+
 .spring15-signups h3 {
     width: 100%;
     font-family: 'SourceCodeProSemiBold', sans-serif;
@@ -592,7 +604,7 @@ nav {
     text-align: center;
 }
 
-.page-head {
+/*.page-head {
     width: 90%;
     left: 5%;
     background-color: #3498db;
@@ -602,7 +614,7 @@ nav {
     color: white;
     font-size: 150%;
     font-family: 'UbuntuRegular', sans-serif;
-}
+}*/
 
 .headline h2 {
     font-family: 'SourceCodeProSemiBold', sans-serif;
