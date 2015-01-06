@@ -22,6 +22,11 @@ scripts: |
     </div>
 		<div id="lab-student-form" class="col-sm-8 col-sm-offset-2">
 			<form role="form">
+        <div id="spring-firstName-error-box" class="spring15-student-form-error col-sm-12" hidden>
+          <p class="spring-student-success-msg student-form">
+              Your First Name is required to register.  
+          </p>
+        </div>
 				<div class="form-group spring-student-input-box">
 			    <div class="col-sm-12">
 			      <input 
@@ -49,8 +54,7 @@ scripts: |
 			       		id="spring-student-email" 
 			       		type="email" 
 			       		class="form-control email student-form spring-lab" 
-			       		placeholder="Email" 
-                required>
+			       		placeholder="Email">
 			    </div>
 			  </div>
 			  <div id="student-cell-div" class="form-group spring-student-input-box">

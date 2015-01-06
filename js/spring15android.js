@@ -14,6 +14,12 @@ window.jQuery(function ($) {
 			var ethnicity = $('#spring-student-ethnicity').val();
 			var comments = $('#spring-student-comments').val();
 
+
+
+			if (!firstName) {
+				$('#spring-firstName-error-box').show();
+			}
+
 			if (school === "school") {
 				$('#spring-school-error-box').show();
 			}
