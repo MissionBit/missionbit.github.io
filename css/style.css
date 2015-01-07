@@ -8,10 +8,134 @@ body .share img {
     max-width: 100%;
 }
 
+.spring15-student-form-error {
+    margin-top: .5em;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'UbuntuRegular', sans-serif;
+    color: red;   
+}
+
+.spring15-input-error {
+    /*background-color: rgba(255, 0, 0, 0.5);*/
+    border: 2px solid red;
+    box-shadow: 1px 1px 15px rgba(255, 0, 0, 1);
+}
+
+.spring15-input-success {
+    border: 2px solid green;
+    box-shadow: 1px 1px 15px rgba(0, 255, 0, 1);
+} 
+
+.change-plan {
+    color: black;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
 /********* DONATE INDEX ***********/
 
 .support li {
     font-size: 1.4em;
+}
+
+/********* PROGRAMS INDEX ***********/
+
+.programs-page-head {
+    width: 90%;
+    left: 5%;
+    background-color: #3498db;
+    text-align: center;
+    padding: 10px 0;
+    margin: -30px inherit auto auto;
+    color: white;
+    font-size: 180%;
+    font-family: 'UbuntuRegular', sans-serif;
+}
+
+.spring15-signups h3 {
+    width: 100%;
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+}
+
+.programs #high-school h3 {
+    font-size: 2.5em;
+}
+
+.programs p {
+    font-size: 1.4em;
+}
+
+#programs .class-module {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+/*    overflow: hidden;*/
+    width: 98%;
+    margin: .5em .75% 1em .75%;
+}
+
+#programs .class-logo {
+    text-align: center;
+    min-height: 100%;
+    height: 100%;
+    width: 21.75%;
+    display: inline-block;
+    margin: 2em 1% 1em 1%;
+}
+
+#programs .class-logo img {
+    width: 90%;
+    max-width: 100%;
+/*    margin-top: -4em;*/
+    vertical-align: bottom;
+    margin: 0 4.5% 0 4.5%;
+}
+
+#programs .class-text {
+    width: 73%;
+    margin: 1em 0 .75em 1%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#programs .action-buttons .spring15-ctr {
+    width: 46%;
+    display: inline-block;
+    text-align: center;
+}
+
+.action-buttons {
+    margin-top: 2em;
+    margin-bottom: 2em
+}
+
+#student-btn-ctr {
+    margin-right: 2%;
+}
+
+#mentor-btn-ctr {
+    margin-left: 2%;
+}
+
+#programs .class-text .class-title {
+    font-size: 2.5em;
+    vertical-align: middle; 
+    font-style: italic;
+    font-weight: bold; 
+    font-family: 'Slabo 27px', serif;
+}
+
+#programs .class-text .class-lead-title {
+    font-size: 1.75em;
+    vertical-align: middle; 
+    font-family: 'Lato', 'sans-serif';
+}
+
+#programs .logistics {
+    font-size: 1.2em;
+}
+
+.logistics-span {
+    font-weight: bold;
 }
 
 /********* HACKER LAB INDEX ***********/
@@ -19,6 +143,10 @@ body .share img {
 .headline .hack-title h3 {
     width: 100%;
     font-family: 'SourceCodeProSemiBold', sans-serif;
+}
+
+.hackerlab #hack-title h3 {
+    font-size: 2.5em;
 }
 
 .hack-headline {
@@ -45,7 +173,8 @@ body .share img {
 }
 
 .share,
-.hackerlab {
+.hackerlab,
+.programs {
     font-size: 10px;
 }
 
@@ -109,7 +238,7 @@ body .share img {
     margin-top: 3em;
     margin-bottom: 3em;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
     font-family: 'Aldrich', sans-serif;
     color: green;  
 }
@@ -122,10 +251,22 @@ body .share img {
 #spring-mentor-email,
 #spring-student-first-name, 
 #spring-student-last-name,
-#spring-student-email  {
+#spring-student-email,
+#spring-student-cell,
+#spring-student-school,
+#spring-student-grade,
+#spring-student-gender,
+#spring-student-ethnicity  {
     height: 3em;
     font-size: 2.25em;
-    text-align: center;
+    color: rgba(0,0,0,.4);
+/*    text-align: center;*/
+}
+
+#spring-student-comments {
+    font-size: 2.25em;
+    color: rgba(0,0,0,.4);
+    text-align: center; 
 }
 
 #hack-workshop-first-name, 
@@ -164,7 +305,8 @@ body .share img {
 #hack-workshop-submit,
 #hack-hardware-submit,
 #spring-mentor-submit,
-#spring-student-submit {
+#spring-student-submit,
+.spring-student-submit {
     font-size: 2em;
     margin-top: 2em;
     width: 30%;
@@ -362,6 +504,11 @@ input.hack-mentor-check {
     font-family: 'SourceCodeProSemiBold', sans-serif;
     font-size: 1.45em;
 }
+.spring15-signups h1 {
+/*    text-align: center;*/
+    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-size: 1.45em;
+}
 
 .enroll-ctr {
     margin-bottom: 2em;
@@ -494,7 +641,7 @@ nav {
     text-align: center;
 }
 
-.page-head {
+/*.page-head {
     width: 90%;
     left: 5%;
     background-color: #3498db;
@@ -504,7 +651,7 @@ nav {
     color: white;
     font-size: 150%;
     font-family: 'UbuntuRegular', sans-serif;
-}
+}*/
 
 .headline h2 {
     font-family: 'SourceCodeProSemiBold', sans-serif;
@@ -1302,6 +1449,55 @@ footer address td.icon {
     #home-press .press-text .press-title {
         font-size: 1.5em;
     }
+
+    #programs .class-logo {
+        width: 25%;
+        margin: 1.5em 1% 1em 1%;
+    }
+
+    #programs .class-logo img {
+        width: 90%;
+        max-width: 100%;
+        margin: 0 4.5% 0 4.5%;
+    }
+
+    #programs .class-text {
+        width: 70%;
+        margin: 1em 0 .75em 1%;
+    }
+
+    .programs #high-school h3 {
+        font-size: 2.5em;
+    }
+
+    .programs p {
+        font-size: 1.2em;
+    }
+
+    .action-buttons {
+        margin-top: 2em;
+        margin-bottom: 2em
+    }
+
+    #student-btn-ctr {
+        margin-right: 2%;
+    }
+
+    #mentor-btn-ctr {
+        margin-left: 2%;
+    }
+
+    #programs .class-text .class-title {
+        font-size: 2.25em;
+    }
+
+    #programs .class-text .class-lead-title {
+        font-size: 1.5em;
+    }
+
+    #programs .logistics {
+        font-size: 1.0em;
+    }
 }
 
 @media (min-width:992px) and (max-width: 1236px) {
@@ -1344,9 +1540,9 @@ footer address td.icon {
 }
 
 @media (min-width:992px) {
-    .share .actions .col-md-4:nth-child(1n+2) {
-/*        border-left: 1px solid #ddd;*/
-    }
+    /*.share .actions .col-md-4:nth-child(1n+2) {
+        border-left: 1px solid #ddd;
+    }*/
 }
 
 @media (min-width: 992px) and (max-width: 1203px) {
@@ -1403,7 +1599,64 @@ footer address td.icon {
     #home-top .home-stories-title {
         width: 90%;
         margin-left: 5%;
-    }  
+    } 
+
+    #programs .class-logo {
+        width: 33%;
+        margin: 1.5em 1% 1em 1%;
+    }
+
+    #programs .class-logo img {
+        width: 90%;
+        max-width: 100%;
+        margin: 0 4.5% 0 4.5%;
+    }
+
+    #programs .class-text {
+        width: 62%;
+        margin: 1em 0 .75em 1%;
+    }
+
+    .programs #high-school h3 {
+        font-size: 2em;
+    }
+
+    .programs p {
+        font-size: 1em;
+    }
+
+    .action-buttons {
+        margin-top: 2em;
+        margin-bottom: 2em
+    }
+
+    #student-btn-ctr {
+        margin-right: 2%;
+    }
+
+    #mentor-btn-ctr {
+        margin-left: 2%;
+    }
+
+    #student-btn-ctr .shadow {
+        font-size: 1.25em;
+    }
+
+    #mentor-btn-ctr .shadow {
+        font-size: 1.25em;
+    }
+
+    #programs .class-text .class-title {
+        font-size: 1.8em;
+    }
+
+    #programs .class-text .class-lead-title {
+        font-size: 1.25em;
+    }
+
+    #programs .logistics {
+        font-size: 1.0em;
+    } 
 }
 
 
@@ -1477,6 +1730,26 @@ footer address td.icon {
         height: 34em;
         margin: 2% 10% 3% 10%;
     } 
+}
+
+@media (max-width: 767px) {
+    #programs .class-text {
+        width: 94%;
+        margin: -2em 4.5% .5em 4.5%;
+    }
+
+    .programs #high-school h3 {
+        font-size: 2em;
+    }
+
+    .programs p {
+        font-size: 1em;
+    }
+
+    .action-buttons {
+        margin-top: 1.5em;
+        margin-bottom: 1em
+    }
 }
 
 @media (max-width: 760px) {
@@ -1694,9 +1967,10 @@ footer address td.icon {
     .hackerlab #hack-headline {
         font-size: 1em;
     }
-    .hackerlab #hack-title h3 {
+/*    .hackerlab #hack-title h3,
+    .programs #high-school h3 {
         font-size: 2em;
-    }
+    }*/
     #home-press .press-module {
         width: 88%;
         margin: .5em 6% 1em 6%;
