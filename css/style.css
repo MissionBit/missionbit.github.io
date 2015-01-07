@@ -1630,14 +1630,6 @@ footer address td.icon {
         margin-bottom: 2em
     }
 
-    #student-btn-ctr {
-        margin-right: 2%;
-    }
-
-    #mentor-btn-ctr {
-        margin-left: 2%;
-    }
-
     #student-btn-ctr .shadow {
         font-size: 1.25em;
     }
@@ -1749,6 +1741,14 @@ footer address td.icon {
     .action-buttons {
         margin-top: 1.5em;
         margin-bottom: 1em
+    }
+
+    #student-btn-ctr .shadow {
+        font-size: 1em;
+    }
+
+    #mentor-btn-ctr .shadow {
+        font-size: 1em;
     }
 }
 
