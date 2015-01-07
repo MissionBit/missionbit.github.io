@@ -19,6 +19,11 @@ scripts: |
     </div>
 		<div id="lab-mentor-form" class="col-sm-8 col-sm-offset-2">
 			<form role="form">
+				<div id="spring-firstName-error-box" class="spring15-mentor-form-error col-sm-12" hidden>
+          <p class="spring-mentor-success-msg mentor-form">
+              Your First Name is required to register for the class.  
+          </p>
+        </div>
 				<div class="form-group spring-mentor-input-box">
 			    <div class="col-sm-12">
 			      <input 
@@ -30,6 +35,11 @@ scripts: |
 			      	autofocus>
 			    </div>	
 			  </div>
+			  <div id="spring-lastName-error-box" class="spring15-mentor-form-error col-sm-12" hidden>
+          <p class="spring-mentor-success-msg mentor-form">
+              Your Last Name is required to register for the class.  
+          </p>
+        </div>
 			  <div class="form-group spring-mentor-input-box">
 			    <div class="col-sm-12">
 			      <input 
@@ -40,6 +50,11 @@ scripts: |
 			      	placeholder="Last Name">
 			    </div>	
 			  </div>
+			  <div id="spring-email-error-box" class="spring15-mentor-form-error col-sm-12" hidden>
+          <p class="spring-mentor-success-msg mentor-form">
+              Your email is required to register for the class.  
+          </p>
+        </div>
 			  <div class="form-group spring-mentor-input-box">
 				  <div class="col-sm-12">
 			       <input 
@@ -49,20 +64,67 @@ scripts: |
 			       		placeholder="Email">
 			    </div>
 			  </div>
-<!-- 			  <div id="spring15-mentor-class-div" class="form-group spring-mentor-input-box">
-          <div class="col-sm-12">
-            <select id="spring-mentor-class" class="form-control mentor-form spring-lab">
-              <option value="class"> Select the class you want to mentor </option>
-              <option value="android">Intro Android Mobile App Programming, Monday/Wednesday </option>
-              <option value="javascript"> Intro Web Programming w/ HTML+CSS+Javascript, Tuesday/Thursday</option>
-              <option value="python"> Intermediate Web Programming w/ Python, Monday/Wednesday </option>
-              <option value="ruby"> Intermediate Web Programming w/ Ruby, Tuesday/Thursday </option>
-            </select>
+			  <div class="form-group spring-mentor-input-box">
+				  <div class="col-sm-12">
+			       <input 
+			       		id="spring-mentor-github" 
+			       		type="text" 
+			       		class="form-control text mentor-form spring-lab" 
+			       		placeholder="Github username">
+			    </div>
+			  </div>
+			  <div class="form-group spring-mentor-input-box">
+				  <div class="col-sm-12">
+			       <input 
+			       		id="spring-mentor-twitter" 
+			       		type="text" 
+			       		class="form-control text mentor-form spring-lab" 
+			       		placeholder="Twitter username">
+			    </div>
+			  </div>
+			  <div id="spring-class-error-box" class="spring15-mentor-form-error col-sm-12" hidden>
+          <p class="spring-mentor-success-msg mentor-form">
+              You must indicate which class you want to mentor to complete your registration. 
+          </p>
+        </div>
+        <div id="spring15-mentor-class-div" class="form-group mentor-class-input-div">
+          <label for="mentor-class" class="col-sm-12 control-label class-label"> Which classes do you want to mentor? </label>
+          <div class="col-sm-12 spring15-mentor-class-div">
+            <div class="row">
+              <div class="checkbox spring15-mentor-class">
+                <label>
+                  <input id="mentor-class-android-input" class="class-check" type="checkbox" value="Android">
+                  <span class="mentor-class-label">Intro Android </span>
+                </label>
+              </div>
+              <div class="checkbox spring15-mentor-class">
+                <label>
+                  <input id="mentor-class-javascript-input" type="checkbox" class="class-check" value="Javascript">
+                  <span class="mentor-class-label"> Intro Web w/ HTML+CSS+Javascript</span>
+                </label>
+              </div>
+              <div class="checkbox spring15-mentor-class">
+                <label>
+                  <input id="mentor-class-python-input" class="class-check" type="checkbox" value="Python">
+                  <span class="mentor-class-label">Intermediate Web w/ Python</span>
+                </label>
+              </div>
+              <div class="checkbox spring15-mentor-class">
+                <label>
+                  <input id="mentor-class-ruby-input" class="class-check" type="checkbox" value="Ruby">
+                  <span class="mentor-class-label">Intermediate Web w/ Ruby</span>
+                </label>
+              </div>
+            </div>
           </div>
         </div>
+        <div id="spring-days-error-box" class="spring15-mentor-form-error col-sm-12" hidden>
+          <p class="spring-mentor-success-msg mentor-form">
+              You must indicate which days you are available to complete your registration as a mentor. 
+          </p>
+        </div>
         <div id="mentor-avail-days-div" class="form-group mentor-avail-input-div">
-          <label for="mentor-avail-tech-tags" class="col-sm-3 control-label"> Days of the Week </label>
-
+          <label for="mentor-avail-days" class="col-sm-12 control-label days-label"> What days of the week are you available to mentor? </label>
           <div class="col-sm-12 spring15-mentor-days-div">
             <div class="row">
               <div class="checkbox-inline spring15-mentor-days">
@@ -89,10 +151,26 @@ scripts: |
                   <span class="mentor-day-label">Thursday</span>
                 </label>
               </div>
-
             </div>
           </div>
-        </div> -->
+        </div>
+
+        <div id="spring-freq-error-box" class="spring15-mentor-form-error col-sm-12" hidden>
+          <p class="spring-mentor-success-msg mentor-form">
+              You must indicate how frequently you are available to mentor to complete your registration. 
+          </p>
+        </div>
+        <div id="spring15-mentor-freq-div" class="form-group spring-mentor-input-box">
+          <div class="col-sm-12">
+            <select id="spring-mentor-freq" class="form-control mentor-form spring-lab">
+              <option value="frequency"> How frequently are you available to mentor? </option>
+              <option value="every"> Two classes per week </option>
+              <option value="weekly"> One class every week </option>
+              <option value="bi-weekly"> One class every other week </option>
+            </select>
+          </div>
+        </div>
+
 				<div class="col-sm-12 spring-mentor-sub-btn">
 			  	<button id="spring-mentor-submit" type="submit" class="btn btn-primary">Submit</button>
 			  </div>

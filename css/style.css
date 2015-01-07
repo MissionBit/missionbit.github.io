@@ -8,7 +8,8 @@ body .share img {
     max-width: 100%;
 }
 
-.spring15-student-form-error {
+.spring15-student-form-error,
+.spring15-mentor-form-error {
     margin-top: .5em;
     text-align: center;
     font-size: 2em;
@@ -40,17 +41,43 @@ body .share img {
     color: rgba(0,0,0,.4);
 }
 
-.day-check {
-    background-color: teal;
-    height: 1.15em;
-}
-
 .mentor-day-label {
     margin-left: 5%;
 }
 
-.spring15-mentor-days-div {
+.days-label {
     margin-top: 1em;
+    font-size: 2em;
+    color: rgba(0,0,0,.4);
+}
+
+#lab-mentor-form {
+    font-family: 'Lato', 'sans-serif';
+}
+
+.spring15-mentor-class {
+    width: 90%;
+    margin-left: 2%;
+    font-size: 2.25em;
+    color: rgba(0,0,0,.4);
+}
+
+.day-check {
+    height: 1.15em;
+}
+
+.class-check {
+    height: 1.15em;
+}
+
+.class-label {
+    margin-top: 1em;
+    font-size: 2em;
+    color: rgba(0,0,0,.4);
+}
+
+.mentor-class-label {
+    margin-left: 5%;
 }
 
 /********* DONATE INDEX ***********/
@@ -277,7 +304,9 @@ body .share img {
 #spring-student-grade,
 #spring-student-gender,
 #spring-student-ethnicity,
-#spring-mentor-class  {
+#spring-mentor-freq,
+#spring-mentor-github,
+#spring-mentor-twitter  {
     height: 3em;
     font-size: 2.25em;
     color: rgba(0,0,0,.4);
