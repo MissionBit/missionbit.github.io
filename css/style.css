@@ -33,6 +33,26 @@ body .share img {
     font-size: 1.25em;
 }
 
+.spring15-mentor-days {
+    width: 20%;
+    margin-left: 2%;
+    font-size: 2em;
+    color: rgba(0,0,0,.4);
+}
+
+.day-check {
+    background-color: teal;
+    height: 1.15em;
+}
+
+.mentor-day-label {
+    margin-left: 5%;
+}
+
+.spring15-mentor-days-div {
+    margin-top: 1em;
+}
+
 /********* DONATE INDEX ***********/
 
 .support li {
@@ -256,11 +276,11 @@ body .share img {
 #spring-student-school,
 #spring-student-grade,
 #spring-student-gender,
-#spring-student-ethnicity  {
+#spring-student-ethnicity,
+#spring-mentor-class  {
     height: 3em;
     font-size: 2.25em;
     color: rgba(0,0,0,.4);
-/*    text-align: center;*/
 }
 
 #spring-student-comments {
