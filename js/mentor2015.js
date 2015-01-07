@@ -140,7 +140,122 @@ window.jQuery(function ($) {
 			//     console.log('Failed to create new object, with error code: ' + error.description);
 			//   }
 			// });
+		})
+		$("#spring-mentor-first-name").on('focusout', function (e) {
+			e.preventDefault();
+			var firstName = $('#spring-mentor-first-name').val();
+			if (!firstName) {
+				$('#spring-mentor-first-name').addClass('spring15-input-error');
+				$('#spring-mentor-first-name').removeClass('spring15-input-success');
+			} else {
+				$('#spring-firstName-error-box').hide();
+				$('#spring-mentor-first-name').addClass('spring15-input-success');
+				$('#spring-mentor-first-name').removeClass('spring15-input-error');
+			}
+		})
+		$("#spring-mentor-last-name").on('focusout', function (e) {
+			e.preventDefault();
+			var lastName = $('#spring-mentor-last-name').val();
+			if (!lastName) {
+				$('#spring-mentor-last-name').addClass('spring15-input-error');
+				$('#spring-mentor-last-name').removeClass('spring15-input-success');
+			} else {
+				$('#spring-lastName-error-box').hide();
+				$('#spring-mentor-last-name').addClass('spring15-input-success');
+				$('#spring-mentor-last-name').removeClass('spring15-input-error');
+			}
+		})
+		$("#spring-mentor-email").on('focusout', function (e) {
+			e.preventDefault();
+			var email = $('#spring-mentor-email').val();
+			var check = new RegExp("^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$");
+			var isEmail = check.test(email);
+			if (!isEmail) {
+				$('#spring-mentor-email').addClass('spring15-input-error');
+				$('#spring-mentor-email').removeClass('spring15-input-success');
+			} else {
+				$('#spring-email-error-box').hide();
+				$('#spring-mentor-email').addClass('spring15-input-success');
+				$('#spring-mentor-email').removeClass('spring15-input-error');
+			}
+		})
+		$(".spring15-mentor-class").on('focusout', function (e) {
+			e.preventDefault();
+			var classes = [];
 
+			// var android = $('#mentor-class-android-input').val();
+			// var javascript = $('#mentor-class-javascript-input').val();
+			// var python = $('#mentor-class-python-input').val();
+			// var ruby = $('#mentor-class-ruby-input').val();
+			if($('#mentor-class-android-input').is(':checked')) {
+        var android = $('#mentor-class-android-input').val();
+        classes.push(android);
+      }
+
+      if($('#mentor-class-javascript-input').is(':checked')) {
+        var javascript = $('#mentor-class-javascript-input').val();
+        classes.push(javascript);
+      }
+
+      if($('#mentor-class-python-input').is(':checked')) {
+        var python = $('#mentor-class-python-input').val();
+        classes.push(python);
+      }
+
+      if($('#mentor-class-ruby-input').is(':checked')) {
+        var ruby = $('#mentor-class-ruby-input').val();
+        classes.push(ruby);
+      }
+      console.log(classes);
+			if (classes[0]) {
+				$('#spring-class-error-box').hide();
+				$('.spring15-mentor-class-div').addClass('spring15-input-success');
+				$('.spring15-mentor-class-div').removeClass('spring15-input-error');
+			} else {
+				$('.spring15-mentor-class-div').addClass('spring15-input-error');
+				$('.spring15-mentor-class-div').removeClass('spring15-input-success');
+
+			}
+		})
+		$(".spring15-mentor-days").on('focusout', function (e) {
+			e.preventDefault();
+			var classes = [];
+			var days = [];
+
+			var availMonday = $('#mentor-avail-days-monday-input').val();
+			var availTuesday = $('#mentor-avail-days-tuesday-input').val();
+			var availWednesday = $('#mentor-avail-days-wednesday-input').val();
+			var availThursday = $('#mentor-avail-days-thursday-input').val();
+
+			if($('#mentor-avail-days-monday-input').is(':checked')) {
+        var availMonday = $('#mentor-avail-days-monday-input').val();
+        days.push(availMonday);
+      }
+
+      if($('#mentor-avail-days-tuesday-input').is(':checked')) {
+        var availTuesday = $('#mentor-avail-days-tuesday-input').val();
+        days.push(availTuesday);
+      }
+
+      if($('#mentor-avail-days-wednesday-input').is(':checked')) {
+        var availWednesday = $('#mentor-avail-days-wednesday-input').val();
+        days.push(availWednesday);
+      }
+
+      if($('#mentor-avail-days-thursday-input').is(':checked')) {
+        var availThursday = $('#mentor-avail-days-thursday-input').val();
+        days.push(availThursday);
+      }
+      console.log(days);
+			if (days[0]) {
+				$('#spring-days-error-box').hide();
+				$('.spring15-mentor-days-div').addClass('spring15-input-success');
+				$('.spring15-mentor-days-div').removeClass('spring15-input-error');
+			} else {
+				$('.spring15-mentor-days-div').addClass('spring15-input-error');
+				$('.spring15-mentor-days-div').removeClass('spring15-input-success');
+
+			}
 		})
   })
 
