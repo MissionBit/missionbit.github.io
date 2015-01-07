@@ -79,7 +79,7 @@ body .share img {
     height: 100%;
     width: 21.75%;
     display: inline-block;
-    margin: 1em 1% 1em 1%;
+    margin: 2em 1% 1em 1%;
 }
 
 #programs .class-logo img {
@@ -105,6 +105,7 @@ body .share img {
 
 .action-buttons {
     margin-top: 2em;
+    margin-bottom: 2em
 }
 
 #student-btn-ctr {
@@ -126,8 +127,6 @@ body .share img {
 #programs .class-text .class-lead-title {
     font-size: 1.75em;
     vertical-align: middle; 
-/*    font-style: italic;
-    font-weight: bold; */
     font-family: 'Lato', 'sans-serif';
 }
 
@@ -1450,6 +1449,55 @@ footer address td.icon {
     #home-press .press-text .press-title {
         font-size: 1.5em;
     }
+
+    #programs .class-logo {
+        width: 25%;
+        margin: 1.5em 1% 1em 1%;
+    }
+
+    #programs .class-logo img {
+        width: 90%;
+        max-width: 100%;
+        margin: 0 4.5% 0 4.5%;
+    }
+
+    #programs .class-text {
+        width: 70%;
+        margin: 1em 0 .75em 1%;
+    }
+
+    .programs #high-school h3 {
+        font-size: 2.5em;
+    }
+
+    .programs p {
+        font-size: 1.2em;
+    }
+
+    .action-buttons {
+        margin-top: 2em;
+        margin-bottom: 2em
+    }
+
+    #student-btn-ctr {
+        margin-right: 2%;
+    }
+
+    #mentor-btn-ctr {
+        margin-left: 2%;
+    }
+
+    #programs .class-text .class-title {
+        font-size: 2.25em;
+    }
+
+    #programs .class-text .class-lead-title {
+        font-size: 1.5em;
+    }
+
+    #programs .logistics {
+        font-size: 1.0em;
+    }
 }
 
 @media (min-width:992px) and (max-width: 1236px) {
@@ -1492,9 +1540,9 @@ footer address td.icon {
 }
 
 @media (min-width:992px) {
-    .share .actions .col-md-4:nth-child(1n+2) {
-/*        border-left: 1px solid #ddd;*/
-    }
+    /*.share .actions .col-md-4:nth-child(1n+2) {
+        border-left: 1px solid #ddd;
+    }*/
 }
 
 @media (min-width: 992px) and (max-width: 1203px) {
@@ -1551,7 +1599,64 @@ footer address td.icon {
     #home-top .home-stories-title {
         width: 90%;
         margin-left: 5%;
-    }  
+    } 
+
+    #programs .class-logo {
+        width: 33%;
+        margin: 1.5em 1% 1em 1%;
+    }
+
+    #programs .class-logo img {
+        width: 90%;
+        max-width: 100%;
+        margin: 0 4.5% 0 4.5%;
+    }
+
+    #programs .class-text {
+        width: 62%;
+        margin: 1em 0 .75em 1%;
+    }
+
+    .programs #high-school h3 {
+        font-size: 2em;
+    }
+
+    .programs p {
+        font-size: 1em;
+    }
+
+    .action-buttons {
+        margin-top: 2em;
+        margin-bottom: 2em
+    }
+
+    #student-btn-ctr {
+        margin-right: 2%;
+    }
+
+    #mentor-btn-ctr {
+        margin-left: 2%;
+    }
+
+    #student-btn-ctr .shadow {
+        font-size: 1.25em;
+    }
+
+    #mentor-btn-ctr .shadow {
+        font-size: 1.25em;
+    }
+
+    #programs .class-text .class-title {
+        font-size: 1.8em;
+    }
+
+    #programs .class-text .class-lead-title {
+        font-size: 1.25em;
+    }
+
+    #programs .logistics {
+        font-size: 1.0em;
+    } 
 }
 
 
@@ -1625,6 +1730,26 @@ footer address td.icon {
         height: 34em;
         margin: 2% 10% 3% 10%;
     } 
+}
+
+@media (max-width: 767px) {
+    #programs .class-text {
+        width: 94%;
+        margin: -2em 4.5% .5em 4.5%;
+    }
+
+    .programs #high-school h3 {
+        font-size: 2em;
+    }
+
+    .programs p {
+        font-size: 1em;
+    }
+
+    .action-buttons {
+        margin-top: 1.5em;
+        margin-bottom: 1em
+    }
 }
 
 @media (max-width: 760px) {
