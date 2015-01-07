@@ -16,6 +16,23 @@ body .share img {
     color: red;   
 }
 
+.spring15-input-error {
+    /*background-color: rgba(255, 0, 0, 0.5);*/
+    border: 2px solid red;
+    box-shadow: 1px 1px 15px rgba(255, 0, 0, 1);
+}
+
+.spring15-input-success {
+    border: 2px solid green;
+    box-shadow: 1px 1px 15px rgba(0, 255, 0, 1);
+} 
+
+.change-plan {
+    color: black;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
 /********* DONATE INDEX ***********/
 
 .support li {
@@ -222,7 +239,7 @@ body .share img {
     margin-top: 3em;
     margin-bottom: 3em;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
     font-family: 'Aldrich', sans-serif;
     color: green;  
 }

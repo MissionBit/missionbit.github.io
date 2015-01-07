@@ -15,16 +15,19 @@ scripts: |
           <span class="spring15-form-title"> Please complete and submit the form below. The first class meeting is Tuesday February 3rd from 4pm-6pm. We look forward to working with you this semester and are excited to see what you build. </span>
       </p>
     </div>
-    <div class="spring-student-success-box col-sm-10 col-sm-offset-1" hidden>
+    <div class="spring-student-success-box col-sm-12" hidden>
       <p class="spring-student-success-msg">
-          Your details have been successfully submitted. We'll get back to you with additional details in early Decemeber 2014. 
+          Your have successfully registered for the 2015 Spring Semester Intro Android Mobile App Development. We look forward to working with you this semester and are excited to see what you build.
+          <br>
+          <br>
+          <span class="change-plan"> If your schedule and/or plans change and you are unable to take the class, immediately send an email to info@missionbit.com so we can give your spot to another student. </span>
       </p>
     </div>
 		<div id="lab-student-form" class="col-sm-8 col-sm-offset-2">
 			<form role="form">
         <div id="spring-firstName-error-box" class="spring15-student-form-error col-sm-12" hidden>
           <p class="spring-student-success-msg student-form">
-              Your First Name is required to register.  
+              Your First Name is required to register for the class.  
           </p>
         </div>
 				<div class="form-group spring-student-input-box">
@@ -38,6 +41,11 @@ scripts: |
 			      	autofocus>
 			    </div>	
 			  </div>
+        <div id="spring-lastName-error-box" class="spring15-student-form-error col-sm-12" hidden>
+          <p class="spring-student-success-msg student-form">
+              Your Last Name is required to register for the class.  
+          </p>
+        </div>
 			  <div class="form-group spring-student-input-box">
 			    <div class="col-sm-12">
 			      <input 
@@ -48,6 +56,11 @@ scripts: |
 			      	placeholder="Last Name">
 			    </div>	
 			  </div>
+        <div id="spring-email-error-box" class="spring15-student-form-error col-sm-12" hidden>
+          <p class="spring-student-success-msg student-form">
+              Your email is required to register for the class.  
+          </p>
+        </div>
 			  <div class="form-group spring-student-input-box">
 				  <div class="col-sm-12">
 			       <input 
@@ -68,7 +81,7 @@ scripts: |
         </div>
         <div id="spring-school-error-box" class="spring15-student-form-error col-sm-12" hidden>
           <p class="spring-student-success-msg student-form">
-              Please select the school you attend.  
+              You are required to indicate the high school you attend to register for the class.  
           </p>
         </div>
         <div id="student-detail-school-div" class="form-group spring-student-input-box">
@@ -99,7 +112,7 @@ scripts: |
         </div>
         <div id="spring-grade-error-box" class="spring15-student-form-error col-sm-12" hidden>
           <p class="spring-student-success-msg student-form">
-              Please select your grade.  
+              You are required to indicate what grade you are in to register for the class.  
           </p>
         </div>
         <div id="student-detail-grade-div" class="form-group spring-student-input-box">
@@ -115,7 +128,7 @@ scripts: |
         </div>
         <div id="spring-gender-error-box" class="spring15-student-form-error col-sm-12" hidden>
           <p class="spring-student-success-msg student-form">
-              Please select your gender.  
+              You are required to indicate your gender to register for the class.  
           </p>
         </div>
         <div id="student-detail-gender-div" class="form-group spring-student-input-box">
@@ -129,7 +142,7 @@ scripts: |
         </div>
         <div id="spring-ethnicity-error-box" class="spring15-student-form-error col-sm-12" hidden>
           <p class="spring-student-success-msg student-form">
-              Please select your ethnicity.  
+              You are required to answer this question to register for the class.  
           </p>
         </div>
         <div id="student-detail-ethnicity-div" class="form-group spring-student-input-box">
@@ -138,10 +151,9 @@ scripts: |
             	<option value="ethnicity"> What is Your Ethnicity? </option>
               <option value="Latino"> Latino/Latina </option>
               <option value="African American"> African American </option>
-              <option value="Chinese"> Chinese </option>
-              <option value="Asian"> Asian, Non-Chinese </option>
+              <option value="Asian"> Asian </option>
               <option value="Native American"> Native American </option>
-              <option value="White"> White </option>
+              <option value="Caucasian"> Caucasian </option>
               <option value="Multi-Racial"> Multi-Racial </option>
               <option value="Undisclosed"> I choose not to share </option>
             </select>

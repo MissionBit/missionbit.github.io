@@ -1,7 +1,7 @@
 
 window.jQuery(function ($) {
     'use strict';
-    $("#spring15-android-submit").on('click', function (e) {
+    $("#spring15-ruby-submit").on('click', function (e) {
 			e.preventDefault();
 			console.log('student button working');
 			var firstName = $('#spring-student-first-name').val();
@@ -90,20 +90,20 @@ window.jQuery(function ($) {
 			if (!firstName || !lastName || !isEmail || school === "school" || grade === "grade" || gender === "gender" || ethnicity === "ethnicity") {
 				$('#spring-submit-error-msg').show();
 			} else {
-				var Spring15Android = Parse.Object.extend("Spring15Android");
-				var spring15Android = new Spring15Android();
-				spring15Android.set("firstName", firstName);
-				spring15Android.set("lastName", lastName);
-				spring15Android.set("email", email);
-				spring15Android.set("cell", cell);
-				spring15Android.set("school", school);
-				spring15Android.set("grade", grade);
-				spring15Android.set("gender", gender);
-				spring15Android.set("ethnicity", ethnicity);
-				spring15Android.set("comments", comments);
-				spring15Android.set("class", "android");
+				var Spring15Ruby = Parse.Object.extend("Spring15Ruby");
+				var spring15Ruby = new Spring15Ruby();
+				spring15Ruby.set("firstName", firstName);
+				spring15Ruby.set("lastName", lastName);
+				spring15Ruby.set("email", email);
+				spring15Ruby.set("cell", cell);
+				spring15Ruby.set("school", school);
+				spring15Ruby.set("grade", grade);
+				spring15Ruby.set("gender", gender);
+				spring15Ruby.set("ethnicity", ethnicity);
+				spring15Ruby.set("comments", comments);
+				spring15Ruby.set("class", "ruby");
 
-				spring15Android.save(null, {
+				spring15Ruby.save(null, {
 				  success: function(student) {
 				    console.log('save successful');
 				    $('#lab-student-form').hide();

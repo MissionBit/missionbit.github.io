@@ -2,7 +2,7 @@
 enable-mentor-alert: false
 title: "Spring 2015 Intermediate Web Development w/ Ruby Student Signup"
 scripts: |
-    <script src="js/student2015.js"></script>
+    <script src="js/spring15ruby.js"></script>
 ---
 
 <div id="spring-student" class="container">
@@ -21,51 +21,71 @@ scripts: |
           Your details have been successfully submitted. We'll get back to you with additional details in early Decemeber 2014. 
       </p>
     </div>
-		<div id="lab-student-form" class="col-sm-8 col-sm-offset-2">
-			<form role="form">
-				<div class="form-group spring-student-input-box">
-			    <div class="col-sm-12">
-			      <input 
-			      	id="spring-student-first-name" 
-			      	type="text" 
-			      	class="form-control name text student-form spring-lab" 
-			      	maxlength="35" 
-			      	placeholder="First Name"
-			      	autofocus>
-			    </div>	
-			  </div>
-			  <div class="form-group spring-student-input-box">
-			    <div class="col-sm-12">
-			      <input 
-			      	id="spring-student-last-name" 
-			      	type="text" 
-			      	class="form-control name text student-form spring-lab" 
-			      	maxlength="70" 
-			      	placeholder="Last Name">
-			    </div>	
-			  </div>
-			  <div class="form-group spring-student-input-box">
-				  <div class="col-sm-12">
-			       <input 
-			       		id="spring-student-email" 
-			       		type="email" 
-			       		class="form-control email student-form spring-lab" 
-			       		placeholder="Email">
-			    </div>
-			  </div>
-			  <div id="student-cell-div" class="form-group spring-student-input-box">
+    <div id="lab-student-form" class="col-sm-8 col-sm-offset-2">
+      <form role="form">
+        <div id="spring-firstName-error-box" class="spring15-student-form-error col-sm-12" hidden>
+          <p class="spring-student-success-msg student-form">
+              Your First Name is required to register for the class.  
+          </p>
+        </div>
+        <div class="form-group spring-student-input-box">
           <div class="col-sm-12">
             <input 
-            	id="spring-student-cell" 
-            	type="text" 
-            	class="form-control student-form spring-lab" 
-            	placeholder="Cell Phone e.g. 555-777-9999">
+              id="spring-student-first-name" 
+              type="text" 
+              class="form-control name text student-form spring-lab" 
+              maxlength="35" 
+              placeholder="First Name"
+              autofocus>
+          </div>  
+        </div>
+        <div id="spring-lastName-error-box" class="spring15-student-form-error col-sm-12" hidden>
+          <p class="spring-student-success-msg student-form">
+              Your Last Name is required to register for the class.  
+          </p>
+        </div>
+        <div class="form-group spring-student-input-box">
+          <div class="col-sm-12">
+            <input 
+              id="spring-student-last-name" 
+              type="text" 
+              class="form-control name text student-form spring-lab" 
+              maxlength="70" 
+              placeholder="Last Name">
+          </div>  
+        </div>
+        <div id="spring-email-error-box" class="spring15-student-form-error col-sm-12" hidden>
+          <p class="spring-student-success-msg student-form">
+              Your email is required to register for the class.  
+          </p>
+        </div>
+        <div class="form-group spring-student-input-box">
+          <div class="col-sm-12">
+             <input 
+                id="spring-student-email" 
+                type="email" 
+                class="form-control email student-form spring-lab" 
+                placeholder="Email">
           </div>
+        </div>
+        <div id="student-cell-div" class="form-group spring-student-input-box">
+          <div class="col-sm-12">
+            <input 
+              id="spring-student-cell" 
+              type="text" 
+              class="form-control student-form spring-lab" 
+              placeholder="Cell Phone e.g. 555-777-9999">
+          </div>
+        </div>
+        <div id="spring-school-error-box" class="spring15-student-form-error col-sm-12" hidden>
+          <p class="spring-student-success-msg student-form">
+              You are required to indicate the high school you attend to register for the class.  
+          </p>
         </div>
         <div id="student-detail-school-div" class="form-group spring-student-input-box">
           <div class="col-sm-12">
             <select id="spring-student-school" class="form-control student-form spring-lab">
-            	<option value="school"> What School Do You Go To? </option>
+              <option value="school"> What School Do You Go To? </option>
               <option value="AAS">Academy of Arts and Sciences</option>
               <option value="Balboa" >Balboa</option>
               <option value="Burton">Burton</option>
@@ -84,13 +104,19 @@ scripts: |
               <option value="Thurgood Marshall">Thurgood Marshall</option>
               <option value="Washington">Washington</option>
               <option value="Wallenberg">Wallenberg</option>
+              <option value="Other">Other</option>
             </select>
           </div>
+        </div>
+        <div id="spring-grade-error-box" class="spring15-student-form-error col-sm-12" hidden>
+          <p class="spring-student-success-msg student-form">
+              You are required to indicate what grade you are in to register for the class.  
+          </p>
         </div>
         <div id="student-detail-grade-div" class="form-group spring-student-input-box">
           <div class="col-sm-12">
             <select id="spring-student-grade" class="form-control student-form spring-lab">
-            	<option value="grade"> What Grade Are You In? </option>
+              <option value="grade"> What Grade Are You In? </option>
               <option value="Senior">Senior, 12th</option>
               <option value="Junior">Junior, 11th </option>
               <option value="Sophomore">Sophomore, 10th</option>
@@ -98,29 +124,24 @@ scripts: |
             </select>
           </div>
         </div>
+        <div id="spring-gender-error-box" class="spring15-student-form-error col-sm-12" hidden>
+          <p class="spring-student-success-msg student-form">
+              You are required to indicate your gender to register for the class.  
+          </p>
+        </div>
         <div id="student-detail-gender-div" class="form-group spring-student-input-box">
           <div class="col-sm-12">
             <select id="spring-student-gender" class="form-control student-form spring-lab">
-            	<option value="gender"> What is Your Gender? </option>
+              <option value="gender"> What is Your Gender? </option>
               <option value="Female">Female</option>
               <option value="Male"> Male </option>
             </select>
           </div>
         </div>
-        <div id="student-detail-ethnicity-div" class="form-group spring-student-input-box">
-          <div class="col-sm-12">
-            <select id="spring-student-ethnicity" class="form-control student-form spring-lab">
-            	<option value="ethnicity"> What is Your Ethnicity? </option>
-              <option value="Latino"> Latino/Latina </option>
-              <option value="African American"> African American </option>
-              <option value="Chinese"> Chinese </option>
-              <option value="Asian"> Asian, Non-Chinese </option>
-              <option value="Native American"> Native American </option>
-              <option value="White"> White </option>
-              <option value="Multi-Racial"> Multi-Racial </option>
-              <option value="Undisclosed"> I choose not to share </option>
-            </select>
-          </div>
+        <div id="spring-ethnicity-error-box" class="spring15-student-form-error col-sm-12" hidden>
+          <p class="spring-student-success-msg student-form">
+              You are required to answer this question to register for the class.  
+          </p>
         </div>
         <div id="student-detail-ethnicity-div" class="form-group spring-student-input-box">
           <div class="col-sm-12">
@@ -128,10 +149,9 @@ scripts: |
               <option value="ethnicity"> What is Your Ethnicity? </option>
               <option value="Latino"> Latino/Latina </option>
               <option value="African American"> African American </option>
-              <option value="Chinese"> Chinese </option>
-              <option value="Asian"> Asian, Non-Chinese </option>
+              <option value="Asian"> Asian </option>
               <option value="Native American"> Native American </option>
-              <option value="White"> White </option>
+              <option value="Caucasian"> Caucasian </option>
               <option value="Multi-Racial"> Multi-Racial </option>
               <option value="Undisclosed"> I choose not to share </option>
             </select>
@@ -146,9 +166,14 @@ scripts: |
              </textarea>
           </div>
         </div>
-				<div class="col-sm-12 spring-student-sub-btn">
-			  	<button id="spring-student-submit" type="submit" class="btn btn-primary">Submit</button>
-			  </div>
+        <div id="spring-submit-error-msg" class="spring15-student-form-error col-sm-12" hidden>
+          <p class="spring-student-error-msg student-form">
+              Your registration for the class is not complete. Follow the instructions above and resubmit.  
+          </p>
+        </div>
+        <div class="col-sm-12 spring-student-sub-btn">
+          <button id="spring15-ruby-submit" type="submit" class="btn btn-primary spring-student-submit">Submit</button>
+        </div>
 			</form>
 		</div>
 	</div>
