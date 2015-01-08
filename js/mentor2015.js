@@ -3,8 +3,7 @@ window.jQuery(function ($) {
     'use strict';
     $("#spring-mentor-submit").on('click', function (e) {
 			e.preventDefault();
-
-
+			
 			var days = [];
 			var time = [];
 			var classes = [];
