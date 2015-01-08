@@ -80,6 +80,14 @@ body .share img {
     margin-left: 5%;
 }
 
+#spring-mentor-freq {
+    margin-top: 1em;
+}
+
+.school-level {
+    font-style: italic;
+}
+
 /********* DONATE INDEX ***********/
 
 .support li {

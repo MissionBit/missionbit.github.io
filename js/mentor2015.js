@@ -28,7 +28,6 @@ window.jQuery(function ($) {
         var availThursday = $('#mentor-avail-days-thursday-input').val();
         days.push(availThursday);
       }
-      console.log(days);
 
       //******** CLASSES *************//
 
@@ -51,7 +50,16 @@ window.jQuery(function ($) {
         var ruby = $('#mentor-class-ruby-input').val();
         classes.push(ruby);
       }
-      console.log(classes);
+
+      if($('#mentor-class-lick-input').is(':checked')) {
+        var lick = $('#mentor-class-lick-input').val();
+        classes.push(lick);
+      }
+
+      if($('#mentor-class-bvhm-input').is(':checked')) {
+        var bvhm = $('#mentor-class-bvhm-input').val();
+        classes.push(bvhm);
+      }
 
 			var firstName = $('#spring-mentor-first-name').val();
 			var lastName = $('#spring-mentor-last-name').val();
@@ -123,23 +131,35 @@ window.jQuery(function ($) {
 				$('#spring-mentor-freq').removeClass('spring15-input-error');
 			}
 
-		 //  var Spring15Mentor = Parse.Object.extend("Spring15Mentor");
-			// var spring15Mentor = new Spring15Mentor();
-			// spring15Mentor.set("firstName", firstName);
-			// spring15Mentor.set("lastName", lastName);
-			// spring15Mentor.set("email", email);
+			if (!firstName || !lastName || !isEmail || frequency === "frequency" || !days[0] || !classes[0]) {
+				$('#spring-submit-error-msg').show();
+			} else {
+				var Spring15Mentor = Parse.Object.extend("Spring15Mentor");
+				var spring15Mentor = new Spring15Mentor();
+				spring15Mentor.set("firstName", firstName);
+				spring15Mentor.set("lastName", lastName);
+				spring15Mentor.set("email", email);
+				spring15Mentor.set("github", github);
+				spring15Mentor.set("twitter", twitter);
+				spring15Mentor.set("frequency", frequency);
+				spring15Mentor.set("days", days);
+				spring15Mentor.set("classes", classes);
 
-			// spring15Mentor.save(null, {
-			//   success: function(mentor) {
-			//     console.log('save successful');
-			//     $('#lab-mentor-form').hide();
-			//     $('.spring-mentor-head-box').hide();
-			//     $('.spring-mentor-success-box').show();
-			//   },
-			//   error: function(project, error) {
-			//     console.log('Failed to create new object, with error code: ' + error.description);
-			//   }
-			// });
+				spring15Mentor.save(null, {
+				  success: function(mentor) {
+				    console.log('save successful');
+				    $('#lab-mentor-form').hide();
+				    $('.spring-mentor-head-box').hide();
+				    $('.spring-mentor-success-box').show();
+				  },
+				  error: function(project, error) {
+				    console.log('Failed to create new object, with error code: ' + error.description);
+				  }
+				})
+			}
+
+			console.log(days.length);
+			console.log(classes.length);
 		})
 		$("#spring-mentor-first-name").on('focusout', function (e) {
 			e.preventDefault();
@@ -183,10 +203,6 @@ window.jQuery(function ($) {
 			e.preventDefault();
 			var classes = [];
 
-			// var android = $('#mentor-class-android-input').val();
-			// var javascript = $('#mentor-class-javascript-input').val();
-			// var python = $('#mentor-class-python-input').val();
-			// var ruby = $('#mentor-class-ruby-input').val();
 			if($('#mentor-class-android-input').is(':checked')) {
         var android = $('#mentor-class-android-input').val();
         classes.push(android);
@@ -206,7 +222,16 @@ window.jQuery(function ($) {
         var ruby = $('#mentor-class-ruby-input').val();
         classes.push(ruby);
       }
-      console.log(classes);
+
+      if($('#mentor-class-lick-input').is(':checked')) {
+        var lick = $('#mentor-class-lick-input').val();
+        classes.push(lick);
+      }
+
+      if($('#mentor-class-bvhm-input').is(':checked')) {
+        var bvhm = $('#mentor-class-bvhm-input').val();
+        classes.push(bvhm);
+      }
 			if (classes[0]) {
 				$('#spring-class-error-box').hide();
 				$('.spring15-mentor-class-div').addClass('spring15-input-success');
@@ -246,7 +271,6 @@ window.jQuery(function ($) {
         var availThursday = $('#mentor-avail-days-thursday-input').val();
         days.push(availThursday);
       }
-      console.log(days);
 			if (days[0]) {
 				$('#spring-days-error-box').hide();
 				$('.spring15-mentor-days-div').addClass('spring15-input-success');
@@ -254,7 +278,18 @@ window.jQuery(function ($) {
 			} else {
 				$('.spring15-mentor-days-div').addClass('spring15-input-error');
 				$('.spring15-mentor-days-div').removeClass('spring15-input-success');
-
+			}
+		})
+		$("#spring-mentor-freq").on('focusout', function (e) {
+			e.preventDefault();
+			var frequency = $('#spring-mentor-freq').val();
+			if (frequency === "frequency") {
+				$('#spring-mentor-freq').addClass('spring15-input-error');
+				$('#spring-mentor-freq').removeClass('spring15-input-success');
+			} else {
+				$('#spring-freq-error-box').hide();
+				$('#spring-mentor-freq').addClass('spring15-input-success');
+				$('#spring-mentor-freq').removeClass('spring15-input-error');
 			}
 		})
   })
