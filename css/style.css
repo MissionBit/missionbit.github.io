@@ -35,7 +35,7 @@ body .share img {
 }
 
 .spring15-mentor-days {
-    width: 20%;
+    width: 90%;
     margin-left: 2%;
     font-size: 2em;
     color: rgba(0,0,0,.4);
@@ -154,6 +154,12 @@ body .share img {
 
 #programs .action-buttons .spring15-ctr {
     width: 46%;
+    display: inline-block;
+    text-align: center;
+}
+
+#mentor-btn-ctr {
+    width: 94%;
     display: inline-block;
     text-align: center;
 }
