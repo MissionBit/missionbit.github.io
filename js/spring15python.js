@@ -114,9 +114,9 @@ window.jQuery(function ($) {
 				    console.log('Failed to create new object, with error code: ' + error.description);
 				  }
 				});
-				$('#lab-student-form').hide();
-			  $('.spring-student-head-box').hide();
-			  $('.spring-student-success-box').show();
+				// $('#lab-student-form').hide();
+			 //  $('.spring-student-head-box').hide();
+			 //  $('.spring-student-success-box').show();
 			}
 		})
 		$("#spring-student-first-name").on('focusout', function (e) {
