@@ -9,7 +9,10 @@ scripts: |
 	<div id="hack-mentor-form-box" class="row">
 		<div class="hack-mentor-head-box col-sm-10 col-sm-offset-1">
       <p class="hack-mentor-headline">
-          Thank you for your interest in mentoring in the Hacker Lab. Please provide us with some details and we'll follow with you soon.
+          Thank you for your interest in mentoring in the Hacker Lab. Please provide us with some details and we'll follow with you soon to confirm your schedule.
+      </p>
+      <p class="lab-volunteer-details">
+      	In Q1 2015, the Hacker Lab will be open Monday - Thursday from 2:30pm - 6pm. Minimum volunteer commitment expectations are a minimum of 1 two hour block per month.
       </p>
     </div>
     <div class="hack-mentor-success-box col-sm-10 col-sm-offset-1" hidden>
@@ -51,15 +54,15 @@ scripts: |
 			  </div>
 			  <div class="form-group hack-mentor-input-box">
 			  	<div class="col-sm-12 hack-question">
-			  		<p class="hack-mentor-check-title"> What time of day are you available to mentor in the Hacker Lab? </p> 
+			  		<p class="hack-mentor-check-title"> What two hour time block are you available to mentor in the Hacker Lab? </p> 
 			  	</div>
-				  <div class="checkbox col-sm-12 hack-mentor-time">
+<!-- 				  <div class="checkbox col-sm-12 hack-mentor-time">
 					  <input id="morning" class="hack-mentor-check" type="checkbox" value="Morning">
 					  Morning: 8am - 12pm (noon) 
-					</div>
+					</div> -->
 					<div class="checkbox col-sm-12 hack-mentor-time">
-					  <input id="afternoon" class="hack-mentor-check" type="checkbox" value="Afternoon">
-					  Afternoon: 1pm - 4pm
+					  <input id="afternoon" class="hack-mentor-check" type="checkbox" value="2:30pm-4:30pm">
+					  Afternoon: 2:30pm - 4:30pm
 					</div>
 					<div class="checkbox col-sm-12 hack-mentor-time">
 					  <input id="evening" class="hack-mentor-check" type="checkbox" value="After School">
@@ -87,6 +90,17 @@ scripts: |
 					  Thursday
 					</div>
 				</div>
+				<div class="form-group hack-mentor-input-box">
+          <div class="col-sm-12">
+            <select id="hack-mentor-freq" class="form-control mentor-form hack-lab">
+              <option value="frequency"> How frequently are you available to mentor? </option>
+              <option value="weekly"> Weekly </option>
+              <option value="bi-weekly"> Every other week </option>
+              <option value="monthly"> Monthly </option>
+              <option value="daily"> I'll be there every day! </option>
+            </select>
+          </div>
+        </div>
 				<div class="col-sm-12 hack-mentor-sub-btn">
 			  	<button id="hack-mentor-submit" type="submit" class="btn btn-primary">Submit</button>
 			  </div>

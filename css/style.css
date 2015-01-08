@@ -264,6 +264,12 @@ body .share img {
 
 /********* HACKER LAB FORMS ***********/
 
+.lab-volunteer-details {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 1.75em; 
+}
+
 #hack-mentor,
 #spring-mentor,
 #spring-student,
@@ -320,7 +326,8 @@ body .share img {
 #spring-student-ethnicity,
 #spring-mentor-freq,
 #spring-mentor-github,
-#spring-mentor-twitter  {
+#spring-mentor-twitter,
+#hack-mentor-freq  {
     height: 3em;
     font-size: 2.25em;
     color: rgba(0,0,0,.4);
