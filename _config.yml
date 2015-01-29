@@ -1,4 +1,6 @@
 title: "Mission Bit"
+exclude:
+  - .c9
 defaults:
   - scope:
       path: ""

@@ -14,6 +14,8 @@ site work well and look good:
 
 # Setup
 
+## Mac
+
 Make sure you have an administrator account on the computer and
 install [Jekyll] by opening Terminal and typing the following command:
 
@@ -21,7 +23,18 @@ install [Jekyll] by opening Terminal and typing the following command:
 sudo gem install jekyll
 ```
 
+## Cloud9
+
+After cloning the repository, you need to install [Jekyll]. It will take
+a while! From the terminal:
+
+```bash
+bundle install
+```
+
 # HACKING
+
+## Mac
 
 Open a Terminal and change to the directory where you've checked out
 `missionbit.github.io`, then run this command to start the [Jekyll]
@@ -34,6 +47,16 @@ jekyll serve --watch --safe
 This will run a webserver on your computer at http://127.0.0.1:4000/
 and automatically rebuild the site when you make changes to the files.
 You will have to reload the pages in your browser to see the changes.
+
+## Cloud9
+
+Open the terminal and run [Jekyll] like this:
+
+```bash
+bundle exec jekyll serve --watch --safe -P $PORT
+```
+
+Once you've done that, Cloud9 should let you know that your code is running.
 
 # Using the page template
 
