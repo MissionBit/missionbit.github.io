@@ -2007,7 +2007,10 @@ footer address td.icon {
         margin-bottom: 2.5em;
     }
     .share #kick-welcome .kickhead p {
-        font-size: 1.5em;
+        font-size: 1.25em;
+    }
+    .share #kick-welcome .reddit-tag {
+        font-size: 1.25em;
     }
     .share .kick-home-box {
         height: 8.75%;
