@@ -22,7 +22,7 @@ window.jQuery(function ($) {
         if (elem4[0]) {
             $('#thx-words').remove();
         }
-    }  
+    }
     $(window).on('resize', function () {
         // event.preventDefault();
         var widthCheck = $(window).width();
@@ -48,11 +48,11 @@ window.jQuery(function ($) {
         }
     })
     console.log(widthCheck);
-    var url = 'https://www.reddit.com/donate',
+    var url = 'https://www.reddit.com/donate?organization=460945785',
         shareURL = 'http://www.missionbit.com/reddit',
         discussURL = 'https://www.reddit.com/r/redditdonate/comments/2wkoym/mission_bit_empowering_youth_with_free_computer/',
         encodedURL = encodeURIComponent(shareURL),
-        title = encodeURIComponent('Help @missionbit win $82,765 from @reddit! Vote for Mission Bit! Use EIN 46-0945785'),
+        title = encodeURIComponent('Help @missionbit win $82,765 from @reddit! Vote for Mission Bit!'),
         buttons = $.makeArray($('.actions button').data('clicked', 0)),
         $percent = $('.progress .progress-bar'),
         $number = $('.progress .number');
@@ -60,16 +60,7 @@ window.jQuery(function ($) {
         return acc + $(el).data('clicked');
     }
     function newWin(url) {
-        var w = 1200,
-            h = 1000,
-            left = (screen.width - w) / 2,
-            top = (screen.height - h) / 2,
-            opts = ['toolbar=0, location=0, directories=0, status=0, menubar=0, scrollbars=0, resizable=0, copyhistory=0',
-                    ', width=', w,
-                    ', height=', h,
-                    ', top=', top,
-                    ', left=', left].join('');
-        window.open(url, '', opts);
+        window.open(url, '_blank');
     }
     function popup(url) {
         var w = 580,
@@ -81,7 +72,7 @@ window.jQuery(function ($) {
                     ', height=', h,
                     ', top=', top,
                     ', left=', left].join('');
-        window.open(url, '', opts);
+        window.open(url, '_blank', opts);
     }
     $('.actions button').on('click', function buttonClick(event) {
         event.preventDefault();
@@ -95,14 +86,17 @@ window.jQuery(function ($) {
     //     popup('http://www.facebook.com/share.php?u=' + encodedURL);
     // });
     $('.actions button.discuss').on('click', function fbClick(event) {
+        event.preventDefault();
         newWin(discussURL);
     });
     $('.actions button.twitter').on('click', function twitterClick(event) {
+        event.preventDefault();
         popup(['http://twitter.com/share',
                '?text=', title,
                '&url=', encodedURL].join(''));
     });
     $('.actions button.vote').on('click', function playClick(event) {
+        event.preventDefault();
         newWin(url);
     });
 });
