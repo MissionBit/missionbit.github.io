@@ -17,6 +17,12 @@ body .share img {
     color: red;   
 }
 
+#goal1 .hacklab-goals,
+#goal2 .hacklab-goals {
+    font-size: 1.5em;
+    text-align: center;
+}
+
 .spring15-input-error {
     /*background-color: rgba(255, 0, 0, 0.5);*/
     border: 2px solid red;
