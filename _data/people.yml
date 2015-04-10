@@ -1,11 +1,11 @@
-- name: Someone Awesome
+- name: Stevon Cook
   avatar: missionbit-logo-vertical-white-on-black-team.png
-  title: General Manager, Mission Bit
-  description: >
-    Send an email to
-    <a href="mailto:info@missionbit.com">info@missionbit.com</a>
-    with "general manager" in the subject line if you are interested in
-    learning about the position.
+  title: CEO, Mission Bit
+  # description: >
+  #   Send an email to
+  #   <a href="mailto:info@missionbit.com">info@missionbit.com</a>
+  #   with "general manager" in the subject line if you are interested in
+  #   learning about the position.
   management: y
   management-order: 1
 - name: Tyson Daugherty
@@ -17,14 +17,6 @@
   twitter: tysonium
   linkedin: in/tysondaugherty
   github: gigmania
-  board: y
-- name: Stevon Cook
-  avatar: stevon-cook.jpg
-  title: CEO, Mission Bit
-  # description: >
-    # Bringing coding to students.
-  # twitter: tysonium
-  # linkedin: in/tysondaugherty
   board: y
 - name: Bob Ippolito
   avatar: bob-ippolito.jpg
