@@ -2263,6 +2263,108 @@ footer address td.icon {
     }
 }
 
+/*NEW CSS FOR SUMMER 2015 CLASS*/
+#intro {
+  color: rgb(80, 80, 80);
+  font-size: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 35px;
+font-family:'SourceCodeProSemiBold', sans-serif;
+
+}
+
+#questions {
+  font-family:'SourceCodeProSemiBold', sans-serif;
+  margin: 20px auto;
+  width: 60%;
+  height: 100%;
+  background-color: white;
+}
+
+/*ANSWER BOXES*/
+.ss-form-entry {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+/*LONG ANSWER BOXES*/
+.ss-q-long {
+  width:95%;
+}
+
+.ss-q-short {
+  height: 45px;
+  width: 100%;
+  border: solid 2px rgba(185,186,187,0.25);
+  border-radius: 0.5em;
+}
+
+input {
+    font-size: 20px;
+}
+
+/*CONFIRMATION PAGE, KEEP FOR NOW*/
+.ss-confirmation {
+  font-family: "Roboto";
+  color: rgb(80,80,80);
+  font-weight: 400;
+  font-size: 2.460rem;
+  font-style: normal;
+}
+
+/*TITLES OF THE QUESTIONS*/
+.ss-q-title {
+  font-family: "Roboto";
+  color: rgb(80,80,80);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom:5px;
+
+}
+
+/*HINTS UNDER QUESTIONS*/
+.ss-q-help, .ss-q-time-hint {
+  font-family: "Roboto";
+  color: rgb(140,140,140);
+  font-weight: 400;
+  font-size: 1.000rem;
+  font-style: normal;
+}
+
+/*MULTIPLE CHOICE ANSWERS*/
+.ss-choice-label, .video-secondary-text, .ss-gridrow-leftlabel, .ss-gridnumber, .ss-scalenumber, .ss-leftlabel, .ss-rightlabel {
+  font-family: "Roboto";
+  color: rgb(80,80,80);
+  font-weight: 400;
+  font-size: 1.000rem;
+  font-style: normal;
+}
+
+/*ERROR MESSAGE STUFF*/
+.error-message, .required-message, .ss-required-asterisk {
+  font-family: "Roboto";
+  color: rgb(196,59,29);
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.ss-item.ss-navigate {
+  text-align: center;
+}
+
+a:link {
+  color: rgb(0,0,238);
+}
+
+a:visited {
+  color: rgb(85,26,139);
+}
+
+a:active {
+  color: rgb(252,0,0);
+}
+
 /* Retina images */
 @media
     only screen and (-webkit-min-device-pixel-ratio: 1.5),
