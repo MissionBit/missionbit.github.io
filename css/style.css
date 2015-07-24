@@ -668,7 +668,7 @@ nav {
     font-size: 1.25em;
 }
 
-.navbar-nav > li > a.menu-button {
+.navbar-nav > li.menu-button > a {
     background-color: #3498DB;
     margin-top: 5px;
     padding-top: 10px;
