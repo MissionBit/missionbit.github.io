@@ -16,6 +16,9 @@ body .share img {
     font-family: 'UbuntuRegular', sans-serif;
     color: red;   
 }
+.get-in-touch {
+    font-style: italic;
+}
 
 #goal1 .hacklab-goals,
 #goal2 .hacklab-goals {

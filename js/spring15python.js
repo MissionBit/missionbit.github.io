@@ -90,20 +90,20 @@ window.jQuery(function ($) {
 			if (!firstName || !lastName || !isEmail || school === "school" || grade === "grade" || gender === "gender" || ethnicity === "ethnicity") {
 				$('#spring-submit-error-msg').show();
 			} else {
-				var Spring15Python = Parse.Object.extend("Spring15Python");
-				var spring15Python = new Spring15Python();
-				spring15Python.set("firstName", firstName);
-				spring15Python.set("lastName", lastName);
-				spring15Python.set("email", email);
-				spring15Python.set("cell", cell);
-				spring15Python.set("school", school);
-				spring15Python.set("grade", grade);
-				spring15Python.set("gender", gender);
-				spring15Python.set("ethnicity", ethnicity);
-				spring15Python.set("comments", comments);
-				spring15Python.set("class", "python");
+				var Fall15Python = Parse.Object.extend("Fall15Python");
+				var fall15Python = new Fall15Python();
+				fall15Python.set("firstName", firstName);
+				fall15Python.set("lastName", lastName);
+				fall15Python.set("email", email);
+				fall15Python.set("cell", cell);
+				fall15Python.set("school", school);
+				fall15Python.set("grade", grade);
+				fall15Python.set("gender", gender);
+				fall15Python.set("ethnicity", ethnicity);
+				fall15Python.set("comments", comments);
+				fall15Python.set("class", "python");
 
-				spring15Python.save(null, {
+				fall15Python.save(null, {
 				  success: function(student) {
 				    console.log('save successful');
 				    $('#lab-student-form').hide();

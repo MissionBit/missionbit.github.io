@@ -90,20 +90,20 @@ window.jQuery(function ($) {
 			if (!firstName || !lastName || !isEmail || school === "school" || grade === "grade" || gender === "gender" || ethnicity === "ethnicity") {
 				$('#spring-submit-error-msg').show();
 			} else {
-				var Spring15Android = Parse.Object.extend("Spring15Android");
-				var spring15Android = new Spring15Android();
-				spring15Android.set("firstName", firstName);
-				spring15Android.set("lastName", lastName);
-				spring15Android.set("email", email);
-				spring15Android.set("cell", cell);
-				spring15Android.set("school", school);
-				spring15Android.set("grade", grade);
-				spring15Android.set("gender", gender);
-				spring15Android.set("ethnicity", ethnicity);
-				spring15Android.set("comments", comments);
-				spring15Android.set("class", "android");
+				var Fall15Android = Parse.Object.extend("Fall15Android");
+				var fall15Android = new Fall15Android();
+				fall15Android.set("firstName", firstName);
+				fall15Android.set("lastName", lastName);
+				fall15Android.set("email", email);
+				fall15Android.set("cell", cell);
+				fall15Android.set("school", school);
+				fall15Android.set("grade", grade);
+				fall15Android.set("gender", gender);
+				fall15Android.set("ethnicity", ethnicity);
+				fall15Android.set("comments", comments);
+				fall15Android.set("class", "android");
 
-				spring15Android.save(null, {
+				fall15Android.save(null, {
 				  success: function(student) {
 				    console.log('save successful');
 				    $('#lab-student-form').hide();

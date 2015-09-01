@@ -90,20 +90,20 @@ window.jQuery(function ($) {
 			if (!firstName || !lastName || !isEmail || school === "school" || grade === "grade" || gender === "gender" || ethnicity === "ethnicity") {
 				$('#spring-submit-error-msg').show();
 			} else {
-				var Spring15Ruby = Parse.Object.extend("Spring15Ruby");
-				var spring15Ruby = new Spring15Ruby();
-				spring15Ruby.set("firstName", firstName);
-				spring15Ruby.set("lastName", lastName);
-				spring15Ruby.set("email", email);
-				spring15Ruby.set("cell", cell);
-				spring15Ruby.set("school", school);
-				spring15Ruby.set("grade", grade);
-				spring15Ruby.set("gender", gender);
-				spring15Ruby.set("ethnicity", ethnicity);
-				spring15Ruby.set("comments", comments);
-				spring15Ruby.set("class", "ruby");
+				var Fall15Ruby = Parse.Object.extend("Fall15Ruby");
+				var fall15Ruby = new Fall15Ruby();
+				fall15Ruby.set("firstName", firstName);
+				fall15Ruby.set("lastName", lastName);
+				fall15Ruby.set("email", email);
+				fall15Ruby.set("cell", cell);
+				fall15Ruby.set("school", school);
+				fall15Ruby.set("grade", grade);
+				fall15Ruby.set("gender", gender);
+				fall15Ruby.set("ethnicity", ethnicity);
+				fall15Ruby.set("comments", comments);
+				fall15Ruby.set("class", "ruby");
 
-				spring15Ruby.save(null, {
+				fall15Ruby.save(null, {
 				  success: function(student) {
 				    console.log('save successful');
 				    $('#lab-student-form').hide();
