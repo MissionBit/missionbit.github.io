@@ -2,6 +2,7 @@
 window.jQuery(function ($) {
     'use strict';
     $("#spring15-javascript2-submit").on('click', function (e) {
+    	console.log('in the js 2');
 			e.preventDefault();
 			var firstName = $('#spring-student-first-name').val();
 			var lastName = $('#spring-student-last-name').val();
