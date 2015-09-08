@@ -102,7 +102,7 @@ window.jQuery(function ($) {
 				fall15Javascript2.set("comments", comments);
 				fall15Javascript2.set("class", "javascript2");
 
-				fall15Javascript.save(null, {
+				fall15Javascript2.save(null, {
 				  success: function(student) {
 				    console.log('save successful');
 				    $('#lab-student-form').hide();
