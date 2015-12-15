@@ -2,90 +2,166 @@
 enable-mentor-alert: false
 ---
 
-<div class="homepage-image img-anim-group-1">
-</div>
-<!-- container -->
-<div class="container home" role="main">
-    <div class="page-head">
-        <span>Empowering youth with computer programming education and professional experiences</span>
+<!-- Header Carousel -->
+<div id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <!-- <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol> -->
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="homepage-image" id="photo1"></div>
+        </div>
+        <div class="item">
+            <div class="homepage-image" id="photo2"></div>
+        </div>
+        <div class="item">
+            <div class="homepage-image" id="photo3"></div>
+        </div>
     </div>
 
-    <div id="home-top" class="row">
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</div>
+
+<!-- container -->
+<div class="container home" role="main">
+    <div class="col-md-8 col-md-offset-3">
+        <form class="form-inline email">
+        <label class="label-text" for="inputEmail">Join the mailing list</label>
+          <div class="form-group">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Your email address">
+          </div>
+        <button type="submit" class="btn btn-default email-btn">Stay in Touch!</button>
+        </form>
+    </div>
+
+    <!-- <div id="home-top" class="row">
         <div class="home-mission-box">
             <p class="home-mission-headline">
                 Mission Bit programs are free, out of school, project based, taught by volunteer professional software engineers and tech entrepreneurs, integrated with industry experiences and offer professional advancement opportunities. Mission Bit education experiences are all-inclusive and ethnically and gender diverse. Mission Bit’s complementary programs create pathways for ‘limited access’ students to form connections with technology professionals and learn the skills, processes and technologies used by professional programmers.
             </p>
         </div>
-    </div>
+    </div> -->
     <div class="section">
-        <div class="col-md-12">
-            <div class="headline home-model-title">
-                <h2> Mission Bit's Pathway Model - The Programs </h2>
-            </div>
-            <div class="home-programs-titles">
-                <h3 class="home-programs-title"> Semester Arc Classes </h3>
-                <h4> 
-                    Classes, aligned with the public school calendar, that meet for two hours twice a week for thirteen weeks.
-                </h4>
-                <p> 
-                    <i class="fa fa-rocket"></i> Launched Fall 2013
-                    <br>
-                    <i class="fa fa-code"></i> 266 students. 37% female, 26% combined latino and african american, representing 14 of 17 SF public high schools
-                </p>
-                <h3 class="home-programs-title"> Paid Summer Internships </h3>
-                <h4> 
-                    Paid summer internships in roles that require computer programming skills and experience at SF tech companies.
-                </h4>
-                <p> 
-                    <i class="fa fa-rocket"></i> Launched Summer 2014
-                    <br>
-                    <i class="fa fa-code"></i> 23% of 2014 spring semester students were placed into paid internships 
-                </p>
-                <h3 class="home-programs-title"> The Hacker Lab </h3>
-                <h4> 
-                    An open Hacker Space that serves as an entry point for new high school coders and an accelerant for active high school coders.
-                </h4>
-                <p> 
-                    <i class="fa fa-rocket"></i> Launched Spring 2015
-                </p>
-            </div>
-            <div class="headline home-stories-title">
-                <h2>Student and Mentor Stories</h2>
-            </div>
-            <div class="home-video-box">
-                <div id="passion-title" class="home-vid-title">
-                    <h3>"Passion Reflected" </h3>
+        <div class='row'>
+            <div class="col-md-11 col-md-offset-1">
+                <div class="col-sm-5 box-container">
+                    <div class="headline home-model-title text-center">
+                        <h2>The Problem</h2>
+                    </div>
+                    <ul>
+                        <li>5% - San Francisco Unified School District has 17,000 high school students. In the 2014-2015 school year obly 5% were enrolled in a computer science course.</li>
+                        <li>25% - In 2015, women only made up 25% of software engineers, while African American and Latino made up 5% combined.</li>
+                        <li>1.4M: According to research by the year 2020, 1.4 Million jobs will go unfilled in computer science fields.</li>
+                    </ul>
                 </div>
-                <div class="home-video">
-                    <iframe id="home-passion" class="vid-iframe" src="https://player.vimeo.com/video/100521340" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="home-video-box pull-right">
-                <div id="changed-title" class="home-vid-title">
-                    <h3>"Changed Everything" </h3>
-                </div>
-                <div class="home-video">
-                    <iframe id="home-passion" class="vid-iframe" src="https://player.vimeo.com/video/100834797" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <div class="col-sm-5 col-sm-offset-1 box-container">
+                    <div class="headline home-model-title text-center">
+                        <h2>The Solution</h2>
+                    </div>
+                    <ul>
+                        <li>Enroll 10,000 students in computer science courses and engagement activities within the next three years.</li>
+                        <li>50% - By 2018, Mission Bit courses will be comprised of 50% women and students of color.</li>
+                        <li>1M: By 2025, Mission Bit programming courses will have led to 1 million people having completed college with a CS degree or found jobs in the tech sector.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+                <!-- <div class="headline home-stories-title">
+                    <h2>Student and Mentor Stories</h2>
+                </div>
+                <div class="home-video-box">
+                    <div id="passion-title" class="home-vid-title">
+                        <h3>"Passion Reflected" </h3>
+                    </div>
+                    <div class="home-video">
+                        <iframe id="home-passion" class="vid-iframe" src="https://player.vimeo.com/video/100521340" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="home-video-box pull-right">
+                    <div id="changed-title" class="home-vid-title">
+                        <h3>"Changed Everything" </h3>
+                    </div>
+                    <div class="home-video">
+                        <iframe id="home-passion" class="vid-iframe" src="https://player.vimeo.com/video/100834797" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div> -->
     <div class="section">
-        <div class="col-md-12">
-            <div class="headline">
-                <h2>Why It Matters</h2>
+        <div class="col-md-10 col-md-offset-1 box-container">
+            <div class="headline text-center">
+                <h2>Our Model</h2>
             </div>
-            <ul>
-                <li>50% of San Francisco's public high schools do not offer any kind of computer science class.</li>
-                <li>Local businesses scour the globe for top talent, we want to provide more opportunities to our community.</li>
-                <li>Many skilled programmers would love to teach, but need an organization like Mission Bit to make it feasible.</li>
-            </ul>
-            <div class="donate-ctr">
+            <div class='row'>
+                <div class='col-md-12 model-icons'>
+                    <div class='col-sm-2'>
+                        <div class='model-icon-circle'><i class="fa fa-laptop fa-3x model-icon"></i></div>
+                        <div class='icon-caption'>Run free CS courses in schools where poverty is prevalent</div>
+                    </div>
+                    <div class='col-sm-1 arrow'><i class="fa fa-arrow-right fa-3x"></i></div>
+                    <div class='col-sm-2'>
+                        <div class='model-icon-circle'><i class="fa fa-users fa-3x model-icon"></i></div>
+                        <div class='icon-caption'>Recruit and train volunteer Software Engineers to teach</div>
+                    </div>
+                    <div class='col-sm-1 arrow'><i class="fa fa-arrow-right fa-3x"></i></div>
+                    <div class='col-sm-2'>
+                        <div class='model-icon-circle'><i class="fa fa-desktop fa-3x model-icon"></i></i></div>
+                        <div class='icon-caption'>Students gain two years of Computer Science instruction</div>
+                    </div>
+                    <div class='col-sm-1 arrow'><i class="fa fa-arrow-right fa-3x"></i></div>
+                    <div class='col-sm-2' id='last-elements'>
+                        <div class='row'>
+                            <div class='model-icon-circle'><i class="fa fa-graduation-cap fa-3x model-icon"></i></div>
+                            <div class='icon-caption'>Students enroll in college as CS majors</div>
+                        </div>
+                        <div class='row'>
+                            <div class='model-icon-circle'><i class="fa fa-university fa-3x model-icon"></i></div>
+                            <div class='icon-caption'>Students enroll in coding bootcamps</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="col-md-10 col-md-offset-1 box-container">
+            <div class="headline text-center">
+                <h2>Our Vision</h2>
+            </div>
+            <div class="col-sm-10 col-sm-offset-1 text-box">
+                <ul>
+                    <li>50% of San Francisco's public high schools do not offer any kind of computer science class.</li>
+                    <li>Local businesses scour the globe for top talent, we want to provide more opportunities to our community.</li>
+                    <li>Many skilled programmers would love to teach, but need an organization like Mission Bit to make it feasible.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="col-md-10 col-md-offset-1 box-container">
+            <div class="headline text-center">
+                <h2>Partnership with Hack Reactor</h2>
+            </div>
+            <div class="col-sm-10 col-sm-offset-1 text-box">The partnership between Hack Reactor and Mission Bit will create a track for San Francisco United School District (SFUSD) alums to attend a series of Hack Reactor network courses, enabling them to get software engineering positions in the area. SFUSD is the seventh largest school district in California, educating over 57,000 students every year. Utilizing project0vased learning similar to Hack Reactor's curriculum, Mission Bit provides a space for young San Francisco-based teens to build core computer science concepts and practical application skills to help them succeed in the tech job sector.</div>
+            <!-- <div class="donate-ctr">
                 <a class="btn btn-lg btn-default donate" href="donate/">Donate Today</a>
-            </div>
+            </div> -->
         </div>
     </div>
-    <div id="why-matters" class="section">
+
+<!--     <div id="why-matters" class="section">
         <div class="col-md-12">
             <div class="headline">
                 <h2> What Makes Mission Bit Unique? </h2>
@@ -97,7 +173,7 @@ enable-mentor-alert: false
                 Mission Bit programs start with this simple, yet powerful, question. From that starting point, Mission Bit mentors help students learn the technologies, processes and approaches, used on the job, to build products the students care about. This differs from the standard approach of teaching students what they should know and trying hard to make the instruction and lessons relevant to each individual student.
             </p>
         </div>
-    </div>
+    </div> -->
 <!--     <div id="who-we" class="section">
         <div class="col-md-12">
             <div class="headline">
@@ -123,6 +199,138 @@ enable-mentor-alert: false
         </div>
     </div> -->
     <div class="section">
+        <div class='row'>
+            <div class="col-md-5 col-md-offset-1">
+                <div class="headline home-model-title text-center">
+                    <h2>Our Sponsors</h2>
+                </div>
+                <div class='col-sm-4'>
+                    <ul>
+                        <li>
+                            <div class="col-md-1">
+                                <span class="vpadding">
+                                    <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+                                        <img src="images/partners/linkedin.png" alt="LinkedIn logo">
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-md-2">
+                                <span class="vpadding">
+                                    <a href="http://playcolab.com/" target="_blank" title="co.lab">
+                                        <img src="images/mobileclasspartners/colab-logo.png" alt="co.lab logo">
+                                    </a>                                
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-md-2">
+                                <span class="vpadding">
+                                    <a href="http://zynga.org/" target="_blank" title="Zynga.org">
+                                        <img src="images/partners/zyngaorg_logo_primary_rgb.jpg" alt="Zynga.org logo">
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class='col-sm-4 col-sm-offset-1'>
+                    <ul>
+                        <li>
+                            <div class="col-md-2">
+                                <span class="vpadding">    
+                                    <a href="https://www.rackspace.com/" target="_blank" title="Rackspace">
+                                        <img src="images/mobileclasspartners/Rackspace.jpg" alt="Rackspace logo">
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-md-2">
+                                <span class="vpadding">
+                                    <a href="http://www.pocketgems.com/" target="_blank" title="Pocket Gems">
+                                        <img src="images/partners/pocket-gems.jpg" alt="Pocket Gems logo">
+                                    </a>
+                                </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col-md-2">
+                                <span class="vpadding">
+                                    <a href="http://www.brightroll.com/" target="_blank" title="Brightroll">
+                                        <img src="images/mobileclasspartners/brightroll-logo.jpg" alt="Brightroll logo">
+                                    <a>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+                <div class="headline home-model-title text-center">
+                    <h2>Our Partners</h2>
+                </div>
+                <ul>
+<!--                     <li>
+                        <div class="col-md-2">
+                            <span class="vpadding">
+                                <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+                                    <img src="images/partners/linkedin.png" alt="LinkedIn logo">
+                                </a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-md-2">
+                            <span class="vpadding">
+                                <a href="http://playcolab.com/" target="_blank" title="co.lab">
+                                    <img src="images/mobileclasspartners/colab-logo.png" alt="co.lab logo">
+                                </a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-md-2">
+                            <span class="vpadding">
+                                <a href="http://zynga.org/" target="_blank" title="Zynga.org">
+                                    <img src="images/partners/zyngaorg_logo_primary_rgb.jpg" alt="Zynga.org logo">
+                                </a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-md-2">
+                            <span class="vpadding">
+                                <a href="https://www.rackspace.com/" target="_blank" title="Rackspace">
+                                    <img src="images/mobileclasspartners/Rackspace.jpg" alt="Rackspace logo">
+                                </a>                                
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-md-2">
+                            <span class="vpadding">
+                                <a href="http://www.pocketgems.com/" target="_blank" title="Pocket Gems">
+                                    <img src="images/partners/pocket-gems.jpg" alt="Pocket Gems logo">
+                                </a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="col-md-2">
+                            <span class="vpadding">
+                                <a href="http://www.brightroll.com/" target="_blank" title="Brightroll">
+                                    <img src="images/mobileclasspartners/brightroll-logo.jpg" alt="Brightroll logo">
+                                <a>
+                            </span>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="section">
         <div class="col-md-12">
             <div class="headline">
                 <h2>Supporting Partners</h2>
@@ -153,14 +361,14 @@ enable-mentor-alert: false
                         <a href="https://www.rackspace.com/" target="_blank" title="Rackspace">
                             <img src="images/mobileclasspartners/Rackspace.jpg" alt="Rackspace logo">
                         </a>
-                    </div>
+                    </div> -->
 <!--                     <div class="col-md-2">
                         <span class="vpadding"></span>
                         <a href="http://www.pinterest.com/" target="_blank" title="Pinterest">
                             <img src="images/partners/Pinterest_Logo.eps" alt="Pinterest logo">
                         <a>
                     </div> -->
-                    <div class="col-md-2">
+                    <!-- <div class="col-md-2">
                         <span class="vpadding"></span>
                         <a href="http://www.pocketgems.com/" target="_blank" title="Pocket Gems">
                             <img src="images/partners/pocket-gems.jpg" alt="Pocket Gems logo">
@@ -175,8 +383,8 @@ enable-mentor-alert: false
                 </div>
             </div>
         </div>
-    </div>
-    <div id="hot-press" class="section">
+    </div> -->
+    <!-- <div id="hot-press" class="section">
         <div class="col-md-12">
             <div class="headline">
                 <h2> Hot Press </h2>
@@ -232,5 +440,5 @@ enable-mentor-alert: false
         <div class="donate-ctr">
             <a class="btn btn-lg btn-default donate" href="donate/">Donate Today</a>
         </div>
-    </div>
+    </div> -->
 </div><!-- /container -->
