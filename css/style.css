@@ -4,8 +4,110 @@
     box-model: false, fallback-colors:false, overqualified-elements:false,
     display-property-grouping:false */
 
+body {
+    font-family: 'Merriweather', serif;
+    text-align: justify;
+}
+
 body .share img {
     max-width: 100%;
+}
+
+li {
+    padding-bottom: 5px;
+}
+
+/* Home Page Carousel */
+
+#myCarousel {
+    margin-bottom: 50px;
+}
+
+.carousel {
+    height: 50%;
+}
+
+.carousel .item,
+.carousel .item.active,
+.carousel .carousel-inner {
+    height: 100%;
+}
+
+#photo1 {
+    background-image: url(../images/home/class-student.png)
+}
+
+#photo2 {
+    background-image: url(../images/home/focused-1.jpg)
+}
+
+#photo3 {
+    background-image: url(../images/home/groups-1.jpg)
+}
+
+.email {
+    margin-right: 10px;
+}
+
+.label-text {
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.email-btn {
+    margin-left: 15px;
+}
+
+.model-icons {
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+.arrow {
+    padding-top: 25px;
+    margin-left: 10px;
+}
+
+.model-icon-circle {
+    height: 90px;
+    width: 90px;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+}
+
+.model-icon {
+    padding-top: 20px;
+}
+
+.icon-caption {
+    font-size: 12px;
+    text-align: center;
+    width: 120%;
+}
+
+#last-elements {
+    margin-top: -80px;
+}
+
+#last-elements .icon-caption {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.box-container {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+}
+
+.text-box {
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 .spring15-student-form-error,
@@ -13,7 +115,7 @@ body .share img {
     margin-top: .5em;
     text-align: center;
     font-size: 2em;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
     color: red;   
 }
 .get-in-touch {
@@ -114,12 +216,12 @@ body .share img {
     margin: -30px inherit auto auto;
     color: white;
     font-size: 180%;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .spring15-signups h3 {
     width: 100%;
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', 'sans-serif';
 }
 
 .programs #high-school h3 {
@@ -212,7 +314,7 @@ body .share img {
 
 .headline .hack-title h3 {
     width: 100%;
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .hackerlab #hack-title h3 {
@@ -257,7 +359,7 @@ body .share img {
     margin: -30px inherit auto auto;
     color: white;
     font-size: 180%;
-    font-family: 'UbuntuRegular', sans-serif;  
+    font-family: 'Merriweather', serif;
 }
 
 .hackerlab p {
@@ -302,7 +404,7 @@ body .share img {
 .hack-hardware-headline {
     text-align: center;
     font-size: 2.15em;
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', sans-serif;
     /*font-family: 'Aldrich', sans-serif;*/
 }
 
@@ -413,7 +515,7 @@ input.hack-mentor-check {
 /********* NEW HOME ***********/
 
 .home .headline h3 {
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 #home-press .press-text .press-title,
@@ -498,7 +600,7 @@ input.hack-mentor-check {
     margin: 0 5% 0 5%;
 }
 #home-top .home-vid-title h3 {
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 1.75em;
 }
 
@@ -538,7 +640,7 @@ input.hack-mentor-check {
 }
 
 .page-head {
-    width: 90%;
+    width: 75%;
     left: 5%;
     background-color: #3498db;
     text-align: center;
@@ -546,7 +648,7 @@ input.hack-mentor-check {
     margin: -30px inherit auto auto;
     color: white;
     font-size: 150%;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .home .students-first {
@@ -565,7 +667,7 @@ input.hack-mentor-check {
 
 .recruit-title h1 {
     text-align: center;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 /************** footer template *****************/
@@ -580,12 +682,12 @@ input.hack-mentor-check {
 
 .open-signups h1 {
     text-align: center;
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 1.45em;
 }
 .spring15-signups h1 {
 /*    text-align: center;*/
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 1.45em;
 }
 
@@ -596,7 +698,7 @@ input.hack-mentor-check {
 }
 
 .enroll-ctr a {
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .showcase-link {
@@ -617,12 +719,12 @@ input.hack-mentor-check {
 
 .mob-game-title {
     font-size: 30px;
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', sans-serif;
     display: inline;
     border-bottom: 2px solid #3498db;
 }
 .mob-game-d {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', serif;
     font-size: 14px;
     font-size: 120%;
     line-height: 1.428571429;
@@ -631,13 +733,13 @@ input.hack-mentor-check {
 }
 .Projects {
     font-size: 30px;
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', sans-serif;
     display: inline;
     border-bottom: 2px solid #3498db
 }
 .smaller-title {
     font-size: 50px;
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', sans-serif;
     display: inline;
     border-bottom: 1px dotted #e4e9f0;
 }
@@ -653,7 +755,7 @@ input.hack-mentor-check {
 
 }
 .teamleaders-story-description {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', serif;
     margin: 0 0 10px;
     font-size: 120%;
     line-height: 1.428571429;
@@ -662,11 +764,12 @@ input.hack-mentor-check {
 .leadinstructor {
     display: inline;
     border-bottom: 2px solid #3498db;
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 500;
 }
 nav {
-    font-family: 'UbuntuMedium', sans-serif;
+    /*font-family: 'UbuntuMedium', sans-serif;*/
+    font-family: 'Lato', 'sans-serif';
     font-weight: 500;
     font-size: 1.25em;
 }
@@ -747,11 +850,11 @@ nav {
     margin: -30px inherit auto auto;
     color: white;
     font-size: 150%;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', sans-serif;
 }*/
 
 .headline h2 {
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', 'sans-serif';
 }
 
 .season h2 {
@@ -760,11 +863,14 @@ nav {
 
 .section {
     font-size: 120%;
+    font-family: 'Merriweather', serif;
+    padding: 15px;
 }
 
 .section ul {
     padding-left: 0;
     list-style-position: inside;
+    font-family: 'Merriweather', serif;
 }
 
 .homepage-image {
@@ -857,7 +963,7 @@ iframe.campaign-alert {
 
 #mbit .donate {
     text-transform: uppercase;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
     color: #fff;
     background: #f0ad4e;
     text-shadow: none;
@@ -871,7 +977,7 @@ iframe.campaign-alert {
 
 #mbit .apply {
     text-transform: uppercase;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
     color: #fff;
     background: #f0ad4e;
     text-shadow: none;
@@ -883,7 +989,7 @@ iframe.campaign-alert {
 
 #mbit .lab {
     text-transform: uppercase;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
     color: #fff;
     background: #f0ad4e;
     text-shadow: none;
@@ -896,7 +1002,7 @@ iframe.campaign-alert {
 
 #mbit .workshop {
     text-transform: uppercase;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
     color: #fff;
     background: #3498db;
     text-shadow: none;
@@ -910,7 +1016,7 @@ iframe.campaign-alert {
 
 #mbit .mentor {
     text-transform: uppercase;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
     color: #fff;
     background: #e74c3c;
     text-shadow: none;
@@ -924,7 +1030,7 @@ iframe.campaign-alert {
 
 #mbit .hardware {
     text-transform: uppercase;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
     color: #fff;
     background: #1abc9c;
     text-shadow: none;
@@ -956,8 +1062,12 @@ footer a {
     font-weight: 500;
 }
 
-footer address td.icon {
+footer address td.contact-info {
     text-align: center;
+    /*padding-right: 10px;*/
+}
+
+.icon {
     padding-right: 10px;
 }
 
@@ -968,7 +1078,7 @@ footer address td.icon {
 }
 
 .headline {
-    margin: 30px 0 15px 0;
+    margin: 25px 0 15px 0;
     border-bottom: 1px dotted #e4e9f0;
 }
 
@@ -978,14 +1088,14 @@ footer address td.icon {
 }
 
 .team h3 {
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .team small {
     display: block;
     font-size: 12px;
     margin-top: 2px;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .team .team-social li {
@@ -1054,7 +1164,7 @@ footer address td.icon {
 
 #mbit .share-button {
     text-transform: uppercase;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
     color: #fff;
     background: #3498db;
     text-shadow: none;
@@ -1205,7 +1315,7 @@ footer address td.icon {
     min-height: 100px;
 }
 .partners div.row .vpadding {
-    display: inline-block;
+/*    display: inline-block;*/
     height: 100%;
 }
 .partners div.row img {
@@ -1287,7 +1397,7 @@ footer address td.icon {
 }
 
 .question {
-    font-family: 'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', 'sans-serif';
 }
 
 .owner-header {
@@ -1303,7 +1413,7 @@ footer address td.icon {
 }
 
 .projects {
-    font-family:'SourceCodeProSemiBold', sans-serif;
+    font-family: 'Lato', 'sans-serif';
     display: inline;
     border-bottom: 2px solid #3498db;
     font-size: 30px;
@@ -1344,7 +1454,7 @@ footer address td.icon {
 .game-page .col-sm-4 {
     text-align: center;
     font-size: 24px;
-    font-family: 'UbuntuRegular', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .team-icon {
