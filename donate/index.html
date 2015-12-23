@@ -1,6 +1,7 @@
 ---
 title: "Donate"
 enable-mentor-alert: true
+semester: Spring 2016
 scripts: |
   <script src="vendor/dogechain-qrcode/jquery.qrcode.min.js"></script>
 ---
@@ -40,7 +41,7 @@ scripts: |
             <div class="col-md-4 col-sm-6">
                 <div class="pricing hover-effect">
                     <div class="pricing-head">
-                        <h3>Support Fall 2015 Classes </h3>
+                        <h3>Support {{ page.semester }} Classes </h3>
                         <h4>$250</h4>
                     </div>
                     <ul class="pricing-content list-unstyled">
@@ -61,13 +62,13 @@ scripts: |
             <div class="col-md-4 col-sm-6">
                 <div class="pricing hover-effect">
                     <div class="pricing-head">
-                        <h3>Sponsor Fall 2015 Student</h3>
+                        <h3>Sponsor a {{ page.semester }} Student</h3>
                         <h4>$1,000</h4>
                     </div>
                     <ul class="pricing-content list-unstyled">
                         <li><i class="fa fa-star"></i>'Student Sponsor' T-Shirt </li>
                         <li><i class="fa fa-star"></i> Mission Bit Hoodie </li>
-                        <li><i class="fa fa-heart"></i> Invite to Fall 2015 Demo Day </li>
+                        <li><i class="fa fa-heart"></i> Invite to {{ page.semester }} Demo Day </li>
                         <li><i class="fa fa-heart"></i> Exclusive Invites </li>
                     </ul>
                     <div id="1000-donate-button" class="donate-button pricing-footer">
