@@ -17,46 +17,98 @@ li {
     padding-bottom: 5px;
 }
 
-/* Home Page Carousel */
-
-#myCarousel {
-    margin-bottom: 50px;
+h1 {
+    font-family: 'Open Sans', 'sans-serif';
+    vertical-align: middle;
+    font-weight: 800;
+    color: #FFF;
+    padding-bottom: 10px;
+    font-size: 48px;
 }
 
-.carousel {
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.white {
+    color: #FFF;
+}
+
+/* Home Page Carousel */
+
+#photoCarousel {
     height: 50%;
 }
 
 .carousel .item,
-.carousel .item.active,
-.carousel .carousel-inner {
+.carousel .item.active {
     height: 100%;
 }
 
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
 #photo1 {
-    background-image: url(../images/home/class-student.png)
+    background-image: url(../images/home/homepage4.png);
 }
 
 #photo2 {
-    background-image: url(../images/home/focused-1.jpg)
+    background-image: url(../images/home/homepage2.jpg);
 }
 
 #photo3 {
-    background-image: url(../images/home/groups-1.jpg)
+    background-image: url(../images/home/homepage3.jpg);
 }
 
+#photo4 {
+    background-image: url(../images/home/homepage1.jpg);
+}
+
+/* Email submission */
+
 .email {
+    margin-top: 50px;
     margin-right: 10px;
+    margin-bottom: 50px;
 }
 
 .label-text {
-    font-size: 14px;
+    font-size: 18px;
     margin-right: 15px;
 }
 
 .email-btn {
     margin-left: 15px;
 }
+
+/* Model */
 
 .model-icons {
     margin-top: 80px;
@@ -98,16 +150,84 @@ li {
     margin-bottom: 25px;
 }
 
+/* Exposure, Enrollment, Employment */
+
 .box-container {
-    margin-top: 50px;
-    margin-bottom: 25px;
     border: 1px solid #e5e5e5;
     box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    margin-bottom: 50px;
+}
+
+.shadow:hover {
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+    cursor: pointer;
 }
 
 .text-box {
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding: 15px 15px 40px 15px;
+}
+
+.stats-title {
+    color: #3498db;
+}
+
+.box-photo {
+    padding: 10px;
+    height: 250px;
+    width: 300px;
+}
+
+/* Text Carousel */
+
+#textCarousel {
+    margin-bottom: 100px;
+    margin-top: 50px;
+    max-height: 20%;
+    width: 100%;
+}
+
+.carousel-control.left {
+    background-image: none;
+    margin-left: -150px;
+    margin-top: -125px;
+    opacity: 1;
+
+}
+.carousel-control.right {
+    background-image: none;
+    margin-right: -150px;
+    margin-top: -125px;
+    opacity: 1;
+
+}
+
+.carousel-control .icon-prev, 
+.carousel-control .icon-next {
+    font-size: 100px;
+}
+
+
+/* Sponsors and Partners */
+.first-row {
+    padding-top: 30px;
+    margin-left: 25px;
+}
+
+.second-row {
+    padding-left: 50px;
+}
+
+.second-column {
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+/* About Us */
+.director-photo {
+    width: 150px;
+    margin-right: 25px;
 }
 
 .spring15-student-form-error,
@@ -163,7 +283,7 @@ li {
 }
 
 #lab-mentor-form {
-    font-family: 'Lato', 'sans-serif';
+    font-family: 'Open Sans', 'sans-serif';
 }
 
 .spring15-mentor-class {
@@ -221,15 +341,11 @@ li {
 
 .spring15-signups h3 {
     width: 100%;
-    font-family: 'Lato', 'sans-serif';
+    font-family: 'Open Sans', 'sans-serif';
 }
 
 .programs #high-school h3 {
     font-size: 2.5em;
-}
-
-.programs p {
-    font-size: 1.4em;
 }
 
 #programs .class-module {
@@ -299,7 +415,7 @@ li {
 #programs .class-text .class-lead-title {
     font-size: 1.75em;
     vertical-align: middle; 
-    font-family: 'Lato', 'sans-serif';
+    font-family: 'Open Sans', 'sans-serif';
 }
 
 #programs .logistics {
@@ -314,7 +430,7 @@ li {
 
 .headline .hack-title h3 {
     width: 100%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .hackerlab #hack-title h3 {
@@ -404,7 +520,7 @@ li {
 .hack-hardware-headline {
     text-align: center;
     font-size: 2.15em;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     /*font-family: 'Aldrich', sans-serif;*/
 }
 
@@ -515,7 +631,7 @@ input.hack-mentor-check {
 /********* NEW HOME ***********/
 
 .home .headline h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #home-press .press-text .press-title,
@@ -600,7 +716,7 @@ input.hack-mentor-check {
     margin: 0 5% 0 5%;
 }
 #home-top .home-vid-title h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.75em;
 }
 
@@ -674,6 +790,8 @@ input.hack-mentor-check {
 
 .copyright-space {
     float: left;
+    font-size: 1.1em
+
 }
 
 .reasons {
@@ -682,12 +800,12 @@ input.hack-mentor-check {
 
 .open-signups h1 {
     text-align: center;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.45em;
 }
 .spring15-signups h1 {
 /*    text-align: center;*/
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.45em;
 }
 
@@ -698,7 +816,7 @@ input.hack-mentor-check {
 }
 
 .enroll-ctr a {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .showcase-link {
@@ -719,7 +837,7 @@ input.hack-mentor-check {
 
 .mob-game-title {
     font-size: 30px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     display: inline;
     border-bottom: 2px solid #3498db;
 }
@@ -733,13 +851,13 @@ input.hack-mentor-check {
 }
 .Projects {
     font-size: 30px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     display: inline;
     border-bottom: 2px solid #3498db
 }
 .smaller-title {
     font-size: 50px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     display: inline;
     border-bottom: 1px dotted #e4e9f0;
 }
@@ -764,14 +882,18 @@ input.hack-mentor-check {
 .leadinstructor {
     display: inline;
     border-bottom: 2px solid #3498db;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 500;
 }
 nav {
     /*font-family: 'UbuntuMedium', sans-serif;*/
-    font-family: 'Lato', 'sans-serif';
+    font-family: 'Open Sans', 'sans-serif';
     font-weight: 500;
     font-size: 1.25em;
+}
+
+.navbar-nav {
+    margin-right: -150px;
 }
 
 .navbar-nav > li.menu-button > a {
@@ -781,6 +903,7 @@ nav {
     margin-bottom: 5px;
     padding-bottom: 10px;
     color: white;
+    border-radius: 5px;
 }
 
 .navbar-nav > li.menu-button > a:hover {
@@ -853,8 +976,16 @@ nav {
     font-family: 'Merriweather', sans-serif;
 }*/
 
-.headline h2 {
-    font-family: 'Lato', 'sans-serif';
+h2 {
+    font-family: 'Open Sans', 'sans-serif';
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.subtitle {
+    margin-bottom: 20px;
 }
 
 .season h2 {
@@ -874,17 +1005,116 @@ nav {
 }
 
 .homepage-image {
-    background: url(../images/home/anim-group-1.jpg);
     min-width: 1172px;
     overflow: hidden;
     background-size: 100%;
     width: 100%;
-    height: 400px;
+    height: 550px;
     position: relative;
     z-index: -1;
     background-repeat: no-repeat;
     background-position: 50%;
-    margin: 0;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.banner-image {
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.banner-title {
+    font-size: 75px;
+    padding-top: 210px;
+    text-align: center;
+}
+
+.exposure {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/exposure.jpg);
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.enrollment {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/enrollment.jpg);
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.employment {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/employment.jpg);
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.about-us {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/whoweare.jpg);
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    margin: 0 0 25px 0;
     padding: 0;
 }
 
@@ -1069,6 +1299,7 @@ footer address td.contact-info {
 
 .icon {
     padding-right: 10px;
+    margin-bottom: 10px;
 }
 
 .copyright {
@@ -1078,13 +1309,14 @@ footer address td.contact-info {
 }
 
 .headline {
-    margin: 25px 0 15px 0;
-    border-bottom: 1px dotted #e4e9f0;
+    margin: 25px 0 0 0;
+    /*border-bottom: 1px dotted #e4e9f0;*/
 }
 
 .headline h2 {
     display: inline;
     border-bottom: 2px solid #3498db;
+    margin-bottom: 20px;
 }
 
 .team h3 {
@@ -1312,18 +1544,19 @@ footer address td.contact-info {
 
 .partners div.row div {
     text-align: center;
-    min-height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-.partners div.row .vpadding {
-/*    display: inline-block;*/
-    height: 100%;
-}
+
 .partners div.row img {
-    max-width: 100%;
+    max-width: 200px;
     max-height: 100px;
     vertical-align: middle;
 }
 
+.background-color-blue { background-color: #3498db; }
+.background-color-orange { background-color: #e67e22; }
+.background-color-red { background-color: #e74c3c; }
 .color-blue { color: #3498db; }
 .color-orange { color: #e67e22; }
 .color-red { color: #e74c3c; }
@@ -1397,7 +1630,7 @@ footer address td.contact-info {
 }
 
 .question {
-    font-family: 'Lato', 'sans-serif';
+    font-family: 'Open Sans', 'sans-serif';
 }
 
 .owner-header {
@@ -1413,7 +1646,7 @@ footer address td.contact-info {
 }
 
 .projects {
-    font-family: 'Lato', 'sans-serif';
+    font-family: 'Open Sans', 'sans-serif';
     display: inline;
     border-bottom: 2px solid #3498db;
     font-size: 30px;
