@@ -2,95 +2,62 @@
 enable-mentor-alert: false
 ---
 
-<!-- Photo Carousel -->
-<div id="photoCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#photoCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#photoCarousel" data-slide-to="1"></li>
-        <li data-target="#photoCarousel" data-slide-to="2"></li>
-        <li data-target="#photoCarousel" data-slide-to="3"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <div class="homepage-image" id="photo1"></div>
-        </div>
-        <div class="item">
-            <div class="homepage-image" id="photo2"></div>
-        </div>
-        <div class="item">
-            <div class="homepage-image" id="photo3"></div>
-        </div>
-        <div class="item">
-            <div class="homepage-image" id="photo4"></div>
-        </div>
-    </div>
-</div>
-
 <!-- container -->
-<div class="container home" role="main">
-    <div class="section">
+<!-- <div class="container home" role="main"> -->
+<section class="module parallax parallax-1">
+  <div class="container">
+    <h1>Mission Bit</h1>
+  </div>
+</section>
+<section class="module content">
+    <div class="container">
         <div class='row'>
             <div class="col-md-10 col-md-offset-1">
-                Mission Bit courses are project based semester long coding courses, taught by college computer science majors and supported by volunteer professional software engineers. Mission Bit education experiences are all-inclusive and ethnically and gender diverse. Mission Bit’s complementary programs create pathways for ‘limited access’ students to form connections with technology professionals and learn the skills, processes and technologies used by professional programmers.
+                <p>Mission Bit courses are project-based semester-long coding courses, taught by college computer science majors and supported by volunteer professional software engineers. Mission Bit education experiences are all-inclusive and ethnically and gender diverse. Mission Bit’s complementary programs create pathways for ‘limited access’ students to form connections with technology professionals and learn the skills, processes and technologies used by professional programmers.</p>
             </div>
         </div>
-    </div>
-
-    <div class="col-md-8 col-md-offset-3 email">
-        <form class="form-inline">
-        <label class="label-text" for="inputEmail">Join the mailing list</label>
-          <div class="form-group">
-            <input type="email" class="form-control" id="inputEmail" placeholder="Your email address">
-          </div>
-        <button type="submit" class="btn btn-default email-btn">Stay in Touch!</button>
-        </form>
-    </div>
-
-
-    <div class="section">
         <div class='row'>
-            <div class="col-md-10 col-md-offset-1">
-                <div class="col-md-4 box-container shadow">
-                    <a href="about-us/">
-                        <div class="row background-color-orange">
-                            <h2 class="white text-center">Exposure</h2>
-                            <img class="box-photo" src="../images/exposure.jpg">
-                        </div>
-                    </a>
-                    <div class="row">
-                        <div class="text-box text-center">Bring a coding workshop to your school</div>
-                    </div>
-                </div>
-                <div class="col-md-4 box-container shadow">
-                    <a href="programs/">
-                        <div class="row background-color-red">
-                            <h2 class="white text-center">Enrollment</h2>
-                            <img class="box-photo" src="../images/enrollment.jpg">
-                        </div>
-                    </a>
-                    <div class="row">
-                        <div class="text-box text-center">Register for a semester long Mission Bit course</div>
-                    </div>
-                </div>
-                <div class="col-md-4 box-container shadow">
-                    <a href="employment/">
-                        <div class="row background-color-blue">
-                            <h2 class="white text-center">Employment</h2>
-                            <img class="box-photo" src="../images/employment.jpg">
-                        </div>
-                    </a>
-                    <div class="row">
-                        <div class="text-box text-center">Start your path to employment as a software engineer</div>
-                    </div>
-                </div>
+            <div class="col-md-8 col-md-offset-3 email">
+                <form class="form-inline">
+                <label class="label-text" for="email">Join the mailing list</label>
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your email address">
+                  </div>
+                <button type="submit" class="btn btn-default email-btn" onclick="Javascript:postEmailToGoogle()">Stay in Touch!</button>
+                </form>
             </div>
         </div>
-    </div>
 
-    <div class="section">
+        <div class="row">
+            <a class="card exposure-photo" href="exposure/">
+                <div class="card-text">
+                    <h2 class="title-text">Exposure</h2>
+                    <p class="caption-text">Bring a coding workshop to your school</p>
+                </div>
+            </a>
+            <a class="card enrollment-photo" href="programs/">
+                <div class="card-text">
+                    <h2 class="title-text">Enrollment</h2>
+                    <p class="caption-text">Register for a semester long Mission Bit course</p>
+                </div>
+            </a>
+            <a class="card employment-photo" href="employment/">
+                <div class="card-text">
+                    <h2 class="title-text">Employment</h2>
+                    <p class="caption-text">Start your path to employment as a software engineer</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="module parallax parallax-2">
+  <div class="container">
+  </div>
+</section>
+
+<section class="module content">
+    <div class="container">
         <div class="col-md-10 col-md-offset-1 box-container">
             <div class="headline text-center">
                 <h2>Our Model</h2>
@@ -126,110 +93,132 @@ enable-mentor-alert: false
             </div>
         </div>
     </div>
+</section>
 
-    <div class="section col-md-10 col-md-offset-1">
-        <!-- Stats Carousel -->
-        <div id="textCarousel" class="carousel slide carousel-fade box-container">
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="item active text-center text-box background-color-orange">
-                    <h1>5%</h1>
-                    <div class="white">San Francisco Unified School District has 17,000 high school students. In the 2014-2015 school year, only 5% were enrolled in a computer science course.</div>
-                </div>
-                <div class="item text-center text-box background-color-red">
-                    <h1>25%</h1>
-                    <div class="white">In 2015, women only made up 25% of software engineers, while African American and Latino made up 5% combined.</div>
-                </div>
-                <div class="item text-center text-box background-color-blue">
-                    <h1>1.4 M</h1>
-                    <div class="white">According to research, by the year 2020, 1.4 million jobs will go unfilled in computer science fields.<br></div>
-                </div>
-            </div>
+<section class="module parallax parallax-4">
+  <div class="container">
+  </div>
+</section>
 
-            <!-- Controls -->
-            <a class="left carousel-control" href="#textCarousel" data-slide="prev">
-                <span class="icon-prev color-blue"></span>
-            </a>
-            <a class="right carousel-control" href="#textCarousel" data-slide="next">
-                <span class="icon-next color-blue"></span>
-            </a>
-        </div>
-    </div>
+<section class="module content">
+    <div class="container">
+        <div class="col-md-12">
+            <!-- Stats Carousel -->
+            <div id="textCarousel" class="carousel slide carousel-fade box-container">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active text-center text-box background-color-orange">
+                        <h1>5%</h1>
+                        <div class="white">San Francisco Unified School District has 17,000 high school students. In the 2014-2015 school year, only 5% were enrolled in a computer science course.</div>
+                    </div>
+                    <div class="item text-center text-box background-color-red">
+                        <h1>25%</h1>
+                        <div class="white">In 2015, women only made up 25% of software engineers, while African American and Latino made up 5% combined.</div>
+                    </div>
+                    <div class="item text-center text-box background-color-blue">
+                        <h1>1.4 M</h1>
+                        <div class="white">According to research, by the year 2020, 1.4 million jobs will go unfilled in computer science fields.<br></div>
+                    </div>
+                </div>
 
-    <div class="section partners">
-        <div class="col-md-10 col-md-offset-1">
-            <div class='row'>
-                <div class="col-md-6">
-                    <div class="headline text-center">
-                        <h2>Our Sponsors</h2>
-                    </div>
-                    <div class='row first-row'>                    
-                        <div class='col-md-6'>
-                            <a href="http://www.facebook.com/" target="_blank" title="Facebook">
-                                <img src="images/partners/fb.png" alt="Facebook logo">
-                            </a>
-                        </div>
-                        <div class='col-md-6'>
-                            <a href="http://www.ifwe.co/" target="_blank" title="if(we)">
-                                <img src="images/partners/ifwe.png" alt="if(we) logo">
-                            </a>
-                        </div>
-                    </div>
-                    <div class='row second-row'>
-                        <div class='col-md-6'>
-                            <a href="http://calvarypresbyterian.org/" target="_blank" title="Calvary Church">
-                                <img src="images/partners/calpres.png" alt="Calvary Church logo">
-                            </a>                                                      
-                        </div>
-                        <div class='col-md-6'>
-                            <a href="https://unity3d.com/company" target="_blank" title="Unity Technologies">
-                                <img src="images/partners/unity.png" alt="Unity Technologies logo">
-                            </a>
-                        </div>
-                    </div>
-                    <div class='row second-row'>
-                        <div class='col-md-6'>
-                            <a href="http://zynga.org/" target="_blank" title="Zynga.org">
-                                <img src="images/partners/zyngaorg.jpg" alt="Zynga.org logo">
-                            </a>
-                        </div>
-                        <div class='col-md-6 second-column'>
-                            <a href="https://www.symantec.com/index.jsp" target="_blank" title="Symantec">
-                                <img src="images/partners/symantec.jpg" alt="Symantec logo">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="headline text-center">
-                        <h2>Our Partners</h2>
-                    </div>
-                    <div class='row first-row'>
-                        <div class='col-md-6'>
-                            <a href="http://www.hackreactor.com/" target="_blank" title="Hack Reactor">
-                                <img src="images/partners/hr.png" alt="Pocket Gems logo">
-                            </a>
-                        </div>
-                        <div class='col-md-6 second-column'>
-                            <a href="http://www.sfusd.edu/" target="_blank" title="SFUSD">
-                                <img src="images/partners/SFUSD.jpg" alt="SFUSD logo">
-                            </a>
-                        </div>
-                    </div>
-                    <div class='row second-row'>
-                        <div class='col-md-6'>
-                            <a href="http://www.ccsf.edu/" target="_blank" title="CCSF">
-                                <img src="images/partners/ccsf.png" alt="CCSF logo">
-                            </a>
-                        </div>
-                        <div class='col-md-6 second-column'>
-                            <a href="http://techcrunch.com/" target="_blank" title="TechCrunch">
-                                <img src="images/partners/techcrunch.jpg" alt="TechCrunch logo">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#textCarousel" data-slide="prev">
+                    <span class="icon-prev color-blue"></span>
+                </a>
+                <a class="right carousel-control" href="#textCarousel" data-slide="next">
+                    <span class="icon-next color-blue"></span>
+                </a>
             </div>
         </div>
     </div>
-</div><!-- /container -->
+</section>
+
+<section class="module parallax parallax-3">
+  <div class="container">
+  </div>
+</section>
+
+<section class="module content">
+    <div class="container">
+        <div class="row">
+            <div class="section partners">
+                <div class="col-md-12">
+                    <div class='row'>
+                        <div class="col-md-6">
+                            <div class="headline text-center">
+                                <h2>Our Sponsors</h2>
+                            </div>
+                            <div class='row first-row'>                    
+                                <div class='col-md-6'>
+                                    <a href="http://www.facebook.com/" target="_blank" title="Facebook">
+                                        <img src="images/partners/fb.png" alt="Facebook logo">
+                                    </a>
+                                </div>
+                                <div class='col-md-6'>
+                                    <a href="http://www.ifwe.co/" target="_blank" title="if(we)">
+                                        <img src="images/partners/ifwe.png" alt="if(we) logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class='row second-row'>
+                                <div class='col-md-6'>
+                                    <a href="http://calvarypresbyterian.org/" target="_blank" title="Calvary Church">
+                                        <img src="images/partners/calpres.png" alt="Calvary Church logo">
+                                    </a>                                                     
+                                </div>
+                                <div class='col-md-6'>
+                                    <a href="https://unity3d.com/company" target="_blank" title="Unity Technologies">
+                                        <img src="images/partners/unity.png" alt="Unity Technologies logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class='row second-row'>
+                                <div class='col-md-6'>
+                                    <a href="http://zynga.org/" target="_blank" title="Zynga.org">
+                                        <img src="images/partners/zyngaorg.jpg" alt="Zynga.org logo">
+                                    </a>
+                                </div>
+                                <div class='col-md-6 second-column'>
+                                    <a href="https://www.symantec.com/index.jsp" target="_blank" title="Symantec">
+                                        <img src="images/partners/symantec.jpg" alt="Symantec logo">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="headline text-center">
+                                <h2>Our Partners</h2>
+                            </div>
+                            <div class='row first-row'>
+                                <div class='col-md-6'>
+                                    <a href="http://www.hackreactor.com/" target="_blank" title="Hack Reactor">
+                                        <img src="images/partners/hr.png" alt="Pocket Gems logo">
+                                    </a>
+                                </div>
+                                <div class='col-md-6 second-column'>
+                                    <a href="http://www.sfusd.edu/" target="_blank" title="SFUSD">
+                                        <img src="images/partners/SFUSD.jpg" alt="SFUSD logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class='row second-row'>
+                                <div class='col-md-6'>
+                                    <a href="http://www.ccsf.edu/" target="_blank" title="CCSF">
+                                        <img src="images/partners/ccsf.png" alt="CCSF logo">
+                                    </a>
+                                </div>
+                                <div class='col-md-6 second-column'>
+                                    <a href="http://techcrunch.com/" target="_blank" title="TechCrunch">
+                                        <img src="images/partners/techcrunch.jpg" alt="TechCrunch logo">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- /container -->

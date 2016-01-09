@@ -24,6 +24,7 @@ h1 {
     color: #FFF;
     padding-bottom: 10px;
     font-size: 48px;
+    text-align: center;
 }
 
 p {
@@ -34,67 +35,154 @@ p {
 
 a:hover {
     text-decoration: none;
+    cursor: pointer;
 }
 
-.white {
-    color: #FFF;
+/* Home Page */
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-/* Home Page Carousel */
-
-#photoCarousel {
-    height: 50%;
+section.module p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 30px;
 }
 
-.carousel .item,
-.carousel .item.active {
-    height: 100%;
+h2 {
+    font-family: 'Open Sans', 'sans-serif';
 }
 
-.carousel-fade .carousel-inner .item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-}
-.carousel-fade .carousel-inner .active {
-  opacity: 1;
-}
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
-  opacity: 1;
-}
-.carousel-fade .carousel-control {
-  z-index: 2;
+h3 {
+    font-size: 22px;
 }
 
-#photo1 {
-    background-image: url(../images/home/homepage4.png);
+.section {
+    font-size: 120%;
+    font-family: 'Merriweather', serif;
+    padding: 15px;
 }
 
-#photo2 {
-    background-image: url(../images/home/homepage2.jpg);
+section.module.content {
+  padding: 40px 0;
 }
 
-#photo3 {
-    background-image: url(../images/home/homepage3.jpg);
+section.module.content a {
+  cursor: pointer;
 }
 
-#photo4 {
-    background-image: url(../images/home/homepage1.jpg);
+section.module.parallax {
+  height: 625px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.module.parallax h1 {
+  font-family: 'Open Sans', 'sans-serif';
+  color: #fff;
+  text-align: center;
+  padding-top: 250px;
+  font-size: 50px;
+}
+
+section.module.parallax-1 {
+  background-image: url(../images/home/homepage4.png);
+}
+
+section.module.parallax-2 {
+  background-image: url(../images/home/homepage2.jpg);
+}
+
+section.module.parallax-3 {
+  background-image: url(../images/home/homepage3.jpg);
+}
+
+section.module.parallax-4 {
+  background-image: url(../images/home/homepage1.jpg);
+}
+
+/* Exposure, Enrollment, Employment boxes */
+
+.card {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 5px;
+    padding: 0;
+    float: left;
+}
+
+.card:hover {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .25),0 5px 15px #193047;
+}
+
+.card-text {
+    padding: 5px;
+    color: #fff;
+}
+
+.exposure-photo {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../images/exposure.jpg);
+    background-repeat: no-repeat;
+    background-position: 30%;
+    background-size: 100%;
+}
+
+.enrollment-photo {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../images/enrollment.jpg);
+    background-repeat: no-repeat;
+    background-position: 30%;
+    background-size: 100%;
+}
+
+.employment-photo {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../images/employment.jpg);
+    background-repeat: no-repeat;
+    background-position: 30%;
+    background-size: 100%;
+}
+
+
+.title-text {
+    font-weight: 600;
+    text-align: center;
+    padding-top: 45px;
+    color: #fff;
+}
+
+.caption-text {
+    color: #fff;
+    text-align: center;
+}
+.text-box {
+    padding: 15px 15px 40px 15px;
+    font-size: 18px;
 }
 
 /* Email submission */
 
 .email {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-right: 10px;
     margin-bottom: 50px;
 }
@@ -109,6 +197,12 @@ a:hover {
 }
 
 /* Model */
+
+.box-container {
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    margin-bottom: 50px;
+}
 
 .model-icons {
     margin-top: 80px;
@@ -132,7 +226,7 @@ a:hover {
 }
 
 .model-icon {
-    padding-top: 20px;
+    padding-top: 25px;
 }
 
 .icon-caption {
@@ -148,35 +242,6 @@ a:hover {
 #last-elements .icon-caption {
     width: 100%;
     margin-bottom: 25px;
-}
-
-/* Exposure, Enrollment, Employment */
-
-.box-container {
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
-    margin-bottom: 50px;
-}
-
-.shadow:hover {
-    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.8);
-    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.8);
-    box-shadow: 0 0 15px rgba(0,0,0,0.8);
-    cursor: pointer;
-}
-
-.text-box {
-    padding: 15px 15px 40px 15px;
-}
-
-.stats-title {
-    color: #3498db;
-}
-
-.box-photo {
-    padding: 10px;
-    height: 250px;
-    width: 300px;
 }
 
 /* Text Carousel */
@@ -226,8 +291,15 @@ a:hover {
 
 /* About Us */
 .director-photo {
-    width: 150px;
+    height: 175px;
     margin-right: 25px;
+    margin-bottom: 5px;
+}
+
+.director-caption {
+    font-size: 12px;
+    text-align: left;
+    margin: 0;
 }
 
 .spring15-student-form-error,
@@ -893,7 +965,9 @@ nav {
 }
 
 .navbar-nav {
-    margin-right: -150px;
+    margin-right: -250px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .navbar-nav > li.menu-button > a {
@@ -918,11 +992,11 @@ nav {
 .navbar-brand {
     display: block;
     width: 150px;
-    height: 40px;
+    height: 50px;
     background: url(../images/logo.png) no-repeat center center;
     background-size: 136px 36px;
     text-indent: -99999px;
-    margin: 6px 5px 5px 5px;
+    margin: 10px 5px 5px 5px;
 }
 
 #mbit .social-icon {
@@ -964,38 +1038,12 @@ nav {
     text-align: center;
 }
 
-/*.page-head {
-    width: 90%;
-    left: 5%;
-    background-color: #3498db;
-    text-align: center;
-    padding: 10px 0;
-    margin: -30px inherit auto auto;
-    color: white;
-    font-size: 150%;
-    font-family: 'Merriweather', sans-serif;
-}*/
-
-h2 {
-    font-family: 'Open Sans', 'sans-serif';
-}
-
-h3 {
-    font-size: 22px;
-}
-
 .subtitle {
     margin-bottom: 20px;
 }
 
 .season h2 {
     font-size: 2.5em;
-}
-
-.section {
-    font-size: 120%;
-    font-family: 'Merriweather', serif;
-    padding: 15px;
 }
 
 .section ul {
@@ -1114,6 +1162,44 @@ h3 {
     z-index: -1;
     background-repeat: no-repeat;
     background-position: 30%;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.donate-photo {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/donate.jpg);
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.email-signup-photo {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/home/homepage2.jpg);
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
     margin: 0 0 25px 0;
     padding: 0;
 }
