@@ -1,29 +1,42 @@
 ---
 enable-mentor-alert: false
 ---
-
+<script type="text/javascript">var submitted=false;</script>
 <!-- container -->
 <!-- <div class="container home" role="main"> -->
 <section class="module parallax parallax-1">
   <div class="container">
-    <h1>Mission Bit</h1>
+    <div class="row">
+        <div class="col-md-7 headline-title">
+            <h1>Enrollment for Spring 2016 Classes is Now Open!</h1>
+        </div>
+    </div>
+    <div class="row spacer-row"></div>
+    <div class="row">
+        <a href="programs/">
+            <h1 class="col-md-4 col-md-offset-11 enrollment-link">Sign Up Here!</h1>
+        </a>
+    </div>
   </div>
 </section>
 <section class="module content">
     <div class="container">
         <div class='row'>
             <div class="col-md-10 col-md-offset-1">
-                <p>Mission Bit courses are project-based semester-long coding courses, taught by college computer science majors and supported by volunteer professional software engineers. Mission Bit education experiences are all-inclusive and ethnically and gender diverse. Mission Bit’s complementary programs create pathways for ‘limited access’ students to form connections with technology professionals and learn the skills, processes and technologies used by professional programmers.</p>
+                <p>Mission Bit courses are project-based semester-long coding courses, taught by college computer science majors and supported by volunteer professional software engineers. Mission Bit education experiences are all-inclusive and ethnically and gender diverse. Mission Bit’s complementary programs create pathways for ‘limited access’ students to form connections with technology professionals and learn the skills, processes, and technologies used by professional programmers.</p>
             </div>
         </div>
         <div class='row'>
             <div class="col-md-8 col-md-offset-3 email">
-                <form class="form-inline">
+                <iframe name="hidden_iframe" id="hidden_iframe"
+                style="display:none;" onload="if(submitted)
+                {window.location='http://www.missionbit.com/';}"></iframe>
+                <form  class="form-inline" id="email-form" action="https://docs.google.com/forms/d/1kACTVfRwjMTuS6o2MpzPQHjneOrizfZuBaQnA-f2OOQ/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
                 <label class="label-text" for="email">Join the mailing list</label>
                   <div class="form-group">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Your email address">
+                    <input type="text" name="entry.529542172" value="" id="entry_529542172" dir="auto" aria-label="Email  " title="" class="form-control" placeholder="Your email address">
                   </div>
-                <button type="submit" class="btn btn-default email-btn" onclick="Javascript:postEmailToGoogle()">Stay in Touch!</button>
+                <button type="submit" class="btn btn-default email-btn" id="email-submit">Stay in Touch!</button>
                 </form>
             </div>
         </div>
@@ -47,6 +60,33 @@ enable-mentor-alert: false
                     <p class="caption-text">Start your path to employment as a software engineer</p>
                 </div>
             </a>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-1">
+                <a href="http://missionlocal.org/2015/04/mission-nonprofit-hacks-tech-industrys-achievement-gap/" target="_blank">
+                    <img class="press-logo" src="../images/press/mission-logo.png" />
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="http://techcrunch.com/2015/10/18/missionbit-2/" target="_blank">
+                    <img class="press-logo" src="../images/press/tc-logo.jpg" />
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="http://www.sfchronicle.com/bayarea/article/Incomes-rise-across-S-F-except-for-African-6548522.php" target="_blank">
+                    <img class="press-logo" src="../images/press/SF-Chronicle-logo.png" />
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="http://www.newsweek.com/after-school-programs-make-difference-269102" target="_blank">
+                    <img class="press-logo push-down" src="../images/press/newsweek.jpg" />
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="http://www.sfbg.com/2014/06/17/disrupting-classroom" target="_blank">
+                    <img class="press-logo push-down" src="../images/press/SFBG-LOGO.jpeg" />
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -85,7 +125,7 @@ enable-mentor-alert: false
                             <div class='icon-caption'>Students enroll in college as CS majors</div>
                         </div>
                         <div class='row'>
-                            <div class='model-icon-circle'><i class="fa fa-university fa-3x model-icon"></i></div>
+                            <div class='model-icon-circle'><i class="fa fa-university fa-3x school-icon"></i></div>
                             <div class='icon-caption'>Students enroll in coding bootcamps</div>
                         </div>
                     </div>
@@ -108,8 +148,8 @@ enable-mentor-alert: false
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active text-center text-box background-color-orange">
-                        <h1>5%</h1>
-                        <div class="white">San Francisco Unified School District has 17,000 high school students. In the 2014-2015 school year, only 5% were enrolled in a computer science course.</div>
+                        <h1>6%</h1>
+                        <div class="white">San Francisco Unified School District has 17,000 high school students. In the 2015-2016 school year, only 6% were enrolled in a computer science course.</div>
                     </div>
                     <div class="item text-center text-box background-color-red">
                         <h1>25%</h1>
@@ -166,7 +206,7 @@ enable-mentor-alert: false
                                         <img src="images/partners/calpres.png" alt="Calvary Church logo">
                                     </a>                                                     
                                 </div>
-                                <div class='col-md-6'>
+                                <div class='col-md-6 second-column'>
                                     <a href="https://unity3d.com/company" target="_blank" title="Unity Technologies">
                                         <img src="images/partners/unity.png" alt="Unity Technologies logo">
                                     </a>
@@ -181,6 +221,13 @@ enable-mentor-alert: false
                                 <div class='col-md-6 second-column'>
                                     <a href="https://www.symantec.com/index.jsp" target="_blank" title="Symantec">
                                         <img src="images/partners/symantec.jpg" alt="Symantec logo">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class='row second-row'>
+                                <div class='col-md-6'>
+                                    <a href="http://www.salesforce.com/" target="_blank" title="Salesforce">
+                                        <img src="images/partners/salesforce.jpg" alt="Salesforce logo">
                                     </a>
                                 </div>
                             </div>

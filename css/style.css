@@ -59,6 +59,27 @@ h3 {
     font-size: 22px;
 }
 
+.headline-title {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.spacer-row {
+    height: 150px;
+}
+
+.enrollment-link {
+    background-color: #e67e22;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.enrollment-link:hover {
+    background-color: #e74c3c;
+    cursor: pointer;
+}
+
 .section {
     font-size: 120%;
     font-family: 'Merriweather', serif;
@@ -84,8 +105,7 @@ section.module.parallax h1 {
   font-family: 'Open Sans', 'sans-serif';
   color: #fff;
   text-align: center;
-  padding-top: 250px;
-  font-size: 50px;
+  padding-top: 15px;
 }
 
 section.module.parallax-1 {
@@ -112,7 +132,7 @@ section.module.parallax-4 {
     border: 1px solid #e5e5e5;
     overflow: hidden;
     position: relative;
-    margin: 20px 5px;
+    margin: 20px 5px 40px 5px;
     padding: 0;
     float: left;
 }
@@ -167,6 +187,7 @@ section.module.parallax-4 {
     font-weight: 600;
     text-align: center;
     padding-top: 45px;
+    padding-bottom: 5px;
     color: #fff;
 }
 
@@ -177,6 +198,17 @@ section.module.parallax-4 {
 .text-box {
     padding: 15px 15px 40px 15px;
     font-size: 18px;
+}
+
+/* Press */
+
+.press-logo {
+    width: 150px;
+}
+
+.push-down {
+    padding-top: 20px;
+    padding-right: 10px;
 }
 
 /* Email submission */
@@ -217,7 +249,7 @@ section.module.parallax-4 {
 .model-icon-circle {
     height: 90px;
     width: 90px;
-    margin-left: 25px;
+    margin-left: 10px;
     margin-bottom: 15px;
     text-align: center;
     border-radius: 50%;
@@ -229,6 +261,11 @@ section.module.parallax-4 {
     padding-top: 25px;
 }
 
+.school-icon {
+    padding-top: 20px;
+    padding-left: 5px;
+}
+
 .icon-caption {
     font-size: 12px;
     text-align: center;
@@ -236,7 +273,7 @@ section.module.parallax-4 {
 }
 
 #last-elements {
-    margin-top: -80px;
+    margin-top: -100px;
 }
 
 #last-elements .icon-caption {
@@ -290,16 +327,190 @@ section.module.parallax-4 {
 }
 
 /* About Us */
+
+.spacer {
+    margin-bottom: 45px;
+    margin-top: 5px;
+    padding: 0;
+}
+
+.small-spacer {
+    margin-top: 25px;
+}
+
 .director-photo {
     height: 175px;
     margin-right: 25px;
     margin-bottom: 5px;
 }
 
+.director-name {
+    margin: 5px 0;
+}
+
 .director-caption {
     font-size: 12px;
     text-align: left;
     margin: 0;
+}
+
+/* Homepage and Banner photo styling */
+
+.subtitle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.homepage-image {
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.banner-image {
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.banner-title {
+    font-size: 75px;
+    padding-top: 210px;
+    text-align: center;
+}
+
+.exposure {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/exposure.jpg);
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.enrollment {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/enrollment.jpg);
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.employment {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/employment.jpg);
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.about-us {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/whoweare.jpg);
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.donate-photo {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/donate.jpg);
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+.email-signup-photo {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/home/homepage2.jpg);
+    min-width: 1172px;
+    overflow: hidden;
+    background-size: 100%;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    margin: 0 0 25px 0;
+    padding: 0;
 }
 
 .spring15-student-form-error,
@@ -958,7 +1169,6 @@ input.hack-mentor-check {
     font-weight: 500;
 }
 nav {
-    /*font-family: 'UbuntuMedium', sans-serif;*/
     font-family: 'Open Sans', 'sans-serif';
     font-weight: 500;
     font-size: 1.25em;
@@ -1038,9 +1248,6 @@ nav {
     text-align: center;
 }
 
-.subtitle {
-    margin-bottom: 20px;
-}
 
 .season h2 {
     font-size: 2.5em;
@@ -1050,158 +1257,6 @@ nav {
     padding-left: 0;
     list-style-position: inside;
     font-family: 'Merriweather', serif;
-}
-
-.homepage-image {
-    min-width: 1172px;
-    overflow: hidden;
-    background-size: 100%;
-    width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    margin: 0 0 25px 0;
-    padding: 0;
-}
-
-.banner-image {
-    min-width: 1172px;
-    overflow: hidden;
-    background-size: 100%;
-    width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-position: 30%;
-    margin: 0 0 25px 0;
-    padding: 0;
-}
-
-.banner-title {
-    font-size: 75px;
-    padding-top: 210px;
-    text-align: center;
-}
-
-.exposure {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)
-    ),
-    url(../images/exposure.jpg);
-    min-width: 1172px;
-    overflow: hidden;
-    background-size: 100%;
-    width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-position: 30%;
-    margin: 0 0 25px 0;
-    padding: 0;
-}
-
-.enrollment {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)
-    ),
-    url(../images/enrollment.jpg);
-    min-width: 1172px;
-    overflow: hidden;
-    background-size: 100%;
-    width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-position: 30%;
-    margin: 0 0 25px 0;
-    padding: 0;
-}
-
-.employment {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)
-    ),
-    url(../images/employment.jpg);
-    min-width: 1172px;
-    overflow: hidden;
-    background-size: 100%;
-    width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-position: 30%;
-    margin: 0 0 25px 0;
-    padding: 0;
-}
-
-.about-us {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)
-    ),
-    url(../images/whoweare.jpg);
-    min-width: 1172px;
-    overflow: hidden;
-    background-size: 100%;
-    width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-position: 30%;
-    margin: 0 0 25px 0;
-    padding: 0;
-}
-
-.donate-photo {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)
-    ),
-    url(../images/donate.jpg);
-    min-width: 1172px;
-    overflow: hidden;
-    background-size: 100%;
-    width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
-    background-repeat: no-repeat;
-    margin: 0 0 25px 0;
-    padding: 0;
-}
-
-.email-signup-photo {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)
-    ),
-    url(../images/home/homepage2.jpg);
-    min-width: 1172px;
-    overflow: hidden;
-    background-size: 100%;
-    width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
-    background-repeat: no-repeat;
-    margin: 0 0 25px 0;
-    padding: 0;
 }
 
 .homepage-image.img-hackerlab-1 {
