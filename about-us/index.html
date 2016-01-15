@@ -1,5 +1,5 @@
 ---
-enable-mentor-alert: true
+enable-mentor-alert: false
 title: "About Us"
 ---
 
@@ -7,40 +7,91 @@ title: "About Us"
   Edit _data/people.yml to make changes to the lists here!
 }
 {% endcomment %} -->
-<div class="homepage-image img-groups-1">
+<div class="about-us">
+    <h1 class="banner-title">About Us</h1>
 </div>
-
 <!-- container -->
 <div class="container" role="main">
-    <div class="page-head">
-        <span>Empowering youth with computer programming education and professional experiences</span>
-    </div>
     <div class="section">
-        <div class="headline" id="who-we-are">
-            <h2>Who We Are</h2>
-        </div>
+        <h2 class="subtitle">Who We Are</h2>
         <p>
-            Mission Bit is a non-profit that offers free programming classes taught by
-            <a href="about-us/#lead-instructors">experienced engineers and entrepreneurs</a>
-            to San Francisco public school students. We provide everything
-            the students need, they just need to show up and be eager to learn. No prior experience
-            required.
+            Mission Bit strives to eliminate the tech divide for youth living in urban poverty and rural areas across the San Francisco Bay Area by building computer programming and professional opportunity pathways for public school students. We provide everything the students need, they just need to show up and be eager to learn. No prior experience required.<br><br>
+            We give students the opportunity to learn directly from successful engineers and entrepreneurs who enjoy sharing knowledge. We're focused on project based learning and aim to teach both core computer science concepts as well as the practical skills and technologies that are required to build web sites and applications today.
         </p>
-        <p>
-            We give students the opportunity to learn directly from successful engineers and
-            entrepreneurs who enjoy sharing knowledge and want to give back
-            to the community. We're focused on project based learning and aim to teach both
-            core computer science concepts as well as the practical skills and technologies that are
-            required to build web sites and applications today. 
-        </p>
-        <ul>
-            <li><a href="about-us/#management">Management</a></li>
-            <li><a href="about-us/#board-of-directors">Board of Directors</a></li>
-            <li><a href="about-us/#lead-instructors">Lead Instructors</a></li>
-            <li><a href="about-us/#instructors">Instructors</a></li>
-            <li><a href="about-us/#advisors-to-the-board">Advisors to the Board</a></li>
-        </ul>
     </div>
+
+    <div class="section">
+        <div class="col-md-12 spacer">
+            <h3>Management</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="director-photo" src="../images/team/stevon-cook.jpg">
+                    <h3 class="director-name">Stevon Cook</h3>
+                    <div class="director-caption">CEO, Mission Bit</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 spacer">
+            <h3>Board of Directors</h3>
+            <div class="row small-spacer">
+                <div class="col-md-3">
+                    <img class="director-photo" src="../images/team/bob-ippolito.jpg">
+                    <h3 class="director-name">Bob Ippolito</h3>
+                    <div class="director-caption">Entrepreneur, Maker of Things</div>
+                </div>
+                <div class="col-md-3">
+                    <img class="director-photo" src="../images/team/brian.png">
+                    <h3 class="director-name">Brian Clark</h3>
+                    <div class="director-caption">CEO</div>
+                </div>
+                <div class="col-md-3">
+                    <img class="director-photo" src="../images/team/clive.jpg">
+                    <h3 class="director-name">Clive Downie</h3>
+                    <div class="director-caption">CMO, Unity Technologies</div>
+                </div>
+                <div class="col-md-3">
+                    <img class="director-photo" src="../images/team/daneen.jpg">
+                    <h3 class="director-name">Daneen Keaton</h3>
+                    <div class="director-caption">Education Coach, National Equity Project</div>
+                </div>
+            </div>
+            <div class="row small-spacer">
+                <div class="col-md-3">
+                    <img class="director-photo" src="../images/team/jarrod.jpg">
+                    <h3 class="director-name">Jarrod Jenkins</h3>
+                    <div class="director-caption">Attorney</div>
+                </div>
+                <div class="col-md-3">
+                    <img class="director-photo" src="../images/team/jesse-farmer.jpg">
+                    <h3 class="director-name">Jesse Farmer</h3>
+                    <div class="director-caption">Computer Programmer, Entrepreneur</div>
+                </div>
+                <div class="col-md-3">
+                    <img class="director-photo" src="../images/team/sharon.jpg">
+                    <h3 class="director-name">Sharon Olken</h3>
+                    <div class="director-caption">Executive Director, Gateway Public Schools</div>
+                </div>
+                <div class="col-md-3">
+                    <img class="director-photo" src="../images/team/tedde.jpg">
+                    <h3 class="director-name">Tedde Tsang</h3>
+                    <div class="director-caption">Consultant, Bain Capital</div>
+                </div>
+            </div>
+            <div class="row small-spacer">
+                <div class="col-md-3">
+                    <img class="director-photo" src="../images/team/tyson-daugherty.jpg">
+                    <h3 class="director-name">Tyson Daughtery</h3>
+                    <div class="director-caption">Founder, Mission Bit</div>
+                </div>
+                <div class="col-md-3">
+                    <img class="director-photo" src="../images/team/vanessa.jpeg">
+                    <h3 class="director-name">Vanessa Slavich</h3>
+                    <div class="director-caption">Square, Inc.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!--Promo Box-->
 <!--     <div class="headline" id="primary-goals"><h2>Program Goals</h2></div>
@@ -105,34 +156,4 @@ title: "About Us"
     </div>  -->
     <!-- Row -->
 
-    <div class="headline" id="management"><h2>Management</h2></div>
-    {% assign people = (site.data.people | where: "management", "y" | sort: "name", "last" | sort: "management-order", "first") %}
-    {% assign people_long_format = true %}
-    {% include about-us/people.html %}
-
-    <div class="headline" id="board-of-directors"><h2>Board of Directors</h2></div>
-    {% assign people = (site.data.people | where: "board", "y" | sort: "name", "last" | sort: "board-order", "first") %}
-    {% assign people_long_format = true %}
-    {% include about-us/people.html %}
-
-    <div class="headline" id="lead-instructors"><h2>Lead Instructors</h2></div>
-    {% assign people = (site.data.people | where: "lead", "y" | sort: "name", "last" | sort: "lead-order", "first") %}
-    {% assign people_long_format = false %}
-    {% include about-us/people.html %}
-
-    <div class="headline" id="instructors"><h2>Instructors</h2></div>
-    {% assign people = (site.data.people | where: "mentor", "y" | sort: "name", "last" | sort: "mentor-order", "first") %}
-    {% assign people_long_format = false %}
-    {% include about-us/people.html %}
-
-    <div class="headline" id="advisors-to-the-board"><h2>Advisors to the Board</h2></div>
-    {% assign people = (site.data.people | where: "advisor", "y" | sort: "name", "last" | sort: "advisor-order", "first") %}
-    {% assign people_long_format = false %}
-    {% include about-us/people.html %}
-
-    <div class="section">
-        <div class="donate-ctr">
-            <a class="btn btn-lg btn-default donate" href="donate/">Donate Today</a>
-        </div>
-    </div>
-</div>
+    

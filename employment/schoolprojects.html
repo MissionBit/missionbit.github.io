@@ -1,0 +1,262 @@
+---
+title: "Get Involved – School Projects"
+scripts: |
+    <!-- PARSE -->
+    <script src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
+    <script src="js/get-involved.js"></script>
+---
+<!-- container -->
+<div class="container" role="main">
+  <div class="section row">
+    <div class="headline season col-sm-12">
+        <h2> SFUSD Requested Development Projects </h2>
+    </div>
+    <div class="col-sm-12">
+    	<p> 
+    		Mission Bit is hoping to connect developers with principals, teachers and administrators within SFUSD that have product/app wish lists. Mission Bit is merely a match maker for the projects outlined below.  
+    	</p>
+    </div>
+  	</br>
+   
+    <div class="col-sm-12">
+    	<div class="row">
+        <div class="headline col-sm-12">
+            <h2> Mission High School Student Data Mapping </h2>
+        </div>
+
+        <div class="col-sm-12 description-div">
+        	<p class="project-owner"> 
+        		<span class="owner-header"> Mission High School Project Lead: </span>
+        		<span class="owner-name"> Brian Fox, Mission High School Vice Principal </span>
+        	</p>
+        	
+	        <p class="project-description"> 
+	        	Brian Fox is looking for someone to develop an app that:
+	        	<ol>
+	        		<li> 
+	        			maps MHS students based on residence. 
+	        		</li>
+	        		<li> 
+	        			enables filtering of mapped MHS students based available anonymous student data e.g. ethnicity, gender, GPA, household income. 
+	        		</li>
+	        		<li> 
+	        			layers general SF municipal data with selected MHS student data.
+	        		</li>
+	        	</ol>
+	        </p>
+	      </div>
+
+	      <div id="project-mission-map-form" class="col-sm-12 project-form">
+          <form class="form-horizontal" role="form">
+          	<div class="row">
+	      			
+	      			<div class="mhs-project-form-body col-sm-10 col-sm-offset-1">
+	      				<div class="row">
+
+	      					<div class="col-sm-12 MHS-map-lead question">
+                		<p> Would you be interested in learning more and potentially working with Brian to create this product/app?
+                		</p>
+                	</div>
+
+                	<div id="mhs-map-lead-div" class="form-group project-input-div">
+						      	<div class="col-sm-12">
+								      <div class="checkbox">
+											  <label>
+											    <input 
+											    type="checkbox" 
+											    name="mhsLead" 
+											    id="mhsLead" 
+											    value="Lead">
+											    Yes. I'm potentially interested in being Brian's volunteer lead.
+											  </label>
+											</div>
+
+											<div class="checkbox">
+											  <label>
+											    <input 
+											    	type="checkbox" 
+											    	name="mhsHack" 
+											    	id="mhsHack" 
+											    	value="Hack">
+											    Yes. I'm potentially interested in contributing to this project if Brian finds a lead developer.
+											  </label>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-12 mhs-project-details question mhs-session-info" hidden>
+                		<p> Your Full Name  
+                		</p>
+                	</div>
+
+                	<div id="project-name-div" class="form-group project-input-div mhs-project-details mhs-session-info" hidden>
+			              <!-- <label for="project-name" class="col-sm-2 control-label"> Your Full Name </label> -->
+			              <div class="col-sm-4 project-name">
+			                <input 
+			                  id="project-mhs-name-input" 
+			                  type="text" 
+			                  maxlength="50"
+			                  class="form-control project-input" 
+			                  placeholder="First Name Last Name">
+			              </div>
+			            </div>
+
+					        <div class="col-sm-12 mhs-project-details question mhs-session-info" hidden>
+                		<p> Your Email Address
+                		</p>
+                	</div>
+
+                	<div id="project-email-div" class="form-group project-input-div mhs-project-details mhs-session-info" hidden>
+			              <div class="col-sm-4 project-email">
+			                <input 
+			                  id="project-mhs-email-input" 
+			                  type="email" 
+			                  maxlength="50"
+			                  class="form-control project-input" 
+			                  placeholder="e.g. coder@coder.com">
+			              </div>
+			            </div>
+
+			            <div class="col-sm-10 col-sm-offset-1 mhs-project-success project-success" hidden>
+						      	<p class="success-msg"> Thanks you. We'll get back to you soon. </p>
+						      </div>
+
+			            <div class="form-group mhs-project-submit" hidden>
+					          <div id="save-mhs-project-button" class="col-sm-9">
+					            <button id="mhs-project-signup" type="submit" class="btn btn-primary"> SUBMIT DETAILS </button>
+					          </div>
+					        </div>
+
+								</div>
+							</div>
+	          </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-12">
+    	<div class="row">
+        <div class="headline col-sm-12">
+            <h2> SFUSD Education Technology Vendor Management App</h2>
+        </div>
+
+        <div class="col-sm-12 description-div">
+        	<p class="project-owner"> 
+        		<span class="owner-header"> SFUSD Staff Lead </span>
+        		<span class="owner-name"> Michele Dawson, Educational Technology Supervisor </span>
+        	</p>
+        	
+	        <p class="project-description"> 
+	        	Michele Dawson is looking for someone to develop an app that:
+	        	<ol>
+	        		<li> 
+	        			manages vendor product and services submissions 
+	        		</li>
+	        		<li> 
+	        			enables SFUSD ed tech staff to publish vendor and product details internally for principals and teachers to consider purchasing and/or using 
+	        		</li>
+	        		<li> 
+	        			principals and teachers can filter and sort vendors and products by defined criteria
+	        		</li>
+	        	</ol>
+	        </p>
+	        <p class="project-description"> 
+	        	This process is currently managed via google docs with high friction and low effeciency.
+	        </p>
+	      </div>
+
+	      <div id="project-sfusd-vendor-form" class="col-sm-12 project-form">
+          <form class="form-horizontal" role="form">
+          	<div class="row">
+	      			
+	      			<div class="sfusd-project-form-body col-sm-10 col-sm-offset-1">
+	      				<div class="row">
+
+	      					<div class="col-sm-12 sfusd-vendor-lead question">
+                		<p> Would you be interested in learning more and potentially working with Michele to create this product/app?
+                		</p>
+                	</div>
+
+                	<div id="sfusd-vendor-lead-div" class="form-group project-input-div">
+						      	<div class="col-sm-12">
+								      <div class="checkbox">
+											  <label>
+											    <input 
+											    type="checkbox" 
+											    name="sfusdLead" 
+											    id="sfusdLead" 
+											    value="Lead">
+											    Yes. I'm potentially interested in being Michele's volunteer lead.
+											  </label>
+											</div>
+
+											<div class="checkbox">
+											  <label>
+											    <input 
+											    	type="checkbox" 
+											    	name="sfusdHack" 
+											    	id="sfusdHack" 
+											    	value="Hack">
+											    Yes. I'm potentially interested in contributing to this project if Michele finds a lead developer.
+											  </label>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-12 sfusd-project-details question sfusd-session-info" hidden>
+                		<p> Your Full Name  
+                		</p>
+                	</div>
+
+                	<div id="project-name-div" class="form-group project-input-div sfusd-project-details sfusd-session-info" hidden>
+			              <!-- <label for="project-name" class="col-sm-2 control-label"> Your Full Name </label> -->
+			              <div class="col-sm-4 project-name">
+			                <input 
+			                  id="project-sfusd-name-input" 
+			                  type="text" 
+			                  maxlength="50"
+			                  class="form-control project-input" 
+			                  placeholder="First Name Last Name">
+			              </div>
+			            </div>
+
+					        <div class="col-sm-12 sfusd-project-details question sfusd-session-info" hidden>
+                		<p> Your Email Address
+                		</p>
+                	</div>
+
+                	<div id="project-email-div" class="form-group project-input-div sfusd-project-details sfusd-session-info" hidden>
+			              <div class="col-sm-4 project-email">
+			                <input 
+			                  id="project-sfusd-email-input" 
+			                  type="email" 
+			                  maxlength="50"
+			                  class="form-control project-input" 
+			                  placeholder="e.g. coder@coder.com">
+			              </div>
+			            </div>
+
+			            <div class="col-sm-10 col-sm-offset-1 sfusd-project-success project-success" hidden>
+						      	<p class="success-msg"> Thanks you. We'll get back to you soon. </p>
+						      </div>
+
+			            <div class="form-group sfusd-project-submit" hidden>
+					          <div id="save-sfusd-project-button" class="col-sm-9">
+					            <button id="sfusd-project-signup" type="submit" class="btn btn-primary"> SUBMIT DETAILS </button>
+					          </div>
+					        </div>
+
+								</div>
+							</div>
+	          </div>
+	          
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /container -->
