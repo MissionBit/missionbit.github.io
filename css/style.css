@@ -121,7 +121,7 @@ section.module.parallax-3 {
 }
 
 section.module.parallax-4 {
-  background-image: url(../images/home/homepage1.jpg);
+  background-image: url(../images/home/homepage1.JPG);
 }
 
 /* Exposure, Enrollment, Employment boxes */
@@ -401,7 +401,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url(../images/exposure.jpg);
+    url(../images/exposure.JPG);
     min-width: 1172px;
     overflow: hidden;
     background-size: 100%;
@@ -421,7 +421,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url(../images/enrollment.jpg);
+    url(../images/enrollment.JPG);
     min-width: 1172px;
     overflow: hidden;
     background-size: 100%;
@@ -461,7 +461,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url(../images/whoweare.jpg);
+    url(../images/whoweare.JPG);
     min-width: 1172px;
     overflow: hidden;
     background-size: 100%;
