@@ -40,11 +40,6 @@ a:hover {
 
 /* Home Page */
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 section.module p {
   font-size: 16px;
   margin-bottom: 10px;
@@ -65,7 +60,7 @@ h3 {
 }
 
 .spacer-row {
-    height: 150px;
+    height: 300px;
 }
 
 .enrollment-link {
@@ -73,6 +68,7 @@ h3 {
     color: #fff;
     font-size: 48px;
     font-weight: 800;
+    float: right;
 }
 
 .enrollment-link:hover {
@@ -96,6 +92,7 @@ section.module.content a {
 
 section.module.parallax {
   height: 625px;
+  width: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -244,6 +241,7 @@ section.module.parallax-4 {
 .arrow {
     padding-top: 25px;
     margin-left: 10px;
+    margin-bottom: 15px;
 }
 
 .model-icon-circle {
@@ -269,7 +267,6 @@ section.module.parallax-4 {
 .icon-caption {
     font-size: 12px;
     text-align: center;
-    width: 120%;
 }
 
 #last-elements {
@@ -277,8 +274,8 @@ section.module.parallax-4 {
 }
 
 #last-elements .icon-caption {
-    width: 100%;
     margin-bottom: 25px;
+    margin-left: -15px;
 }
 
 /* Text Carousel */
@@ -379,7 +376,7 @@ section.module.parallax-4 {
     min-width: 1172px;
     overflow: hidden;
     background-size: 100%;
-    width: 100%;
+    max-width: 100%;
     height: 550px;
     position: relative;
     z-index: -1;
@@ -1175,7 +1172,6 @@ nav {
 }
 
 .navbar-nav {
-    margin-right: -250px;
     margin-top: 10px;
     margin-bottom: 5px;
 }
