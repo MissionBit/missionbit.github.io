@@ -359,10 +359,9 @@ section.module.parallax-4 {
 }
 
 .homepage-image {
-    min-width: 1172px;
     overflow: hidden;
     background-size: 100%;
-    width: 100%;
+    max-width: 100%;
     height: 550px;
     position: relative;
     z-index: -1;
@@ -373,7 +372,6 @@ section.module.parallax-4 {
 }
 
 .banner-image {
-    min-width: 1172px;
     overflow: hidden;
     background-size: 100%;
     max-width: 100%;
@@ -399,10 +397,9 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35)
     ),
     url(../images/exposure.JPG);
-    min-width: 1172px;
     overflow: hidden;
     background-size: 100%;
-    width: 100%;
+    max-width: 100%;
     height: 550px;
     position: relative;
     z-index: -1;
@@ -419,10 +416,9 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35)
     ),
     url(../images/enrollment.JPG);
-    min-width: 1172px;
     overflow: hidden;
     background-size: 100%;
-    width: 100%;
+    max-width: 100%;
     height: 550px;
     position: relative;
     z-index: -1;
@@ -439,10 +435,9 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35)
     ),
     url(../images/employment.jpg);
-    min-width: 1172px;
     overflow: hidden;
     background-size: 100%;
-    width: 100%;
+    max-width: 100%;
     height: 550px;
     position: relative;
     z-index: -1;
@@ -459,10 +454,9 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35)
     ),
     url(../images/whoweare.JPG);
-    min-width: 1172px;
     overflow: hidden;
     background-size: 100%;
-    width: 100%;
+    max-width: 100%;
     height: 550px;
     position: relative;
     z-index: -1;
@@ -479,29 +473,9 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35)
     ),
     url(../images/donate.jpg);
-    min-width: 1172px;
     overflow: hidden;
     background-size: 100%;
-    width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
-    background-repeat: no-repeat;
-    margin: 0 0 25px 0;
-    padding: 0;
-}
-
-.email-signup-photo {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)
-    ),
-    url(../images/home/homepage2.jpg);
-    min-width: 1172px;
-    overflow: hidden;
-    background-size: 100%;
-    width: 100%;
+    max-width: 100%;
     height: 550px;
     position: relative;
     z-index: -1;
