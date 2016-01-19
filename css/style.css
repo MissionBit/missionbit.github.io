@@ -453,7 +453,7 @@ section.module.parallax-4 {
     }
 
     .container {
-        width: auto;
+        width: 100%;
         margin: 0;
     }
 
@@ -485,6 +485,20 @@ section.module.parallax-4 {
         display: none;
     }
 
+    #entry_529542172 {
+        width: 75%;
+    }
+
+    .cards.col-xs-offset-1 {
+        margin-left: 0;
+    }
+
+    .card {
+        width: auto;
+        height: 200px;
+        margin: 25px 0;
+    }
+
     .press-logo {
         margin-left: 30%;
     }
@@ -494,12 +508,12 @@ section.module.parallax-4 {
     }
 
     .banner-image {
-        height: 225px;
+        height: 175px;
     }
 
     .banner-title {
         font-size: 45px;
-        padding-top: 65px;
+        padding-top: 45px;
     }
 
     #model {
@@ -508,6 +522,8 @@ section.module.parallax-4 {
 
     iframe {
         width: 100%;
+        height: 500px;
+        margin: 0;
     }
 
 }
