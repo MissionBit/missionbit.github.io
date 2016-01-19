@@ -473,11 +473,13 @@ section.module.parallax-4 {
     section.module.parallax.parallax-1 {
         display: block;
         height: 250px;
+        margin-bottom: 50px;
     }
 
     .headline-title {
         font-size: 24px;
         width: 100%;
+        height: 100%;
     }
 
     .enrollment-link {
@@ -489,14 +491,9 @@ section.module.parallax-4 {
         width: 75%;
     }
 
-    .cards.col-xs-offset-1 {
-        margin-left: 0;
-    }
-
     .card {
-        width: auto;
-        height: 200px;
-        margin: 25px 0;
+        display: none;
+        height: 0;
     }
 
     .press-logo {
@@ -516,12 +513,18 @@ section.module.parallax-4 {
         padding-top: 45px;
     }
 
+    #textCarousel {
+        display: none;
+        height: 0;
+    }
+
     #model {
         display: none;
+        height: 0;
     }
 
     iframe {
-        width: 100%;
+        width: 90%;
         height: 500px;
         margin: 0;
     }
