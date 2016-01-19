@@ -9,8 +9,6 @@ site work well and look good:
 * [jQuery]
 * [Bootstrap]
 * [Font Awesome]
-* [Ubuntu Font Family]
-* [Source Code Pro]
 
 # Setup
 
@@ -94,6 +92,4 @@ title: "Minimal Page Example"
 [jQuery]: http://jquery.com/
 [Bootstrap]: http://getbootstrap.com/
 [Font Awesome]: http://fontawesome.io/
-[Ubuntu Font Family]: http://font.ubuntu.com/
-[Source Code Pro]: https://github.com/adobe/source-code-pro
 [YAML Front Matter]: http://jekyllrb.com/docs/frontmatter/
