@@ -7,6 +7,7 @@
 body {
     font-family: 'Merriweather', serif;
     text-align: justify;
+    max-width: 100%;
 }
 
 body .share img {
@@ -38,7 +39,7 @@ a:hover {
     cursor: pointer;
 }
 
-/* Home Page */
+/* Redesigned Site Home Page */
 
 section.module p {
   font-size: 16px;
@@ -69,6 +70,7 @@ h3 {
     font-size: 48px;
     font-weight: 800;
     float: right;
+    max-width: 100%;
 }
 
 .enrollment-link:hover {
@@ -358,28 +360,12 @@ section.module.parallax-4 {
     margin-bottom: 20px;
 }
 
-.homepage-image {
-    overflow: hidden;
-    background-size: 100%;
-    max-width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    margin: 0 0 25px 0;
-    padding: 0;
-}
-
 .banner-image {
     overflow: hidden;
-    background-size: 100%;
     max-width: 100%;
     height: 550px;
     position: relative;
     z-index: -1;
-    background-repeat: no-repeat;
-    background-position: 30%;
     margin: 0 0 25px 0;
     padding: 0;
 }
@@ -397,16 +383,9 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35)
     ),
     url(../images/exposure.JPG);
-    overflow: hidden;
-    background-size: 100%;
-    max-width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
     background-repeat: no-repeat;
     background-position: 30%;
-    margin: 0 0 25px 0;
-    padding: 0;
+    background-size: 100%;
 }
 
 .enrollment {
@@ -416,16 +395,9 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35)
     ),
     url(../images/enrollment.JPG);
-    overflow: hidden;
     background-size: 100%;
-    max-width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
     background-repeat: no-repeat;
     background-position: 30%;
-    margin: 0 0 25px 0;
-    padding: 0;
 }
 
 .employment {
@@ -435,16 +407,9 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35)
     ),
     url(../images/employment.jpg);
-    overflow: hidden;
     background-size: 100%;
-    max-width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
     background-repeat: no-repeat;
     background-position: 30%;
-    margin: 0 0 25px 0;
-    padding: 0;
 }
 
 .about-us {
@@ -454,16 +419,9 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35)
     ),
     url(../images/whoweare.JPG);
-    overflow: hidden;
     background-size: 100%;
-    max-width: 100%;
-    height: 550px;
-    position: relative;
-    z-index: -1;
     background-repeat: no-repeat;
     background-position: 30%;
-    margin: 0 0 25px 0;
-    padding: 0;
 }
 
 .donate-photo {
@@ -475,7 +433,7 @@ section.module.parallax-4 {
     url(../images/donate.jpg);
     overflow: hidden;
     background-size: 100%;
-    max-width: 100%;
+    width: 100%;
     height: 550px;
     position: relative;
     z-index: -1;
@@ -483,6 +441,81 @@ section.module.parallax-4 {
     margin: 0 0 25px 0;
     padding: 0;
 }
+
+/* Media Queries */
+
+@media screen and (max-width : 768px) {
+
+    html {
+/*        -webkit-text-size-adjust: none;*/
+        width: 100%;
+        margin: 0;
+    }
+
+    .container {
+        width: auto;
+        margin: 0;
+    }
+
+    .navbar-toggle {
+        float: left;
+    }
+
+    .navbar-responsive-collapse {
+        float: left;
+    }
+
+    section.module.parallax {
+        display: none;
+        height: 0;
+    }
+
+    section.module.parallax.parallax-1 {
+        display: block;
+        height: 250px;
+    }
+
+    .headline-title {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .enrollment-link {
+        height: 0;
+        display: none;
+    }
+
+    .press-logo {
+        margin-left: 30%;
+    }
+
+    .box-container {
+        width: auto;
+    }
+
+    .banner-image {
+        height: 225px;
+    }
+
+    .banner-title {
+        font-size: 45px;
+        padding-top: 65px;
+    }
+
+    #model {
+        display: none;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+}
+
+
+
+/* Old Site CSS */
+
 
 .spring15-student-form-error,
 .spring15-mentor-form-error {
@@ -2295,7 +2328,7 @@ footer address td.contact-info {
     }
 
     .programs p {
-        font-size: 1em;
+        font-size: 1.4em;
     }
 
     .action-buttons {
