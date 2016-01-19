@@ -488,7 +488,7 @@ section.module.parallax-4 {
     }
 
     #entry_529542172 {
-        width: 85%;
+        width: 90%;
     }
 
     .card {
@@ -498,6 +498,20 @@ section.module.parallax-4 {
 
     .press-logo {
         margin-left: 30%;
+    }
+
+    .first-row {
+        padding-top: 0;
+        margin-left: 0;
+    }
+
+    .second-row {
+        padding-left: 0;
+    }
+
+    .second-column {
+        padding-top: 0;
+        padding-left: 0;
     }
 
     .box-container {
@@ -523,8 +537,9 @@ section.module.parallax-4 {
         height: 0;
     }
 
-    .code-ramp-form {
-        width: 85%;
+    .code-ramp-form.col-xs-12 {
+        padding: 0;
+        margin: 0;
     }
 
     iframe {
