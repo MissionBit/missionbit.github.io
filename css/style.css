@@ -488,7 +488,7 @@ section.module.parallax-4 {
     }
 
     #entry_529542172 {
-        width: 75%;
+        width: 85%;
     }
 
     .card {
@@ -523,8 +523,12 @@ section.module.parallax-4 {
         height: 0;
     }
 
+    .code-ramp-form {
+        width: 85%;
+    }
+
     iframe {
-        width: 90%;
+        width: auto;
         height: 500px;
         margin: 0;
     }
