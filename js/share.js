@@ -1,7 +1,7 @@
 /*jslint browser: true*/
 window.jQuery(function ($) {
     'use strict';
-    var url = 'http://www.missionbit.com/donate/',
+    var url = 'https://www.missionbit.com/donate/',
         encodedURL = encodeURIComponent(url),
         title = encodeURIComponent('Free coding classes for SF public school students by @missionbit – '),
         buttons = $.makeArray($('.actions button').data('clicked', 0)),
@@ -31,10 +31,10 @@ window.jQuery(function ($) {
         $number.text(percent + '%');
     });
     $('.actions button.facebook').on('click', function fbClick(event) {
-        popup('http://www.facebook.com/share.php?u=' + encodedURL);
+        popup('https://www.facebook.com/share.php?u=' + encodedURL);
     });
     $('.actions button.twitter').on('click', function twitterClick(event) {
-        popup(['http://twitter.com/share',
+        popup(['https://twitter.com/share',
                '?text=', title,
                '&url=', encodedURL].join(''));
     });

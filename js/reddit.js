@@ -49,7 +49,7 @@ window.jQuery(function ($) {
     })
     console.log(widthCheck);
     var url = 'https://www.reddit.com/donate?organization=460945785',
-        shareURL = 'http://www.missionbit.com/reddit',
+        shareURL = 'https://www.missionbit.com/reddit',
         discussURL = 'https://www.reddit.com/r/redditdonate/comments/2wkoym/mission_bit_empowering_youth_with_free_computer/',
         encodedURL = encodeURIComponent(shareURL),
         title = encodeURIComponent('Help @missionbit win $82,765 from @reddit! Vote for Mission Bit!'),
