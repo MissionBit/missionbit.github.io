@@ -40,5 +40,14 @@
     <!-- Scripts -->
     <script type="text/javascript" src="vendor/jquery-2.0.3/jquery-2.0.3.min.js"></script>
 
+    <!-- change the navigation bar default listenter from click to hover -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#dropdown1").hover(function(){$("#dropdown-toggle1").click();});
+            $("#dropdown2").hover(function(){$("#dropdown-toggle2").click();});
+            $("#dropdown3").hover(function(){$("#dropdown-toggle3").click();});
+        });
+    </script>
+    
     {{ page.head }}
 </head>

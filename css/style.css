@@ -145,6 +145,7 @@ section.module.parallax-4 {
     color: #fff;
 }
 
+
 .exposure-photo {
     background: 
     linear-gradient(
@@ -374,6 +375,19 @@ section.module.parallax-4 {
     font-size: 75px;
     padding-top: 210px;
     text-align: center;
+}
+
+/* added image placeholder */
+.placeholder {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/placeholder.jpg);
+    background-repeat: no-repeat;
+    background-position: 30%;
+    background-size: 100%;
 }
 
 .exposure {
