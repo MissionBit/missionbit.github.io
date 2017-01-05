@@ -373,7 +373,9 @@ section.module.parallax-4 {
 
 .banner-title {
     font-size: 75px;
-    padding-top: 210px;
+/* updated about us photo */
+/*    padding-top: 210px;*/
+    padding-top: 320px;
     text-align: center;
 }
 
@@ -432,10 +434,13 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url(../images/whoweare.JPG);
-    background-size: 100%;
+/* updated about us photo */
+/*    url(../images/whoweare.JPG);*/
+    url(../images/whoweareFall17.JPG);
+    background-size: , 100%;
     background-repeat: no-repeat;
-    background-position: 30%;
+/*    background-position: 30%;*/
+    background-position: center;
 }
 
 .donate-photo {
