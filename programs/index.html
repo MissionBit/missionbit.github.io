@@ -70,6 +70,40 @@ title: "Enrollment"
             <br><br>    
             Students that enroll in this course will earn a $300 stipend and take part in a leadership development curriculum. </p>
     </div>
+<!--    temp thing start -->
+    <div class="section program class-module">
+<!--
+        <div class="class-logo">
+            <img src="images/program/html-css-js-logo-34.png" class="class-img hidden-xs"/>
+        </div>
+-->
+        <div class="class-text">
+            <div>
+                <h2> Summer 2017 Student Interest Form </h2>
+                <p>Enter Password</p>
+                <input id="numb">
+                <button type="button" onclick="myFunction()">Submit</button>
+                <p id="demo"></p>
+                
+                <script>
+                    function myFunction() {
+                        var x, text;
+
+                        x = document.getElementById("numb").value;
+
+                        if (x=="hello") {
+//                            location.replace("http://localhost:4000/spring17/studentInterest.html")
+                            location.replace("https://www.missionbit.com/spring17/studentInterest.html")
+//                            <a class="btn btn-lg btn-default shadow hardware spring-student" href="spring17/studentInterest.html">Student Signup</a>
+                        } else {
+                            document.getElementById("demo").innerHTML = "wrong password";
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+<!--    temp thing end -->
     <div class="section program class-module">
         <div class="class-logo">
             <img src="images/program/html-css-js-logo-34.png" class="class-img hidden-xs"/>
