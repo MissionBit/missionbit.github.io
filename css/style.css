@@ -136,6 +136,18 @@ section.module.parallax-4 {
     float: left;
 }
 
+/* for Student Projects each image link, also change col-xs-11 from 3 images per row to col-xs-12 4 images per row*/
+.card-Student-Projects {
+    width: 230px;
+    height: 200px;
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 5px 40px 5px;
+    padding: 0;
+    float: left;
+}
+
 .card:hover {
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .25),0 5px 15px #193047;
 }
@@ -387,6 +399,20 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35)
     ),
     url(../images/placeholder.jpg);
+    background-repeat: no-repeat;
+    background-position: 30%;
+    background-size: 100%;
+}
+
+/* added studentProjects image as a css class*/
+.studentProjects {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+/*    url(../images/studentProjects.png);*/
+    url(../images/Spring17DemoDayMissionBits2.jpg);
     background-repeat: no-repeat;
     background-position: 30%;
     background-size: 100%;
