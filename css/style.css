@@ -417,6 +417,19 @@ section.module.parallax-4 {
     background-size: 100%;
 }
 
+/* added gala image as a css class*/
+.gala {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/Spring17DemoDayMissionBits3.jpg);
+    background-repeat: no-repeat;
+    background-position: 30%;
+    background-size: 100%;
+}
+
 .exposure {
     background: 
     linear-gradient(
