@@ -1,0 +1,27 @@
+<html>
+
+    <head>
+<!--        #1 link our phaser.min file and state file(s)-->
+        <script src = "phaser.min.js"></script>
+        <script src = "mainState.js"></script>
+        
+        <script>
+//            #3 create a function for our game
+            (function() {
+//                #4 create a game object w/ size, phaser.canvas, and variable name
+                var game = new Phaser.Game(500, 200, Phaser.CANVAS, "game");
+//                #5 add our state(s)
+                game.state.add("state1",mainState);
+//                #6 start our state
+                game.state.start("state1");
+                
+            })();
+            
+        </script>
+        
+    </head>
+
+    <body>
+    </body>
+
+</html>
