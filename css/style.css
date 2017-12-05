@@ -80,7 +80,7 @@ h3 {
 
 .section {
     font-size: 120%;
-    font-family: 'Merriweather', serif;
+    font-family: 'Open Sans', serif;
     padding: 15px;
 }
 
@@ -159,7 +159,7 @@ section.module.parallax-4 {
 
 
 .exposure-photo {
-    background: 
+    background:
     linear-gradient(
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
@@ -171,7 +171,7 @@ section.module.parallax-4 {
 }
 
 .enrollment-photo {
-    background: 
+    background:
     linear-gradient(
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
@@ -183,7 +183,7 @@ section.module.parallax-4 {
 }
 
 .employment-photo {
-    background: 
+    background:
     linear-gradient(
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
@@ -317,7 +317,7 @@ section.module.parallax-4 {
 
 }
 
-.carousel-control .icon-prev, 
+.carousel-control .icon-prev,
 .carousel-control .icon-next {
     font-size: 100px;
 }
@@ -406,7 +406,7 @@ section.module.parallax-4 {
 
 /* added image placeholder */
 .placeholder {
-    background: 
+    background:
     linear-gradient(
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
@@ -419,7 +419,7 @@ section.module.parallax-4 {
 
 /* added studentProjects image as a css class*/
 .studentProjects {
-    background: 
+    background:
     linear-gradient(
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
@@ -432,7 +432,7 @@ section.module.parallax-4 {
 
 /* added gala image as a css class*/
 .gala {
-    background: 
+    background:
     linear-gradient(
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
@@ -444,7 +444,7 @@ section.module.parallax-4 {
 }
 
 .exposure {
-    background: 
+    background:
     linear-gradient(
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
@@ -456,7 +456,7 @@ section.module.parallax-4 {
 }
 
 .enrollment {
-    background: 
+    background:
     linear-gradient(
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
@@ -468,7 +468,7 @@ section.module.parallax-4 {
 }
 
 .employment {
-    background: 
+    background:
     linear-gradient(
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
@@ -480,7 +480,7 @@ section.module.parallax-4 {
 }
 
 .about-us {
-    background: 
+    background:
     linear-gradient(
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
@@ -495,7 +495,7 @@ section.module.parallax-4 {
 }
 
 .donate-photo {
-    background: 
+    background:
     linear-gradient(
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
@@ -631,7 +631,7 @@ section.module.parallax-4 {
     text-align: center;
     font-size: 2em;
     font-family: 'Merriweather', serif;
-    color: red;   
+    color: red;
 }
 .get-in-touch {
     font-style: italic;
@@ -652,7 +652,7 @@ section.module.parallax-4 {
 .spring15-input-success {
     border: 2px solid green;
     box-shadow: 1px 1px 15px rgba(0, 255, 0, 1);
-} 
+}
 
 .change-plan {
     color: black;
@@ -743,33 +743,45 @@ section.module.parallax-4 {
     font-size: 2.5em;
 }
 
+.classes-container {
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
 #programs .class-module {
     box-shadow: 0 0 15px rgba(0, 0, 0, .25);
 /*    overflow: hidden;*/
-    width: 98%;
-    margin: .5em .75% 1em .75%;
+    width: 75%;
+    margin: .5em .75% 1em 10%;
+    display: block;
+    float: left;
+    line-height: 0;
 }
 
 #programs .class-logo {
     text-align: center;
     min-height: 100%;
     height: 100%;
-    width: 21.75%;
+    width: 25%;
     display: inline-block;
-    margin: 2em 1% 1em 1%;
+    /*margin: 2em 1% 1em 1%;*/
+    margin: 0;
 }
 
 #programs .class-logo img {
-    width: 90%;
-    max-width: 100%;
+    /*width: 90%;*/
+    max-width: 200%;
 /*    margin-top: -4em;*/
     vertical-align: bottom;
-    margin: 0 4.5% 0 4.5%;
+    /*margin: 0 4.5% 0 4.5%;*/
+    margin: 0;
 }
 
 #programs .class-text {
     width: 73%;
-    margin: 1em 0 .75em 1%;
+    margin: 1em 0 0 1%;
     display: inline-block;
     vertical-align: top;
 }
@@ -778,6 +790,10 @@ section.module.parallax-4 {
     width: 46%;
     display: inline-block;
     text-align: center;
+}
+
+#programs .col-md-6 {
+    margin-bottom: 10%;
 }
 
 #mentor-btn-ctr {
@@ -801,20 +817,31 @@ section.module.parallax-4 {
 
 #programs .class-text .class-title {
     font-size: 2.5em;
-    vertical-align: middle; 
+    vertical-align: middle;
     font-style: italic;
-    font-weight: bold; 
+    font-weight: bold;
     font-family: 'Slabo 27px', serif;
 }
 
 #programs .class-text .class-lead-title {
     font-size: 1.75em;
-    vertical-align: middle; 
+    vertical-align: middle;
     font-family: 'Open Sans', 'sans-serif';
 }
 
-#programs .logistics {
+#programs .class-time {
+    font-size: 1.0em;
+    text-align: center;
+    padding-right: 1.5em;
+}
+
+#programs .class-location {
     font-size: 1.2em;
+}
+
+#programs .spring-student a {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .logistics-span {
@@ -878,8 +905,8 @@ section.module.parallax-4 {
 }
 
 .hackerlab .mhs-lab-vid {
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     border-radius: .5em;
 }
 
@@ -889,7 +916,7 @@ section.module.parallax-4 {
 .lab-volunteer-details {
     margin-top: 1em;
     text-align: center;
-    font-size: 1.75em; 
+    font-size: 1.75em;
 }
 
 #hack-mentor,
@@ -929,16 +956,16 @@ section.module.parallax-4 {
     text-align: center;
     font-size: 2em;
     font-family: 'Aldrich', sans-serif;
-    color: green;  
+    color: green;
 }
 
-#hack-mentor-first-name, 
+#hack-mentor-first-name,
 #hack-mentor-last-name,
 #hack-mentor-email,
-#spring-mentor-first-name, 
+#spring-mentor-first-name,
 #spring-mentor-last-name,
 #spring-mentor-email,
-#spring-student-first-name, 
+#spring-student-first-name,
 #spring-student-last-name,
 #spring-student-email,
 #spring-student-cell,
@@ -958,10 +985,10 @@ section.module.parallax-4 {
 #spring-student-comments {
     font-size: 2.25em;
     color: rgba(0,0,0,.4);
-    text-align: center; 
+    text-align: center;
 }
 
-#hack-workshop-first-name, 
+#hack-workshop-first-name,
 #hack-workshop-last-name,
 #hack-workshop-email {
     height: 3em;
@@ -969,7 +996,7 @@ section.module.parallax-4 {
     text-align: center;
 }
 
-#hack-hardware-first-name, 
+#hack-hardware-first-name,
 #hack-hardware-last-name,
 #hack-hardware-email {
     height: 3em;
@@ -980,7 +1007,7 @@ section.module.parallax-4 {
 #hack-workshop-description,
 #hack-hardware-info {
     font-size: 2.25em;
-    text-align: center; 
+    text-align: center;
 }
 
 .hack-question {
@@ -1080,13 +1107,13 @@ input.hack-mentor-check {
 
 #home-press .press-text .press-title {
     font-size: 1.75em;
-    vertical-align: middle; 
+    vertical-align: middle;
     font-style: italic;
-    font-weight: bold; 
+    font-weight: bold;
     font-family: 'Slabo 27px', serif;
 }
 
-#home-press .press-text .press-title:hover, 
+#home-press .press-text .press-title:hover,
 #home-press .press-text .press-title:focus {
     text-shadow: 0 1px 1px rgba(0,0,0,0.5);
     cursor: pointer;
@@ -1145,8 +1172,8 @@ input.hack-mentor-check {
 }
 
 .home #home-passion {
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     border-radius: .5em;
 }
 
@@ -1190,7 +1217,7 @@ input.hack-mentor-check {
 }
 
 .reasons {
-    text-align: center; 
+    text-align: center;
 }
 
 .open-signups h1 {
@@ -1535,7 +1562,7 @@ iframe.campaign-alert {
 
 #mbit .hardware {
     text-transform: uppercase;
-    font-family: 'Merriweather', serif;
+    font-family: 'Open Sans', serif;
     color: #fff;
     background: #1abc9c;
     text-shadow: none;
@@ -1695,7 +1722,7 @@ footer address td.contact-info {
 
 /*#hacklab.kickstart header {
     padding: 2px 0 0px 0;
-    margin-bottom: 0px;  
+    margin-bottom: 0px;
 }*/
 
 .share header h1 {
@@ -1805,7 +1832,9 @@ footer address td.contact-info {
 }
 
 .programs .section {
-    clear: both;
+    /*clear: both;*/
+    text-align: center;
+    padding: 0;
 }
 
 .program .logo {
@@ -1971,15 +2000,15 @@ footer address td.contact-info {
 }
 
 @media (min-width:769px) and (max-width: 991px) {
-    .homepage-image { 
-        height: 300px; 
-        min-width: 391px; 
+    .homepage-image {
+        height: 300px;
+        min-width: 391px;
     }
 }
 
 @media (max-width: 768px) {
-    .homepage-image { 
-        height: 200px; 
+    .homepage-image {
+        height: 200px;
         min-width: 586px;
     }
 }
@@ -1998,11 +2027,11 @@ footer address td.contact-info {
     font-family: 'Aldrich', sans-serif;
 }
 
-.share .kickhead h3, 
+.share .kickhead h3,
 .share .kickhead h1 {
     text-align: center;
     font-family: 'Aldrich', sans-serif;
-    color: white; 
+    color: white;
 }
 
 .share #kick-welcome {
@@ -2053,8 +2082,8 @@ footer address td.contact-info {
 
 .share .kick-home-box {
     width: 100%;
-    height: 42.857143%; 
-    margin-bottom: 2em; 
+    height: 42.857143%;
+    margin-bottom: 2em;
 }
 
 .kickstart-image {
@@ -2174,21 +2203,21 @@ footer address td.contact-info {
         font-size: 1.5em;
     }
 
-    #programs .class-logo {
+    /*#programs .class-logo {
         width: 25%;
         margin: 1.5em 1% 1em 1%;
     }
 
     #programs .class-logo img {
         width: 90%;
-        max-width: 100%;
-        margin: 0 4.5% 0 4.5%;
+        max-width: 200%;
+        margin: 0;
     }
 
     #programs .class-text {
         width: 70%;
         margin: 1em 0 .75em 1%;
-    }
+    }*/
 
     .programs #high-school h3 {
         font-size: 2.5em;
@@ -2221,6 +2250,8 @@ footer address td.contact-info {
 
     #programs .logistics {
         font-size: 1.0em;
+        text-align: right;
+        padding-right: 1.5em;
     }
 }
 
@@ -2301,14 +2332,14 @@ footer address td.contact-info {
     }
     .share .trigger-title {
         font-size: 2.5em;
-    } 
+    }
     .home-video-box {
         width: 80%;
         margin: 0 10% 0 10%;
     }
     .home-video {
         height: 23em;
-    } 
+    }
     #home-press .press-logo {
         width: 20%;
     }
@@ -2319,11 +2350,11 @@ footer address td.contact-info {
     #home-press .press-text {
         width: 75%;
         margin: 1.5em 0 0 2em ;
-    } 
+    }
     #home-top .home-stories-title {
         width: 90%;
         margin-left: 5%;
-    } 
+    }
 
     #programs .class-logo {
         width: 33%;
@@ -2372,7 +2403,7 @@ footer address td.contact-info {
 
     #programs .logistics {
         font-size: 1.0em;
-    } 
+    }
 }
 
 
@@ -2433,19 +2464,19 @@ footer address td.contact-info {
 }
 
 @media (max-width: 800px) {
-    .lab-video { 
+    .lab-video {
         width: 78%;
         height: 32em;
         margin: 2% 11% 3% 11%;
-    } 
+    }
 }
 
 @media (max-width: 780px) {
-    .lab-video { 
+    .lab-video {
         width: 80%;
         height: 34em;
         margin: 2% 10% 3% 10%;
-    } 
+    }
 }
 
 @media (max-width: 767px) {
@@ -2477,7 +2508,7 @@ footer address td.contact-info {
 }
 
 @media (max-width: 760px) {
-    .lab-video { 
+    .lab-video {
         width: 82%;
         height: 34em;
         margin: 2% 9% 3% 9%;
@@ -2485,25 +2516,25 @@ footer address td.contact-info {
 }
 
 @media (max-width: 740px) {
-    .lab-video { 
+    .lab-video {
         width: 83%;
         height: 34em;
         margin: 2% 8.5% 3% 8.5%;
-    } 
+    }
     .home-video {
         height: 22em;
-    } 
+    }
 }
 
 @media (max-width: 720px) {
-    .lab-video { 
+    .lab-video {
         width: 84%;
         height: 33em;
         margin: 2% 8% 3% 8%;
-    } 
+    }
     .home-video {
         height: 21.5em;
-    } 
+    }
 }
 
 @media (max-width: 710px) {
@@ -2518,14 +2549,14 @@ footer address td.contact-info {
 }
 
 @media (max-width: 700px) {
-    .lab-video { 
+    .lab-video {
         width: 84%;
         height: 32em;
         margin: 2% 8% 3% 8%;
     }
     .home-video {
         height: 21em;
-    } 
+    }
 }
 
 @media (max-width: 680px) {
@@ -2546,7 +2577,7 @@ footer address td.contact-info {
         height: 9.5%;
     }
 /*    .share #kick-welcome #support {
-        padding-top: .5em;  
+        padding-top: .5em;
     }*/
     .hackerlab #goal1,
     .hackerlab #goal2,
@@ -2607,43 +2638,43 @@ footer address td.contact-info {
 }
 
 @media (max-width: 650px) {
-    .lab-video { 
+    .lab-video {
         height: 30em;
-    } 
+    }
     .home-video {
         height: 19.5em;
     }
 }
 
 @media (max-width: 630px) {
-    .lab-video { 
+    .lab-video {
         height: 29em;
     }
     .home-video {
         height: 19em;
-    } 
+    }
 }
 
 @media (max-width: 605px) {
-    .lab-video { 
+    .lab-video {
         height: 28em;
-    } 
+    }
     .home-video {
         height: 18em;
-    } 
+    }
 }
 
 @media (max-width: 585px) {
     .home-video {
         height: 17.5em;
-    }    
+    }
 }
 
 @media (max-width: 580px) {
     #kick-welcome.share-cta,
     #kick-box.kick-box {
         width: 82%;
-    }  
+    }
 }
 
 @media (max-width: 575px) {
@@ -2677,7 +2708,7 @@ footer address td.contact-info {
         font-size: 1.75em;
         text-align: center;
         margin: 0 2em .5em 2em;
-        
+
     }
     #home-top .home-mission-headline {
         font-size: 1.25em;
@@ -2701,7 +2732,7 @@ footer address td.contact-info {
     #home-press .press-module {
         width: 88%;
         margin: .5em 6% 1em 6%;
-    } 
+    }
     #home-press .press-logo {
         width: 25%;
         margin: 0 37.5% 0 37.5%;
@@ -2717,47 +2748,47 @@ footer address td.contact-info {
         margin-top: .5em;
     }
     #home-press .press-text .press-title {
-        padding-left: 1em;  
+        padding-left: 1em;
     }
     #home-press .press-text .press-quote {
-        padding-left: 1.2em; 
+        padding-left: 1.2em;
     }
     #home-press .press-text .press-author {
-      padding-left: 1.5em;  
+      padding-left: 1.5em;
     }
 }
 
 @media (max-width: 570px) {
     .home-video {
         height: 17em;
-    }    
+    }
 }
 
 @media (max-width: 550px) {
-    .lab-video { 
+    .lab-video {
         height: 27em;
-    } 
+    }
     .home-video {
         height: 16.5em;
-    } 
+    }
 }
 
 @media (max-width: 530px) {
-    .lab-video { 
+    .lab-video {
         height: 26em;
-    } 
+    }
     .home-video {
         height: 16em;
-    } 
+    }
 }
 
 @media (max-width: 510px) {
-    .lab-video { 
+    .lab-video {
         height: 25em;
     }
     .home-video {
         height: 15.5em;
-    }  
+    }
 }
 
 @media (max-width: 491px) {
@@ -2816,7 +2847,7 @@ footer address td.contact-info {
     }
     .hackerlab #hack-title h3 {
         font-size: 1.8em;
-    } 
+    }
     #home-press .press-module {
         width: 85%;
         margin: .5em 7.5% 1em 7.5%;
@@ -2840,34 +2871,34 @@ footer address td.contact-info {
 
 
 @media (max-width: 490px) {
-    .lab-video { 
+    .lab-video {
         height: 24em;
     }
     .home-video {
         height: 15em;
-    } 
+    }
 }
 
 @media (max-width: 470px) {
-    .lab-video { 
+    .lab-video {
         height: 23em;
-    } 
+    }
     .home-video {
         height: 14.5em;
     }
 }
 
 @media (max-width: 450px) {
-    .lab-video { 
+    .lab-video {
         height: 22em;
-    } 
+    }
     .home-video {
         height: 14em;
     }
 }
 
 @media (max-width: 430px) {
-    .lab-video { 
+    .lab-video {
         height: 21em;
     }
     .home-video {
@@ -2876,7 +2907,7 @@ footer address td.contact-info {
 }
 
 @media (max-width: 410px) {
-    .lab-video { 
+    .lab-video {
         height: 20em;
     }
     .home-video {
@@ -2885,7 +2916,7 @@ footer address td.contact-info {
 }
 
 @media (max-width: 390px) {
-    .lab-video { 
+    .lab-video {
         height: 19em;
     }
     .home-video {
@@ -2894,7 +2925,7 @@ footer address td.contact-info {
 }
 
 @media (max-width: 370px) {
-    .lab-video { 
+    .lab-video {
         height: 18em;
     }
     .home-video {
