@@ -1,0 +1,77 @@
+body {
+	display: flex;
+	background: #000;
+    
+	width: 100vw;
+	height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Fredericka the Great", cursive;
+    color: #b2532d;
+}
+
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #ffffff;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+}
+
+.apple {
+    color: #c11313;
+}
+
+.potato {
+    color: #e2bf93;
+}
+
+.block {
+    display: block;
+    margin: auto;
+    padding-right: 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+.container {
+	margin: auto;
+	padding: 20px;
+}
+
+.emi {
+    font-family: 'Raleway', sans-serif;
+    color: #7fe7ff;
+}
+
+.flex {
+    display: flex;
+}
+
+.mary {
+    font-family: 'Raleway', sans-serif;
+    color: #7d42f4;
+}
+
+.nasheeb {
+    font-family: 'Raleway', sans-serif;
+    color: #2530f9;
+}
+
+.nicholas {
+    font-family: 'Raleway', sans-serif;
+    color: #adbfff;
+}
+
+#paper {
+    max-width: 100%;
+    
+	background: #000;
+	border: 1px solid #fff;
+}

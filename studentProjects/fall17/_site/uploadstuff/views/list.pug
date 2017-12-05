@@ -1,0 +1,27 @@
+html
+    head
+        meta(http-equiv="expires", content="0")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Home
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/static/base.css")
+        script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js")
+        script(src="/static/main.js")
+    body
+        div(class="container")
+            h1(class="center") Upload files
+            if message
+                p(class=`alert alert-${messageType} alert-dismissible fade show`)= message
+                    button(type="button", class="close", data-dismiss="alert")
+                        span &times;
+            if !auth
+                a(href="/login")
+                    button(class="btn btn-success", id="loginButton") Login
+            form(action='/upload', method='POST', enctype='multipart/form-data', class="center")
+                input(type='file', name='uploadFile')
+                button(type="submit") Submit
+            include includes/viewList.pug
+                                        
+                                

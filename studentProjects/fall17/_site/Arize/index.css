@@ -1,0 +1,24 @@
+.color {
+    color:red;
+    
+}
+
+.color2 {
+    color:deepskyblue
+}
+
+.color3 {
+    color: black
+}
+        
+#size {
+    font-size: 85px;
+}
+
+#size2 {
+    font-size: 25px;
+}
+
+body {
+    text-align: center;
+}
