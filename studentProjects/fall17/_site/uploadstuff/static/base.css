@@ -1,0 +1,44 @@
+#item-boxes {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+}
+
+.item-box {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    border: 2px solid #808080;
+    padding: 20px;
+    word-wrap: break-word; 
+}
+
+.item-box > a > img {
+    margin-left: 4px;
+}
+
+#item-box-wrapper {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#loginButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+#backButton {
+    margin-left: 16px;
+    margin-top: 16px;
+}

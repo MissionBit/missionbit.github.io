@@ -1,0 +1,19 @@
+canvas{
+  margin: auto;
+ border-bottom: 5px solid black;
+}
+
+body{
+  display: flex;
+  height:9vh;
+}
+body{
+  background: #ffffff
+}
+
+
+#score-container {
+  font-family: monospace;
+  text-align: center;
+  color: #fff;
+}
