@@ -1567,10 +1567,18 @@ iframe.campaign-alert {
     background: #1abc9c;
     text-shadow: none;
     border: none;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 #mbit .hardware:hover, #mbit .hardware:focus {
     background: white;
+    color: #1abc9c;
+}
+
+#mbit .learn-more {
+    margin-top: 0;
+    background: #fff;
     color: #1abc9c;
 }
 
