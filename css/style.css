@@ -3016,3 +3016,20 @@ img.gala-sponsor-img-ms:hover {
 a.gala-a {
     padding-right: 20px;
 }
+/* use in instructor and TA job post */
+/*
+div.mymargin {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+*/
+h3.myline-height {
+    line-height: 1%;
+}
+img.mycenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
