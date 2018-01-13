@@ -1587,14 +1587,11 @@ iframe.campaign-alert {
     background: #1abc9c;
     text-shadow: none;
     border: none;
-<<<<<<< HEAD
     width: 20%;
     height: 20%;
     margin: 0% 40%;
-=======
     margin-top: 5%;
     margin-bottom: 5%;
->>>>>>> 21e16ae504e626bab679570be03ab636cd20d73b
 }
 
 #mbit .hardware:hover, #mbit .hardware:focus {
@@ -3050,5 +3047,3 @@ a.gala-a {
     width: 20%;
     height: 20%;
 }
-
-
