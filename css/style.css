@@ -467,6 +467,23 @@ section.module.parallax-4 {
     background-position: 30%;
 }
 
+.volunteer {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/volunteers/MissionBitGala2017.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 30%;
+}
+
+.volunteer-card {
+    margin: 10%;
+
+}
+
 .employment {
     background:
     linear-gradient(
@@ -1567,6 +1584,9 @@ iframe.campaign-alert {
     background: #1abc9c;
     text-shadow: none;
     border: none;
+    width: 20%;
+    height: 20%;
+    margin: 0% 40%;
 }
 
 #mbit .hardware:hover, #mbit .hardware:focus {
