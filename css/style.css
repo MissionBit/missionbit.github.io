@@ -480,8 +480,21 @@ section.module.parallax-4 {
 }
 
 .volunteer-card {
-    margin: 10%;
+    height: 100%;
 
+}
+
+.volunteer-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4% 4% 0 4%;
+}
+
+.volunteer-buttons {
+    width: 20%;
+    height: 20%;
+    margin: 0% 40%;
+    padding: 20px 50px 20px 50px;
 }
 
 .employment {
@@ -1587,9 +1600,6 @@ iframe.campaign-alert {
     background: #1abc9c;
     text-shadow: none;
     border: none;
-    width: 20%;
-    height: 20%;
-    margin: 0% 40%;
     margin-top: 5%;
     margin-bottom: 5%;
 }
