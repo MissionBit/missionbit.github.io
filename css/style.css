@@ -1417,7 +1417,10 @@ li.navbar-gala {
 .section ul {
     padding-left: 0;
     list-style-position: inside;
-    font-family: 'Merriweather', serif;
+/*    font-family: 'Merriweather', serif;*/
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 30px;
 }
 
 .homepage-image.img-hackerlab-1 {
@@ -1567,10 +1570,18 @@ iframe.campaign-alert {
     background: #1abc9c;
     text-shadow: none;
     border: none;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 #mbit .hardware:hover, #mbit .hardware:focus {
     background: white;
+    color: #1abc9c;
+}
+
+#mbit .learn-more {
+    margin-top: 0;
+    background: #fff;
     color: #1abc9c;
 }
 
@@ -3008,3 +3019,13 @@ img.gala-sponsor-img-ms:hover {
 a.gala-a {
     padding-right: 20px;
 }
+/* use in instructor and TA job post */
+.jobpost img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: 20%;
+}
+
+
