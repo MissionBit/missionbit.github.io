@@ -467,6 +467,36 @@ section.module.parallax-4 {
     background-position: 30%;
 }
 
+.volunteer {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url(../images/volunteers/MissionBitGala2017.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 30%;
+}
+
+.volunteer-card {
+    height: 100%;
+
+}
+
+.volunteer-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4% 4% 0 4%;
+}
+
+.volunteer-buttons {
+    width: 20%;
+    height: 20%;
+    margin: 0% 40%;
+    padding: 25px 100px 25px 100px;
+}
+
 .employment {
     background:
     linear-gradient(
@@ -3027,5 +3057,3 @@ a.gala-a {
     width: 20%;
     height: 20%;
 }
-
-
