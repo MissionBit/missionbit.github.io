@@ -3,124 +3,559 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Mission Bit - Teacher Resources</title>
+  <title>MB Intro to Web</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/logo-nav.css" rel="stylesheet">
-    <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/2-col-portfolio.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/logo-nav.css" rel="stylesheet">
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="css/2-col-portfolio.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" alt="">
-                </a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="introToWeb.html">Intro to Web</a>
-                    </li>
-                    <li>
-                        <a href="android.html">Android Game Design</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <div id="wrapper">
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Teacher Resources</h1>
-                        <img style="max-height: 100px; width: auto;" src="img/construction.png">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 portfolio-item">    
-                        <div class="bs-callout bs-callout-info" id="callout-navbar-overflow">
-                            <h4>Links</h4> 
-                            <ul>
-                                <li>
-                                    <a href="https://drive.google.com/drive/folders/0B_raxv1Dw2l0czc3SXJkd2JReG8?usp=sharing">Google Drive folder</a>
-                                </li>
-                                <li>
-                                    <a href="https://ggorlen.github.io/mb/material/">Greg's Course Material</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <iframe style="width: 100%; height: 600px;" src="IntroToWeb/intro_curr.html"></iframe>
-                </div>
-            </div>
-        </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="">
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="introToWeb.html">Intro to Web</a>
+          </li>
+          <li>
+            <a href="android.html">Android Game Design</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
-    <!-- /#wrapper -->
+    <!-- /.container -->
+  </nav>
 
-    <hr>
-    <!-- Footer -->
-    <footer>
-        <div class="row footer">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Mission Bit 2017</p>
-            </div>
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <!-- <li class="sidebar-brand">
+        <a href="#">
+        Course Overview
+      </a>
+    </li> -->
+    <li>
+      <a href="https://drive.google.com/open?id=0B_raxv1Dw2l0czc3SXJkd2JReG8">Google Drive</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/open?id=1ksluCfSzI6wXOyNnT7o0BRwx_Ovm9lQu_G-7VYy5OTU">Syllabus</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/open?id=1Q616gMAkNK1BPU2EFgN-Ys6uzHVEf6U5f91qJ3Y7RTM">Timeline</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/open?id=14LSKXLJrDEJE99h-34APSCfv1rzAAzJWB5eedIPmY0c">Teacher Checklist and Tips</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/open?id=1yejq9eu_FT4M4KmOju0meYMUy9nKhMuORMEY4TVnsk4">Learning Outcomes + Assessment</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/open?id=1HMW9jKQ90DZHhz0WK645HkjqVDJf3nUb">Lectures</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/open?id=1vBjZ4mkPXt-aioQ-tire7csCTyLUMDzm">Lesson Plans</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/open?id=0B_raxv1Dw2l0SkpRbm84VDc5dG8">Surveys</a>
+    </li>
+    <li>
+      <a href="https://drive.google.com/open?id=1LByBsmsd4qTLVX5kwX00ts34JnM6VkHM">Resources</a>
+    </li>
+  </ul>
+</div>
+<!-- /#sidebar-wrapper -->
+
+<!-- Page Content -->
+<div id="page-content-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Intro to Web Programming</h1>
+        <p>Prerequisites: none</p>
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Quick Links</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Course Overview and Objectives</h2>
+        <h3>Course Description</h3>
+        <p>The Intro to Web Programming course is specifically designed for students with little to no coding knowledge. Students will learn HTML5, CSS3 and Javascript, as well as some core programming concepts through project based instruction. By the end of the semester, students will have built and designed a personal website and portfolio, a final project of their choice (website or web game), and additional small projects such as a Build Your Own Adventure game.</p>
+        <p>Topics include: HTML5, CSS3, JavaScript, Phaser (an HTML5 Game Framework), fundamentals of game design, and version control using git and Github.</p>
+        <h3>Learning Goals</h3>
+        <ul>
+          <li>Technical skills:
+            <ul>
+              <li>Design, prototype, and implement a website and/or Phaser web game</li>
+              <li>Describe the main features of HTML, CSS, and JavaScript</li>
+              <li>Use git and github for version control and code sharing (team / open source workflow - pull, push, add, commit, PRs)</li>
+              <li>Know the basics of how to start a python Server</li>
+              <li>Know basic terminal commands</li>
+              <li>Integrate JS into a web page</li>
+            </ul>
+          </li>
+          <li>Other goals:
+            <ul>
+              <li>Students will work effectively on teams and review each other's code.</li>
+              <li>Students will feel like they belong in tech</li>
+              <li>Students will have insights into what it’s like to work in the tech industry (pros and cons)</li>
+              <li>Students will learn how to create a game pitch</li>
+              <li>Students will develop public speaking skills</li>
+            </ul>
+          </li>
         </div>
-        <!-- /.row -->
-    </footer>
+      </div>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+      <!-- Page Header -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Curriculum
+            <small>Course Modules and Resources</small>
+          </h1>
+          <p>Each module is equivalent to 1 day of class during the summer, or 2 days of classes during the Fall/Spring semester.</p>
+        </div>
+      </div>
+      <!-- /.row -->
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+      <!-- Projects Row -->
+      <div class="row">
+        <!-- Module 1 -->
+        <div class="col-md-6 portfolio-item">
+          <h3>Module 1</h3>
+          <p>Introductions and getting started with web programming</p>
+          <div class="bs-callout bs-callout-warning" id="callout-navbar-overflow">
+            <h4>Agenda</h4>
+            <ol>
+              <li>Pre-course survey</li>
+              <li>Introductions</li>
+              <li>Course overview and logistics</li>
+              <li>Inspector</li>
+              <li>About-me</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-danger" id="callout-navbar-overflow">
+            <h4>Learning Outcomes -- Students will be able to:</h4>
+            <ol>
+              <li>Meet and engage with peers through community builders</li>
+              <li>Exchange contact info with at least two peers</li>
+              <li>Learn to navigate google classroom</li>
+              <li>Learn to use inspector</li>
+              <li>List at least 2 differences between HTML and CSS</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-info" id="callout-navbar-overflow">
+            <h4>Resources</h4>
+            <ol>
+              <li><a href="https://drive.google.com/open?id=1vn9gTTBBAnPR9F-KSoBsPoPv-1MFH-P5w2UU4ta_hXE">Lesson Plan</a></li>
+              <li><a href="https://drive.google.com/open?id=1-eAWV3Fsj5SeIaMKlcg3hsXrYYbyWuRfBQSl4EuiRb4">Lecture slides</a></li>
+            </ol>
+          </div>
+        </div>
+        <!-- end of Module 1 -->
 
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+        <!-- Module 2 -->
+        <div class="col-md-6 portfolio-item">
+          <h3>Module 2</h3>
+          <p>The magic of templates</p>
+          <div class="bs-callout bs-callout-warning" id="callout-navbar-overflow">
+            <h4>Agenda</h4>
+            <ol>
+              <li>Who said cheat-sheets are bad?</li>
+              <li>Web templates</li>
+              <li>Bootstrap</li>
+              <li>Your portfolio</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-danger" id="callout-navbar-overflow">
+            <h4>Learning Outcomes -- Students will be able to:</h4>
+            <ol>
+              <li>List at least 4 HTML/CSS tags (2 of each) and identify what they do</li>
+              <li>Explain what a template is and how to use them</li>
+              <li>Explain what Bootstrap is</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-info" id="callout-navbar-overflow">
+            <h4>Resources</h4>
+            <ol>
+              <li><a href="https://drive.google.com/open?id=1MNVl23VXUBOYVbZlKvNBTRwrObGqhJiY_eib5TKazmo">Lesson Plan</a></li>
+              <li><a href="https://drive.google.com/open?id=1MFEfr8oLivr0ZYOTLHLxuvGLu8qWh84BRqeO8FTt7XY">Lecture slides</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- Projects Row -->
+      <div class="row">
+        <div class="col-md-6 portfolio-item">
+          <h3>Module 3</h3>
+          <p></p>
+          <div class="bs-callout bs-callout-warning" id="callout-navbar-overflow">
+            <h4>Agenda</h4>
+            <ol>
+              <li>Git, GitHub, and the command line</li>
+              <li>Creating your first repo</li>
+              <li>Build your own adventure game</li>
+              <li>Teams!</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-danger" id="callout-navbar-overflow">
+            <h4>Learning Outcomes -- Students will be able to:</h4>
+            <ol>
+              <li>List at least 2 command line instructions</li>
+              <li>Describe what version control is</li>
+              <li>List at least 2 brainstorming rules</li>
+              <li>Participate in a brainstorming activity</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-info" id="callout-navbar-overflow">
+            <h4>Resources</h4>
+            <ol>
+              <li><a href="https://drive.google.com/open?id=1fD1TtqTEYC29RMOKW3HhcqM-bWIbiSXMyzRPjleDcdo">Lesson Plan</a></li>
+              <li><a href="https://drive.google.com/open?id=1jrKeN5fFom_N-ut4Sj8VHt0gcH3t4TB_APzgk-6q8Zs">Lecture slides</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-md-6 portfolio-item">
+          <h3>Module 4</h3>
+          <p></p>
+          <div class="bs-callout bs-callout-warning" id="callout-navbar-overflow">
+            <h4>Agenda</h4>
+            <ol>
+              <li>BYOA Game
+                <ol>
+                  <li>Teams</li>
+                  <li>Brainstorm</li>
+                  <li>Prototype</li>
+                  <li>Create a repo</li>
+                  <li>Divide and Conquer!</li>
+                </ol>
+              </li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-danger" id="callout-navbar-overflow">
+            <h4>Learning Outcomes -- Students will be able to:</h4>
+            <ol>
+              <li>Learn brainstorming and prototyping techniques</li>
+              <li>Describe what a repo is</li>
+              <li>Implement simple web pages</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-info" id="callout-navbar-overflow">
+            <h4>Resources</h4>
+            <ol>
+              <li><a href="https://drive.google.com/open?id=1Urb9OsL51aRAUCSD6aAlMNXD122sTuBPM5E_IHplB38">Lesson Plan</a></li>
+              <li><a href="https://drive.google.com/open?id=17FwM99SgjnwM8IbWvAraqKMOgSqcTq1qSe-c0dmrjVY">Lecture slides</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- Projects Row -->
+      <div class="row">
+        <div class="col-md-6 portfolio-item">
+          <h3>Module 5</h3>
+          <p></p>
+          <div class="bs-callout bs-callout-warning" id="callout-navbar-overflow">
+            <h4>Agenda</h4>
+            <ol>
+              <li>Pull and Push to integrate</li>
+              <li>The game pitch</li>
+              <li>BYOA game and show it off</li>
+              <li>Adding my first project to my Portfolio</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-danger" id="callout-navbar-overflow">
+            <h4>Learning Outcomes -- Students will be able to:</h4>
+            <ol>
+              <li>Describe what pull and push commands do</li>
+              <li>Know how to merge their work</li>
+              <li>Learn about the elevator pitch (what it is and basic techniques)</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-info" id="callout-navbar-overflow">
+            <h4>Resources</h4>
+            <ol>
+              <li><a href="https://drive.google.com/open?id=1fKXtGWgh4STzvHocK2WX9-uDzrvrN8YSx8aNnX-hfDU">Lesson Plan</a></li>
+              <li><a href="https://drive.google.com/open?id=1ofFNwlhXrsRO5toMm5YTUHLi-Amm1cj0zOGuGMRrif0">Lecture slides</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-md-6 portfolio-item">
+          <h3>Module 6</h3>
+          <p></p>
+          <div class="bs-callout bs-callout-warning" id="callout-navbar-overflow">
+            <h4>Agenda</h4>
+            <ol>
+              <li>The final project</li>
+              <li>Working in teams</li>
+              <li>Ideation</li>
+              <li>Intro to Game Design</li>
+              <li>Game Art + Tools</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-danger" id="callout-navbar-overflow">
+            <h4>Learning Outcomes -- Students will be able to:</h4>
+            <ol>
+              <li>List 2 productivity strategies that they will use in their teams</li>
+              <li>Practice brainstorming and prototyping</li>
+              <li>Learn fundamentals of game design - game mechanics and core loop</li>
+              <li>Learn about free resources available for creating or downloading game art</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-info" id="callout-navbar-overflow">
+            <h4>Resources</h4>
+            <ol>
+              <li><a href="https://drive.google.com/open?id=1z3qPXdCbfu2XY1TQMmY7J2RQUJkf6_Mjo2QDcmwHAzU">Lesson Plan</a></li>
+              <li><a href="https://drive.google.com/open?id=1wjuMWLaMJ_X0C7d5uWyrdolFduq8GTV3yBxuTczen8s">Lecture slides</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- Projects Row -->
+      <div class="row">
+        <div class="col-md-6 portfolio-item">
+          <h3>Module 7</h3>
+          <p></p>
+          <div class="bs-callout bs-callout-warning" id="callout-navbar-overflow">
+            <h4>Agenda</h4>
+            <ol>
+              <li>JS</li>
+              <li>JS in Bootstrap</li>
+              <li>Practice</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-danger" id="callout-navbar-overflow">
+            <h4>Learning Outcomes -- Students will be able to:</h4>
+            <ol>
+              <li>Describe JS</li>
+              <li>Learn about functions</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-info" id="callout-navbar-overflow">
+            <h4>Resources</h4>
+            <ol>
+              <li><a href="https://drive.google.com/open?id=13n0_t4H96s1AGrlEE1sqfBx8t1eICfeqYOOJ1sGzH6s">Lesson Plan</a></li>
+              <li><a href="https://drive.google.com/open?id=1wWXAiuf6XgbRSr86c8nDxoV8sckawU6Pk6AV3jJ5QDc">Lecture slides</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-md-6 portfolio-item">
+          <h3>Module 8</h3>
+          <p></p>
+          <div class="bs-callout bs-callout-warning" id="callout-navbar-overflow">
+            <h4>Agenda</h4>
+            <ol>
+              <li>Phaser</li>
+              <li>The server</li>
+              <li>The game loop</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-danger" id="callout-navbar-overflow">
+            <h4>Learning Outcomes -- Students will be able to:</h4>
+            <ol>
+              <li>Describe what Phaser is</li>
+              <li>Learn how to set up a Python server</li>
+              <li>Become familiar with the concept of game loop</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-info" id="callout-navbar-overflow">
+            <h4>Resources</h4>
+            <ol>
+              <li><a href="https://drive.google.com/open?id=1B11xFhB7DimfqXPK-hXDvcrugAARs2YaOSS1qxImhXE">Lesson Plan</a></li>
+              <li><a href="https://drive.google.com/open?id=1YH0tbJ-Dg4RJuDmZtD3mhBqLIobWT7H8Ypq8jxQWvn0">Lecture slides</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- Projects Row -->
+      <div class="row">
+        <div class="col-md-6 portfolio-item">
+          <h3>Module 9</h3>
+          <p></p>
+          <div class="bs-callout bs-callout-warning" id="callout-navbar-overflow">
+            <h4>Agenda</h4>
+            <ol>
+              <li></li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-danger" id="callout-navbar-overflow">
+            <h4>Learning Outcomes -- Students will be able to:</h4>
+            <ol>
+              <li></li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-info" id="callout-navbar-overflow">
+            <h4>Resources</h4>
+            <ol>
+              <li><a href="https://drive.google.com/open?id=1lpLUJb6yIIvUDe7AwRma01S09UvHou3vC07himTIqTk">Lesson Plan</a></li>
+              <li><a href="https://drive.google.com/open?id=1dnYV49X6MQOocGdvBUdlkZGrYp4StWjHCp3fbYsJJSY">Lecture slides</a></li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-md-6 portfolio-item">
+          <h3>Module 10</h3>
+          <p></p>
+          <div class="bs-callout bs-callout-warning" id="callout-navbar-overflow">
+            <h4>Agenda</h4>
+            <ol>
+              <li></li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-danger" id="callout-navbar-overflow">
+            <h4>Learning Outcomes -- Students will be able to:</h4>
+            <ol>
+              <li></li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-info" id="callout-navbar-overflow">
+            <h4>Resources</h4>
+            <ol>
+              <li><a href="https://drive.google.com/open?id=1rR0n1sjO98kj8Gi4UYY0A6RjIsmzLWg0VV4nODmRWy8">Lesson Plan</a></li>
+              <li><a href="https://drive.google.com/open?id=1XIuuDs4x4oj9VaB5mpJC2qxM6uDKxXklTbk3ozzOj5c">Lecture slides</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+
+      <!-- Projects Row -->
+      <div class="row">
+        <div class="col-md-6 portfolio-item">
+          <h3>Demo Day Prep</h3>
+          <div class="bs-callout bs-callout-warning" id="callout-navbar-overflow">
+            <h4>Agenda</h4>
+            <ol>
+              <li>Game Pitch</li>
+              <li>Public speaking</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-danger" id="callout-navbar-overflow">
+            <h4>Learning Outcomes -- Students will be able to:</h4>
+            <ol>
+              <li>Learn public speaking techniques</li>
+              <li>Practice for final presentation</li>
+            </ol>
+          </div>
+          <div class="bs-callout bs-callout-info" id="callout-navbar-overflow">
+            <h4>Resources</h4>
+            <ol>
+              <li><a href="https://docs.google.com/a/missionbit.com/document/d/1zN62ToxYW9Ig_t8qHcVfQILS4czJn1z9A0bul27vAWU/edit?usp=sharing">Lesson Plan / Public Speaking practice activity</a></li>
+              <li><a href="https://drive.google.com/drive/u/2/folders/0Bz6iyyhR4gvLZ3dSVjVIc2F5YUk">Demo Day items</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+
+      <!-- Pagination -->
+      <!-- <div class="row text-center">
+      <div class="col-lg-12">
+      <ul class="pagination">
+      <li>
+      <a href="#">&laquo;</a>
+    </li>
+    <li class="active">
+    <a href="#">1</a>
+  </li>
+  <li>
+  <a href="#">2</a>
+</li>
+<li>
+<a href="#">3</a>
+</li>
+<li>
+<a href="#">4</a>
+</li>
+<li>
+<a href="#">5</a>
+</li>
+<li>
+<a href="#">&raquo;</a>
+</li>
+</ul>
+</div>
+</div> -->
+<!-- /.pagination -->
+</div>
+</div>
+<!-- /#page-content-wrapper -->
+
+
+</div>
+<!-- /#wrapper -->
+
+<hr>
+<!-- Footer -->
+<footer>
+  <div class="row footer">
+    <div class="col-lg-12">
+      <p>Copyright &copy; Mission Bit 2017</p>
+    </div>
+  </div>
+  <!-- /.row -->
+</footer>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+$("#menu-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
+</script>
 
 </body>
 
