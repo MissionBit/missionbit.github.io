@@ -3027,5 +3027,10 @@ a.gala-a {
     width: 20%;
     height: 20%;
 }
-
-
+/* for summer18javascrip */
+#mydiv {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    border-style: ridge;
+}

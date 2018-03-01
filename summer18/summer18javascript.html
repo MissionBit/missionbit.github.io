@@ -1,0 +1,42 @@
+---
+enable-mentor-alert: false
+title: "Summer 2018 Intro Web Development Student Signup"
+scripts: |
+    <script src="js/spring15javascript.js"></script>
+---
+
+<div id="spring-student" class="container">
+	<div id="spring-student-form-box" class="row">
+        <div class="spring-student-head-box col-sm-12">
+            <p class="spring-student-headline">
+                <span class="spring15-form-title"> Mission Bit Summer 2018 Student Registration</span>
+                <br>
+                <span class="spring15-form-title"> Intro to Web Programming
+                    <br> Monday, Tuesday, Thursday, Friday, 9am - 1pm, Wednesday 9am - 12pm.
+                    <br> At CCSF Southeast Campus
+                    <br> (Class begins ???, 2018 and ends ???, 2018)
+                    <br> To RSVP please complete the form below.
+                </span>
+            </p>
+        </div>
+        <div>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeNbKxLdeW0k38wHNnGdfR_Wy44E4bz-EFk8bxHhSIcMy_mmg/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0" onload="myFunction()">Loading...</iframe>
+        </div>
+        <div id="mydiv">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/register-mb/makeup-interview-mh" style="min-width:320px;height:580px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+            <!-- Calendly inline widget end -->
+        </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("mydiv");
+                if (x.style.display === "none"){
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+	</div>
+</div>
