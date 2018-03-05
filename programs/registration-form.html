@@ -1,0 +1,20 @@
+---
+title: "Student Registration Form"
+enable-mentor-alert: false
+---
+
+<div class="container">
+	<div class="row">
+        <div>
+            <center>
+                <iframe id="registration_form" src="https://www.tfaforms.com/forms/view/4663249?" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            </center>
+        </div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var urlParams = new URLSearchParams(window.location.search);
+	const course_choice = urlParams.toString();
+	document.getElementById('registration_form').src += course_choice;
+</script>
