@@ -3061,3 +3061,26 @@ a.gala-a {
 .staff div {
     padding-bottom: 2%;
 }
+
+.reg-deadline {
+    color: white;
+    text-align: center;
+}
+
+@include media-breakpoint-up(sm) {
+  .reg-deadline {
+    font-size: 25%;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .reg-deadline {
+    font-size: 50%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .reg-deadline {
+    font-size: 100%;
+  }
+}
