@@ -5,7 +5,7 @@
     display-property-grouping:false */
 
 body {
-    font-family: 'Merriweather', serif;
+    font-family: 'Open Sans', serif;
     text-align: justify;
     max-width: 100%;
 }
@@ -367,11 +367,6 @@ section.module.parallax-4 {
 }
 
 /* Homepage and Banner photo styling */
-
-.subtitle {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 
 .banner-image {
     overflow: hidden;
@@ -752,27 +747,6 @@ section.module.parallax-4 {
 
 /********* PROGRAMS INDEX ***********/
 
-.programs-page-head {
-    width: 90%;
-    left: 5%;
-    background-color: #3498db;
-    text-align: center;
-    padding: 10px 0;
-    margin: -30px inherit auto auto;
-    color: white;
-    font-size: 180%;
-    font-family: 'Merriweather', serif;
-}
-
-.spring15-signups h3 {
-    width: 100%;
-    font-family: 'Open Sans', 'sans-serif';
-}
-
-.programs #high-school h3 {
-    font-size: 2.5em;
-}
-
 .classes-container {
     text-align: center;
     padding: 0;
@@ -782,100 +756,29 @@ section.module.parallax-4 {
 
 #programs .class-module {
     box-shadow: 0 0 15px rgba(0, 0, 0, .25);
-/*    overflow: hidden;*/
-    width: 75%;
-    margin: .5em .75% 1em 10%;
-    display: block;
-    float: left;
-    line-height: 0;
-}
-
-#programs .class-logo {
-    text-align: center;
-    min-height: 100%;
-    height: 100%;
-    width: 25%;
-    display: inline-block;
-    /*margin: 2em 1% 1em 1%;*/
-    margin: 0;
-}
-
-#programs .class-logo img {
-    /*width: 90%;*/
-    max-width: 200%;
-/*    margin-top: -4em;*/
-    vertical-align: bottom;
-    /*margin: 0 4.5% 0 4.5%;*/
-    margin: 0;
+    padding: 0;
 }
 
 #programs .class-text {
-    width: 73%;
+    padding: 0 5% 0 5%;
     margin: 1em 0 0 1%;
     display: inline-block;
     vertical-align: top;
 }
 
-#programs .action-buttons .spring15-ctr {
-    width: 46%;
-    display: inline-block;
+.course-name {
+    min-height: 60px;
+}
+
+.reg-deadline {
+    color: white;
     text-align: center;
 }
 
-#programs .col-md-6 {
-    margin-bottom: 10%;
-}
-
-#mentor-btn-ctr {
-    width: 94%;
-    display: inline-block;
-    text-align: center;
-}
-
-.action-buttons {
-    margin-top: 2em;
-    margin-bottom: 2em
-}
-
-#student-btn-ctr {
-    margin-right: 2%;
-}
-
-#mentor-btn-ctr {
-    margin-left: 2%;
-}
-
-#programs .class-text .class-title {
-    font-size: 2.5em;
-    vertical-align: middle;
-    font-style: italic;
-    font-weight: bold;
-    font-family: 'Slabo 27px', serif;
-}
-
-#programs .class-text .class-lead-title {
-    font-size: 1.75em;
-    vertical-align: middle;
-    font-family: 'Open Sans', 'sans-serif';
-}
-
-#programs .class-time {
-    font-size: 1.0em;
-    text-align: center;
-    padding-right: 1.5em;
-}
-
-#programs .class-location {
-    font-size: 1.2em;
-}
-
-#programs .spring-student a {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-}
-
-.logistics-span {
-    font-weight: bold;
+@media (max-width: 768px) {
+  .reg-deadline {
+    font-size: 15px;
+  }
 }
 
 /********* HACKER LAB INDEX ***********/
@@ -910,12 +813,6 @@ section.module.parallax-4 {
     height: 35em;
     padding: 2em;
     border-radius: .5em;
-}
-
-.share,
-.hackerlab,
-.programs {
-    font-size: 10px;
 }
 
 .hackerlab #hack-page-head {
@@ -1873,7 +1770,6 @@ footer address td.contact-info {
 }
 
 .programs .section {
-    /*clear: both;*/
     text-align: center;
     padding: 0;
 }
@@ -2244,30 +2140,6 @@ footer address td.contact-info {
         font-size: 1.5em;
     }
 
-    /*#programs .class-logo {
-        width: 25%;
-        margin: 1.5em 1% 1em 1%;
-    }
-
-    #programs .class-logo img {
-        width: 90%;
-        max-width: 200%;
-        margin: 0;
-    }
-
-    #programs .class-text {
-        width: 70%;
-        margin: 1em 0 .75em 1%;
-    }*/
-
-    .programs #high-school h3 {
-        font-size: 2.5em;
-    }
-
-    .programs p {
-        font-size: 1.2em;
-    }
-
     .action-buttons {
         margin-top: 2em;
         margin-bottom: 2em
@@ -2279,20 +2151,6 @@ footer address td.contact-info {
 
     #mentor-btn-ctr {
         margin-left: 2%;
-    }
-
-    #programs .class-text .class-title {
-        font-size: 2.25em;
-    }
-
-    #programs .class-text .class-lead-title {
-        font-size: 1.5em;
-    }
-
-    #programs .logistics {
-        font-size: 1.0em;
-        text-align: right;
-        padding-right: 1.5em;
     }
 }
 
@@ -2397,54 +2255,11 @@ footer address td.contact-info {
         margin-left: 5%;
     }
 
-    #programs .class-logo {
-        width: 33%;
-        margin: 1.5em 1% 1em 1%;
-    }
-
-    #programs .class-logo img {
-        width: 90%;
-        max-width: 100%;
-        margin: 0 4.5% 0 4.5%;
-    }
-
-    #programs .class-text {
-        width: 62%;
-        margin: 1em 0 .75em 1%;
-    }
-
-    .programs #high-school h3 {
-        font-size: 2em;
-    }
-
-    .programs p {
-        font-size: 1em;
-    }
-
     .action-buttons {
         margin-top: 2em;
         margin-bottom: 2em
     }
 
-    #student-btn-ctr .shadow {
-        font-size: 1.25em;
-    }
-
-    #mentor-btn-ctr .shadow {
-        font-size: 1.25em;
-    }
-
-    #programs .class-text .class-title {
-        font-size: 1.8em;
-    }
-
-    #programs .class-text .class-lead-title {
-        font-size: 1.25em;
-    }
-
-    #programs .logistics {
-        font-size: 1.0em;
-    }
 }
 
 
@@ -2521,31 +2336,12 @@ footer address td.contact-info {
 }
 
 @media (max-width: 767px) {
-    #programs .class-text {
-        width: 94%;
-        margin: -2em 4.5% .5em 4.5%;
-    }
-
-    .programs #high-school h3 {
-        font-size: 2em;
-    }
-
-    .programs p {
-        font-size: 1.4em;
-    }
 
     .action-buttons {
         margin-top: 1.5em;
         margin-bottom: 1em
     }
 
-    #student-btn-ctr .shadow {
-        font-size: 1em;
-    }
-
-    #mentor-btn-ctr .shadow {
-        font-size: 1em;
-    }
 }
 
 @media (max-width: 760px) {
@@ -2766,10 +2562,7 @@ footer address td.contact-info {
     .hackerlab #hack-headline {
         font-size: 1em;
     }
-/*    .hackerlab #hack-title h3,
-    .programs #high-school h3 {
-        font-size: 2em;
-    }*/
+
     #home-press .press-module {
         width: 88%;
         margin: .5em 6% 1em 6%;
@@ -3060,27 +2853,4 @@ a.gala-a {
 
 .staff div {
     padding-bottom: 2%;
-}
-
-.reg-deadline {
-    color: white;
-    text-align: center;
-}
-
-@include media-breakpoint-up(sm) {
-  .reg-deadline {
-    font-size: 25%;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  .reg-deadline {
-    font-size: 50%;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  .reg-deadline {
-    font-size: 100%;
-  }
 }
