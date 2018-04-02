@@ -393,8 +393,6 @@ section.module.parallax-4 {
 
 .banner-title {
     font-size: 75px;
-/* updated about us photo */
-/*    padding-top: 210px;*/
     padding-top: 320px;
     text-align: center;
 }
@@ -1246,7 +1244,8 @@ nav {
 }
 
 .navbar-nav > li.menu-button > a {
-    background-color: #3498DB;
+    /*background-color: #3498DB;*/
+    background-color: #c43f8a;
     margin-top: 5px;
     padding-top: 10px;
     margin-bottom: 5px;
@@ -1256,7 +1255,8 @@ nav {
 }
 
 .navbar-nav > li.menu-button > a:hover {
-    background-color: #2C86C2;
+    /*background-color: #2C86C2;*/
+    background-color: #9c356f;
     margin-top: 5px;
     padding-top: 10px;
     margin-bottom: 5px;
