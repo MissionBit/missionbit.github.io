@@ -3,21 +3,36 @@ title: "30K in 30 Days"
 ---
 <style>
   div.photo {
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)
-    ),
-    url(30k30days/3030-header.jpg);
+    background: url(30k30days/3030-header.jpg) no-repeat center;
     overflow: hidden;
     background-size: 100%;
-    width: 100%;
+    max-width: 100%;
     height: 550px;
     position: relative;
-    background-repeat: no-repeat;
     margin: 0 0 25px 0;
     padding: 0;
-}  
+  }  
+
+  @media screen and (max-width : 768px) {
+    div.photo {
+        height: 215px;
+    }
+  }
+  
+  .video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+  .video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+    
 </style>
 
 <div class="photo">
@@ -39,9 +54,9 @@ title: "30K in 30 Days"
       <div style="position: relative; float: left; width: 32.2%; margin-right: 1.5%;"><img typeof="foaf:Image" src="" width="399" height="337"></div>
       <div style="position: relative; float: left; width: 32.2%;"><img typeof="foaf:Image" src="" width="399" height="337"></div>
     </div> -->
-
-    <iframe width="1120" height="630" src="https://www.youtube-nocookie.com/embed/2R1yQmkL1Hg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    
+    <div class="video-responsive">
+      <iframe width="1120" height="630" src="https://www.youtube-nocookie.com/embed/2R1yQmkL1Hg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>  
   </div><!--/section-->
 
 
