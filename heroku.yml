@@ -1,0 +1,7 @@
+build:
+  packages:
+    - cmake
+  languages:
+    - ruby
+run:
+  web: bundle exec jekyll serve --safe -P $PORT

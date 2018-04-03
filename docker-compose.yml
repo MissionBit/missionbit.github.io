@@ -1,0 +1,13 @@
+version: '2'
+services:
+  web:
+    tty: true
+    stdin_open: true
+    build: .
+    environment:
+      - PORT=4000
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/app
+    command: bash /app/heroku-start.sh
