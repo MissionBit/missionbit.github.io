@@ -104,7 +104,7 @@ section.module.content a {
 }
 
 section.module.parallax {
-  height: 625px;
+  height: 100%;
   width: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
