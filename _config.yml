@@ -1,6 +1,7 @@
 title: "Mission Bit"
 exclude:
   - .c9
+  - vendor
 defaults:
   - scope:
       path: ""
