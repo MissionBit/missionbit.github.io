@@ -1,7 +1,8 @@
 title: "Mission Bit"
 exclude:
   - .c9
-  - vendor
+  - vendor/bundle
+  - vendor/heroku
 defaults:
   - scope:
       path: ""
