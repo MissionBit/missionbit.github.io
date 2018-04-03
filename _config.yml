@@ -1,6 +1,19 @@
 title: "Mission Bit"
 exclude:
   - .c9
+  - vendor/bundle
+  - vendor/heroku
+  - Dockerfile
+  - Dockerfile.web
+  - docker-compose.yml
+  - config.ru
+  - docker-start.sh
+  - app.json
+  - Gemfile
+  - Gemfile.lock
+  - heroku.yml
+  - Rakefile
+  - README.md
 defaults:
   - scope:
       path: ""
