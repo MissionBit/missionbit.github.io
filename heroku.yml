@@ -3,7 +3,5 @@ build:
     - cmake
   languages:
     - ruby
-  post:
-    - bundle exec jekyll build
 run:
   web: bundle exec jekyll serve --safe --port $PORT --host 0.0.0.0
