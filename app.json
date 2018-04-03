@@ -1,4 +1,10 @@
 {
   "name": "missionbit-github-io",
-  "stack": "container"
+  "stack": "container",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "hobby"
+    }
+  }
 }
