@@ -10,4 +10,4 @@ services:
       - "4000:4000"
     volumes:
       - .:/app
-    command: bash /app/heroku-start.sh
+    command: bash /app/docker-start.sh
