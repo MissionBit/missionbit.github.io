@@ -1,10 +1,24 @@
 ---
 title: "$30K in 30 Days"
 image: "/30k30days/3030-poster.jpg"
+totals:
+  # flipcause
+  - 6480
+  # https://www.facebook.com/permalink.php?story_fbid=10100256594005390&id=3900296:
+  - 265
+  # https://www.facebook.com/etrepum/posts/10155943718461253:
+  - 301
 description:
   Help us raise $30k in 30 days to bring more courses to the 100K young
   people who don't have access to computer science education in the Bay Area
 ---
+{%- assign total = 0 -%}
+{%- for donation in page.totals -%}
+{%- assign total = total | plus: donation -%}
+{%- endfor -%}
+{%- assign percent = total | divided_by: 30000.0 -%}
+{%- assign percent = percent | times: 100.0 -%}
+{%- assign total_s = total | append: "" -%}
 <style>
   div.photo {
     background: url(/30k30days/3030-header.jpg) no-repeat center;
@@ -56,12 +70,10 @@ description:
 
 <!-- container -->
 <div class="container" role="main">
-  <!-- $6,480 through flipcause campaign -->
-  <!-- $265 through FB at https://www.facebook.com/permalink.php?story_fbid=10100256594005390&id=3900296 -->
-  <h3><strong>$6,745</strong> Raised of $30,000 Goal (22%)</h3>
+  <h3><strong class="format-money">${{ total }}</strong> Raised of $30,000 Goal ({{ percent | round }}%)</h3>
   <div class="progress" style="height: 35px;">
-    <div class="progress-bar" role="progressbar" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100" style="width: 22.4833333%;background-image: linear-gradient(to bottom, #c43f8a 0%, #9c356f 100%);">
-      <span class="sr-only">22% Complete</span>
+    <div class="progress-bar" role="progressbar" aria-valuenow="{{ percent | round }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percent }}%;background-image: linear-gradient(to bottom, #c43f8a 0%, #9c356f 100%);">
+      <span class="sr-only">{{ percent | round }}% Complete</span>
     </div>
   </div>
 
@@ -85,14 +97,24 @@ description:
 
 
 </div><!--/container-->
+<script>
+$(function () {
+  $(".format-money").each(function (_index, element) {
+    var e = $(element);
+    e.text(e.text().replace(/(?:\$)(\d+)/g, function (_match, digits) {
+      return "$" + (+digits).toLocaleString("en-US");
+    }));
+  });
+})
+</script>
 <div style="width: 100%; background-color: #ececec; padding: 50px;">
-      <div id="curator-feed"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag"></a></div>
-      <script type="text/javascript">
-      // curator-feed
-      (function(){
-          var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
-          i.src = "https://cdn.curator.io/published/4d46d954-a9f0-4096-9917-0ebf859f.js";
-          e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
-      })();
-      </script>
-    </div>
+  <div id="curator-feed"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag"></a></div>
+  <script type="text/javascript">
+  // curator-feed
+  (function(){
+      var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
+      i.src = "https://cdn.curator.io/published/4d46d954-a9f0-4096-9917-0ebf859f.js";
+      e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+  })();
+  </script>
+</div>
