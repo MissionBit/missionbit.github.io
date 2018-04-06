@@ -301,6 +301,10 @@ section.module.parallax-4 {
 
 /* Text Carousel */
 
+.carousel-container {
+  overflow-x: hidden;
+}
+
 #textCarousel {
     margin-bottom: 100px;
     margin-top: 50px;
