@@ -7,12 +7,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <meta property="og:image" content="https://www.missionbit.com/images/logo-fb.png">
-    <meta property="og:title" content="Free coding education and industry experiences for public school students">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@missionbit">
+    <meta property="og:image" content="https://www.missionbit.com{{ page.image | default: "/images/logo-fb.png" }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}Free coding education and industry experiences for public school students{% endif %}">
     <meta property="og:site_name" content="Mission Bit">
     <meta property="og:type" content="non_profit">
-    <meta property="og:url" content="https://www.missionbit.com/">
-    <meta property="og:description" content="Mission Bit is a 501(c)3 non-profit offering coding education and industry experiences to equip, empower and inspire public school youth to build products they dream up and broaden the opportunity horizon they envision for themselves.">
+    <meta property="og:url" content="https://www.missionbit.com{{ page.url }}">
+
+    <meta property="og:description" content="{% if page.description %}{{ page.description | escape }}{% else %}Mission Bit is a 501(c)3 non-profit offering coding education and industry experiences to equip, empower and inspire public school youth to build products they dream up and broaden the opportunity horizon they envision for themselves.{% endif %}">
 
     <!-- Shortcut icons -->
     <link rel="shortcut icon" href="images/icon64.png" sizes="64x64" type="image/png">
@@ -122,6 +125,9 @@
     }
     </style>
     <script>
+    CAUSE_ID_MAIN = 'MjMzNDM=';
+    CAUSE_ID_30K = 'MzI2MTc=';
+
     function open_window(cause_id) {
     var  protocol=String(document.location.protocol);
     var new_url;
@@ -170,7 +176,7 @@
     </div>
 
     <!--END Flipcause Main Integration Code-->
-    <div class="floating_button" style="background:#3498db; border-radius:0px 0px 0px 0px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; bottom:-2px; right: 150px; padding:4px 10px 4px 10px; font-size:24px; color:#fff;text-align:center; cursor:pointer;border:2px solid #fff;text-decoration: none;box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); z-index:999999" onclick="open_window('MjMzNDM=')">Support Us</div>
+    <div class="floating_button" style="background:#3498db; border-radius:0px 0px 0px 0px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; bottom:-2px; right: 150px; padding:4px 10px 4px 10px; font-size:24px; color:#fff;text-align:center; cursor:pointer;border:2px solid #fff;text-decoration: none;box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); z-index:999999" onclick="open_window(CAUSE_ID_30K)">Support Us</div>
 
 
     {{ page.head }}

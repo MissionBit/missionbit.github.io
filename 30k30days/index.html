@@ -1,0 +1,160 @@
+---
+title: "$30K in 30 Days"
+image: "/30k30days/3030-poster.jpg"
+totals:
+  # flipcause
+  - 10264
+  # https://www.facebook.com/permalink.php?story_fbid=10100256594005390&id=3900296
+  - 415
+  # https://www.facebook.com/etrepum/posts/10155943718461253
+  - 1972
+  # https://www.facebook.com/mjwalker3/posts/10215481995260708
+  - 100
+  # https://www.facebook.com/bclark8923/posts/10216341411077077
+  - 138
+  # https://www.facebook.com/sharonolken/posts/10155735815384092
+  - 50
+  # https://www.facebook.com/clivejdownie/posts/10155182596137511
+  - 200
+  # https://www.facebook.com/goddess.gisela/posts/2057725160922937
+  - 50
+  # DAF check
+  - 1500
+  # Salesforce match
+  - 100
+description:
+  Help us raise $30k in 30 days to bring more courses to the 100K young
+  people who don't have access to computer science education in the Bay Area
+---
+{%- assign total = 0 -%}
+{%- for donation in page.totals -%}
+{%- assign total = total | plus: donation -%}
+{%- endfor -%}
+{%- assign percent = total | divided_by: 30000.0 -%}
+{%- assign percent = percent | times: 100.0 -%}
+{%- assign total_s = total | append: "" -%}
+<style>
+  div.photo {
+    background: url(/30k30days/3030-header.jpg) no-repeat center;
+    overflow: hidden;
+    background-size: 100%;
+    max-width: 100%;
+    height: 550px;
+    position: relative;
+    margin: 0 0 25px 0;
+    padding: 0;
+  }
+
+  @media screen and (max-width : 768px) {
+    div.photo {
+        height: 215px;
+    }
+  }
+
+  .video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    margin-bottom: 15px;
+  }
+  .video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+</style>
+
+<div class="photo">
+    <h1 class="banner-title">$30K in 30 Days</h1>
+
+    <div style="background:#c43f8a; border-radius:5px 5px 5px 5px;font-weight:normal; border:none;box-shadow:none;left: 50%; margin-left: -107.5px;display: block;clear: both; width:215px; height:70px; line-height:2.9; position:relative; cursor:pointer;font-size:24px; text-align:center;color:#fff;text-decoration: none; z-index:1;" onclick="open_window(CAUSE_ID_30K)">Donate Now</div>
+</div>
+
+<!-- container -->
+<div class="container" role="main">
+  <h3><strong class="format-money">${{ total }}</strong> Raised of $30,000 Goal ({{ percent | round }}%)</h3>
+  <div class="progress" style="height: 35px;">
+    <div class="progress-bar" role="progressbar" aria-valuenow="{{ percent | round }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percent }}%;background-image: linear-gradient(to bottom, #c43f8a 0%, #9c356f 100%);">
+      <span class="sr-only">{{ percent | round }}% Complete</span>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section">
+      <p>During the month of April 2018 Mission Bit is asking supporters to help us raise $30,000 to support our continued growth to add more courses across the San Francisco Bay Area. Our goal is to teach 10,000 students how to code by the year 2020. There are 100,000 young people that currently don't have access to computer science courses in the Bay Area. That's 100,000 reasons we need your support. Every little bit counts. If 1,000 people donate $30 we can reach our goal.</p>
+    </div><!--/section 2-->
+
+    <!-- <div class="row" style="margin-bottom: 100px;">
+      <div style="position: relative; float: left; width: 32.2%; margin-right: 1.5%;"><img typeof="foaf:Image" src="" width="399" height="337"></div>
+      <div style="position: relative; float: left; width: 32.2%; margin-right: 1.5%;"><img typeof="foaf:Image" src="" width="399" height="337"></div>
+      <div style="position: relative; float: left; width: 32.2%;"><img typeof="foaf:Image" src="" width="399" height="337"></div>
+    </div> -->
+    <div class="video-responsive">
+      <iframe width="1120" height="630" src="https://www.youtube-nocookie.com/embed?listType=playlist&list=PLaw6DVSn8IuSBzDzxz5Z9fN42u3dkswf8&rel=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <div class="section">
+      <p>
+        Mission Bit strives to eliminate the tech divide for youth living in urban poverty and rural areas across the San Francisco Bay Area by building computer programming and professional opportunity pathways for public school students. We provide everything the students need, they just need to show up and be eager to learn. No prior experience required.<br><br>
+        We give students the opportunity to learn directly from successful engineers and entrepreneurs who enjoy sharing knowledge. We're focused on project based learning and aim to teach both core computer science concepts as well as the practical skills and technologies that are required to build web sites and applications today. We currently run classes in San Francisco and Oakland.
+      </p>
+    </div>
+
+    <div class="row text-center">
+      <h2>Meet our Students</h2>
+      <div class="col-md-6">
+        <h3>Abel</h3>
+        <div class="video-responsive">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/33L0e_u1I5s?rel=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3>Joshua</h3>
+        <div class="video-responsive">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DrjHKM3Ejy0?rel=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3>Ivan</h3>
+        <div class="video-responsive">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/quubD8LIwWY?rel=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3>Angelina</h3>
+        <div class="video-responsive">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/U-5g3gUNX9o?rel=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="background:#c43f8a; border-radius:5px 5px 5px 5px;font-weight:normal; border:none;box-shadow:none;left: 50%; margin-left: -107.5px;display: block;clear: both; width:215px; height:70px; line-height:2.9; position:relative; cursor:pointer;font-size:24px; text-align:center;color:#fff;text-decoration: none; z-index:1;" onclick="open_window(CAUSE_ID_30K)">Donate Now</div>
+  </div><!--/section 1-->
+
+</div><!--/container-->
+<script>
+$(function () {
+  $(".format-money").each(function (_index, element) {
+    var e = $(element);
+    e.text(e.text().replace(/(?:\$)(\d+)/g, function (_match, digits) {
+      return "$" + (+digits).toLocaleString("en-US");
+    }));
+  });
+})
+</script>
+<div style="width: 100%; background-color: #ececec; padding: 50px;">
+  <div id="curator-feed"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag"></a></div>
+  <script type="text/javascript">
+  // curator-feed
+  (function(){
+      var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
+      i.src = "https://cdn.curator.io/published/4d46d954-a9f0-4096-9917-0ebf859f.js";
+      e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+  })();
+  </script>
+</div>
