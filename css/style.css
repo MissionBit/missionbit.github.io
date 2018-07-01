@@ -478,6 +478,18 @@ section.module.parallax-4 {
     background-position: 30%;
 }
 
+.hackathon {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/hackathon.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 30%;
+}
+
 .volunteer {
     background:
     linear-gradient(
@@ -1400,4 +1412,16 @@ img.gala-sponsor-img-ms:hover {
 /* use in Gala page hyperlink, add space between hyperlinks */
 a.gala-a {
     padding-right: 20px;
+}
+
+/* hackathon schedule */
+.schedule-block {
+    display: inline-block;
+    min-width: 84px;
+    text-align: center;
+    background-color: #c43f8a;
+    color: white;
+    border-radius: 6px;
+    padding: 7px 9px;
+    margin: 4px 0;
 }
