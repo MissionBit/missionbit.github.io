@@ -1435,7 +1435,6 @@ a.gala-a {
 .hackathon-column-small {
     float: left;
     width: 30%;
-    border: 5px groove black;
 }
 
 .hackathon-row::after {
