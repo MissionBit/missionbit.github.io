@@ -7,12 +7,12 @@ enable-mentor-alert: false
 	<div class="row">
         <div>
             <center>
-                <iframe id="registration_form" src="https://www.tfaforms.com/forms/view/4663249?" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0" onload="showCalendly()">Loading...</iframe>
+                <iframe id="registration_form" src="https://www.tfaforms.com/forms/view/4686585?" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0" onload="showCalendly()">Loading...</iframe>
             </center>
         </div>
         <div id="calendly_div">
         	<!-- Calendly inline widget begin -->
-            <div id="calendly_widget" class="calendly-inline-widget" data-url="https://calendly.com/register-mb/" style="min-width:320px;height:580px;""></div>
+            <div id="calendly_widget" class="calendly-inline-widget" data-url="https://calendly.com/register-mb/student-admissions-interview-san-francisco" style="min-width:320px;height:580px;""></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
             <!-- Calendly inline widget end -->
         </div>
@@ -23,12 +23,6 @@ enable-mentor-alert: false
 	var urlParams = new URLSearchParams(window.location.search);
 	const course_choice = urlParams.toString();
 	document.getElementById('registration_form').src += course_choice;
-	const calendly = document.getElementById('calendly_widget');
-	if (course_choice === "tfa_2013=tfa_2016") {
-		calendly.setAttribute('data-url', "https://calendly.com/mb_calendar/admission-interview-oakland");
-	} else {
-		calendly.setAttribute('data-url', "https://calendly.com/register-mb/admission-interview-sanfrancisco");
-	}
 
 	function showCalendly() {
         var cal = document.getElementById("calendly_div");
