@@ -454,6 +454,14 @@ section.module.parallax-4 {
     background-size: 100%;
 }
 
+.demoday {
+    background:
+    url(../images/demoday_summer18.png);
+    background-repeat: no-repeat;
+    background-position: 30%;
+    background-size: 100%;
+}
+
 .exposure {
     background:
     linear-gradient(
