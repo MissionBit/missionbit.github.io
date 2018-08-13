@@ -1,0 +1,21 @@
+---
+title: "Laptops"
+enable-mentor-alert: false
+---
+
+<div id="laptops" class="container" role="main">
+    <div class="section">
+    	<h3><b>Name: </b><div id="name"></div></h3>
+    	<h3><b>Serial Number: </b><div id="serno"></div></h3>
+    	<h3><b>Model: </b><div id="model"></div></h3>
+    	<h3><b>RAM: </b><div id="ram"></div></h3>
+    	<h3><b>CPU: </b><div id="cpu"></div></h3>
+    	<h3><b>CPU Speed: </b><div id="cpu_speed"></div></h3>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+    	document.getElementById(key).innerHTML = decodeURIComponent(value);
+    });
+</script>
