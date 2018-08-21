@@ -467,10 +467,10 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url(../images/enrollment.JPG);
+    url(../images/trent.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 30%;
+    background-position-y: 20%;
 }
 
 .hackathon {
