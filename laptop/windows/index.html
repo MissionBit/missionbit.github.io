@@ -1,1 +1,1 @@
-cinst -y $( ( [xml]( Invoke-WebRequest -Uri https://www.missionbit.com/laptop/windows/mb.config ).packages.package | Select id ).id
+cinst -y $( ( [xml]( Invoke-WebRequest -Uri https://www.missionbit.com/laptop/windows/mb.config -UseBasicParsing) ).packages.package | Select id ).id
