@@ -1,5 +1,7 @@
 # Install Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+# Refresh / Update Session Environment
+refreshenv
 # Download Meraki agent installer
 (New-Object System.Net.WebClient).DownloadFile("https://www.missionbit.com/laptop/windows/meraki-agent-missionbit.1.0.nupkg", "C:\users\missionbit\downloads\meraki-agent-missionbit.1.0.nupkg")
 # Install Meraki agent
