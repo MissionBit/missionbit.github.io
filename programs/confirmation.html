@@ -1,0 +1,46 @@
+---
+title: "Confirmation and Student Interview"
+enable-mentor-alert: false
+---
+
+<div class="container">
+	<div class="row">
+        <div id="calendly_div">
+        	<!-- Calendly inline widget begin -->
+            <div id="calendly_widget" class="calendly-inline-widget" data-url="https://calendly.com/register-mb/student-admissions-interview-san-francisco" style="min-width:320px;height:580px;""></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+            <!-- Calendly inline widget end -->
+        </div>
+    </div>
+    <div class="row">
+        <div id="confirmation_page">
+            <br>
+            <h2>Thank you for applying to Mission Bit!</h2>
+            <p>Your application has been successfully received!</p> 
+            <p><strong>If you are a returning student</strong>, you don't need to attend the student interview. We will contact you on Thursday, September 13, 2018 to let you know whether you’ve been accepted into the program.</p>
+            <p><strong>If you are a new student</strong>, please make sure to sign up for your student admission interview here: <a href="https://calendly.com/register-mb/student-admissions-interview-san-francisco">https://calendly.com/register-mb/student-admissions-interview-san-francisco</a>. The interview will take place on Saturday, September 8, 2018. Don't be scared about the interview! It's really just an opportunity for us to get to know you better and for you to meet potential classmates.</p>
+            <p>Mark the following events on your calendar:</p>
+            <ul><li>Family Orientation on Saturday, September 15, 2018.</li>
+            <li>Demo Day on Saturday, December 8, 2018.</li></ul>
+            <p>If you have any questions, please don't hesitate to contact us at davontae@missionbit.com.</p>
+            <br>
+            <p>In Community,</p>
+            <h4>Mission Bit</h4>
+            
+        </div>
+	</div>
+</div>
+
+<script type="text/javascript">
+    var cal = document.getElementById("calendly_div");
+    var done = document.getElementById("confirmation_page");
+    var returning = localStorage.getItem('returning_student');
+
+    if (returning === "true") {
+        cal.style.display = "none";
+        done.style.display = "block";
+    } else {
+        cal.style.display = "block";
+        done.style.display = "none";
+    }
+</script>
