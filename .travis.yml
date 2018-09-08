@@ -1,0 +1,9 @@
+language: ruby
+script: ./travis/cibuild.sh
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+sudo: false
+cache: bundler
+notifications:
+  email: false

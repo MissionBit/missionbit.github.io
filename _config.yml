@@ -14,6 +14,10 @@ exclude:
   - heroku.yml
   - Rakefile
   - README.md
+  - travis
+  - .travis.yml
+  - .editorconfig
+  - .gitignore
 defaults:
   - scope:
       path: ""
