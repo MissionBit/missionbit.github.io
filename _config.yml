@@ -6,8 +6,10 @@ exclude:
   - Dockerfile
   - Dockerfile.web
   - docker-compose.yml
+  - docker-compose-ci.yml
   - config.ru
   - docker-start.sh
+  - docker-ci.sh
   - app.json
   - Gemfile
   - Gemfile.lock
@@ -18,6 +20,7 @@ exclude:
   - .travis.yml
   - .editorconfig
   - .gitignore
+  - archive
 defaults:
   - scope:
       path: ""

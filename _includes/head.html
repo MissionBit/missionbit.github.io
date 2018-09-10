@@ -1,6 +1,4 @@
 <head>
-    <!-- set base for compatibility with non-jekyll pages -->
-    {% assign path_components = page.path | split: '/' %}<base href="{% if path_components.size == 1 %}./{% endif %}{% for item in path_components offset:1 %}..{% unless forloop.last %}/{% endunless %}{% endfor %}">
     <title>{{ site.title }}{% if page.title %} – {{ page.title }}{% endif %}</title>
 
     <!-- Meta -->
@@ -18,30 +16,22 @@
     <meta property="og:description" content="{% if page.description %}{{ page.description | escape }}{% else %}Mission Bit is a 501(c)3 non-profit offering coding education and industry experiences to equip, empower and inspire public school youth to build products they dream up and broaden the opportunity horizon they envision for themselves.{% endif %}">
 
     <!-- Shortcut icons -->
-    <link rel="shortcut icon" href="images/icon64.png" sizes="64x64" type="image/png">
-    <link rel="shortcut icon" href="images/icon128.png" sizes="128x128" type="image/png">
-    <link rel="shortcut icon" href="images/icon256.png" sizes="256x256" type="image/png">
+    <link rel="shortcut icon" href="/images/icon64.png" sizes="64x64" type="image/png">
+    <link rel="shortcut icon" href="/images/icon128.png" sizes="128x128" type="image/png">
+    <link rel="shortcut icon" href="/images/icon256.png" sizes="256x256" type="image/png">
     <!-- Vendor CSS -->
-    <!--
-    <link rel="stylesheet" href="vendor/bootstrap-3.0.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/bootstrap-3.0.3/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="vendor/font-awesome-4.0.3/css/font-awesome.min.css">
-    -->
-    <link rel="stylesheet" href="vendor/bootstrap-3.0.3/css/bootstrap.css">
-    <link rel="stylesheet" href="vendor/bootstrap-3.0.3/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="vendor/font-awesome-4.3.0/css/font-awesome.css">
-    <link rel="stylesheet" href="vendor/ubuntu/stylesheet.css">
-    <link rel="stylesheet" href="vendor/source-code-pro/stylesheet.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-3.0.3/css/bootstrap.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-3.0.3/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/vendor/font-awesome-4.3.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/vendor/ubuntu/stylesheet.css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/stylesheet.css">
     <!-- Local CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" href="/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 
     <!-- Scripts -->
-    <script type="text/javascript" src="vendor/jquery-2.0.3/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/vendor/jquery-2.0.3/jquery-2.0.3.min.js"></script>
 
     <!-- change the navigation bar default listenter from click to hover -->
     <script type="text/javascript">

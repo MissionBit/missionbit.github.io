@@ -1,0 +1,7 @@
+version: '2'
+services:
+  ci:
+    build: .
+    volumes:
+      - .:/app
+    command: bash /app/docker-ci.sh

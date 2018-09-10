@@ -5,7 +5,4 @@ window.jQuery(function ($) {
         // Upgrade to TLS
         window.location.protocol = 'https:';
     }
-    if ($.fn.qrcode !== undefined) {
-        $('.doge-qrcode').qrcode($('.doge-qrcode').data('qrcode'));
-    }
 });
