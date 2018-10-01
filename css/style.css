@@ -534,7 +534,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35)
     ),
     url(../images/aboutusnew.jpg);
-    background-size: , 50%;
+    background-size: , 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -645,6 +645,10 @@ section.module.parallax-4 {
 
     .banner-image {
         height: 175px;
+    }
+    
+    .banner-image2 {
+        height: 100px;
     }
 
     .banner-title {
