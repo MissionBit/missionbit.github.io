@@ -530,13 +530,13 @@ section.module.parallax-4 {
 .about-us {
     background:
     linear-gradient(
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
     ),
-    url(../images/whoweareFall17.jpg);
-    background-size: , 100%;
+    url(../images/aboutusnew.jpg);
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 30%;
 }
 
 .donate-photo {
