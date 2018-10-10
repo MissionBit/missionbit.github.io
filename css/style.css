@@ -114,19 +114,19 @@ section.module.parallax h1 {
 }
 
 section.module.parallax-1 {
-  background-image: url(../images/home/homepage4.png);
+  background-image: url(/images/home/homepage4.png);
 }
 
 section.module.parallax-2 {
-  background-image: url(../images/home/homepage2.jpg);
+  background-image: url(/images/home/homepage2.jpg);
 }
 
 section.module.parallax-3 {
-  background-image: url(../images/home/homepage3.jpg);
+  background-image: url(/images/home/homepage3.jpg);
 }
 
 section.module.parallax-4 {
-  background-image: url(../images/home/homepage1.JPG);
+  background-image: url(/images/home/homepage1.JPG);
 }
 
 /* Exposure, Enrollment, Employment boxes */
@@ -170,7 +170,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
     ),
-    url(../images/exposure.JPG);
+    url(/images/exposure.JPG);
     background-repeat: no-repeat;
     background-position: 30%;
     background-size: 100%;
@@ -182,7 +182,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
     ),
-    url(../images/enrollment.JPG);
+    url(/images/enrollment.JPG);
     background-repeat: no-repeat;
     background-position: 30%;
     background-size: 100%;
@@ -194,7 +194,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
     ),
-    url(../images/employment.jpg);
+    url(/images/employment.jpg);
     background-repeat: no-repeat;
     background-position: 30%;
     background-size: 100%;
@@ -422,7 +422,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url(../images/placeholder.jpg);
+    url(/images/placeholder.jpg);
     background-repeat: no-repeat;
     background-position: 30%;
     background-size: 100%;
@@ -435,7 +435,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url(../images/Spring17DemoDayMissionBits2.jpg);
+    url(/images/Spring17DemoDayMissionBits2.jpg);
     background-repeat: no-repeat;
     background-position: 30%;
     background-size: 100%;
@@ -443,7 +443,7 @@ section.module.parallax-4 {
 
 .demoday {
     background:
-    url(../images/demoday_summer18.png);
+    url(/images/demoday_summer18.png);
     background-repeat: no-repeat;
     background-position: 30%;
     background-size: 100%;
@@ -455,7 +455,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url(../images/exposure.JPG);
+    url(/images/exposure.JPG);
     background-repeat: no-repeat;
     background-position: 30%;
     background-size: 100%;
@@ -467,7 +467,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url(../images/trent.jpg);
+    url(/images/trent.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: 20%;
@@ -479,7 +479,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url(../hackathon/tenderloin.jpg);
+    url(/hackathon/tenderloin.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 30%;
@@ -491,7 +491,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url(../images/volunteers/MissionBitGala2017.jpg);
+    url(/images/volunteers/MissionBitGala2017.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 30%;
@@ -521,7 +521,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url(../images/employment.jpg);
+    url(/images/employment.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 30%;
@@ -545,7 +545,7 @@ section.module.parallax-4 {
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url(../images/donate.jpg);
+    url(/images/donate.jpg);
     overflow: hidden;
     background-size: 100%;
     width: 100%;
@@ -770,7 +770,7 @@ nav {
     display: block;
     width: 150px;
     height: 50px;
-    background: url(../images/logo.png) no-repeat center center;
+    background: url(/images/logo.png) no-repeat center center;
     background-size: 136px 36px;
     text-indent: -99999px;
     margin: 10px 5px 5px 5px;
@@ -1364,7 +1364,7 @@ footer address td.contact-info {
 
 /* added gala image as a css class*/
 .gala.responsive-banner {
-  background: url(../images/gala17-2.jpg);
+  background: url(/images/gala17-2.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
 }
