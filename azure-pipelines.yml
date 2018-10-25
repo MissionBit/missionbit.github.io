@@ -7,7 +7,7 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
-- task: Docker@1
+- task: Docker@0
   displayName: 'Run Jekyll & Test Links'
   inputs:
     containerRegistryType: 'Container Registry'
@@ -16,5 +16,16 @@ steps:
     volumes: |
       $(build.sourcesDirectory):/srv/jekyll
       $(build.binariesDirectory):/srv/jekyll/_site
-    containerCommand: travis/cibuild.sh
+    containerCommand: ci/buildpipeline.sh
+    runInBackground: false
     detached: false
+- task: ArchiveFiles@1
+  displayName: Archive Files
+  inputs:
+    includeRootFolder: false
+- task: PublishBuildArtifacts@1
+  displayName: Publish Site
+  inputs:
+    PathToPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    ArtifactName: www
+

@@ -5,4 +5,4 @@ export GEM_HOME=$(ls -t -U | ruby -e 'puts Gem.user_dir')
 export GEM_PATH=$GEM_HOME
 export PATH=$PATH:$GEM_HOME/bin
 bundle install
-./travis/cibuild.sh
+./ci/cibuild.sh
