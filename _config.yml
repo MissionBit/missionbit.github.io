@@ -16,7 +16,8 @@ exclude:
   - heroku.yml
   - Rakefile
   - README.md
-  - travis
+  - ci
+  - azure-pipelines.yml
   - .travis.yml
   - .editorconfig
   - .gitignore
