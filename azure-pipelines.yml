@@ -19,13 +19,7 @@ steps:
     containerCommand: ci/buildpipeline.sh
     runInBackground: false
     detached: false
-- task: ArchiveFiles@1
-  displayName: Archive Files
-  inputs:
-    includeRootFolder: false
 - task: PublishBuildArtifacts@1
   displayName: Publish Site
   inputs:
-    PathToPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    ArtifactName: www
-
+    artifactName: www
