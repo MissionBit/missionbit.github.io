@@ -1,7 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-  <h1>404</h1>
-  <h2>File not found</h2>
+  <style>
+    .centered {
+      display: grid;
+      height: 100vh;
+      justify-items: center;
+      align-items: center;
+      font-size: 200%;
+    }
+    .logo-home {
+      display: block;
+      background: no-repeat center/contain url("/images/icon128.svg");
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <section class="centered">
+    <h1>HTTP 404 Not Found</h1>
+    <a href="/" class="logo-home"></a>
+    <h3><a href="/">Check out our homepage</a></h3>
+  </section>
 </body>
 </html>
