@@ -35,8 +35,8 @@ a:hover {
 /************** footer template *****************/
 
 .copyright-space {
-    float: left;
-    font-size: 1.1em
+    font-size: 1.1em;
+    text-align: center;
 }
 
 /************** end of footer template *****************/
