@@ -442,11 +442,17 @@ section.module.parallax-4 {
 }
 
 .demoday {
-    background:
-    url(/images/demoday_summer18.png);
-    background-repeat: no-repeat;
-    background-position: 30%;
-    background-size: 100%;
+    display: block;
+    position: relative;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url('/images/demoday_banner.jpg') 50% 0 no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .exposure {
