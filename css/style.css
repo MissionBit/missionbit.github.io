@@ -413,6 +413,7 @@ section.module.parallax-4 {
     font-size: 75px;
     padding-top: 320px;
     text-align: center;
+    color: #fff;
 }
 
 /* added image placeholder */
@@ -442,17 +443,49 @@ section.module.parallax-4 {
 }
 
 .demoday {
-    display: block;
-    position: relative;
-    background: linear-gradient(
+    background:
+    linear-gradient(
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url('/images/demoday_banner.jpg') 50% 0 no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    url(/images/demoday_banner.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#demo-day-map {
+    width: 230px;
+    height: 200px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.rectangle {
+    width: 30%;
+    height: 50px;
+    margin: 5px;
+}
+
+.logo-pink {
+    background-color: #c43f8a;
+}
+
+.logo-orange {
+    background-color: #ef8a33;
+}
+
+.logo-blue {
+    background-color: #0866cc;
+}
+
+.no-margin {
+    padding: 0;
+    margin: 0;
 }
 
 .exposure {
