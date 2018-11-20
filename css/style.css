@@ -569,13 +569,12 @@ section.module.parallax-4 {
 .about-us {
     background:
     linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
     ),
-    url(../images/aboutusnew.jpg);
+    url(../images/team/mbteam2018.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 30%;
 }
 
 .donate-photo {
