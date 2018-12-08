@@ -22,6 +22,8 @@ exclude:
   - .editorconfig
   - .gitignore
   - archive
+  - default.nix
+  - .nix-gems
 defaults:
   - scope:
       path: ""
