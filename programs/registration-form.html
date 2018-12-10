@@ -8,218 +8,220 @@ scripts: >
   </script>
 ---
 
+<style type="text/css">
+    .label {
+        color: #383932;
+        font-size: 100%;
+        text-align: left;
+        padding: 0;
+    }
+
+    .section {
+        font-size: 100%;
+    }
+
+    .inline {
+        display: flex;
+    }
+</style>
+
 
 <!-- FORM: HEAD SECTION -->
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function(){
-            const FORM_TIME_START = Math.floor((new Date).getTime()/1000);
-            let formElement = document.getElementById("tfa_0");
-            if (null === formElement) {
-                formElement = document.getElementById("0");
-            }
-            let appendJsTimerElement = function(){
-                let formTimeDiff = Math.floor((new Date).getTime()/1000) - FORM_TIME_START;
-                let cumulatedTimeElement = document.getElementById("tfa_dbCumulatedTime");
-                if (null !== cumulatedTimeElement) {
-                    let cumulatedTime = parseInt(cumulatedTimeElement.value);
-                    if (null !== cumulatedTime && cumulatedTime > 0) {
-                        formTimeDiff += cumulatedTime;
-                    }
-                }
-                let jsTimeInput = document.createElement("input");
-                jsTimeInput.setAttribute("type", "hidden");
-                jsTimeInput.setAttribute("value", formTimeDiff.toString());
-                jsTimeInput.setAttribute("name", "tfa_dbElapsedJsTime");
-                jsTimeInput.setAttribute("id", "tfa_dbElapsedJsTime");
-                jsTimeInput.setAttribute("autocomplete", "off");
-                if (null !== formElement) {
-                    formElement.appendChild(jsTimeInput);
-                }
-            };
-            if (null !== formElement) {
-                if(formElement.addEventListener){
-                    formElement.addEventListener('submit', appendJsTimerElement, false);
-                } else if(formElement.attachEvent){
-                    formElement.attachEvent('onsubmit', appendJsTimerElement);
-                }
-            }
-        });
-    </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(){
+const FORM_TIME_START = Math.floor((new Date).getTime()/1000);
+let formElement = document.getElementById("tfa_0");
+if (null === formElement) {
+    formElement = document.getElementById("0");
+}
+let appendJsTimerElement = function(){
+    let formTimeDiff = Math.floor((new Date).getTime()/1000) - FORM_TIME_START;
+    let cumulatedTimeElement = document.getElementById("tfa_dbCumulatedTime");
+    if (null !== cumulatedTimeElement) {
+        let cumulatedTime = parseInt(cumulatedTimeElement.value);
+        if (null !== cumulatedTime && cumulatedTime > 0) {
+            formTimeDiff += cumulatedTime;
+        }
+    }
+    let jsTimeInput = document.createElement("input");
+    jsTimeInput.setAttribute("type", "hidden");
+    jsTimeInput.setAttribute("value", formTimeDiff.toString());
+    jsTimeInput.setAttribute("name", "tfa_dbElapsedJsTime");
+    jsTimeInput.setAttribute("id", "tfa_dbElapsedJsTime");
+    jsTimeInput.setAttribute("autocomplete", "off");
+    if (null !== formElement) {
+        formElement.appendChild(jsTimeInput);
+    }
+};
+if (null !== formElement) {
+    if(formElement.addEventListener){
+        formElement.addEventListener('submit', appendJsTimerElement, false);
+    } else if(formElement.attachEvent){
+        formElement.attachEvent('onsubmit', appendJsTimerElement);
+    }
+}
+});
+</script>
 
-    <link href="https://www.tfaforms.com/dist/form-builder/5.0.0/wforms-layout.css?v=512-8" rel="stylesheet" type="text/css" />
+<link href="https://www.tfaforms.com/dist/form-builder/5.0.0/wforms-layout.css?v=512-13" rel="stylesheet" type="text/css" />
 
-    <link href="https://www.tfaforms.com/uploads/themes/theme-54371.css" rel="stylesheet" type="text/css" />
-    <link href="https://www.tfaforms.com/dist/form-builder/5.0.0/wforms-jsonly.css?v=512-8" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
-    <script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms.js?v=512-8"></script>
-    <script type="text/javascript">
-        wFORMS.behaviors.prefill.skip = false;
-    </script>
-        <link rel="stylesheet" type="text/css" href="https://www.tfaforms.com/css/kalendae.css" />
-    <script type="text/javascript" src="https://www.tfaforms.com/js/kalendae/kalendae.standalone.min.js" ></script>
-    <script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms_calendar.js"></script>
-    <script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/localization-en_US.js?v=512-8"></script>
+<link href="https://www.tfaforms.com/uploads/themes/theme-54371.css" rel="stylesheet" type="text/css" />
+<link href="https://www.tfaforms.com/dist/form-builder/5.0.0/wforms-jsonly.css?v=512-13" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms.js?v=512-13"></script>
+<script type="text/javascript">
+wFORMS.behaviors.prefill.skip = false;
+</script>
+<link rel="stylesheet" type="text/css" href="https://www.tfaforms.com/css/kalendae.css" />
+<script type="text/javascript" src="https://www.tfaforms.com/js/kalendae/kalendae.standalone.min.js" ></script>
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms_calendar.js"></script>
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/localization-en_US.js?v=512-13"></script>
 
 <!-- FORM: BODY SECTION -->
 <div class="wFormContainer"  >
-    <div class="wFormHeader"></div>
-    <style type="text/css">
-                .label {
-                    color: #383932;
-                    font-size: 100%;
-                    text-align: left;
-                    padding: 0;
-                }
+<div class="wFormHeader"></div>
+<style type="text/css">
+    #tfa_2013-L,
+    label[id^="tfa_2013["] {
+        width: 331px !important;
+        min-width: 0px;
+    }
 
-                .section {
-                    font-size: 100%;
-                }
+    #tfa_2026,
+    *[id^="tfa_2026["] {
+        width: 236px !important;
+    }
+    #tfa_2026-D,
+    *[id^="tfa_2026["][class~="field-container-D"] {
+        width: auto !important;
+    }
 
-                .inline {
-                    display: flex;
-                }
+    #tfa_1876,
+    *[id^="tfa_1876["] {
+        width: 30px !important;
+    }
+    #tfa_1876-D,
+    *[id^="tfa_1876["][class~="field-container-D"] {
+        width: auto !important;
+    }
 
-                #tfa_2013-L,
-                label[id^="tfa_2013["] {
-                    width: 331px !important;
-                    min-width: 0px;
-                }
+    #tfa_1876-L,
+    label[id^="tfa_1876["] {
+        width: 113px !important;
+        min-width: 0px;
+    }
 
-                #tfa_2026,
-                *[id^="tfa_2026["] {
-                    width: 236px !important;
-                }
-                #tfa_2026-D,
-                *[id^="tfa_2026["][class~="field-container-D"] {
-                    width: auto !important;
-                }
+    #tfa_2029,
+    *[id^="tfa_2029["] {
+        width: 240.18181824684143px !important;
+    }
+    #tfa_2029-D,
+    *[id^="tfa_2029["][class~="field-container-D"] {
+        width: auto !important;
+    }
 
-                #tfa_1876,
-                *[id^="tfa_1876["] {
-                    width: 30px !important;
-                }
-                #tfa_1876-D,
-                *[id^="tfa_1876["][class~="field-container-D"] {
-                    width: auto !important;
-                }
+    #tfa_2092,
+    *[id^="tfa_2092["] {
+        width: 170px !important;
+    }
+    #tfa_2092-D,
+    *[id^="tfa_2092["][class~="field-container-D"] {
+        width: auto !important;
+    }
 
-                #tfa_1876-L,
-                label[id^="tfa_1876["] {
-                    width: 113px !important;
-                    min-width: 0px;
-                }
+    #tfa_1887,
+    *[id^="tfa_1887["] {
+        width: 240.18181824684143px !important;
+    }
+    #tfa_1887-D,
+    *[id^="tfa_1887["][class~="field-container-D"] {
+        width: auto !important;
+    }
 
-                #tfa_2029,
-                *[id^="tfa_2029["] {
-                    width: 240.18181824684143px !important;
-                }
-                #tfa_2029-D,
-                *[id^="tfa_2029["][class~="field-container-D"] {
-                    width: auto !important;
-                }
+    #tfa_2072-L,
+    label[id^="tfa_2072["] {
+        width: 311px !important;
+        min-width: 0px;
+    }
 
-                #tfa_2092,
-                *[id^="tfa_2092["] {
-                    width: 170px !important;
-                }
-                #tfa_2092-D,
-                *[id^="tfa_2092["][class~="field-container-D"] {
-                    width: auto !important;
-                }
+    #tfa_2043-L,
+    label[id^="tfa_2043["] {
+        width: 171px !important;
+        min-width: 0px;
+    }
 
-                #tfa_1887,
-                *[id^="tfa_1887["] {
-                    width: 240.18181824684143px !important;
-                }
-                #tfa_1887-D,
-                *[id^="tfa_1887["][class~="field-container-D"] {
-                    width: auto !important;
-                }
+    #tfa_1960-L,
+    label[id^="tfa_1960["] {
+        width: 348px !important;
+        min-width: 0px;
+    }
 
-                #tfa_2072-L,
-                label[id^="tfa_2072["] {
-                    width: 311px !important;
-                    min-width: 0px;
-                }
+    #tfa_2127-L,
+    label[id^="tfa_2127["] {
+        width: 268px !important;
+        min-width: 0px;
+    }
 
-                #tfa_2043-L,
-                label[id^="tfa_2043["] {
-                    width: 171px !important;
-                    min-width: 0px;
-                }
+    #tfa_1967-L,
+    label[id^="tfa_1967["] {
+        width: 191px !important;
+        min-width: 0px;
+    }
 
-                #tfa_1960-L,
-                label[id^="tfa_1960["] {
-                    width: 348px !important;
-                    min-width: 0px;
-                }
+    #tfa_1900-L,
+    label[id^="tfa_1900["] {
+        width: 328px !important;
+        min-width: 0px;
+    }
 
-                #tfa_2127-L,
-                label[id^="tfa_2127["] {
-                    width: 268px !important;
-                    min-width: 0px;
-                }
+    #tfa_1907-L,
+    label[id^="tfa_1907["] {
+        width: 171px !important;
+        min-width: 0px;
+    }
 
-                #tfa_1967-L,
-                label[id^="tfa_1967["] {
-                    width: 191px !important;
-                    min-width: 0px;
-                }
+    #tfa_1994-L,
+    label[id^="tfa_1994["] {
+        width: 656px !important;
+        min-width: 0px;
+    }
 
-                #tfa_1900-L,
-                label[id^="tfa_1900["] {
-                    width: 328px !important;
-                    min-width: 0px;
-                }
+    #tfa_2017,
+    *[id^="tfa_2017["] {
+        width: 432px !important;
+    }
+    #tfa_2017-D,
+    *[id^="tfa_2017["][class~="field-container-D"] {
+        width: auto !important;
+    }
 
-                #tfa_1907-L,
-                label[id^="tfa_1907["] {
-                    width: 171px !important;
-                    min-width: 0px;
-                }
+    #tfa_2017-L,
+    label[id^="tfa_2017["] {
+        width: 431px !important;
+        min-width: 0px;
+    }
 
-                #tfa_1994-L,
-                label[id^="tfa_1994["] {
-                    width: 656px !important;
-                    min-width: 0px;
-                }
-
-                #tfa_2017,
-                *[id^="tfa_2017["] {
-                    width: 432px !important;
-                }
-                #tfa_2017-D,
-                *[id^="tfa_2017["][class~="field-container-D"] {
-                    width: auto !important;
-                }
-
-                #tfa_2017-L,
-                label[id^="tfa_2017["] {
-                    width: 431px !important;
-                    min-width: 0px;
-                }
-
-                #tfa_2152-L,
-                label[id^="tfa_2152["] {
-                    width: 668px !important;
-                    min-width: 0px;
-                }
-            </style><div class=""><div class="wForm" id="4697458-WRPR" dir="ltr">
+    #tfa_2152-L,
+    label[id^="tfa_2152["] {
+        width: 668px !important;
+        min-width: 0px;
+    }
+</style><div class=""><div class="wForm" id="4697458-WRPR" dir="ltr">
 <div class="codesection" id="code-4697458"></div>
 <h3 class="wFormTitle" id="4697458-T">Mission Bit: Spring 2019 Student Registration</h3>
 <form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsAbove" id="4697458" role="form">
 <div class="oneField field-container-D    " id="tfa_2013-D">
 <label id="tfa_2013-L" class="label preField reqMark" for="tfa_2013">Which class are you applying for?</label><br><div class="inputWrapper"><select id="tfa_2013" name="tfa_2013" title="Which class are you applying for?" aria-required="true" class="required"><option value="">Please select...</option>
-<option value="tfa_2148" id="tfa_2148" data-conditionals="#tfa_2171" class="">Intro to Game Design (CCPA)</option>
-<option value="tfa_2118" id="tfa_2118" data-conditionals="#tfa_2105" class="">Web Design 101 (Lincoln)</option>
-<option value="tfa_2116" id="tfa_2116" data-conditionals="#tfa_2097" class="">Intro to Game Design (Mission)</option>
-<option value="tfa_2117" id="tfa_2117" data-conditionals="#tfa_2101" class="">Mobile App Dev (Lincoln)</option>
+<option value="tfa_2148" id="tfa_2148" data-conditionals="#tfa_2171" class="">Game Design (CCPA)</option>
+<option value="tfa_2118" id="tfa_2118" data-conditionals="#tfa_2105" class="">Game Design (Lincoln)</option>
+<option value="tfa_2116" id="tfa_2116" data-conditionals="#tfa_2097" class="">Game Design (Mission)</option>
+<option value="tfa_2117" id="tfa_2117" data-conditionals="#tfa_2101" class="">Web Design 101 (Lincoln)</option>
 <option value="tfa_2115" id="tfa_2115" data-conditionals="#tfa_2088" class="">Web Design 101 (Mission)</option>
 <option value="tfa_2149" id="tfa_2149" data-conditionals="#tfa_2161" class="">Web Design 101 (Arise)</option>
-<option value="tfa_2119" id="tfa_2119" data-conditionals="#tfa_2113" class="">Intro to Game Design (Gateway)</option>
-<option value="tfa_2120" id="tfa_2120" data-conditionals="#tfa_2109" class="">Intro to Game Design (Leadership)</option>
-<option value="tfa_2158" id="tfa_2158" data-conditionals="#tfa_2179" class="">Intro to Game Design (McClymonds)</option></select></div>
+<option value="tfa_2119" id="tfa_2119" data-conditionals="#tfa_2113" class="">Game Design (Gateway)</option>
+<option value="tfa_2120" id="tfa_2120" data-conditionals="#tfa_2109" class="">Game Design (Leadership)</option>
+<option value="tfa_2158" id="tfa_2158" data-conditionals="#tfa_2179" class="">Game Design (McClymonds)</option></select></div>
 </div>
 <fieldset id="tfa_2025" class="section">
 <legend id="tfa_2025-L">Student</legend>
@@ -241,12 +243,12 @@ scripts: >
 <input type="text" id="tfa_2028" name="tfa_2028" value="" placeholder="##########" maxlength="10" aria-required="true" aria-describedby="tfa_2028-HH" autoformat="##########" title="Phone (student)" class="validate-custom /^[2-9]\d{2}\d{3}\d{4}$/ required"><span class="field-hint-inactive" id="tfa_2028-H"><span id="tfa_2028-HH" class="hint">Numbers only.</span></span>
 </div>
 <script type="text/javascript">
-                        if(typeof wFORMS != 'undefined') {
-                            if(wFORMS.behaviors.validation) {
-                                wFORMS.behaviors.validation.rules['customtfa_2028'] =  { selector: '*[id="tfa_2028"]', check: 'validateCustom'};
-                                wFORMS.behaviors.validation.messages['customtfa_2028'] = "Please enter numbers only.";
-                            }
-                        }</script>
+            if(typeof wFORMS != 'undefined') {
+                if(wFORMS.behaviors.validation) {
+                    wFORMS.behaviors.validation.rules['customtfa_2028'] =  { selector: '*[id="tfa_2028"]', check: 'validateCustom'};
+                    wFORMS.behaviors.validation.messages['customtfa_2028'] = "Please enter numbers only.";
+                }
+            }</script>
 </div>
 <div class="oneField field-container-D    " id="tfa_2029-D">
 <label id="tfa_2029-L" class="label preField reqMark" for="tfa_2029">Email (student)</label><br><div class="inputWrapper">
@@ -273,12 +275,12 @@ scripts: >
 <input type="text" id="tfa_1886" name="tfa_1886" value="" placeholder="##########" maxlength="10" aria-required="true" aria-describedby="tfa_1886-HH" autoformat="##########" title="Phone (parent)" class="validate-custom /^[2-9]\d{2}\d{3}\d{4}$/ required"><span class="field-hint-inactive" id="tfa_1886-H"><span id="tfa_1886-HH" class="hint">Numbers only.</span></span>
 </div>
 <script type="text/javascript">
-                        if(typeof wFORMS != 'undefined') {
-                            if(wFORMS.behaviors.validation) {
-                                wFORMS.behaviors.validation.rules['customtfa_1886'] =  { selector: '*[id="tfa_1886"]', check: 'validateCustom'};
-                                wFORMS.behaviors.validation.messages['customtfa_1886'] = "Please enter numbers only.";
-                            }
-                        }</script>
+            if(typeof wFORMS != 'undefined') {
+                if(wFORMS.behaviors.validation) {
+                    wFORMS.behaviors.validation.rules['customtfa_1886'] =  { selector: '*[id="tfa_1886"]', check: 'validateCustom'};
+                    wFORMS.behaviors.validation.messages['customtfa_1886'] = "Please enter numbers only.";
+                }
+            }</script>
 </div>
 <div class="oneField field-container-D   hintsBelow " id="tfa_1887-D">
 <label id="tfa_1887-L" class="label preField reqMark" for="tfa_1887">Email&nbsp;(parent)</label><br><div class="inputWrapper">
@@ -288,8 +290,8 @@ scripts: >
 </fieldset>
 <div id="tfa_2088" class="section group" data-condition="`#tfa_2115`"><div class="htmlSection" id="tfa_2089"><div class="htmlContent" id="tfa_2089-HTML"><div><div><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;">Welcome to&nbsp;<span style="box-sizing: border-box; font-weight: 700;">Web Design 101 at Mission High School</span>!</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;"><u style="box-sizing: border-box;">Class details</u></div><div style="box-sizing: border-box;">Location: Mission High School, 3750 18th St, San Francisco, CA 94114</div><div style="box-sizing: border-box;">Meets: Tuesday and Thursday, 4pm - 6pm</div><div style="box-sizing: border-box;">Dates: February 4, 2019 to April 27, 2019</div></div></div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">Thank you for registering for the Mission Bit Spring 2019 semester.&nbsp;</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">Any questions or concerns may be directed to Christina, Program Manager, at christina@missionbit.com.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">In Community,</div>The Mission Bit Team<br></div></div><div><br></div></div></div></div>
 <div id="tfa_2097" class="section group" data-condition="`#tfa_2116`"><div class="htmlSection" id="tfa_2098"><div class="htmlContent" id="tfa_2098-HTML"><div><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;">Welcome to&nbsp;<span style="box-sizing: border-box; font-weight: 700;">Intro to Game Design&nbsp;at Mission High School</span>!</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;"><u style="box-sizing: border-box;">Class details</u></div><div style="box-sizing: border-box;">Location: Mission High School, 3750 18th St, San Francisco, CA 94114</div><div style="box-sizing: border-box;">Meets: Monday and Wednesday, 4pm - 6pm</div><div style="box-sizing: border-box;">Dates: February 4, 2019 to April 27, 2019</div></div></div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">Thank you for registering for the Mission Bit Spring 2019 semester.&nbsp;</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">Any questions or concerns may be directed to Christina, Program Manager, at christina@missionbit.com.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">In Community,</div>The Mission Bit Team<br></div><div><br></div></div></div></div>
-<div id="tfa_2101" class="section group" data-condition="`#tfa_2117`"><div class="htmlSection" id="tfa_2102"><div class="htmlContent" id="tfa_2102-HTML"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;">Welcome to&nbsp;<span style="box-sizing: border-box; font-weight: 700;">Mobile App Dev&nbsp;at Abraham Lincoln High School</span>!</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;"><u style="box-sizing: border-box;">Class details</u></div><div style="box-sizing: border-box;">Location: Lincoln High School, 2162 24th Ave, San Francisco, CA 94116</div><div style="box-sizing: border-box;">Meets: Monday and Wednesday, 4pm - 6pm</div><div>Dates: February 4, 2019 to April 27, 2019</div><div><br></div><div>Thank you for registering for the Mission Bit Spring 2019 semester.&nbsp;<span style="background-color: transparent; word-spacing: normal;">&nbsp;</span></div></div></div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">Any questions or concerns may be directed to Christina, Program Manager, at christina@missionbit.com.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">In Community,</div>The Mission Bit Team<br></div></div></div>
-<div id="tfa_2105" class="section group" data-condition="`#tfa_2118`"><div class="htmlSection" id="tfa_2106"><div class="htmlContent" id="tfa_2106-HTML"><div><div><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;">Welcome to&nbsp;<span style="box-sizing: border-box; font-weight: 700;">Web Design 101 at&nbsp;</span><span style="font-weight: 700;">Abraham Lincoln High School</span>!</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;"><u style="box-sizing: border-box;">Class details</u></div><div style="box-sizing: border-box;">Location: Lincoln High School, 2162 24th Ave, San Francisco, CA 94116</div><div style="box-sizing: border-box;">Meets: Tuesday and Thursday, 4pm - 6pm</div><div style="box-sizing: border-box;"><div>Dates: February 4, 2019 to April 27, 2019</div><div><br></div><div>Thank you for registering for the Mission Bit Spring 2019 semester.&nbsp;</div><div><br></div></div></div></div><div style="box-sizing: border-box;">This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">Any questions or concerns may be directed to Christina, Program Manager, at christina@missionbit.com.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">In Community,</div>The Mission Bit Team<br></div></div><div><br></div></div></div></div>
+<div id="tfa_2101" class="section group" data-condition="`#tfa_2117`"><div class="htmlSection" id="tfa_2102"><div class="htmlContent" id="tfa_2102-HTML"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;">Welcome to&nbsp;<span style="box-sizing: border-box; font-weight: 700;">Web Design 101 at Abraham Lincoln High School</span>!</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;"><u style="box-sizing: border-box;">Class details</u></div><div style="box-sizing: border-box;">Location: Lincoln High School, 2162 24th Ave, San Francisco, CA 94116</div><div style="box-sizing: border-box;">Meets: Monday and Wednesday, 4pm - 6pm</div><div>Dates: February 4, 2019 to April 27, 2019</div><div><br></div><div>Thank you for registering for the Mission Bit Spring 2019 semester.&nbsp;<span style="background-color: transparent; word-spacing: normal;">&nbsp;</span></div></div></div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">Any questions or concerns may be directed to Christina, Program Manager, at christina@missionbit.com.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">In Community,</div>The Mission Bit Team<br></div></div></div>
+<div id="tfa_2105" class="section group" data-condition="`#tfa_2118`"><div class="htmlSection" id="tfa_2106"><div class="htmlContent" id="tfa_2106-HTML"><div><div><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;">Welcome to&nbsp;<span style="box-sizing: border-box; font-weight: 700;">Intro to Game Design with Unity&nbsp;at&nbsp;</span><span style="font-weight: 700;">Abraham Lincoln High School</span>!</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;"><u style="box-sizing: border-box;">Class details</u></div><div style="box-sizing: border-box;">Location: Lincoln High School, 2162 24th Ave, San Francisco, CA 94116</div><div style="box-sizing: border-box;">Meets: Tuesday and Thursday, 4pm - 6pm</div><div style="box-sizing: border-box;"><div>Dates: February 4, 2019 to April 27, 2019</div><div><br></div><div>Thank you for registering for the Mission Bit Spring 2019 semester.&nbsp;</div><div><br></div></div></div></div><div style="box-sizing: border-box;">This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">Any questions or concerns may be directed to Christina, Program Manager, at christina@missionbit.com.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">In Community,</div>The Mission Bit Team<br></div></div><div><br></div></div></div></div>
 <div id="tfa_2109" class="section group" data-condition="`#tfa_2120`"><div class="htmlSection" id="tfa_2110"><div class="htmlContent" id="tfa_2110-HTML"><div><div><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;">Welcome to&nbsp;<span style="box-sizing: border-box; font-weight: 700;">Intro to Game Design with Unity at Leadership High School</span>!</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;"><u style="box-sizing: border-box;">Class details</u></div><div style="box-sizing: border-box;">Location: Leadership High School, 350 Seneca Ave, San Francisco, CA 94112</div><div style="box-sizing: border-box;">Meets: Tuesday and Thursday, 4pm - 6pm</div><div style="box-sizing: border-box;"><div>Dates: February 4, 2019 to April 27, 2019</div><div><br></div><div>Thank you for registering for the Mission Bit Spring 2019 semester.&nbsp;</div><div><br></div></div></div></div><div style="box-sizing: border-box;">This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">Any questions or concerns may be directed to Davontae, Program Manager, at davontae@missionbit.com.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">In Community,</div>The Mission Bit Team<br></div></div><div><br></div></div></div></div>
 <div id="tfa_2161" class="section group" data-condition="`#tfa_2149`"><div class="htmlSection" id="tfa_2162"><div class="htmlContent" id="tfa_2162-HTML"><div><div><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;">Welcome to&nbsp;<span style="box-sizing: border-box; font-weight: 700;">Web Design 101 at Arise High School</span>!</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;"><u style="box-sizing: border-box;">Class details</u></div><div style="box-sizing: border-box;">Location: Arise High School, 3301 E 12th St # 205, Oakland, CA 94601</div><div style="box-sizing: border-box;">Meets: Monday 4:15pm - 6:15pm&nbsp;<span style="word-spacing: normal;">and Wednesday 3pm - 5pm</span></div><div style="box-sizing: border-box;"><div>Dates: February 4, 2019 to April 27, 2019</div><div><br></div><div>Thank you for registering for the Mission Bit Spring 2019 semester.&nbsp;</div><div><br></div></div></div></div><div style="box-sizing: border-box;">This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">Any questions or concerns may be directed to Davontae, Program Manager, at davontae@missionbit.com.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">In Community,</div>The Mission Bit Team<br></div></div><div><br></div></div></div></div>
 <div id="tfa_2171" class="section group" data-condition="`#tfa_2148`"><div class="htmlSection" id="tfa_2173"><div class="htmlContent" id="tfa_2173-HTML"><div><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;">Welcome to&nbsp;<span style="font-weight: 700; word-spacing: normal;">Intro to Game Design with Unity</span><span style="font-weight: 700; word-spacing: normal;">&nbsp;at CCPA!</span></div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;"><u style="box-sizing: border-box;">Class details</u></div><div style="box-sizing: border-box;">Location: Coliseum College Prep Academy (CCPA), 1390 66th Ave, Oakland, CA 94621</div><div style="box-sizing: border-box;">Meets: Tuesday and Thursday, 2pm - 4pm</div><div style="box-sizing: border-box;"><div>Dates: February 4, 2019 to April 27, 2019</div><div><br></div><div>Thank you for registering for the Mission Bit Spring 2019 semester.&nbsp;</div><div><br></div></div></div></div><div style="box-sizing: border-box;">This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">Any questions or concerns may be directed to Davontae, Program Manager, at davontae@missionbit.com.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">In Community,</div>The Mission Bit Team<br><br></div><div><br></div></div></div></div>
@@ -321,7 +323,7 @@ scripts: >
 <option value="tfa_2059" id="tfa_2059" class=""> Leadership</option>
 <option value="tfa_2060" id="tfa_2060" class=""> Lincoln</option>
 <option value="tfa_2061" id="tfa_2061" class=""> Lowell</option>
-<option value="tfa_2183" id="tfa_2183" class=""> McClymonds</option>
+<option value="tfa_2183" id="tfa_2183" class="">McClymonds</option>
 <option value="tfa_2062" id="tfa_2062" class=""> Mission</option>
 <option value="tfa_2063" id="tfa_2063" class=""> O'Connell</option>
 <option value="tfa_2064" id="tfa_2064" class=""> Riordan</option>
@@ -382,11 +384,11 @@ scripts: >
 </div>
 <div class="actions" id="4697458-A"><input type="submit" class="primaryAction" id="submit_button" value="Submit"></div>
 <div style="clear:both"></div>
-<input type="hidden" value="4697458" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="ccb719e44098413b4d40ada860525c93" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="12" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
+<input type="hidden" value="4697458" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="ccb719e44098413b4d40ada860525c93" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="16" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
 </form>
 </div></div><div class="wFormFooter"><p class="supportInfo"><a target="new" class="contactInfoLink" href="https://www.tfaforms.com/forms/help/4686585">Contact Information</a><br></p></div>
-  <p class="supportInfo" >
+<p class="supportInfo" >
 
 
-      </p>
- </div>
+</p>
+</div>
