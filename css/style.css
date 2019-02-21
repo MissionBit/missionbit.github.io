@@ -1010,7 +1010,6 @@ footer address td.contact-info {
 .headline h2 {
     display: inline;
     border-bottom: 2px solid #3498db;
-    margin-bottom: 20px;
 }
 
 .team h3 {
@@ -1430,6 +1429,7 @@ img.gala-sponsor-img {
 }
 img.gala-sponsor-img:hover {
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .25),0 5px 15px #193047;
+    transform: scale(1.2);
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -1442,6 +1442,7 @@ img.gala-sponsor-img-ms {
 }
 img.gala-sponsor-img-ms:hover {
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .25),0 5px 15px #193047;
+    transform: scale(1.2);
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
