@@ -445,10 +445,10 @@ section.module.parallax-4 {
 .demoday {
     background:
     linear-gradient(
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
     ),
-    url(/images/demoday_banner.jpg);
+    url(/images/demo-day-hero.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
