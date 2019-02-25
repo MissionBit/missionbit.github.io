@@ -363,8 +363,8 @@ section.module.parallax-4 {
 
 .director-photo {
     height: 175px;
-    margin-right: 25px;
-    margin-bottom: 5px;
+    /* margin-right: 25px;
+    margin-bottom: 5px; */
 }
 
 .director-name {
