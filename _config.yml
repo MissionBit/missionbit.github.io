@@ -23,6 +23,7 @@ exclude:
   - .gitignore
   - archive
   - default.nix
+  - gemset.nix
   - .nix-gems
 defaults:
   - scope:
