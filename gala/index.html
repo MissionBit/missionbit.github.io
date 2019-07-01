@@ -111,7 +111,12 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
     }
   }
 
-  .video-responsive{
+  .buy-tickets {
+    text-align: center;
+    padding: 0.5em;
+  }
+
+  .video-responsive {
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;
@@ -150,23 +155,24 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
       For more information on sponsorships, see our <a href="/gala/sponsorship/">Gala Sponsorship Packages</a>
       or contact us at <a href="mailto:development@missionbit.com">development@missionbit.com</a>.
     </p>
-    <!-- Begin Mailchimp Signup Form -->
-    <div id="mc_embed_signup">
-      <form action="https://missionbit.us3.list-manage.com/subscribe/post?u=dca59ff0c46a6c1be0d20cf89&amp;id=ec36efa7f3"
-        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
-        novalidate>
-        <div id="mc_embed_signup_scroll">
-          <label for="mce-EMAIL">Get notified when tickets go on sale by subscribing to our mailing list:</label>
-          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-              name="b_dca59ff0c46a6c1be0d20cf89_ec36efa7f3" tabindex="-1" value=""></div>
-          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-              class="button"></div>
-        </div>
-      </form>
-    </div>
-    <!--End mc_embed_signup-->
+    <p><strong>Dress:</strong> Dressy Casual. Please refer to the following <a href="http://emilypost.com/advice/attire-guide-dress-codes-from-casual-to-white-tie/" target="_blank" rel="nofollow noopener noreferrer">Attire Guide</a> for examples of Gala wear.</p>
+    <p><span><strong>Parking:</strong> </span>Street Parking + Parking Garage @ 1 Embarcadero Center</p>
+    <p><strong>Location:</strong> The Bently Reserve is located at the corner of Battery St &amp; Sacramento St</p>
+    <p><strong>What to Expect:</strong></p>
+    <p>
+      <ul>
+        <li>Booths featuring amazing student projects</li>
+        <li>Open bar with specialty cocktails</li>
+        <li>Delicious San Francisco-inspired foods</li>
+        <li>Great network of folks to connect with who care about our young people</li>
+      </ul>
+    </p>
+    <p>We're excited to share this very special evening with you!</p>
+    <p class="buy-tickets">
+      <noscript><a href="https://missionbit-gala-2019.eventbrite.com" rel="noopener noreferrer" target="_blank"></noscript>
+      <button id="eventbrite-widget-modal-trigger-64317553534" class="btn btn-lg btn-primary" type="button">Buy Tickets</button>
+      <noscript></a>Buy Tickets on Eventbrite</noscript>
+    </p>
     <div class="video-responsive">
       <iframe width="1120" height="630" src="https://www.youtube-nocookie.com/embed/QG88ydg_5Rk?rel=0&modestbranding=1"
         frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -221,3 +227,18 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
   </section>
 </div>
 <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://plugins.eventable.com/eventable.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'eventable-script');</script>
+
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+<script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '64317553534',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-64317553534',
+        onOrderComplete: exampleCallback
+    });
+</script>

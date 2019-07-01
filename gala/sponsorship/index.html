@@ -60,6 +60,11 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
         margin: 20px;
     }
 
+    .buy-tickets {
+        text-align: center;
+        padding: 0.5em;
+    }
+
     .eventable-link {
         display: inline-block;
         height: 35px;
@@ -208,6 +213,13 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
             </li>
         </ul>
     </section>
+    <section class="buy-tickets">
+        <p class="buy-tickets">
+            <noscript><a href="https://missionbit-gala-2019.eventbrite.com" rel="noopener noreferrer" target="_blank"></noscript>
+            <button id="eventbrite-widget-modal-trigger-64317553534" class="btn btn-lg btn-primary" type="button">Sponsor the Gala</button>
+            <noscript></a>Sponsor the Gala on Eventbrite</noscript>
+        </p>
+    </section>
     <section>
         <div class="video-responsive">
             <iframe width="1120" height="630"
@@ -265,3 +277,17 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
         </div>
     </section>
 </div>
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+<script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '64317553534',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-64317553534',
+        onOrderComplete: exampleCallback
+    });
+</script>
