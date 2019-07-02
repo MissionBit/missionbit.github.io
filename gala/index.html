@@ -92,6 +92,24 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
     position: relative;
   }
 
+  .emoji-bullets {
+    list-style: none;
+    padding-left: 0;
+    text-indent: 0;
+    font-size: 16px;
+  }
+  .emoji-bullets li[data-bullet] {
+    display: flex;
+    min-height: 2em;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  .emoji-bullets li[data-bullet]::before {
+    content: attr(data-bullet);
+    font-size: 200%;
+    padding-right: 0.5em;
+  }
+
   @supports (display: grid) {
     .gala-sponsors a {
       margin: 0;
@@ -156,15 +174,15 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
       or contact us at <a href="mailto:development@missionbit.com">development@missionbit.com</a>.
     </p>
     <p><strong>Dress:</strong> Dressy Casual. Please refer to the following <a href="http://emilypost.com/advice/attire-guide-dress-codes-from-casual-to-white-tie/" target="_blank" rel="nofollow noopener noreferrer">Attire Guide</a> for examples of Gala wear.</p>
-    <p><span><strong>Parking:</strong> </span>Street Parking + Parking Garage @ 1 Embarcadero Center</p>
-    <p><strong>Location:</strong> The Bently Reserve is located at the corner of Battery St &amp; Sacramento St</p>
-    <p><strong>What to Expect:</strong></p>
+    <p><strong>Parking:</strong> Street Parking + Parking Garage @ 1 Embarcadero Center</p>
+    <p><strong>Location:</strong> The Bently Reserve is located on the corner of 301 Battery St at Sacramento St (<a href="https://goo.gl/maps/fmngaetYa4tUrnBbA" target="_blank">View Map</a>)</p>
     <p>
-      <ul>
-        <li>Booths featuring amazing student projects</li>
-        <li>Open bar with specialty cocktails</li>
-        <li>Delicious San Francisco-inspired foods</li>
-        <li>Great network of folks to connect with who care about our young people</li>
+      <strong>What to Expect:</strong><br />
+      <ul class="emoji-bullets">
+        <li data-bullet="👩🏽‍💻">Booths featuring amazing student projects</li>
+        <li data-bullet="🥃">Open bar with specialty cocktails</li>
+        <li data-bullet="🥢">Delicious San Francisco-inspired food</li>
+        <li data-bullet="🙋🏿‍♂">Great network of folks to connect with who care about our young people</li>
       </ul>
     </p>
     <p>We're excited to share this very special evening with you!</p>
