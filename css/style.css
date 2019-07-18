@@ -703,12 +703,6 @@ section.module.parallax-4 {
         margin: 0;
     }
 
-    iframe {
-        width: auto;
-        height: 500px;
-        margin: 0;
-    }
-
 }
 
 /********* DONATE INDEX ***********/
@@ -850,17 +844,6 @@ li.navbar-gala {
 .donate-icon:hover .fa-square,
 .donate-icon:focus .fa-square {
     color: #ed9c28;
-}
-
-.campaign-alert {
-    text-align: center;
-}
-.student-alert {
-    text-align: center;
-}
-iframe.campaign-alert {
-    margin: 30px 15px 15px 15px;
-    float: right;
 }
 
 .apply-ctr, .donate-ctr {
