@@ -1389,3 +1389,19 @@ footer address td.contact-info {
     padding: 7px 9px;
     margin: 4px 0;
 }
+
+/* 16:9 iframe video */
+.video-responsive {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    margin-bottom: 15px;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
