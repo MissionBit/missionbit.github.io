@@ -2,7 +2,34 @@
 title: "Demo Day RSVP"
 ---
 
-
+<style>
+	/* Ensure that there's room to display the time in the banner */
+	.banner-image.demoday {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 290px;
+	}
+	.demoday .banner-title {
+		padding-top: 0px;
+	}
+	@media (max-width: 768px) {
+		.banner-image.demoday {
+			height: 290px;
+		}
+	}
+	/* "RSVP" should not get cropped */
+	@media (max-width: 450px) {
+		.rectangle.logo-orange {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.rectangle.logo-orange h1 {
+			font-size: 18px;
+		}
+	}
+</style>
 <div class="banner-image demoday">
 	<div class="banner-title">
 		<h2>MISSION BIT PRESENTS</h2>
@@ -28,10 +55,8 @@ title: "Demo Day RSVP"
 		<li>Live demos of student projects</li>
 		<li>An incredible group of like-minded individuals who are invested in the future of education</li>
 	</ul>
-	<center>
-		<p>Admission is free, but please make sure to RSVP below. If your name is not on the guest list, you'll not be allowed into the venue.</p>
-		<p>We hope to see you there!</p>
-	</center>
+	<p>We hope to see you there!</p>
+	<h4>Admission is free, but please make sure to RSVP below. If your name is not on the guest list, you'll not be allowed into the venue.</h4>
 	<hr>
 
 	<div class="row">
@@ -110,42 +135,17 @@ title: "Demo Day RSVP"
 		<div class="wFormContainer"  >
 			<div class="wFormHeader"></div>
 			<style type="text/css">
-						#tfa_1876,
-						*[id^="tfa_1876["] {
-							width: 412px !important;
-						}
-						#tfa_1876-D,
-						*[id^="tfa_1876["][class~="field-container-D"] {
-							width: auto !important;
-						}
-					
-						#tfa_1937,
-						*[id^="tfa_1937["] {
-							width: 412px !important;
-						}
-						#tfa_1937-D,
-						*[id^="tfa_1937["][class~="field-container-D"] {
-							width: auto !important;
-						}
-					
-						#tfa_1977,
-						*[id^="tfa_1977["] {
-							width: 412px !important;
-						}
-						#tfa_1977-D,
-						*[id^="tfa_1977["][class~="field-container-D"] {
-							width: auto !important;
-						}
-					
-						#tfa_2017,
-						*[id^="tfa_2017["] {
-							width: 412px !important;
-						}
-						#tfa_2017-D,
-						*[id^="tfa_2017["][class~="field-container-D"] {
-							width: auto !important;
-						}
-					</style><div class=""><div class="wForm" id="4723971-WRPR" dir="ltr">
+				@media (max-width: 680px) {
+					/* first & last name (for form 1 through 4) should be stacked in narrow browsers */
+					.wForm .inline div.oneField,
+					#tfa_1912,
+					#tfa_1934,
+					#tfa_1974,
+					#tfa_2014 {
+						display: block;
+					}
+				}
+			</style><div class=""><div class="wForm" id="4723971-WRPR" dir="ltr">
 		<div class="codesection" id="code-4723971"></div>
 		<h3 class="wFormTitle" id="4723971-T">Demo Day Summer 2019 - RSVP</h3>
 		<form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsAbove" id="4723971" role="form">
