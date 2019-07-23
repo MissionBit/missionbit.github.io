@@ -13,6 +13,9 @@ title: "Demo Day RSVP"
 	.demoday .banner-title {
 		padding-top: 0px;
 	}
+	.location-info {
+		padding-top: 35px;
+	}
 	@media (max-width: 768px) {
 		.banner-image.demoday {
 			height: 290px;
@@ -130,22 +133,29 @@ title: "Demo Day RSVP"
         wFORMS.behaviors.prefill.skip = false;
     </script>
         <script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/localization-en_US.js?v=546"></script>
+		<style type="text/css">
+			@media (max-width: 680px) {
+				/* first & last name (for form 1 through 4) should be stacked in narrow browsers */
+				.wForm .inline div.oneField,
+				#tfa_1912,
+				#tfa_1934,
+				#tfa_1974,
+				#tfa_2014 {
+					display: block;
+				}
+			}
+			.wFormContainer {
+				margin: 0 auto;
+			}
+			.wFormHeader {
+				display: none;
+			}
+		</style>
 
 		<!-- FORM: BODY SECTION -->
 		<div class="wFormContainer"  >
 			<div class="wFormHeader"></div>
-			<style type="text/css">
-				@media (max-width: 680px) {
-					/* first & last name (for form 1 through 4) should be stacked in narrow browsers */
-					.wForm .inline div.oneField,
-					#tfa_1912,
-					#tfa_1934,
-					#tfa_1974,
-					#tfa_2014 {
-						display: block;
-					}
-				}
-			</style><div class=""><div class="wForm" id="4723971-WRPR" dir="ltr">
+			<div class=""><div class="wForm" id="4723971-WRPR" dir="ltr">
 		<div class="codesection" id="code-4723971"></div>
 		<h3 class="wFormTitle" id="4723971-T">Demo Day Summer 2019 - RSVP</h3>
 		<form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsAbove" id="4723971" role="form">
@@ -324,11 +334,7 @@ title: "Demo Day RSVP"
 		<div style="clear:both"></div>
 		<input type="hidden" value="4723971" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="ce6d99a848bd03127bf7e04a5f32b3cc" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="3" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
 		</form>
-		</div></div><div class="wFormFooter"><p class="supportInfo"><br></p></div>
-		<p class="supportInfo" >
-			
-
-			</p>
+		</div></div><div class="wFormFooter"></div>
 		</div>
 			
 			</div>
@@ -336,7 +342,7 @@ title: "Demo Day RSVP"
 		</div>
 
 		<!-- date and location -->
-		<div class="col-md-4" style="margin-top: 100px;">
+		<div class="col-md-4 location-info">
 
 			<div>
 				<p> <strong>Date:</strong> <br>Saturday, July 27, 2019</p>
