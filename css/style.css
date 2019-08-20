@@ -1405,3 +1405,6 @@ footer address td.contact-info {
     width:100%;
     position:absolute;
 }
+.footericon {
+    color: inherit;
+}
