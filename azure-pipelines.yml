@@ -16,6 +16,7 @@ steps:
     dockerComposeFileArgs: |
       SOURCES_DIRECTORY=$(Build.SourcesDirectory)
       BINARIES_DIRECTORY=$(Build.BinariesDirectory)
+      USER=root
     projectName: $(Build.Repository.Name)
     detached: false
 - task: PublishBuildArtifacts@1
