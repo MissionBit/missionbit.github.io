@@ -4,5 +4,7 @@ services:
     build: .
     volumes:
       - "${SOURCES_DIRECTORY}:/app"
-      - "${BINARIES_DIRECTORY}:/app/_site"
+      - "${BINARIES_DIRECTORY}:/site"
     command: bash /app/docker-ci.sh
+    environment:
+      - DESTINATION=/site

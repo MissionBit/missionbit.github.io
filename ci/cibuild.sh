@@ -1,4 +1,5 @@
 #!/bin/bash
 set -e
-bundle exec jekyll build
-bundle exec htmlproofer ./_site --allow-hash-href --empty-alt-ignore --http-status-ignore="0,403"
+DESTINATION="${DESTINATION:-./_site}"
+bundle exec jekyll build -d "${DESTINATION}"
+bundle exec htmlproofer "${DESTINATION}" --allow-hash-href --empty-alt-ignore --http-status-ignore="0,403"
