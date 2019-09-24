@@ -3,5 +3,6 @@ services:
   ci:
     build: .
     volumes:
-      - .:/app
+      - ${SOURCES_DIRECTORY}:/app
+      - ${BINARIES_DIRECTORY}:/app/_site
     command: bash /app/docker-ci.sh

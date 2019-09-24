@@ -13,6 +13,9 @@ steps:
     action: Run services
     containerRegistryType: Container Registry
     dockerComposeFile: docker-compose-ci.yml
+    dockerComposeFileArgs: >
+      SOURCES_DIRECTORY=$(Build.SourcesDirectory)
+      BINARIES_DIRECTORY=$(Build.BinariesDirectory)
     projectName: $(Build.Repository.Name)
     detached: false
 - task: PublishBuildArtifacts@1
