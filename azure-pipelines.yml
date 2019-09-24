@@ -14,12 +14,12 @@ steps:
     containerRegistryType: Container Registry
     dockerComposeFile: docker-compose-ci.yml
     dockerComposeFileArgs: |
-      SOURCES_DIRECTORY="$(Build.SourcesDirectory)"
-      BINARIES_DIRECTORY="$(Build.BinariesDirectory)"
+      SOURCES_DIRECTORY=$(Build.SourcesDirectory)
+      BINARIES_DIRECTORY=$(Build.BinariesDirectory)
     projectName: $(Build.Repository.Name)
     detached: false
 - task: PublishBuildArtifacts@1
   displayName: Publish Site
   inputs:
     artifactName: www
-    pathtoPublish: "$(Build.BinariesDirectory)"
+    pathtoPublish: $(Build.BinariesDirectory)

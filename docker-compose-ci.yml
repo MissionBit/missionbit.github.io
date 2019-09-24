@@ -3,8 +3,8 @@ services:
   ci:
     build: .
     volumes:
-      - "${SOURCES_DIRECTORY}:/app"
-      - "${BINARIES_DIRECTORY}:/site"
+      - ${SOURCES_DIRECTORY}:/app
+      - ${BINARIES_DIRECTORY}:/site
     command: bash /app/docker-ci.sh
     environment:
       - DESTINATION=/site
