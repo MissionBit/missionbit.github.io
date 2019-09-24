@@ -1,7 +1,13 @@
-version: '2'
+version: '3'
 services:
   ci:
-    build: .
+    build:
+      context: .
+      args:
+        build_user: root
     volumes:
-      - .:/app
+      - ${SOURCES_DIRECTORY}:/app
+      - ${BINARIES_DIRECTORY}:/site
     command: bash /app/docker-ci.sh
+    environment:
+      - DESTINATION=/site
