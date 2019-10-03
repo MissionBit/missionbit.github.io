@@ -133,6 +133,10 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
     text-align: center;
     padding: 0.5em;
   }
+  .ticket-sales-timer {
+    text-align: center;
+    margin: 20px 0;
+  }
 </style>
 
 <div class="responsive-banner"></div>
@@ -140,18 +144,13 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
 <!-- container -->
 <div class="container gala" role="main">
   <section>
-    <h2 class="gala-save-the-date-heading">
-      Save the Date
-      <a href="https://add.eventable.com/events/5ce8c427fd34ba001ddfe50c/5ce8cd88a35e11007beac4bf/"
-        class="eventable-link" target="_blank" data-key="5ce8c427fd34ba001ddfe50c" data-event="5ce8cd88a35e11007beac4bf"
-        data-style="1"><img class="eventable-img" src="https://plugins.eventable.com/assets/eventable-logo.svg"><span>Add to Calendar</span></a>
-    </h2>
     <h2 class="gala-save-the-date">November 14, 2019, 6pm-9pm, San Francisco</h2>
     <p class="buy-tickets">
       <noscript><a href="https://missionbit-gala-2019.eventbrite.com" rel="noopener noreferrer" target="_blank"></noscript>
       <button id="eventbrite-widget-modal-trigger-64317553534" class="btn btn-lg btn-primary" type="button">Buy Tickets</button>
       <noscript></a>Buy Tickets on Eventbrite</noscript>
     </p>
+    <h2 class="ticket-sales-timer"></h2>
     <p>
       Mission Bit's Third Annual Gala is a celebration of six years of growth, impact, and learning. Due to the
       support of this generous community, we have reached over 3,500 students through our workshops, coding courses,
@@ -242,8 +241,46 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
     </div>
   </section>
 </div>
-<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://plugins.eventable.com/eventable.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'eventable-script');</script>
+<script>
+  var MIN_MSEC = 1000 * 60;
+  var HOUR_MSEC = MIN_MSEC * 60;
+  var DAY_MSEC = 24 * HOUR_MSEC;
 
+  function timeFormat(delta, prefix, soon) {
+    var days = Math.floor(delta / DAY_MSEC);
+    if (days >= 2) {
+      return prefix + String(days) + ' days';
+    }
+    var hours = Math.floor(delta / HOUR_MSEC);
+    if (hours >= 2) {
+      return prefix + String(hours) + ' hours';
+    }
+    var minutes = Math.floor(delta / MIN_MSEC);
+    if (minutes >= 5) {
+      return prefix + String(minutes) + ' minutes';
+    }
+    return soon;
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('.ticket-sales-timer'), function (el) {
+    var PDT_OFFSET = 7 * HOUR_MSEC;
+    var PST_OFFSET = 8 * HOUR_MSEC;
+    var NOVEMBER = 11 - 1;
+    // 2019-11-01 6pm PDT
+    var ticketSalesEnd = Date.UTC(2019, NOVEMBER, 1, 18) + PDT_OFFSET;
+    // 2019-11-14 6pm PST
+    var eventStart = Date.UTC(2019, NOVEMBER, 14, 18) + PST_OFFSET;
+    var now = Date.now();
+    var output = [];
+    if (ticketSalesEnd > now) {
+      output.push(timeFormat(ticketSalesEnd - now, 'Only ', 'Moments'), ' left to buy tickets! ')
+    }
+    if (eventStart > now) {
+      output.push('Gala starts ', timeFormat(eventStart - now, 'in ', 'soon'), '!');
+    }
+    el.textContent = output.join('');
+  });
+</script>
 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
 <script type="text/javascript">
     var exampleCallback = function() {
