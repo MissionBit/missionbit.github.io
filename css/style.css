@@ -1408,3 +1408,6 @@ footer address td.contact-info {
 .footericon {
     color: inherit;
 }
+.circle-mask {
+    border-radius: 50%;
+}
