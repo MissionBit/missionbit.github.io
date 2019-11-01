@@ -267,11 +267,11 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
   }
 
   Array.prototype.forEach.call(document.querySelectorAll('.ticket-sales-timer'), function (el) {
-    var PDT_OFFSET = 7 * HOUR_MSEC;
+    // var PDT_OFFSET = 7 * HOUR_MSEC;
     var PST_OFFSET = 8 * HOUR_MSEC;
     var NOVEMBER = 11 - 1;
-    // 2019-11-01 6pm PDT
-    var ticketSalesEnd = Date.UTC(2019, NOVEMBER, 1, 18) + PDT_OFFSET;
+    // 2019-11-07 6pm PST
+    var ticketSalesEnd = Date.UTC(2019, NOVEMBER, 7, 18) + PST_OFFSET;
     // 2019-11-14 6pm PST
     var eventStart = Date.UTC(2019, NOVEMBER, 14, 18) + PST_OFFSET;
     var now = Date.now();
