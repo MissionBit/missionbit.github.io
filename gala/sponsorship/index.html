@@ -64,6 +64,9 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
         text-align: center;
         padding: 0.5em;
     }
+    .buy-tickets.sales-ended {
+      display: none;
+    }
 
     @supports (display: grid) {
         .gala-sponsors a {
@@ -185,7 +188,7 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
         </ul>
     </section>
     <section>
-        <p class="buy-tickets">
+        <p class="buy-tickets sales-ended">
             <noscript><a href="https://missionbit-gala-2019.eventbrite.com" rel="noopener noreferrer" target="_blank"></noscript>
             <button id="eventbrite-widget-modal-trigger-64317553534" class="btn btn-lg btn-primary" type="button">Sponsor the Gala</button>
             <noscript></a>Sponsor the Gala on Eventbrite</noscript>
