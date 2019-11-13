@@ -60,38 +60,6 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
     margin: 20px;
   }
 
-  .eventable-link {
-    display: inline-block;
-    height: 35px;
-    width: 165px;
-    line-height: 0;
-    border-radius: 2px;
-    background: #49afcd;
-    padding: 1px;
-    border: 1px solid transparent;
-    text-decoration: none;
-    text-align: center;
-  }
-  .eventable-link > span {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 13.86px;
-    font-weight: 700;
-    line-height: 30px;
-    color: #fff;
-    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-    margin-left: 11px;
-    top: 0px;
-    position: relative;
-  }
-  .eventable-img {
-    height: 20px;
-    width: 19px;
-    top: 6px;
-    padding: 0;
-    margin: 0;
-    position: relative;
-  }
-
   .emoji-bullets {
     list-style: none;
     padding-left: 0;
@@ -132,6 +100,9 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
   .buy-tickets {
     text-align: center;
     padding: 0.5em;
+  }
+  .buy-tickets.sales-ended {
+    display: none;
   }
   .ticket-sales-timer {
     text-align: center;
@@ -266,24 +237,38 @@ image: "/images/gala/2019-poster-save-the-date.jpg"
     return soon;
   }
 
-  Array.prototype.forEach.call(document.querySelectorAll('.ticket-sales-timer'), function (el) {
-    // var PDT_OFFSET = 7 * HOUR_MSEC;
-    var PST_OFFSET = 8 * HOUR_MSEC;
-    var NOVEMBER = 11 - 1;
-    // 2019-11-07 6pm PST
-    var ticketSalesEnd = Date.UTC(2019, NOVEMBER, 7, 18) + PST_OFFSET;
-    // 2019-11-14 6pm PST
-    var eventStart = Date.UTC(2019, NOVEMBER, 14, 18) + PST_OFFSET;
-    var now = Date.now();
-    var output = [];
-    if (ticketSalesEnd > now) {
-      output.push(timeFormat(ticketSalesEnd - now, 'Only ', 'Moments'), ' left to buy tickets! ')
+  function updateCountdown() {
+    var shouldUpdate = false;
+    Array.prototype.forEach.call(document.querySelectorAll('.ticket-sales-timer'), function (el) {
+      // var PDT_OFFSET = 7 * HOUR_MSEC;
+      var PST_OFFSET = 8 * HOUR_MSEC;
+      var NOVEMBER = 11 - 1;
+      // 2019-11-07 6pm PST
+      var ticketSalesEnd = Date.UTC(2019, NOVEMBER, 12, 18) + PST_OFFSET;
+      // 2019-11-14 6pm PST
+      var eventStart = Date.UTC(2019, NOVEMBER, 14, 18) + PST_OFFSET;
+      var now = Date.now();
+      var output = [];
+      if (ticketSalesEnd > now) {
+        output.push(timeFormat(ticketSalesEnd - now, 'Only ', 'Moments'), ' left to buy tickets! ')
+      } else {
+        Array.prototype.forEach.call(document.querySelectorAll('.buy-tickets'), function (el) {
+          el.classList.add('sales-ended');
+        });
+      }
+      if (eventStart > now) {
+        shouldUpdate = true;
+        output.push('Gala starts ', timeFormat(eventStart - now, 'in ', 'soon'), '!');
+      }
+      el.textContent = output.join('');
+    });
+    if (shouldUpdate) {
+      setTimeout(updateCountdown, 60 * 1000);
     }
-    if (eventStart > now) {
-      output.push('Gala starts ', timeFormat(eventStart - now, 'in ', 'soon'), '!');
-    }
-    el.textContent = output.join('');
-  });
+  }
+
+  updateCountdown();
+
 </script>
 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
 <script type="text/javascript">
