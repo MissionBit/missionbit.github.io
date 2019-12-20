@@ -76,6 +76,58 @@ wFORMS.behaviors.prefill.skip = false;
 <script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms_calendar.js"></script>
 <script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/localization-en_US.js?v=570-4"></script>
 
+<!-- FORM: HEAD SECTION -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(){
+const FORM_TIME_START = Math.floor((new Date).getTime()/1000);
+let formElement = document.getElementById("tfa_0");
+if (null === formElement) {
+    formElement = document.getElementById("0");
+}
+let appendJsTimerElement = function(){
+    let formTimeDiff = Math.floor((new Date).getTime()/1000) - FORM_TIME_START;
+    let cumulatedTimeElement = document.getElementById("tfa_dbCumulatedTime");
+    if (null !== cumulatedTimeElement) {
+        let cumulatedTime = parseInt(cumulatedTimeElement.value);
+        if (null !== cumulatedTime && cumulatedTime > 0) {
+            formTimeDiff += cumulatedTime;
+        }
+    }
+    let jsTimeInput = document.createElement("input");
+    jsTimeInput.setAttribute("type", "hidden");
+    jsTimeInput.setAttribute("value", formTimeDiff.toString());
+    jsTimeInput.setAttribute("name", "tfa_dbElapsedJsTime");
+    jsTimeInput.setAttribute("id", "tfa_dbElapsedJsTime");
+    jsTimeInput.setAttribute("autocomplete", "off");
+    if (null !== formElement) {
+        formElement.appendChild(jsTimeInput);
+    }
+};
+if (null !== formElement) {
+    if(formElement.addEventListener){
+        formElement.addEventListener('submit', appendJsTimerElement, false);
+    } else if(formElement.attachEvent){
+        formElement.attachEvent('onsubmit', appendJsTimerElement);
+    }
+}
+});
+</script>
+
+<link href="https://www.tfaforms.com/dist/form-builder/5.0.0/wforms-layout.css?v=571" rel="stylesheet" type="text/css" />
+
+<link href="https://www.tfaforms.com/uploads/themes/theme-54371.css" rel="stylesheet" type="text/css" />
+<link href="https://www.tfaforms.com/dist/form-builder/5.0.0/wforms-jsonly.css?v=571" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms.js?v=571"></script>
+<script type="text/javascript">
+wFORMS.behaviors.prefill.skip = false;
+</script>
+<link rel="stylesheet" type="text/css" href="https://www.tfaforms.com/css/kalendae.css" />
+<script type="text/javascript" src="https://www.tfaforms.com/js/kalendae/kalendae.standalone.min.js" ></script>
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms_calendar.js"></script>
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/localization-en_US.js?v=571"></script>
+
 <!-- FORM: BODY SECTION -->
 <div class="wFormContainer"  >
 <div class="wFormHeader"></div>
@@ -217,7 +269,8 @@ wFORMS.behaviors.prefill.skip = false;
 <option value="tfa_2233" id="tfa_2233" data-conditionals="#tfa_2207" class="">Unity Game Design (Washington)</option>
 <option value="tfa_2234" id="tfa_2234" data-conditionals="#tfa_2226" class="">Unity Game Design (Mission)</option>
 <option value="tfa_2235" id="tfa_2235" data-conditionals="#tfa_2211" class="">Unity Game Design (Leadership)</option>
-<option value="tfa_2236" id="tfa_2236" data-conditionals="#tfa_2215" class="">Android Game Design (CCSF Mission)</option></select></div>
+<option value="tfa_2236" id="tfa_2236" data-conditionals="#tfa_2215" class="">Android Game Design (CCSF Mission)</option>
+<option value="tfa_2241" id="tfa_2241" data-conditionals="#tfa_2239" class="">Unity Game Design (Booker T. Washington)</option></select></div>
 </div>
 <div id="tfa_2084" class="section group">
 <div id="tfa_2088" class="section group" data-condition="`#tfa_2230`"><div class="htmlSection" id="tfa_2089"><div class="htmlContent" id="tfa_2089-HTML"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;">Welcome to&nbsp;<span style="box-sizing: border-box; font-weight: 700;">Web Design 101 at Lincoln High School&nbsp;</span></div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;"><u style="box-sizing: border-box;">Class details</u></div><div style="box-sizing: border-box;"><div>Location: Abraham Lincoln High School&nbsp;</div><div>Meets: Tuesdays and Thursdays (4pm to 6pm)</div><div><span style="word-spacing: normal;">Dates:&nbsp;</span><span style="word-spacing: normal;">February 3, 2020 - April 25, 2020</span></div><div><br></div></div></div></div><div style="box-sizing: border-box;">Thank you for registering for the Mission Bit Spring 2020 semester.&nbsp;</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">Any questions or concerns may be directed to Cynthia, Program Manager, at cynthia@missionbit.com.</div><div style="box-sizing: border-box;"><br style="box-sizing: border-box;"></div><div style="box-sizing: border-box;">In Community,</div>The Mission Bit Team</div></div></div>
@@ -227,6 +280,7 @@ wFORMS.behaviors.prefill.skip = false;
 <div id="tfa_2226" class="section group" data-condition="`#tfa_2234`"><div class="htmlSection" id="tfa_2227"><div class="htmlContent" id="tfa_2227-HTML"><div><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div><div><div>Welcome to&nbsp;<span style="font-weight: 700;">Unity Game Design at Mission High School</span></div><div><br></div></div><div><u>Class details</u></div><div><div>Location: Mission High School&nbsp;</div><div>Meets:&nbsp;<span style="word-spacing: normal;">Mondays and Wednesdays (4pm to 6pm)</span></div><div><div><span style="word-spacing: normal;">Dates:&nbsp;</span><span style="word-spacing: normal;">February 3, 2020 - April 25, 2020</span></div><div><br></div></div></div></div><div><div>Thank you for registering for the Mission Bit Spring 2020 semester.&nbsp;</div><div><br></div></div><div>This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div><br></div><div>Any questions or concerns may be directed to Cynthia, Program Manager, at cynthia@missionbit.com.</div><div><br></div><div>In Community,</div>The Mission Bit Team</div></div></div></div></div></div></div>
 <div id="tfa_2211" class="section group" data-condition="`#tfa_2235`"><div class="htmlSection" id="tfa_2212"><div class="htmlContent" id="tfa_2212-HTML"><div><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div><div><div>Welcome to&nbsp;<span style="font-weight: 700;">Unity Game Design at Leadership High School</span></div><div><br></div></div><div><u>Class details</u></div><div><div>Location: Leadership Marshall High School&nbsp;</div><div>Meets:&nbsp;<span style="word-spacing: normal;">Tuesdays and Thursdays (4pm to 6pm)</span></div><div><div><span style="word-spacing: normal;">Dates:&nbsp;</span><span style="word-spacing: normal;">February 3, 2020 - April 25, 2020</span></div><div><br></div></div></div></div><div><div>Thank you for registering for the Mission Bit Spring 2020 semester.&nbsp;</div><div><br></div></div><div>This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div><br></div><div>Any questions or concerns may be directed to Cynthia, Program Manager, at cynthia@missionbit.com.</div><div><br></div><div>In Community,</div>The Mission Bit Team</div></div></div></div></div></div></div>
 <div id="tfa_2215" class="section group" data-condition="`#tfa_2236`"><div class="htmlSection" id="tfa_2216"><div class="htmlContent" id="tfa_2216-HTML"><div><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div><div>Welcome to&nbsp;<span style="font-weight: 700;">Android Game Design at CCSF Mission</span></div><div><br></div><div><u>Class details</u></div><div><div>Location: City College of San Francisco - Mission Campus</div><div>Meets:&nbsp;<span style="word-spacing: normal;">Mondays and Wednesdays (4:30pm to 6:30pm)</span></div><div><div><span style="word-spacing: normal;">Dates:&nbsp;</span><span style="word-spacing: normal;">February 3, 2020 - April 25, 2020</span></div><div><br></div></div></div></div><div><div>Thank you for registering for the Mission Bit Spring 2020 semester.&nbsp;</div><div><br></div></div><div>This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div><br></div><div>Any questions or concerns may be directed to Cynthia, Program Manager, at cynthia@missionbit.com.</div><div><br></div><div>In Community,</div>The Mission Bit Team</div></div></div></div></div></div></div>
+<div id="tfa_2239" class="section group" data-condition="`#tfa_2241`"><div class="htmlSection" id="tfa_2240"><div class="htmlContent" id="tfa_2240-HTML"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div style="box-sizing: border-box;"><div><div>Welcome to&nbsp;<span style="font-weight: 700;">Unity Game Design at Booker T. Washington</span></div><div><br></div><div><u>Class details</u></div><div><div>Location: Booker T. Washington Community Services Center</div><div>Meets:&nbsp;<span style="word-spacing: normal;">Tuesdays and Thursdays (4pm to 6pm)</span></div><div><div><span style="word-spacing: normal;">Dates:&nbsp;</span><span style="word-spacing: normal;">February 3, 2020 - April 25, 2020</span></div><div><br></div></div></div></div><div><div>Thank you for registering for the Mission Bit Spring 2020 semester.&nbsp;</div><div><br></div></div><div>This is the first step in the enrollment process.&nbsp; Please enter all contact information accurately as we will connect with you soon for next steps.</div><div><br></div><div>Any questions or concerns may be directed to Cynthia, Program Manager, at cynthia@missionbit.com.</div><div><br></div><div>In Community,</div>The Mission Bit Team</div></div></div></div></div></div>
 </div>
 <fieldset id="tfa_2025" class="section">
 <legend id="tfa_2025-L">Student</legend>
@@ -381,7 +435,7 @@ wFORMS.behaviors.prefill.skip = false;
 </div>
 <div class="actions" id="4778161-A"><input type="submit" data-label="Submit" class="primaryAction" id="submit_button" value="Submit"></div>
 <div style="clear:both"></div>
-<input type="hidden" value="4778161" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="31ef3e83eddf6d1c1ac4e301bed2309b" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="8" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
+<input type="hidden" value="4778161" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="31ef3e83eddf6d1c1ac4e301bed2309b" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="9" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
 </form>
 </div></div><div class="wFormFooter"><p class="supportInfo"><a target="new" class="contactInfoLink" href="https://www.tfaforms.com/forms/help/4686585">Contact Information</a><br></p></div>
 <p class="supportInfo" >
