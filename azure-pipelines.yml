@@ -7,6 +7,13 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      chmod 777 "$BINARIES_DIRECTORY"
+  env:
+    BINARIES_DIRECTORY: $(Build.BinariesDirectory)
 - task: DockerCompose@0
   displayName: 'Run Jekyll & Test Links'
   inputs:
@@ -16,8 +23,8 @@ steps:
     dockerComposeFileArgs: |
       SOURCES_DIRECTORY=$(Build.SourcesDirectory)
       BINARIES_DIRECTORY=$(Build.BinariesDirectory)
-      USER=root
     projectName: $(Build.Repository.Name)
+    abortOnContainerExit: true
     detached: false
 - task: PublishBuildArtifacts@1
   displayName: Publish Site

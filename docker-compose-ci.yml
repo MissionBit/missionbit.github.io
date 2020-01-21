@@ -1,13 +1,12 @@
 version: '3'
 services:
   ci:
-    build:
-      context: .
-      args:
-        build_user: root
+    image: jekyll/builder:latest
     volumes:
       - ${SOURCES_DIRECTORY}:/app
       - ${BINARIES_DIRECTORY}:/site
-    command: bash /app/docker-ci.sh
+    tmpfs: /app/.jekyll-cache
+    working_dir: /app
+    command: ./docker-ci.sh
     environment:
       - DESTINATION=/site
