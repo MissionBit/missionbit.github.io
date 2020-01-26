@@ -3,31 +3,115 @@
 # Add steps that build, test, save build artifacts, deploy, and more:
 # https://aka.ms/yaml
 
-pool:
-  vmImage: 'Ubuntu 16.04'
+variables:
+  azureSubscription: 'Azure Resource Manager'
 
-steps:
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      chmod 777 "$BINARIES_DIRECTORY"
-  env:
-    BINARIES_DIRECTORY: $(Build.BinariesDirectory)
-- task: DockerCompose@0
-  displayName: 'Run Jekyll & Test Links'
-  inputs:
-    action: Run services
-    containerRegistryType: Container Registry
-    dockerComposeFile: docker-compose-ci.yml
-    dockerComposeFileArgs: |
-      SOURCES_DIRECTORY=$(Build.SourcesDirectory)
-      BINARIES_DIRECTORY=$(Build.BinariesDirectory)
-    projectName: $(Build.Repository.Name)
-    abortOnContainerExit: true
-    detached: false
-- task: PublishBuildArtifacts@1
-  displayName: Publish Site
-  inputs:
-    artifactName: www
-    pathtoPublish: $(Build.BinariesDirectory)
+jobs:
+  - job: Build
+
+    pool:
+      vmImage: ubuntu-latest
+
+    steps:
+    - task: Bash@3
+      inputs:
+        targetType: 'inline'
+        script: |
+          chmod 777 "$BINARIES_DIRECTORY"
+      env:
+        BINARIES_DIRECTORY: $(Build.BinariesDirectory)
+    - task: DockerCompose@0
+      displayName: 'Run Jekyll & Test Links'
+      inputs:
+        action: Run services
+        containerRegistryType: Container Registry
+        dockerComposeFile: docker-compose-ci.yml
+        dockerComposeFileArgs: |
+          SOURCES_DIRECTORY=$(Build.SourcesDirectory)
+          BINARIES_DIRECTORY=$(Build.BinariesDirectory)
+        projectName: $(Build.Repository.Name)
+        abortOnContainerExit: true
+        detached: false
+    - task: PublishBuildArtifacts@1
+      displayName: Publish Site
+      inputs:
+        artifactName: www
+        pathtoPublish: $(Build.BinariesDirectory)
+
+  - job: UploadArtifact
+    pool:
+      vmImage: windows-latest
+    dependsOn: Build
+    condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.Reason'], 'PullRequest')))
+
+    steps:
+    - checkout: none
+    - download: current
+      artifact: www
+    - task: AzureFileCopy@3
+      inputs:
+        sourcePath: $(Pipeline.Workspace)/www
+        azureSubscription: $(azureSubscription)
+        destination: azureBlob
+        storage: missionbitwww
+        containerName: '$web'
+        blobPrefix: $(Build.SourceVersion)
+
+  - deployment: DeployPR
+
+    environment: www-dev
+    pool:
+      vmImage: windows-latest
+    dependsOn: UploadArtifact
+    condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+    variables:
+      prHost: pr$(system.pullRequest.pullRequestNumber).dev.missionbit.org
+
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - checkout: none
+          - task: AzureCLI@2
+            displayName: Azure CLI
+            inputs:
+              azureSubscription: $(azureSubscription)
+              scriptType: ps
+              scriptLocation: inlineScript
+              inlineScript: |
+                  $name = $env:prHost.replace(".", "-")
+                  az extension add --name front-door
+                  $frontends = $(az network front-door frontend-endpoint list -f missionbit-dev -g www-dev | ConvertFrom-Json)
+                  $frontend = $frontends.where({ $_.name -eq $name })
+                  if (!$frontend) {
+                    echo "Creating new frontend for $env:prHost to /$env:Build_SourceVersion/"
+                    $frontend = $(az network front-door frontend-endpoint create -f missionbit-dev -g www-dev --host-name $env:prHost --name $name | ConvertFrom-Json)
+                    az network front-door frontend-endpoint enable-https -f missionbit-dev -g www-dev -n $name
+                    $frontends = $(az network front-door frontend-endpoint list -f missionbit-dev -g www-dev | ConvertFrom-Json)
+                    az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Http -n redirect-to-https --frontend-endpoints $($frontends.id) --route-type Redirect --redirect-type PermanentRedirect --redirect-protocol HttpsOnly
+                  }
+                  az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Https -n $name --backend-pool blob --frontend-endpoints "$($frontend.id)" --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
+
+  - deployment: DeployMaster
+
+    environment: www
+    pool:
+      vmImage: windows-latest
+    dependsOn: UploadArtifact
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - checkout: none
+          - task: AzureCLI@2
+            displayName: Azure CLI
+            inputs:
+              azureSubscription: $(azureSubscription)
+              scriptType: ps
+              scriptLocation: inlineScript
+              inlineScript: |
+                az extension add --name front-door
+                az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Https -n serve-content --backend-pool blob --frontend-endpoints "$($frontend.id)" --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
+                az storage blob service-properties update --account-name missionbitwww --static-website --404-document "$(Build.SourceVersion)/404.html"
+                az cdn endpoint update -g www -n missionbitwww --profile-name missionbitcdn --origin-path "/$(Build.SourceVersion)"
