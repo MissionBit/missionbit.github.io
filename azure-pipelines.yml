@@ -95,7 +95,7 @@ jobs:
                     az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Http -n redirect-to-https --frontend-endpoints $($frontends.id) --route-type Redirect --redirect-type PermanentRedirect --redirect-protocol HttpsOnly
                   }
                   echo "Updating routing-rule $name to /$env:Build_SourceVersion/"
-                  az network front-door routing-rule create --debug --front-door-name missionbit-dev --resource-group www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly --name $name --backend-pool blob --frontend-endpoints "$($frontend.id)" --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
+                  az network front-door routing-rule create --front-door-name missionbit-dev --resource-group www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly --name $name --backend-pool blob --frontend-endpoints "$($frontend.id)" --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
           - task: GitHubDeployment@0
             inputs:
               gitHubConnection: github.com_etrepum
