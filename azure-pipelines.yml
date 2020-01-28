@@ -180,7 +180,7 @@ jobs:
                 az extension add --name front-door
                 $headers = @{ "Accept" = "application/vnd.github.shadow-cat-preview+json"; }
                 $url = "https://api.github.com/repos/missionbit/missionbit.github.io/pulls"
-                $prs = (Invoke-WebRequest -Uri $PrUrl -Headers $Headers -Method Get -ErrorAction Stop | ConvertFrom-Json)
+                $prs = (Invoke-WebRequest -Uri $url -Headers $Headers -Method Get -ErrorAction Stop | ConvertFrom-Json)
                 $envs = @{ "missionbit-dev-azurefd-net" = 0; }
                 $prs.number | foreach { $envs["pr$_-dev-missionbit-org"] = $_ }
                 $frontends = $(az network front-door frontend-endpoint list -f missionbit-dev -g www-dev | ConvertFrom-Json)
