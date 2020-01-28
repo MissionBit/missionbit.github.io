@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 DESTINATION="${DESTINATION:-./_site}"
-jekyll build -d "${DESTINATION}"
+jekyll build -d "${DESTINATION}" --trace
 # Temporarily ignore drive.google.com broken links
 htmlproofer "${DESTINATION}" \
     --allow-hash-href \
