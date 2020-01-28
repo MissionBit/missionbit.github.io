@@ -71,11 +71,13 @@ title: "Minimal Page Example"
 
 The site is automatically built with [Azure Pipelines].
 
-On a successful build of the master branch, the [New release pipeline]
-publishes the build artifacts to Azure Blob Storage and then modifies
-the CDN configuration to use this path as the new website.
+On a successful build of the master branch, the DeployMasterCDN
+pipeline job publishes the build artifacts to Azure Blob Storage and then
+modifies the CDN configuration to use this path as the new website.
 
-[New release pipeline]: https://dev.azure.com/missionbit/www.missionbit.com/_releaseDefinition?definitionId=1&_a=environments-editor-preview
+Note that since the same blob store is used for all front-ends,
+changes to the 404.html page only occur after merging to master.
+
 [Azure Pipelines]: https://dev.azure.com/missionbit/www.missionbit.com/
 [Docker Desktop]: https://www.docker.com/products/docker-desktop
 [Jekyll]: http://jekyllrb.com/
