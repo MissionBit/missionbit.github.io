@@ -61,11 +61,13 @@ jobs:
 
     environment: www-dev
     pool:
-      vmImage: windows-latest
+      # windows-latest not currently compatible with AzureCLI@2
+      vmImage: vs2017-win2016
     dependsOn: UploadArtifact
     condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
     variables:
       prHost: pr$(system.pullRequest.pullRequestNumber).dev.missionbit.org
+      prEnvironment: pr$(system.pullRequest.pullRequestNumber)-dev-missionbit-org
 
     strategy:
       runOnce:
@@ -79,18 +81,35 @@ jobs:
               scriptType: ps
               scriptLocation: inlineScript
               inlineScript: |
-                  $name = $env:prHost.replace(".", "-")
+                  $name = $env:prEnvironment
                   az extension add --name front-door
                   $frontends = $(az network front-door frontend-endpoint list -f missionbit-dev -g www-dev | ConvertFrom-Json)
-                  $frontend = $frontends.where({ $_.name -eq $name })
+                  $frontend = $frontends.where({ $_.name -eq $name })[0]
                   if (!$frontend) {
                     echo "Creating new frontend for $env:prHost to /$env:Build_SourceVersion/"
                     $frontend = $(az network front-door frontend-endpoint create -f missionbit-dev -g www-dev --host-name $env:prHost --name $name | ConvertFrom-Json)
+                    echo "Enabling https"
                     az network front-door frontend-endpoint enable-https -f missionbit-dev -g www-dev -n $name
                     $frontends = $(az network front-door frontend-endpoint list -f missionbit-dev -g www-dev | ConvertFrom-Json)
+                    echo "Updating redirect-to-https rule with all frontends"
                     az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Http -n redirect-to-https --frontend-endpoints $($frontends.id) --route-type Redirect --redirect-type PermanentRedirect --redirect-protocol HttpsOnly
                   }
-                  az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Https -n $name --backend-pool blob --frontend-endpoints "$($frontend.id)" --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
+                  echo "Updating routing-rule $name to /$env:Build_SourceVersion/"
+                  az network front-door routing-rule create --debug --front-door-name missionbit-dev --resource-group www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly --name $name --backend-pool blob --frontend-endpoints "$($frontend.id)" --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
+          - task: GitHubDeployment@0
+            inputs:
+              gitHubConnection: github.com_etrepum
+              repositoryName: $(Build.Repository.Name)
+              ref: $(system.pullRequest.sourceBranch)
+              task: "deploy"
+              autoMerge: true
+              environment: $(prEnvironment)
+              description: "$(Build.SourceVersionMessage)"
+              transientEnvironment: true
+              state: 'success'
+              logUrl: https://dev.azure.com/missionbit/www.missionbit.com/_build/results?buildId=$(Build.BuildId)&view=logs
+              environmentUrl: https://$(prHost)/
+              autoInactive: true
 
   - deployment: DeployMaster
 
@@ -112,6 +131,6 @@ jobs:
               scriptLocation: inlineScript
               inlineScript: |
                 az extension add --name front-door
-                az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Https -n serve-content --backend-pool blob --frontend-endpoints "$($frontend.id)" --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
+                az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly -n serve-content --backend-pool blob --frontend-endpoints missionbit-dev-azurefd-net --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
                 az storage blob service-properties update --account-name missionbitwww --static-website --404-document "$(Build.SourceVersion)/404.html"
                 az cdn endpoint update -g www -n missionbitwww --profile-name missionbitcdn --origin-path "/$(Build.SourceVersion)"
