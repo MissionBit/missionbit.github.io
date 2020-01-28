@@ -133,6 +133,7 @@ jobs:
               inlineScript: |
                 az storage blob service-properties update --account-name missionbitwww --static-website --404-document "$(Build.SourceVersion)/404.html"
                 az cdn endpoint update -g www -n missionbitwww --profile-name missionbitcdn --origin-path "/$(Build.SourceVersion)"
+                az cdn endpoint purge -g www -n missionbitwww --profile-name missionbitcdn --content-paths '/*'
 
   - deployment: DeployMasterFrontDoor
 
