@@ -36,6 +36,12 @@ You will have to reload the pages in your browser to see the changes.
 
 You can stop the server by pressing Ctrl-C.
 
+You can run the tests locally with the following command:
+
+```bash
+docker-compose -f docker-compose-ci.yml up
+```
+
 ## Using the page template
 
 To make a page on the site use the template, they need to have
