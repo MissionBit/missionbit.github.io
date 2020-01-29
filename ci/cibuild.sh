@@ -7,4 +7,5 @@ htmlproofer "${DESTINATION}" \
     --allow-hash-href \
     --empty-alt-ignore \
     --url-ignore "/drive.google.com/" \
-    --http-status-ignore="0,403"
+    --http-status-ignore="0,403" \
+    --trace

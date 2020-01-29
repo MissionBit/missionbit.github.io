@@ -50,9 +50,9 @@ jobs:
       runOnce:
         deploy:
           steps:
-          - checkout: none
           - download: current
             artifact: www
+          - checkout: none
           - task: AzureFileCopy@3
             inputs:
               sourcePath: $(Pipeline.Workspace)/www
@@ -78,6 +78,7 @@ jobs:
       runOnce:
         deploy:
           steps:
+          - download: none
           - checkout: none
           - task: AzureCLI@2
             displayName: Azure CLI
@@ -128,8 +129,8 @@ jobs:
       runOnce:
         deploy:
           steps:
-          - checkout: none
           - download: none
+          - checkout: none
           - task: AzureCLI@2
             displayName: Azure CLI
             inputs:
@@ -153,8 +154,8 @@ jobs:
       runOnce:
         deploy:
           steps:
-          - checkout: none
           - download: none
+          - checkout: none
           - task: AzureCLI@2
             displayName: Azure CLI
             inputs:
@@ -182,8 +183,8 @@ jobs:
       runOnce:
         deploy:
           steps:
-          - checkout: none
           - download: none
+          - checkout: none
           - task: AzureCLI@2
             displayName: Azure CLI
             inputs:
