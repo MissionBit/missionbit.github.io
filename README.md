@@ -1,8 +1,9 @@
-# www.missionbit.com
+# www.missionbit.org
 
-This is the source for www.missionbit.com!
+This is the source for www.missionbit.org
+(also available at www.missionbit.com)!
 
-We use [Jekyll] to help us generate www.missionbit.com because that's
+We use [Jekyll] to help us generate www.missionbit.org because that's
 what [GitHub Pages] uses. This lets us build a site with a lot of
 pages without having to repeat so much over and over.
 
