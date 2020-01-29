@@ -38,24 +38,29 @@ jobs:
         artifactName: www
         pathtoPublish: $(Build.BinariesDirectory)
 
-  - job: UploadArtifact
+  - deployment: UploadArtifact
+
+    environment: www-dev
     pool:
       vmImage: windows-latest
     dependsOn: Build
     condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.Reason'], 'PullRequest')))
 
-    steps:
-    - checkout: none
-    - download: current
-      artifact: www
-    - task: AzureFileCopy@3
-      inputs:
-        sourcePath: $(Pipeline.Workspace)/www
-        azureSubscription: $(azureSubscription)
-        destination: azureBlob
-        storage: missionbitwww
-        containerName: '$web'
-        blobPrefix: $(Build.SourceVersion)
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - checkout: none
+          - download: current
+            artifact: www
+          - task: AzureFileCopy@3
+            inputs:
+              sourcePath: $(Pipeline.Workspace)/www
+              azureSubscription: $(azureSubscription)
+              destination: azureBlob
+              storage: missionbitwww
+              containerName: '$web'
+              blobPrefix: $(Build.SourceVersion)
 
   - deployment: DeployPR
 
@@ -124,6 +129,7 @@ jobs:
         deploy:
           steps:
           - checkout: none
+          - download: none
           - task: AzureCLI@2
             displayName: Azure CLI
             inputs:
@@ -148,6 +154,7 @@ jobs:
         deploy:
           steps:
           - checkout: none
+          - download: none
           - task: AzureCLI@2
             displayName: Azure CLI
             inputs:
@@ -176,6 +183,7 @@ jobs:
         deploy:
           steps:
           - checkout: none
+          - download: none
           - task: AzureCLI@2
             displayName: Azure CLI
             inputs:
