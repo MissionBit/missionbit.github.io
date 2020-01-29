@@ -3,8 +3,8 @@ services:
   ci:
     image: jekyll/builder:latest
     volumes:
-      - ${SOURCES_DIRECTORY}:/app
-      - ${BINARIES_DIRECTORY}:/site
+      - ${SOURCES_DIRECTORY:-.}:/app
+      - ${BINARIES_DIRECTORY:-./_site}:/site
     tmpfs: /app/.jekyll-cache
     working_dir: /app
     command: ./docker-ci.sh
