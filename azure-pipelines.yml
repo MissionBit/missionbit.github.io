@@ -117,31 +117,6 @@ jobs:
               environmentUrl: https://$(prHost)/
               autoInactive: true
 
-  - deployment: DeployMasterCDN
-
-    environment: www
-    pool:
-      # windows-latest not currently compatible with AzureCLI@2
-      vmImage: vs2017-win2016
-    dependsOn: UploadArtifact
-    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - download: none
-          - checkout: none
-          - task: AzureCLI@2
-            displayName: Azure CLI
-            inputs:
-              azureSubscription: $(azureSubscription)
-              scriptType: ps
-              scriptLocation: inlineScript
-              inlineScript: |
-                az storage blob service-properties update --account-name missionbitwww --static-website --404-document "$(Build.SourceVersion)/404.html"
-                az cdn endpoint update -g www -n missionbitwww --profile-name missionbitcdn --origin-path "/$(Build.SourceVersion)"
-                az cdn endpoint purge -g www -n missionbitwww --profile-name missionbitcdn --content-paths '/' '/*'
-
   - deployment: DeployMasterFrontDoor
 
     environment: www
@@ -164,6 +139,8 @@ jobs:
               scriptLocation: inlineScript
               inlineScript: |
                 az extension add --name front-door
+                echo "Updating 404 document"
+                az storage blob service-properties update --account-name missionbitwww --static-website --404-document "$(Build.SourceVersion)/404.html"
                 echo "Updating missionbit-dev routing-rule serve-content to /$env:Build_SourceVersion/"
                 az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly -n serve-content --backend-pool blob --frontend-endpoints missionbit-dev-azurefd-net --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
                 echo "Updating missionbit-www routing-rule serve-content to /$env:Build_SourceVersion/"
