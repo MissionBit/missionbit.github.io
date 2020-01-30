@@ -32,11 +32,10 @@ jobs:
         projectName: $(Build.Repository.Name)
         abortOnContainerExit: true
         detached: false
-    - task: PublishBuildArtifacts@1
+    - publish: $(Build.BinariesDirectory)
+      artifact: www
       displayName: Publish Site
-      inputs:
-        artifactName: www
-        pathtoPublish: $(Build.BinariesDirectory)
+      condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.Reason'], 'PullRequest')))
 
   - deployment: UploadArtifact
 
