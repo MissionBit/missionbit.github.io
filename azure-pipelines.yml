@@ -242,3 +242,17 @@ jobs:
                   echo "Removing frontend endpoint $($_.hostName)"
                   az network front-door frontend-endpoint delete -g www-dev -f missionbit-dev -n $_.name
                 })
+
+                echo "Cleaning up blob storage"
+                $routes = (az network front-door routing-rule list -f missionbit-dev -g www-dev | ConvertFrom-Json)
+                $validPrefix = @{ "$env:Build_SourceVersion/" = $true }
+                $routes.routeConfiguration.customForwardingPath.where({ $_ }).ForEach({
+                  $validPrefix[$_.TrimStart("/")] = $true
+                })
+                echo "$($validPrefix.Count) valid blob prefixes"
+                $earlier = (Get-Date).AddHours(-6).ToUniversalTime().toString("yyyy-MM-ddThh:mm:ssZ")
+                $prefixes = (az storage blob list -c '$web' --account-name=missionbitwww --delimiter / | ConvertFrom-Json)
+                $prefixes.name.where({ -Not $validPrefix.ContainsKey($_) }).ForEach({
+                  echo "Deleting unused blob prefix $_*"
+                  az storage blob delete-batch --source '$web' --account-name=missionbitwww --pattern="$_*" --if-unmodified-since $earlier --dryrun
+                })
