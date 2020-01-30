@@ -226,9 +226,18 @@ jobs:
                   $validPrefix[$_.TrimStart("/")] = $true
                 })
                 echo "$($validPrefix.Count) valid blob prefixes"
-                $earlier = (Get-Date).AddHours(-6).ToUniversalTime().toString("yyyy-MM-ddThh:mm:ssZ")
+                $earlier = (Get-Date).AddHours(-6)
                 $prefixes = (az storage blob list -c '$web' --account-name=missionbitwww --delimiter / | ConvertFrom-Json)
-                $prefixes.name.where({ -Not $validPrefix.ContainsKey($_) }).ForEach({
-                  echo "Deleting unused blob prefix $_*"
-                  az storage blob delete-batch --source '$web' --account-name=missionbitwww --pattern="$_*" --if-unmodified-since $earlier
-                })
+
+                foreach ($prefix in $prefixes.name.where({ -Not $validPrefix.ContainsKey($_) })) {
+                  Write-Host "Deleting unused blob prefix $prefix before $earlier"
+                  $blobs = (az storage blob list -c '$web' --account-name=missionbitwww --prefix $prefix --num-results 10 | ConvertFrom-Json)
+                  $lastModified = ($blobs.properties.lastModified | measure -Maximum).Maximum
+                  if ($lastModified -ge $earlier) {
+                    Write-Host "  $prefix Last-Modified $lastModified newer than $earlier, skipping delete"
+                  } else {
+                    Write-Host "  $prefix Last-Modified $lastModified older than $earlier, deleting"
+                    az storage remove -c '$web' --account-name=missionbitwww -n $prefix --recursive
+                  }
+                  $prefix
+                }
