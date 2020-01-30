@@ -232,7 +232,7 @@ jobs:
                 foreach ($prefix in $prefixes.name.where({ -Not $validPrefix.ContainsKey($_) })) {
                   Write-Host "Deleting unused blob prefix $prefix before $earlier"
                   $blobs = (az storage blob list -c '$web' --account-name=missionbitwww --prefix $prefix --num-results 10 | ConvertFrom-Json)
-                  $lastModified = ($blobs.properties.lastModified | measure -Maximum).Maximum
+                  $lastModified = [datetime]($blobs.properties.lastModified | measure -Maximum).Maximum
                   if ($lastModified -ge $earlier) {
                     Write-Host "  $prefix Last-Modified $lastModified newer than $earlier, skipping delete"
                   } else {
