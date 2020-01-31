@@ -112,7 +112,7 @@ jobs:
               description: "$(Build.SourceVersionMessage)"
               transientEnvironment: true
               state: 'success'
-              logUrl: https://dev.azure.com/missionbit/www.missionbit.com/_build/results?buildId=$(Build.BuildId)&view=logs
+              logUrl: https://$(prHost)/
               environmentUrl: https://$(prHost)/
               autoInactive: true
 
