@@ -19,6 +19,9 @@ site work well and look good:
 The most straightforward way is to install [Docker Desktop],
 which takes care of managing the software required to build the site.
 
+You can also use [Visual Studio Code Remote] to make it easier to
+manage this container.
+
 ## HACKING
 
 Open a Terminal and change to the directory where you've checked out
@@ -87,6 +90,7 @@ changes to the 404.html page only occur after merging to master.
 
 [Azure Pipelines]: https://dev.azure.com/missionbit/www.missionbit.org/
 [Docker Desktop]: https://www.docker.com/products/docker-desktop
+[Visual Studio Code Remote]: https://code.visualstudio.com/docs/remote/containers
 [Jekyll]: http://jekyllrb.com/
 [GitHub Pages]: https://pages.github.com/
 [jQuery]: http://jquery.com/
