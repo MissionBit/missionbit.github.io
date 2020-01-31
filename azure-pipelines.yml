@@ -164,7 +164,7 @@ jobs:
                 echo "Updating missionbit-dev routing-rule serve-content to /$env:Build_SourceVersion/"
                 az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly -n serve-content --backend-pool blob --frontend-endpoints missionbit-dev-azurefd-net --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
                 echo "Updating missionbit-www routing-rule serve-content to /$env:Build_SourceVersion/"
-                az network front-door routing-rule create --front-door-name missionbit-www --resource-group www --accepted-protocols Https --forwarding-protocol HttpsOnly --name serve-content --backend-pool blob --frontend-endpoints missionbit-www-azurefd-net www-missionbit-org --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/" --dynamic-compression Enabled --caching Enabled --query-parameter-strip-directive StripNone
+                az network front-door routing-rule create --front-door-name missionbit-www --resource-group www --accepted-protocols Https --forwarding-protocol HttpsOnly --name serve-content --backend-pool blob --frontend-endpoints missionbit-www-azurefd-net www-missionbit-org --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
                 echo "Purging cache for missionbit-www"
                 az network front-door purge-endpoint -g www -n missionbit-www --content-paths '/*'
 
