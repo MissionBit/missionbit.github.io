@@ -67,7 +67,7 @@ jobs:
     pool:
       # windows-latest not currently compatible with AzureCLI@2
       vmImage: vs2017-win2016
-    dependsOn: UploadArtifact
+    dependsOn: Build
     condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
     variables:
       prHost: pr$(system.pullRequest.pullRequestNumber).dev.missionbit.org
@@ -101,6 +101,27 @@ jobs:
                   }
                   echo "Updating routing-rule $name to /$env:Build_SourceVersion/"
                   az network front-door routing-rule create --front-door-name missionbit-dev --resource-group www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly --name $name --backend-pool blob --frontend-endpoints $name --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
+
+  - deployment: GitHubPR
+
+    environment: www-dev
+    pool:
+      # windows-latest not currently compatible with AzureCLI@2
+      vmImage: vs2017-win2016
+    dependsOn:
+    - UploadArtifact
+    - DeployPR
+    condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+    variables:
+      prHost: pr$(system.pullRequest.pullRequestNumber).dev.missionbit.org
+      prEnvironment: pr$(system.pullRequest.pullRequestNumber)-dev-missionbit-org
+
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: none
+          - checkout: none
           - task: GitHubDeployment@0
             inputs:
               gitHubConnection: github.com_etrepum
@@ -188,10 +209,10 @@ jobs:
                   $name = $_
                   echo "Pre-allocating frontend for $name"
                   $frontend = $(az network front-door frontend-endpoint create -f missionbit-dev -g www-dev --host-name $name.Replace("-", ".") --name $name | ConvertFrom-Json)
-                  echo "Enabling https"
-                  az network front-door frontend-endpoint enable-https -f missionbit-dev -g www-dev -n $name
                   echo "Preallocating routing rule $name"
                   az network front-door routing-rule create --front-door-name missionbit-dev --resource-group www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly --name $name --backend-pool blob --frontend-endpoints $name --route-type Forward --custom-forwarding-path "/prealloc/"
+                  echo "Enabling https"
+                  az network front-door frontend-endpoint enable-https -f missionbit-dev -g www-dev -n $name
                 })
                 if ($prealloc) {
                   $frontends = $(az network front-door frontend-endpoint list -f missionbit-dev -g www-dev | ConvertFrom-Json)
