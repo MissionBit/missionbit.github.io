@@ -190,6 +190,8 @@ jobs:
                   $frontend = $(az network front-door frontend-endpoint create -f missionbit-dev -g www-dev --host-name $name.Replace("-", ".") --name $name | ConvertFrom-Json)
                   echo "Enabling https"
                   az network front-door frontend-endpoint enable-https -f missionbit-dev -g www-dev -n $name
+                  echo "Preallocating routing rule $name"
+                  az network front-door routing-rule create --front-door-name missionbit-dev --resource-group www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly --name $name --backend-pool blob --frontend-endpoints "$($frontend.id)" --route-type Forward --custom-forwarding-path "/prealloc/"
                 })
                 if ($prealloc) {
                   $frontends = $(az network front-door frontend-endpoint list -f missionbit-dev -g www-dev | ConvertFrom-Json)
