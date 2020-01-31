@@ -85,7 +85,7 @@ modifies the CDN configuration to use this path as the new website.
 Note that since the same blob store is used for all front-ends,
 changes to the 404.html page only occur after merging to master.
 
-[Azure Pipelines]: https://dev.azure.com/missionbit/www.missionbit.com/
+[Azure Pipelines]: https://dev.azure.com/missionbit/www.missionbit.org/
 [Docker Desktop]: https://www.docker.com/products/docker-desktop
 [Jekyll]: http://jekyllrb.com/
 [GitHub Pages]: https://pages.github.com/
