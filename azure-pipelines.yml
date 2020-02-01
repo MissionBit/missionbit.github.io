@@ -171,7 +171,8 @@ jobs:
                 az network front-door routing-rule create --front-door-name missionbit-www --resource-group www --accepted-protocols Https --forwarding-protocol HttpsOnly --name serve-content --backend-pool blob --frontend-endpoints missionbit-www-azurefd-net www-missionbit-org --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/" --dynamic-compression Enabled --caching Enabled --query-parameter-strip-directive StripNone
                 echo "Purging cache for missionbit-www"
                 az network front-door purge-endpoint -g www -n missionbit-www --content-paths '/*'
-                echo "##vso[task.setvariable variable=oldPrefix;isOutput=true]$oldPrefix"
+                echo "vso[task.setvariable variable=oldPrefix;isSecret=false;isOutput=true;]$oldPrefix"
+                echo "##vso[task.setvariable variable=oldPrefix;isSecret=false;isOutput=true;]$oldPrefix"
 
   - deployment: DeployMasterCleanupDev
 
