@@ -271,11 +271,12 @@ jobs:
                   $validPrefix[$_.TrimStart("/")] = $true
                 })
                 echo "$($validPrefix.Count) valid blob prefixes"
-                echo "Old prefix  (): $(oldPrefix)"
-                echo "Old prefix env: $env:oldPrefix"
+                echo "Old prefix: $(oldPrefix)"
                 echo "New prefix: $env:Build_SourceVersion/"
                 $earlier = (Get-Date).AddHours(-6)
                 $prefixes = (az storage blob list -c '$web' --account-name=missionbitwww --delimiter / | ConvertFrom-Json)
+                echo "All prefix count: $($prefixes.count)"
+                echo "Filtered prefix count: $($prefixes.name.where({ -Not $validPrefix.ContainsKey($_) }).count)"
                 foreach ($prefix in $prefixes.name.where({ -Not $validPrefix.ContainsKey($_) })) {
                   Write-Host "Deleting unused blob prefix $prefix before $earlier"
                   $blobs = (az storage blob list -c '$web' --account-name=missionbitwww --prefix $prefix --num-results 10 | ConvertFrom-Json)
