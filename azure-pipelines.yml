@@ -152,6 +152,7 @@ jobs:
           - download: none
           - checkout: none
           - task: AzureCLI@2
+            name: FrontDoor
             displayName: Azure CLI
             inputs:
               azureSubscription: $(azureSubscription)
@@ -163,10 +164,14 @@ jobs:
                 az storage blob service-properties update --account-name missionbitwww --static-website --404-document "$(Build.SourceVersion)/404.html"
                 echo "Updating missionbit-dev routing-rule serve-content to /$env:Build_SourceVersion/"
                 az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly -n serve-content --backend-pool blob --frontend-endpoints missionbit-dev-azurefd-net --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
+                echo "Fetching old missionbit-www routing-rule serve-content prefix"
+                $oldPrefix = (az network front-door routing-rule show --front-door-name missionbit-www --resource-group www --name serve-content | ConvertFrom-Json).routeConfiguration.customForwardingPath.TrimStart("/")
+                echo "Old prefix $oldPrefix"
                 echo "Updating missionbit-www routing-rule serve-content to /$env:Build_SourceVersion/"
                 az network front-door routing-rule create --front-door-name missionbit-www --resource-group www --accepted-protocols Https --forwarding-protocol HttpsOnly --name serve-content --backend-pool blob --frontend-endpoints missionbit-www-azurefd-net www-missionbit-org --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/" --dynamic-compression Enabled --caching Enabled --query-parameter-strip-directive StripNone
                 echo "Purging cache for missionbit-www"
                 az network front-door purge-endpoint -g www -n missionbit-www --content-paths '/*'
+                echo "##vso[task.setvariable variable=oldPrefix;isOutput=true]$oldPrefix"
 
   - deployment: DeployMasterCleanupDev
 
@@ -174,7 +179,11 @@ jobs:
     pool:
       # windows-latest not currently compatible with AzureCLI@2
       vmImage: vs2017-win2016
-    dependsOn: UploadArtifact
+    dependsOn:
+    - UploadArtifact
+    - DeployMasterFrontDoor
+    variables:
+      oldPrefix: $[ dependencies.DeployMasterFrontDoor.outputs['DeployMasterFrontDoor.FrontDoor.oldPrefix'] ]
     condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
     strategy:
       runOnce:
@@ -253,14 +262,18 @@ jobs:
 
                 echo "Cleaning up blob storage"
                 $routes = (az network front-door routing-rule list -f missionbit-dev -g www-dev | ConvertFrom-Json)
-                $validPrefix = @{ "$env:Build_SourceVersion/" = $true }
+                $validPrefix = @{
+                  "$env:Build_SourceVersion/" = $true;
+                  "$oldPrefix" = $true
+                }
                 $routes.routeConfiguration.customForwardingPath.where({ $_ }).ForEach({
                   $validPrefix[$_.TrimStart("/")] = $true
                 })
                 echo "$($validPrefix.Count) valid blob prefixes"
+                echo "Old prefix: $oldPrefix"
+                echo "New prefix: $env:Build_SourceVersion/"
                 $earlier = (Get-Date).AddHours(-6)
                 $prefixes = (az storage blob list -c '$web' --account-name=missionbitwww --delimiter / | ConvertFrom-Json)
-
                 foreach ($prefix in $prefixes.name.where({ -Not $validPrefix.ContainsKey($_) })) {
                   Write-Host "Deleting unused blob prefix $prefix before $earlier"
                   $blobs = (az storage blob list -c '$web' --account-name=missionbitwww --prefix $prefix --num-results 10 | ConvertFrom-Json)
