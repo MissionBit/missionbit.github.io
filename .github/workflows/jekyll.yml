@@ -11,6 +11,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the site in the jekyll/builder container
       run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && ./ci/cibuild.sh"
+        export BINARIES_DIRECTORY="${{ github.workspace }}/_site"
+        export SOURCES_DIRECTORY="${{ github.workspace }}"
+        mkdir -p "$BINARIES_DIRECTORY"
+        docker-compose -f docker-compose-ci.yml up --abort-on-container-exit --exit-code-from ci

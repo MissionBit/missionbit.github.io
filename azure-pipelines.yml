@@ -3,24 +3,289 @@
 # Add steps that build, test, save build artifacts, deploy, and more:
 # https://aka.ms/yaml
 
-pool:
-  vmImage: 'Ubuntu 16.04'
+variables:
+  azureSubscription: 'Azure Resource Manager'
 
-steps:
-- task: DockerCompose@0
-  displayName: 'Run Jekyll & Test Links'
-  inputs:
-    action: Run services
-    containerRegistryType: Container Registry
-    dockerComposeFile: docker-compose-ci.yml
-    dockerComposeFileArgs: |
-      SOURCES_DIRECTORY=$(Build.SourcesDirectory)
-      BINARIES_DIRECTORY=$(Build.BinariesDirectory)
-      USER=root
-    projectName: $(Build.Repository.Name)
-    detached: false
-- task: PublishBuildArtifacts@1
-  displayName: Publish Site
-  inputs:
-    artifactName: www
-    pathtoPublish: $(Build.BinariesDirectory)
+jobs:
+  - job: Build
+
+    pool:
+      vmImage: ubuntu-latest
+
+    steps:
+    - task: Bash@3
+      inputs:
+        targetType: 'inline'
+        script: |
+          chmod 777 "$BINARIES_DIRECTORY"
+      env:
+        BINARIES_DIRECTORY: $(Build.BinariesDirectory)
+    - task: DockerCompose@0
+      displayName: 'Run Jekyll & Test Links'
+      inputs:
+        action: Run services
+        containerRegistryType: Container Registry
+        dockerComposeFile: docker-compose-ci.yml
+        dockerComposeFileArgs: |
+          SOURCES_DIRECTORY=$(Build.SourcesDirectory)
+          BINARIES_DIRECTORY=$(Build.BinariesDirectory)
+        projectName: $(Build.Repository.Name)
+        abortOnContainerExit: true
+        detached: false
+    - publish: $(Build.BinariesDirectory)
+      artifact: www
+      displayName: Publish Site
+      condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.Reason'], 'PullRequest')))
+
+  - deployment: UploadArtifact
+
+    environment: www-dev
+    pool:
+      vmImage: windows-latest
+    dependsOn: Build
+    condition: and(succeeded(), or(eq(variables['Build.SourceBranch'], 'refs/heads/master'), eq(variables['Build.Reason'], 'PullRequest')))
+
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: www
+          - checkout: none
+          - task: AzureFileCopy@3
+            inputs:
+              sourcePath: $(Pipeline.Workspace)/www
+              azureSubscription: $(azureSubscription)
+              destination: azureBlob
+              storage: missionbitwww
+              containerName: '$web'
+              blobPrefix: $(Build.SourceVersion)
+
+  - deployment: DeployPR
+
+    environment: www-dev
+    pool:
+      # windows-latest not currently compatible with AzureCLI@2
+      vmImage: vs2017-win2016
+    dependsOn: Build
+    condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+    variables:
+      prHost: pr$(system.pullRequest.pullRequestNumber).dev.missionbit.org
+      prEnvironment: pr$(system.pullRequest.pullRequestNumber)-dev-missionbit-org
+
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: none
+          - checkout: none
+          - task: AzureCLI@2
+            displayName: Azure CLI
+            inputs:
+              azureSubscription: $(azureSubscription)
+              scriptType: ps
+              scriptLocation: inlineScript
+              inlineScript: |
+                  $name = $env:prEnvironment
+                  az extension add --name front-door
+                  $frontends = $(az network front-door frontend-endpoint list -f missionbit-dev -g www-dev | ConvertFrom-Json)
+                  $frontend = $frontends.where({ $_.name -eq $name })[0]
+                  if (!$frontend) {
+                    echo "Creating new frontend for $env:prHost to /$env:Build_SourceVersion/"
+                    $frontend = $(az network front-door frontend-endpoint create -f missionbit-dev -g www-dev --host-name $env:prHost --name $name | ConvertFrom-Json)
+                    echo "Enabling https"
+                    az network front-door frontend-endpoint enable-https -f missionbit-dev -g www-dev -n $name
+                    $frontends = $(az network front-door frontend-endpoint list -f missionbit-dev -g www-dev | ConvertFrom-Json)
+                    echo "Updating redirect-to-https rule with all frontends"
+                    az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Http -n redirect-to-https --frontend-endpoints $($frontends.id) --route-type Redirect --redirect-type PermanentRedirect --redirect-protocol HttpsOnly
+                  }
+                  echo "Updating routing-rule $name to /$env:Build_SourceVersion/"
+                  az network front-door routing-rule create --front-door-name missionbit-dev --resource-group www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly --name $name --backend-pool blob --frontend-endpoints $name --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
+
+  - deployment: GitHubPR
+
+    environment: www-dev
+    pool:
+      # windows-latest not currently compatible with AzureCLI@2
+      vmImage: vs2017-win2016
+    dependsOn:
+    - UploadArtifact
+    - DeployPR
+    condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+    variables:
+      prHost: pr$(system.pullRequest.pullRequestNumber).dev.missionbit.org
+      prEnvironment: pr$(system.pullRequest.pullRequestNumber)-dev-missionbit-org
+
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: none
+          - checkout: none
+          - task: GitHubDeployment@0
+            inputs:
+              gitHubConnection: github.com_etrepum
+              repositoryName: $(Build.Repository.Name)
+              ref: $(system.pullRequest.sourceBranch)
+              task: "deploy"
+              autoMerge: true
+              environment: $(prEnvironment)
+              description: "$(Build.SourceVersionMessage)"
+              transientEnvironment: true
+              state: 'success'
+              logUrl: https://$(prHost)/
+              environmentUrl: https://$(prHost)/
+              autoInactive: true
+
+  - deployment: DeployMasterFrontDoor
+
+    environment: www
+    pool:
+      # windows-latest not currently compatible with AzureCLI@2
+      vmImage: vs2017-win2016
+    dependsOn: UploadArtifact
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: none
+          - checkout: none
+          - task: AzureCLI@2
+            name: FrontDoor
+            displayName: Azure CLI
+            inputs:
+              azureSubscription: $(azureSubscription)
+              scriptType: ps
+              scriptLocation: inlineScript
+              inlineScript: |
+                az extension add --name front-door
+                echo "Updating 404 document"
+                az storage blob service-properties update --account-name missionbitwww --static-website --404-document "$(Build.SourceVersion)/404.html"
+                echo "Updating missionbit-dev routing-rule serve-content to /$env:Build_SourceVersion/"
+                az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly -n serve-content --backend-pool blob --frontend-endpoints missionbit-dev-azurefd-net --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/"
+                echo "Fetching old missionbit-www routing-rule serve-content prefix"
+                $oldPrefix = (az network front-door routing-rule show --front-door-name missionbit-www --resource-group www --name serve-content | ConvertFrom-Json).routeConfiguration.customForwardingPath.TrimStart("/")
+                echo "Old prefix $oldPrefix"
+                echo "Updating missionbit-www routing-rule serve-content to /$env:Build_SourceVersion/"
+                az network front-door routing-rule create --front-door-name missionbit-www --resource-group www --accepted-protocols Https --forwarding-protocol HttpsOnly --name serve-content --backend-pool blob --frontend-endpoints missionbit-www-azurefd-net www-missionbit-org --route-type Forward --custom-forwarding-path "/$env:Build_SourceVersion/" --dynamic-compression Enabled --caching Enabled --query-parameter-strip-directive StripNone
+                echo "Purging cache for missionbit-www"
+                az network front-door purge-endpoint -g www -n missionbit-www --content-paths '/*'
+                echo "vso[task.setvariable variable=oldPrefix;isSecret=false;isOutput=true;]$oldPrefix"
+                echo "##vso[task.setvariable variable=oldPrefix;isSecret=false;isOutput=true;]$oldPrefix"
+
+  - deployment: DeployMasterCleanupDev
+
+    environment: www-dev
+    pool:
+      # windows-latest not currently compatible with AzureCLI@2
+      vmImage: vs2017-win2016
+    dependsOn:
+    - UploadArtifact
+    - DeployMasterFrontDoor
+    variables:
+      oldPrefix: $[ dependencies.DeployMasterFrontDoor.outputs['DeployMasterFrontDoor.FrontDoor.oldPrefix'] ]
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: none
+          - checkout: none
+          - task: AzureCLI@2
+            displayName: Azure CLI
+            inputs:
+              azureSubscription: $(azureSubscription)
+              scriptType: ps
+              scriptLocation: inlineScript
+              inlineScript: |
+                az extension add --name front-door
+                $frontends = $(az network front-door frontend-endpoint list -f missionbit-dev -g www-dev | ConvertFrom-Json)
+                $envs = @{ "missionbit-dev-azurefd-net" = 0; }
+                $frontendMap = @{}
+                $frontends.ForEach({ $frontendMap[$_.name] = $true })
+                $headers = @{ "Accept" = "application/vnd.github.shadow-cat-preview+json"; }
+
+                echo "Getting number of latest PR"
+                $url = "https://api.github.com/repos/missionbit/missionbit.github.io/pulls?state=all"
+                $allPrs = (Invoke-WebRequest -Uri $url -Headers $Headers -Method Get -ErrorAction Stop | ConvertFrom-Json)
+                $latestPr = $allPrs[0].number
+                echo "Latest PR is ${latestPr}"
+                $prealloc = (1..20).ForEach({ "pr$($_ + $latestPr)-dev-missionbit-org" }).where({
+                  $envs[$_] = 0;
+                  -Not $frontEndMap.ContainsKey($_)
+                })
+                $prealloc.ForEach({
+                  $name = $_
+                  echo "Pre-allocating frontend for $name"
+                  $frontend = $(az network front-door frontend-endpoint create -f missionbit-dev -g www-dev --host-name $name.Replace("-", ".") --name $name | ConvertFrom-Json)
+                  echo "Preallocating routing rule $name"
+                  az network front-door routing-rule create --front-door-name missionbit-dev --resource-group www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly --name $name --backend-pool blob --frontend-endpoints $name --route-type Forward --custom-forwarding-path "/prealloc/"
+                  echo "Enabling https"
+                  az network front-door frontend-endpoint enable-https -f missionbit-dev -g www-dev -n $name
+                })
+                if ($prealloc) {
+                  $frontends = $(az network front-door frontend-endpoint list -f missionbit-dev -g www-dev | ConvertFrom-Json)
+                  $frontends.ForEach({ $frontendMap[$_.name] = $true })
+                }
+
+                $allRoutes = @{ "missionbit-dev-azurefd-net" = $true }
+                $routes = (az network front-door routing-rule list -f missionbit-dev -g www-dev | ConvertFrom-Json)
+                $routes.ForEach({ $allRoutes[$_.name] = $true })
+                $frontends.where({ -Not $allRoutes.ContainsKey($_.name) }).ForEach({
+                  $name = $_.name
+                  echo "Preallocating missing routing rule $name"
+                  az network front-door routing-rule create --front-door-name missionbit-dev --resource-group www-dev --accepted-protocols Https --forwarding-protocol HttpsOnly --name $name --backend-pool blob --frontend-endpoints $name --route-type Forward --custom-forwarding-path "/prealloc/"
+                })
+
+                echo "Getting list of open PRs"
+                $url = "https://api.github.com/repos/missionbit/missionbit.github.io/pulls"
+                $prs = (Invoke-WebRequest -Uri $url -Headers $Headers -Method Get -ErrorAction Stop | ConvertFrom-Json)
+                $prs.number.ForEach({ $envs["pr$_-dev-missionbit-org"] = $_ })
+                $closedFrontends = $frontends.where({ -Not $envs.ContainsKey($_.name) })
+                if ($closedFrontends -Or $prealloc) {
+                  if ($closedFrontends) {
+                    echo "Detected closed environments: $($closedFrontends.name)"
+                  }
+                  if ($prealloc) {
+                    echo "New preallocated environments: $prealloc"
+                  }
+                  $openFrontends = $frontends.where({ $envs.ContainsKey($_.name) })
+                  echo "Updating redirect-to-https rule with all open frontends"
+                  az network front-door routing-rule create -f missionbit-dev -g www-dev --accepted-protocols Http -n redirect-to-https --frontend-endpoints $($openFrontends.id) --route-type Redirect --redirect-type PermanentRedirect --redirect-protocol HttpsOnly
+                }
+                $closedFrontends.ForEach({
+                  echo "Removing routing rule $($_.name)"
+                  az network front-door routing-rule delete -g www-dev -f missionbit-dev -n $_.name
+                  echo "Removing frontend endpoint $($_.hostName)"
+                  az network front-door frontend-endpoint delete -g www-dev -f missionbit-dev -n $_.name
+                })
+
+                echo "Cleaning up blob storage"
+                $routes = (az network front-door routing-rule list -f missionbit-dev -g www-dev | ConvertFrom-Json)
+                $validPrefix = @{
+                  "$env:Build_SourceVersion/" = $true;
+                  "$(oldPrefix)" = $true
+                }
+                $routes.routeConfiguration.customForwardingPath.where({ $_ }).ForEach({
+                  $validPrefix[$_.TrimStart("/")] = $true
+                })
+                echo "$($validPrefix.Count) valid blob prefixes"
+                echo "Old prefix: $(oldPrefix)"
+                echo "New prefix: $env:Build_SourceVersion/"
+                $earlier = (Get-Date).AddHours(-6)
+                $prefixes = (az storage blob list -c '$web' --account-name=missionbitwww --delimiter / | ConvertFrom-Json)
+                echo "All prefix count: $($prefixes.count)"
+                echo "Filtered prefix count: $($prefixes.name.where({ -Not $validPrefix.ContainsKey($_) }).count)"
+                foreach ($prefix in $prefixes.name.where({ -Not $validPrefix.ContainsKey($_) })) {
+                  Write-Host "Deleting unused blob prefix $prefix before $earlier"
+                  $blobs = (az storage blob list -c '$web' --account-name=missionbitwww --prefix $prefix --num-results 10 | ConvertFrom-Json)
+                  $lastModified = [datetime]($blobs.properties.lastModified | measure -Maximum).Maximum
+                  if ($lastModified -ge $earlier) {
+                    Write-Host "  $prefix Last-Modified $lastModified newer than $earlier, skipping delete"
+                  } else {
+                    Write-Host "  $prefix Last-Modified $lastModified older than $earlier, deleting"
+                    az storage remove -c '$web' --account-name=missionbitwww -n $prefix --recursive
+                  }
+                  $prefix
+                }

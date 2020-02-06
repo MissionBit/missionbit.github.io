@@ -1,68 +1,58 @@
-This is the source for www.missionbit.com!
+# www.missionbit.org
 
-We use [Jekyll] to help us generate www.missionbit.com because that's
+This is the source for www.missionbit.org
+(also available at www.missionbit.com)!
+
+We use [Jekyll] to help us generate www.missionbit.org because that's
 what [GitHub Pages] uses. This lets us build a site with a lot of
 pages without having to repeat so much over and over.
 
 We use the following JavaScript, CSS, and font libraries to make the
 site work well and look good:
+
 * [jQuery]
 * [Bootstrap]
 * [Font Awesome]
 
-# Setup
+## Setup
 
-## Mac
+The most straightforward way is to install [Docker Desktop],
+which takes care of managing the software required to build the site.
 
-Make sure you have an administrator account on the computer and
-install [Jekyll] by opening Terminal and typing the following command:
+You can also use [Visual Studio Code Remote] to make it easier to
+manage this container.
 
-```bash
-sudo gem install jekyll
-```
-
-## Cloud9
-
-After cloning the repository, you need to install [Jekyll]. It will take
-a while! From the terminal:
-
-```bash
-bundle install
-```
-
-# HACKING
-
-## Mac
+## HACKING
 
 Open a Terminal and change to the directory where you've checked out
 `missionbit.github.io`, then run this command to start the [Jekyll]
 preview server:
 
 ```bash
-jekyll serve --watch --safe
+docker-compose up
 ```
 
-This will run a webserver on your computer at http://127.0.0.1:4000/
+This will run a webserver on your computer at
+[http://127.0.0.1:4000/](http://127.0.0.1:4000/)
 and automatically rebuild the site when you make changes to the files.
 You will have to reload the pages in your browser to see the changes.
 
-## Cloud9
+You can stop the server by pressing Ctrl-C.
 
-Open the terminal and run [Jekyll] like this:
+You can run the tests locally with the following command:
 
 ```bash
-bundle exec jekyll serve --watch --safe -P $PORT
+docker-compose -f docker-compose-ci.yml up
 ```
 
-Once you've done that, Cloud9 should let you know that your code is running.
-
-# Using the page template
+## Using the page template
 
 To make a page on the site use the template, they need to have
 what's called [YAML Front Matter]. A very small example page would
 look like this:
 
-*minimal-page-example.html*
+`minimal-page-example.html`
+
 ```html
 ---
 title: "Minimal Page Example"
@@ -87,6 +77,20 @@ title: "Minimal Page Example"
 </div>
 ```
 
+## Azure Deployment
+
+The site is automatically built with [Azure Pipelines].
+
+On a successful build of the master branch, the DeployMasterCDN
+pipeline job publishes the build artifacts to Azure Blob Storage and then
+modifies the CDN configuration to use this path as the new website.
+
+Note that since the same blob store is used for all front-ends,
+changes to the 404.html page only occur after merging to master.
+
+[Azure Pipelines]: https://dev.azure.com/missionbit/www.missionbit.org/
+[Docker Desktop]: https://www.docker.com/products/docker-desktop
+[Visual Studio Code Remote]: https://code.visualstudio.com/docs/remote/containers
 [Jekyll]: http://jekyllrb.com/
 [GitHub Pages]: https://pages.github.com/
 [jQuery]: http://jquery.com/
