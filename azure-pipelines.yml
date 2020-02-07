@@ -263,10 +263,9 @@ jobs:
 
                 echo "Cleaning up blob storage"
                 $routes = (az network front-door routing-rule list -f missionbit-dev -g www-dev | ConvertFrom-Json)
-                $validPrefix = @{
-                  "$env:Build_SourceVersion/" = $true;
-                  "$(oldPrefix)" = $true
-                }
+                $validPrefix = @{ "$env:Build_SourceVersion/" = $true }
+                $validPrefix["$(oldPrefix)"] = $true
+
                 $routes.routeConfiguration.customForwardingPath.where({ $_ }).ForEach({
                   $validPrefix[$_.TrimStart("/")] = $true
                 })
