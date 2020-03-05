@@ -246,6 +246,11 @@ section.module.parallax-4 {
     margin-left: 15px;
 }
 
+/* New Model */
+.home-model {
+    width:99%;
+}
+
 /* Model */
 
 .box-container {
