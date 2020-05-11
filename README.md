@@ -1,6 +1,11 @@
-# www.missionbit.org
+# www.missionbit.org (historical)
 
-This is the source for www.missionbit.org
+As of May 11, 2020, the latest version of this site has been moved to
+https://github.com/MissionBit/missionbit.org
+
+----
+
+This is the historical source for www.missionbit.org
 (also available at www.missionbit.com)!
 
 We use [Jekyll] to help us generate www.missionbit.org because that's
