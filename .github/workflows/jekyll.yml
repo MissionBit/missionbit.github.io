@@ -10,14 +10,14 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     - uses: docker/setup-compose-action@v2
-    - name: Setup Pages
-      uses: actions/configure-pages@v5
     - name: Build the site in the jekyll/builder container
       run: |
         export BINARIES_DIRECTORY="${{ github.workspace }}/_site"
         export SOURCES_DIRECTORY="${{ github.workspace }}"
         mkdir -p "$BINARIES_DIRECTORY"
-        docker-compose -f docker-compose-ci.yml up --abort-on-container-exit --exit-code-from ci
+        docker compose -f docker-compose-ci.yml up --abort-on-container-exit --exit-code-from ci
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
     - name: Upload GitHub Pages artifact
       uses: actions/upload-pages-artifact@v4
 
